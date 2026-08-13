@@ -1,0 +1,7 @@
+/* Brand mark and header logo styling. */
+.brand{gap:0}
+.brand-wordmark{font-size:19px;letter-spacing:-1.1px;color:#372582}
+.brand-wordmark em{color:#ff7900}
+.header-logo-symbol{display:block;width:34px;height:28px;object-fit:contain;object-position:center;margin-right:8px;filter:drop-shadow(0 2px 3px #37258222);transition:transform .25s ease}
+.brand:hover .header-logo-symbol{transform:rotate(-4deg) scale(1.07)}
+@media(max-width:780px){.brand-wordmark{font-size:16px}.header-logo-symbol{width:30px;height:25px;margin-right:6px}}
