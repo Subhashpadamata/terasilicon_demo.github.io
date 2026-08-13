@@ -241,3 +241,57 @@ const metrics = document.querySelector('.metrics');
 if (metrics) {
   metricObserver.observe(metrics);
 }
+
+/* =========================================================
+   NAVIGATION — DROPDOWN + SECTION NAVIGATION
+   ========================================================= */
+
+const navDropdownTargets = {
+  Services: '#expertise',
+  Solutions: '#solutions',
+  Domains: '#industries',
+  Insights: '#insights',
+  Company: '#about'
+};
+
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const button = dropdown.querySelector('.nav-dropdown-toggle');
+
+  if (!button) return;
+
+  const label = button.textContent.trim();
+
+  button.addEventListener('click', () => {
+
+    const target = navDropdownTargets[label];
+
+    if (!target) return;
+
+    const section = document.querySelector(target);
+
+    if (!section) return;
+
+    /* Active navigation item */
+    document.querySelectorAll('.nav-dropdown, .nav > a').forEach(item => {
+      item.classList.remove('active');
+    });
+
+    dropdown.classList.add('active');
+
+    /* Smooth scroll */
+    section.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+
+    /* Update URL */
+    history.pushState(null, '', target);
+
+    /* Close mobile menu */
+    nav?.classList.remove('open');
+    toggle?.setAttribute('aria-expanded', 'false');
+
+    /* Remove focus so dropdown doesn't stay open */
+    button.blur();
+  });
+});
