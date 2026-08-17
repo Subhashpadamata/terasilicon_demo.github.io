@@ -20,9 +20,7 @@
     <link rel="stylesheet" href="mobile-nav.css">
     <link rel="stylesheet" href="page-polish.css">
     <link rel="stylesheet" href="flow.css">
-    <link rel="stylesheet" href="flow-fix.css">
     <link rel="stylesheet" href="footer-layout.css">
-    <link rel="stylesheet" href="capability-pages.css">
     <style>
       .mail-link{
       display:inline-flex;
@@ -36,7 +34,10 @@
       flex:0 0 16px;
       }
     </style>
-  </head>
+    <link rel="stylesheet" href="capability-pages.css">
+  <link rel="stylesheet" href="nav-active.css">
+  <link rel="stylesheet" href="brand-colors.css">
+</head>
   <body>
     <header class="site-header">
       <a class="site-brand" href="#home" aria-label="Terasilicon IQ home">
@@ -350,38 +351,38 @@
               Engineering support across the RTL-to-GDSII lifecycle.
             </p>
           </div>
-          <div class="capabilities">
-            <a class="capability-row" href="formal-verification.html">
-              <b>Formal Verification</b>
-              <span>Property Checking, Equivalence, Formal Debug, Convergence Support</span>
-              <strong aria-hidden="true">→</strong>
-            </a>
-            <a class="capability-row" href="sta-timing-closure.html">
-              <b>STA &amp; Timing Closure</b>
-              <span>SDC, MCMM, Setup/Hold, Critical Path Analysis, Timing Closure</span>
-              <strong aria-hidden="true">→</strong>
-            </a>
-            <a class="capability-row" href="emir-power-integrity.html">
-              <b>EMIR &amp; Power Integrity</b>
-              <span>Static/Dynamic IR, Electromigration, Violation Analysis, Closure Support</span>
-              <strong aria-hidden="true">→</strong>
-            </a>
-            <a class="capability-row" href="physical-design-signoff.html">
-              <b>Physical Design &amp; Signoff</b>
-              <span>Floorplanning, Placement, CTS, Routing, Optimization, Physical Closure</span>
-              <strong aria-hidden="true">→</strong>
-            </a>
-            <a class="capability-row" href="rtl-dv-dft.html">
-              <b>RTL, Design Verification &amp; DFT</b>
-              <span>RTL development, SystemVerilog, UVM, coverage, scan, ATPG and MBIST</span>
-              <strong aria-hidden="true">→</strong>
-            </a>
-            <a class="capability-row" href="physical-verification.html">
-              <b>Physical Verification</b>
-              <span>DRC, LVS support, layout debugging and physical closure</span>
-              <strong aria-hidden="true">→</strong>
-            </a>
-          </div>
+          <div class="capabilities capability-links">
+<a class="capability-row" href="formal-verification.html">
+  <b>Formal Verification</b>
+  <span>Property Checking, Equivalence, Formal Debug, Convergence Support</span>
+  <strong aria-hidden="true">→</strong>
+</a>
+<a class="capability-row" href="sta-timing-closure.html">
+  <b>STA & Timing Closure</b>
+  <span>SDC, MCMM, Setup/Hold, Critical Path Analysis, Timing Closure</span>
+  <strong aria-hidden="true">→</strong>
+</a>
+<a class="capability-row" href="emir-power-integrity.html">
+  <b>EMIR & Power Integrity</b>
+  <span>Static/Dynamic IR, Electromigration, Violation Analysis, Closure Support</span>
+  <strong aria-hidden="true">→</strong>
+</a>
+<a class="capability-row" href="physical-design-signoff.html">
+  <b>Physical Design & Signoff</b>
+  <span>Floorplanning, Placement, CTS, Routing, Optimization, Physical Closure</span>
+  <strong aria-hidden="true">→</strong>
+</a>
+<a class="capability-row" href="rtl-dv-dft.html">
+  <b>RTL, Design Verification & DFT</b>
+  <span>RTL development, SystemVerilog, UVM, coverage, scan, ATPG and MBIST</span>
+  <strong aria-hidden="true">→</strong>
+</a>
+<a class="capability-row" href="physical-verification.html">
+  <b>Physical Verification</b>
+  <span>DRC, LVS support, layout debugging and physical closure</span>
+  <strong aria-hidden="true">→</strong>
+</a>
+</div>
         </div>
       </section>
       <section id="solutions">
@@ -713,5 +714,6 @@
         </div>
       </div>
     </footer>
-  </body>
+    <script src="nav-active.js"></script>
+</body>
 </html>

@@ -1,0 +1,78 @@
+/* =========================================================
+   TERASILICON IQ — LOGO COLOUR CARD BACKGROUNDS
+   Logo colours:
+   Blue   #101638
+   Orange #FC7701
+   ========================================================= */
+
+:root {
+  --tsi-logo-blue: #101638;
+  --tsi-logo-orange: #FC7701;
+}
+
+/* Signoff cards */
+#signoff .grid.four .card.core {
+  background: var(--tsi-logo-blue) !important;
+  border-color: var(--tsi-logo-blue) !important;
+  color: #ffffff !important;
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+
+#signoff .grid.four .card.core:nth-child(even) {
+  background: var(--tsi-logo-orange) !important;
+  border-color: var(--tsi-logo-orange) !important;
+  color: var(--tsi-logo-blue) !important;
+}
+
+#signoff .grid.four .card.core > span,
+#signoff .grid.four .card.core h3,
+#signoff .grid.four .card.core > p,
+#signoff .grid.four .card.core li {
+  color: inherit !important;
+}
+
+#signoff .grid.four .card.core li {
+  border-color: rgba(255,255,255,.22) !important;
+}
+
+#signoff .grid.four .card.core:nth-child(even) li {
+  border-color: rgba(16,22,56,.22) !important;
+}
+
+#signoff .grid.four .card.core:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(16,22,56,.16);
+}
+
+/* Solutions / How We Work cards */
+#solutions .grid.four .card {
+  background: var(--tsi-logo-blue) !important;
+  border-color: var(--tsi-logo-blue) !important;
+  color: #ffffff !important;
+  transition: transform .25s ease, box-shadow .25s ease, background-color .25s ease;
+}
+
+#solutions .grid.four .card:nth-child(even) {
+  background: var(--tsi-logo-orange) !important;
+  border-color: var(--tsi-logo-orange) !important;
+  color: var(--tsi-logo-blue) !important;
+}
+
+#solutions .grid.four .card > span,
+#solutions .grid.four .card h3,
+#solutions .grid.four .card > p {
+  color: inherit !important;
+}
+
+#solutions .grid.four .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 32px rgba(16,22,56,.16);
+}
+
+/* Keep cards comfortable on smaller screens */
+@media (max-width: 760px) {
+  #signoff .grid.four .card.core,
+  #solutions .grid.four .card {
+    transform: none;
+  }
+}

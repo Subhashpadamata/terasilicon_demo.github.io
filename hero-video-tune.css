@@ -1,2 +1,0 @@
-/* Let the supplied hero footage remain visible while retaining readable copy. */
-.hero-video{opacity:.82;filter:saturate(1.05) contrast(1.08) brightness(.82)}.hero:after{background:linear-gradient(90deg,rgba(10,18,53,.84) 0%,rgba(10,18,53,.56) 42%,rgba(10,18,53,.2) 100%)}.hero-grid{opacity:.42}.orb-one{opacity:.38}.orb-two{opacity:.22}@media(max-width:780px){.hero-video{opacity:.62;filter:saturate(1) contrast(1.05) brightness(.7)}.hero:after{background:linear-gradient(90deg,rgba(10,18,53,.88),rgba(10,18,53,.5))}}
