@@ -1,0 +1,400 @@
+/* =========================================================
+   TERASILICON IQ — FOOTER FINAL BALANCED LAYOUT
+   Layout + single-font-family fix only.
+   ========================================================= */
+
+.contact-details {
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.contact-details .footer-grid {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns:
+    minmax(0, 1.18fr)
+    minmax(0, 0.95fr)
+    minmax(0, 1.18fr)
+    minmax(0, 1.15fr)
+    minmax(0, 0.92fr);
+
+  column-gap: clamp(28px, 3vw, 58px);
+  align-items: start;
+
+  padding-left: clamp(24px, 4vw, 72px);
+  padding-right: clamp(24px, 4vw, 72px);
+}
+
+/* One font family throughout the footer. */
+.contact-details,
+.contact-details * {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Preserve the existing brand treatment. */
+.contact-details .contact-intro h2 i {
+  font-family: "Space Grotesk", sans-serif;
+}
+
+/* Prevent any individual block from forcing the grid wider. */
+.contact-details .contact-intro,
+.contact-details .footer-column,
+.contact-details .footer-directory {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* Allow long content to wrap instead of causing horizontal overflow. */
+.contact-details a,
+.contact-details span,
+.contact-details p,
+.contact-details h3 {
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* Keep icons and their text aligned. */
+.contact-details .mail-link,
+.contact-details .location-link {
+  display: inline-flex;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.contact-details .mail-link span,
+.contact-details .location-link span {
+  min-width: 0;
+}
+
+/* Location should have enough room, but never force the grid wider. */
+.contact-details .location-link {
+  max-width: 100%;
+}
+
+/* Service links should wrap naturally if required. */
+.contact-details .footer-directory a {
+  white-space: normal;
+}
+
+/* Keep the Services column as the right-most grid column,
+   without allowing it to overflow the viewport. */
+.contact-details .footer-directory:last-child {
+  justify-self: stretch;
+  min-width: 0;
+}
+
+/* Tablet */
+@media (max-width: 1150px) {
+  .contact-details .footer-grid {
+    grid-template-columns:
+      minmax(0, 1.1fr)
+      minmax(0, 1fr)
+      minmax(0, 1.1fr);
+
+    column-gap: 36px;
+    row-gap: 48px;
+
+    padding-left: 6vw;
+    padding-right: 6vw;
+  }
+
+  .contact-details .contact-intro {
+    grid-column: 1 / -1;
+  }
+
+  .contact-details .footer-directory:last-child {
+    justify-self: start;
+  }
+}
+
+/* Mobile */
+@media (max-width: 780px) {
+  .contact-details .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 42px;
+    padding-left: 7vw;
+    padding-right: 7vw;
+  }
+
+  .contact-details .contact-intro {
+    grid-column: auto;
+  }
+
+  .contact-details .footer-directory:last-child {
+    justify-self: stretch;
+  }
+}
+
+/* =========================================================
+   FOOTER — FINAL SPACING / FONT FIX
+   ========================================================= */
+
+/* Keep the complete footer on one font family. */
+.contact-details,
+.contact-details *,
+.contact-details a,
+.contact-details h2,
+.contact-details h3,
+.contact-details p,
+.contact-details span {
+  font-family: "Space Grotesk", sans-serif !important;
+}
+
+/* Keep the footer columns separated vertically.
+   This fixes links running together such as:
+   Formal VerificationSTA & Timing Closure... */
+.contact-details .footer-directory {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 0;
+}
+
+.contact-details .footer-directory h3 {
+  margin-bottom: 26px;
+}
+
+.contact-details .footer-directory a {
+  display: block !important;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0 0 17px 0 !important;
+  line-height: 1.45 !important;
+  white-space: normal !important;
+}
+
+/* Training should have a clear gap from the service links. */
+.contact-details .footer-directory .training-heading {
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+/* Move "Open in Google Maps" slightly to the right,
+   while keeping it inside the Location column. */
+.contact-details .map-link {
+  display: block !important;
+  width: fit-content;
+  margin-left: 105px !important;
+  margin-top: 26px !important;
+}
+
+/* Keep the location icon/address alignment unchanged. */
+.contact-details .location-link {
+  display: flex !important;
+  align-items: flex-start;
+}
+
+/* Desktop */
+@media (min-width: 1151px) {
+  .contact-details .footer-directory {
+    padding-left: 0;
+  }
+
+  .contact-details .map-link {
+    margin-left: 105px !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1150px) {
+  .contact-details .map-link {
+    margin-left: 60px !important;
+  }
+}
+
+/* Mobile */
+@media (max-width: 780px) {
+  .contact-details .map-link {
+    margin-left: 0 !important;
+  }
+}
+
+
+/* Exact email icon/text alignment */
+.contact-details .mail-link {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  width: auto !important;
+  margin: 0 0 17px 0 !important;
+  line-height: 1.45 !important;
+  vertical-align: middle;
+}
+
+.contact-details .mail-link img {
+  display: block !important;
+  width: 20px !important;
+  height: 20px !important;
+  min-width: 20px !important;
+  min-height: 20px !important;
+  object-fit: contain !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 20px !important;
+  align-self: center !important;
+}
+
+.contact-details .mail-link span {
+  display: block !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 20px !important;
+  white-space: nowrap;
+}
+
+/* =========================================================
+   SERVICES / ENGINEERING SERVICES — FINAL TYPOGRAPHY
+   Match the "Partner with Terasilicon IQ →" link.
+   ========================================================= */
+
+/* Match the Partner link's Space Grotesk typography. */
+.contact-details .footer-directory a {
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 1.45 !important;
+  letter-spacing: normal !important;
+  text-transform: none !important;
+}
+
+/* Tighten the vertical rhythm between service links.
+   The previous flex gap + link margin made the lines too far apart. */
+.contact-details .footer-directory {
+  gap: 0 !important;
+}
+
+.contact-details .footer-directory h3 {
+  margin-bottom: 22px !important;
+}
+
+.contact-details .footer-directory a {
+  margin: 0 0 20px 0 !important;
+}
+
+/* Keep the last service item from creating unnecessary extra space. */
+.contact-details .footer-directory > a:last-of-type {
+  margin-bottom: 0 !important;
+}
+
+/* Training should have a deliberate but compact separation. */
+.contact-details .footer-directory .training-heading {
+  margin-top: 28px !important;
+  margin-bottom: 20px !important;
+}
+
+.contact-details .footer-directory .training-heading + a {
+  margin-bottom: 0 !important;
+}
+
+/* Keep mobile typography proportional while preserving the same font. */
+@media (max-width: 780px) {
+  .contact-details .footer-directory a {
+    font-size: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .contact-details .footer-directory h3 {
+    margin-bottom: 18px !important;
+  }
+
+  .contact-details .footer-directory .training-heading {
+    margin-top: 22px !important;
+    margin-bottom: 16px !important;
+  }
+}
+
+/* =========================================================
+   FOOTER — COMPACT SERVICE TEXT
+   Reduce service text size and vertical spacing.
+   ========================================================= */
+
+.contact-details .footer-directory a {
+  font-family: "Space Grotesk", sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 600 !important;
+  line-height: 1.3 !important;
+  letter-spacing: normal !important;
+  margin: 0 0 12px 0 !important;
+}
+
+/* Keep headings slightly larger than their links. */
+.contact-details .footer-directory h3 {
+  font-size: 16px !important;
+  line-height: 1.2 !important;
+  margin-bottom: 18px !important;
+}
+
+/* Compact the Training separation. */
+.contact-details .footer-directory .training-heading {
+  margin-top: 20px !important;
+  margin-bottom: 12px !important;
+}
+
+.contact-details .footer-directory .training-heading + a {
+  margin-bottom: 0 !important;
+}
+
+/* Keep wrapped items compact. */
+.contact-details .footer-directory a {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+/* Mobile */
+@media (max-width: 780px) {
+  .contact-details .footer-directory a {
+    font-size: 15px !important;
+    line-height: 1.3 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .contact-details .footer-directory h3 {
+    font-size: 16px !important;
+    margin-bottom: 16px !important;
+  }
+
+  .contact-details .footer-directory .training-heading {
+    margin-top: 18px !important;
+    margin-bottom: 10px !important;
+  }
+}
+
+/* =========================================================
+   LOCATION — GOOGLE MAPS LINK ALIGNMENT
+   Start the Maps link exactly under the address text,
+   not under the location icon.
+   ========================================================= */
+
+.contact-details .map-link {
+  display: block !important;
+  width: fit-content !important;
+  margin-left: 38px !important;
+  margin-top: 22px !important;
+}
+
+/* Keep the link aligned with the address text on desktop. */
+@media (min-width: 1151px) {
+  .contact-details .map-link {
+    margin-left: 38px !important;
+  }
+}
+
+/* Tablet */
+@media (max-width: 1150px) and (min-width: 781px) {
+  .contact-details .map-link {
+    margin-left: 38px !important;
+  }
+}
+
+/* Mobile: align with the address text as well. */
+@media (max-width: 780px) {
+  .contact-details .map-link {
+    margin-left: 38px !important;
+  }
+}

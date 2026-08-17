@@ -1,0 +1,210 @@
+/* =========================================================
+   TERASILICON IQ — ASIC FLOW STRIP FIX
+   Compact, connected, and visually balanced.
+   ========================================================= */
+
+.flow-section {
+  padding: 26px 0 28px !important;
+  background: #fff !important;
+}
+
+.flow-section .container {
+  max-width: 1380px;
+}
+
+.flow-row {
+  position: relative;
+  display: grid !important;
+  grid-template-columns:
+    minmax(52px, 1fr) 24px
+    minmax(70px, 1fr) 24px
+    minmax(70px, 1fr) 24px
+    minmax(70px, 1fr) 24px
+    minmax(52px, 1fr) 24px
+    minmax(65px, 1fr) 24px
+    minmax(52px, 1fr) 24px
+    minmax(52px, 1fr) 24px
+    minmax(92px, 1.2fr) 24px
+    minmax(62px, 1fr) !important;
+  align-items: center !important;
+  justify-items: center;
+  gap: 0 !important;
+  min-height: 112px;
+  padding: 24px 34px !important;
+  border: 1px solid #dedbd5;
+  background: #fbfaf7;
+  box-sizing: border-box;
+}
+
+/* Hide the old connector treatment and draw clean connectors ourselves. */
+.flow-row i {
+  display: block !important;
+  width: 100% !important;
+  height: 1px !important;
+  min-height: 1px !important;
+  margin: 0 !important;
+  background: #d8d4cc !important;
+}
+
+/* Stage labels */
+.flow-row div {
+  position: relative;
+  width: auto !important;
+  min-width: 0;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  text-align: center !important;
+  color: #756e88;
+  font: 500 10px/1.35 "DM Mono", monospace !important;
+  letter-spacing: .01em;
+  white-space: nowrap;
+}
+
+/* The existing pseudo-element becomes a small status node. */
+.flow-row div:before {
+  content: "" !important;
+  display: block !important;
+  width: 12px !important;
+  height: 12px !important;
+  margin: 0 !important;
+  flex: 0 0 12px;
+  border: 1px solid #aaa7b1 !important;
+  border-radius: 1px !important;
+  background: #fff !important;
+  box-shadow: none !important;
+  box-sizing: border-box;
+}
+
+/* Completed stages use the Terasilicon IQ purple. */
+.flow-row div.flow-active {
+  color: #372582 !important;
+}
+
+.flow-row div.flow-active:before {
+  background: #372582 !important;
+  border-color: #372582 !important;
+  box-shadow: 0 0 0 5px rgba(55,37,130,.08),
+              0 0 18px rgba(55,37,130,.22) !important;
+}
+
+/* Current stage uses the Terasilicon IQ orange accent. */
+.flow-row div.flow-current {
+  color: #ff7900 !important;
+}
+
+.flow-row div.flow-current:before {
+  background: #ff7900 !important;
+  border-color: #ff7900 !important;
+  box-shadow: 0 0 0 5px rgba(255,121,0,.10),
+              0 0 22px rgba(255,121,0,.32) !important;
+  transform: scale(1.12);
+}
+
+/* Active path connectors. */
+.flow-row i.flow-line-active {
+  background: #372582 !important;
+  box-shadow: 0 0 5px rgba(55,37,130,.16);
+}
+
+/* Signoff is the terminal stage. */
+.flow-row .terminal {
+  color: #ff7900 !important;
+  font-weight: 700 !important;
+}
+
+.flow-row .terminal:before {
+  border-color: #ff7900 !important;
+}
+
+.flow-row .terminal.flow-active:before {
+  background: #ff7900 !important;
+  border-color: #ff7900 !important;
+  box-shadow: 0 0 0 5px rgba(255,121,0,.10), 0 0 18px rgba(255,121,0,.25) !important;
+}
+
+.flow-section > .container > p {
+  max-width: none !important;
+  margin: 18px auto 0 !important;
+  text-align: center !important;
+  color: #756e88;
+  font: 500 11px/1.6 "DM Mono", monospace !important;
+}
+
+.flow-section > .container > p strong {
+  color: #e87500;
+  font-weight: 600;
+}
+
+/* Don't let the long Physical Verification label distort the row. */
+.flow-row div:nth-of-type(9) {
+  white-space: normal;
+  max-width: 105px;
+}
+
+/* Desktop/tablet */
+@media (max-width: 1100px) {
+  .flow-row {
+    grid-template-columns:
+      minmax(45px,1fr) 16px minmax(55px,1fr) 16px
+      minmax(55px,1fr) 16px minmax(55px,1fr) 16px
+      minmax(45px,1fr) 16px minmax(55px,1fr) 16px
+      minmax(45px,1fr) 16px minmax(45px,1fr) 16px
+      minmax(75px,1.2fr) 16px minmax(55px,1fr) !important;
+    padding: 22px 20px !important;
+  }
+
+  .flow-row div {
+    font-size: 9px !important;
+  }
+}
+
+/* Mobile: use the existing vertical flow instead of forcing a tiny
+   horizontal strip. */
+@media (max-width: 580px) {
+  .flow-section {
+    padding: 28px 0 30px !important;
+  }
+
+  .flow-row {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 0 !important;
+    min-height: 0;
+    padding: 20px 22px !important;
+  }
+
+  .flow-row div {
+    display: grid !important;
+    grid-template-columns: 16px 1fr !important;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: center;
+    gap: 12px;
+    width: 100% !important;
+    text-align: left !important;
+    font-size: 11px !important;
+  }
+
+  .flow-row div:before {
+    width: 12px !important;
+    height: 12px !important;
+  }
+
+  .flow-row i {
+    width: 1px !important;
+    height: 17px !important;
+    min-height: 17px !important;
+    margin: 3px 0 3px 5px !important;
+    background: #d8d4cc !important;
+  }
+
+  .flow-section > .container > p {
+    padding: 0 20px;
+    text-align: left !important;
+    font-size: 10px !important;
+  }
+}

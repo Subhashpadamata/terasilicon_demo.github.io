@@ -1,51 +1,717 @@
+<!--
+  Terasilicon IQ website
+-->
+
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Terasilicon IQ provides signoff-driven ASIC and SoC semiconductor engineering services.">
-  <title>Terasilicon IQ | Signoff-Driven Semiconductor Engineering</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site-refresh.css">
-  <link rel="stylesheet" href="layout-fixes.css">
-  <link rel="stylesheet" href="contact-panel-fix.css">
-  <link rel="stylesheet" href="mobile-nav.css">
-</head>
-<body>
-  <header class="site-header">
-    <a class="site-brand" href="#home" aria-label="Terasilicon IQ home"><img src="assets/terasilicon-iq-symbol.png" alt=""><span>TERASILICON <b>IQ</b><small>ENGINEERING THE FUTURE OF SILICON</small></span></a>
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
-    <nav aria-label="Primary navigation"><a href="#home">Home</a><a href="#signoff">Signoff</a><a href="#capabilities">Capabilities</a><a href="#solutions">Solutions</a><a href="#about">About</a><a class="nav-cta" href="#contact">Talk to our team <b>→</b></a></nav>
-  </header>
-
-  <main id="home">
-    <section class="hero">
-      <video autoplay muted loop playsinline preload="metadata" aria-hidden="true"><source src="assets/tsiq-hero.mp4" type="video/mp4"></video>
-      <div class="hero-overlay"></div>
-      <div class="container hero-content"><p class="eyebrow">SEMICONDUCTOR ENGINEERING SERVICES</p><h1>Signoff-Driven<br>Semiconductor Engineering</h1><p class="hero-sub">FORMAL VERIFICATION <i>|</i> STA &amp; TIMING CLOSURE <i>|</i> EMIR &amp; POWER INTEGRITY <i>|</i> PHYSICAL DESIGN &amp; SIGNOFF</p><p class="hero-copy">Specialized ASIC/SoC engineering support for semiconductor companies worldwide.</p><div class="actions"><a class="button" href="#contact">Discuss your engineering requirement <b>→</b></a><a class="button button-ghost" href="#signoff">Explore signoff engineering</a></div></div>
-    </section>
-
-    <section class="flow-section" aria-labelledby="flow-title"><div class="container"><h2 class="visually-hidden" id="flow-title">ASIC implementation flow</h2><div class="flow-row"><div>RTL</div><i></i><div>Synthesis</div><i></i><div>Floorplan</div><i></i><div>Placement</div><i></i><div>CTS</div><i></i><div>Routing</div><i></i><div>STA</div><i></i><div>EMIR</div><i></i><div>Physical<br>Verification</div><i></i><div class="terminal">Signoff</div></div><p>Formal Verification runs as a <strong>parallel functional signoff track</strong> across the implementation flow.</p></div></section>
-
-    <section id="signoff"><div class="container"><div class="section-head"><p class="eyebrow">CORE FOCUS</p><h2>Signoff Is Our Core</h2><p>Terasilicon IQ focuses on engineering activities that become critical as ASIC/SoC designs move toward closure and signoff.</p></div><div class="grid four"><article class="card core"><span>01</span><h3>Formal Verification</h3><p>Analyze functional correctness. Find corner cases. Accelerate verification closure.</p><ul><li>Property Checking</li><li>Assertion-Based Verification</li><li>Formal Debug</li><li>Counterexample Analysis</li><li>Equivalence</li><li>Convergence Support</li></ul></article><article class="card core"><span>02</span><h3>STA &amp; Timing Closure</h3><p>Analyze. Debug. Optimize. Close.</p><ul><li>SDC</li><li>MCMM</li><li>Setup / Hold</li><li>Timing Analysis</li><li>Critical Paths</li><li>Timing Closure</li></ul></article><article class="card core"><span>03</span><h3>EMIR &amp; Power Integrity</h3><p>Analyze power integrity and support EM/IR closure.</p><ul><li>Static IR</li><li>Dynamic IR</li><li>Electromigration</li><li>Power Integrity</li><li>Violation Analysis</li><li>Closure Support</li></ul></article><article class="card core"><span>04</span><h3>Physical Design &amp; Signoff</h3><p>Drive implementation toward signoff.</p><ul><li>Floorplanning</li><li>Placement</li><li>CTS</li><li>Routing</li><li>Optimization</li><li>Physical Closure</li></ul></article></div></div></section>
-
-    <section class="section-shade" id="capabilities"><div class="container"><div class="section-head"><p class="eyebrow">CAPABILITIES</p><h2>Our Engineering Capabilities</h2><p>Engineering support across the RTL-to-GDSII lifecycle.</p></div><div class="capabilities"><div><b>Formal Verification</b><span>Property Checking, Equivalence, Formal Debug, Convergence Support</span></div><div><b>STA &amp; Timing Closure</b><span>SDC, MCMM, Setup/Hold, Critical Path Analysis, Timing Closure</span></div><div><b>EMIR &amp; Power Integrity</b><span>Static/Dynamic IR, Electromigration, Violation Analysis, Closure Support</span></div><div><b>Physical Design &amp; Signoff</b><span>Floorplanning, Placement, CTS, Routing, Optimization, Physical Closure</span></div><div><b>RTL, Design Verification &amp; DFT</b><span>RTL development, SystemVerilog, UVM, coverage, scan, ATPG and MBIST</span></div><div><b>Physical Verification</b><span>DRC, LVS support, layout debugging and physical closure</span></div></div></div></section>
-
-    <section id="solutions"><div class="container"><div class="section-head"><p class="eyebrow">HOW WE WORK</p><h2>How We Work With Semiconductor Teams</h2></div><div class="grid four"><article class="card"><span>MODEL 01</span><h3>Focused Signoff Support</h3><p>For a specific Formal, STA, EMIR or Physical Design requirement.</p></article><article class="card"><span>MODEL 02</span><h3>Project-Based Engineering</h3><p>A defined technical scope with milestones and deliverables.</p></article><article class="card"><span>MODEL 03</span><h3>Dedicated Engineering Team</h3><p>Engineering capacity built around your project requirements.</p></article><article class="card"><span>MODEL 04</span><h3>Engineering Extension</h3><p>Long-term collaboration where Terasilicon IQ operates as an extension of your internal engineering organization.</p></article></div></div></section>
-
-    <section class="section-shade"><div class="container split"><div class="section-head"><p class="eyebrow">BEYOND SIGNOFF</p><h2>Broader ASIC/SoC Engineering Services</h2><p>While signoff is our primary engineering focus, we provide broader ASIC/SoC capabilities based on customer requirements.</p></div><div class="service-list"><div><b>RTL Design</b><span>RTL development, optimization and implementation readiness.</span></div><div><b>Design Verification</b><span>SystemVerilog, UVM, functional verification, coverage and debug.</span></div><div><b>DFT</b><span>Scan, ATPG, MBIST, DFT verification and test coverage.</span></div><div><b>ASIC/SoC Implementation</b><span>Support across the RTL-to-GDSII lifecycle.</span></div></div></div></section>
-
-    <section id="about"><div class="container split"><div class="section-head"><p class="eyebrow">GLOBAL ENGINEERING DELIVERY</p><h2>Engineering Support for Global Teams</h2><p>Terasilicon IQ provides India-based semiconductor engineering support for global technology and semiconductor teams.</p></div><ul class="check-list"><li>India-based engineering team</li><li>Remote collaboration</li><li>Flexible engagement</li><li>Dedicated engineering teams</li><li>Scalable technical support</li></ul></div></section>
-
-    <section class="section-shade"><div class="container split"><div class="section-head"><p class="eyebrow">CONFIDENTIALITY</p><h2>Built for Confidential Engineering</h2><p>Semiconductor engineering involves sensitive IP, design information and product roadmaps. We understand the importance of confidentiality and controlled access.</p></div><ul class="check-list"><li>NDA-based engagements</li><li>Controlled access to project information</li><li>Confidentiality practices across the team</li><li>Secure engineering workflows</li></ul></div></section>
-
-    <section class="contact" id="contact"><div class="container"><p class="eyebrow">GET IN TOUCH</p><h2>Have an ASIC/SoC<br>Engineering Requirement?</h2><p>Tell us about your project, signoff challenge or engineering capacity requirement.</p><div class="actions"><a class="button" href="mailto:contact@terasiliconiq.com">Talk to our engineering team <b>→</b></a><a class="button button-ghost" href="#capabilities">View capabilities</a></div></div></section>
-    <section class="contact-details" aria-label="Contact and location details"><div class="container"><div class="contact-intro"><p>There is no better time than now</p><h2>Let’s <i>talk.</i></h2><a href="mailto:contact@terasiliconiq.com">Write to us <span>&rarr;</span></a></div><div><h3>Contact us</h3><a href="mailto:contact@terasiliconiq.com">&#9993;&nbsp; contact@terasiliconiq.com</a><a class="linkedin-link" href="https://www.linkedin.com/company/tera-silicon-iq-pvt-ltd/" target="_blank" rel="noopener noreferrer" aria-label="Visit Terasilicon IQ on LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 3H3.55A.55.55 0 0 0 3 3.55v16.9c0 .3.25.55.55.55h16.9c.3 0 .55-.25.55-.55V3.55A.55.55 0 0 0 20.45 3ZM8.34 18.34H5.66V9.72h2.68v8.62ZM7 8.54a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1Zm11.35 9.8h-2.67v-4.19c0-1 0-2.28-1.39-2.28-1.4 0-1.6 1.09-1.6 2.2v4.27h-2.67V9.72h2.56v1.18h.04c.36-.68 1.23-1.39 2.53-1.39 2.71 0 3.2 1.78 3.2 4.1v4.73Z"/></svg><span>Follow us on LinkedIn</span></a><a href="#contact">Partner with Terasilicon IQ &rarr;</a></div><div><h3>Our location</h3><a class="location-link" href="https://share.google/JlaKoklWRbZiwAswa" target="_blank" rel="noopener noreferrer" aria-label="Open our location in Google Maps"><img src="assets/terasilicon-iq-symbol.png" alt="" aria-hidden="true"><span>KIADB plot#8, 1st cross, Sadaramangala road, Mahadevapura post, Bengaluru, Karnataka, 560048, India</span></a><p>India-based semiconductor engineering support for global teams.</p><a class="map-link" href="https://share.google/JlaKoklWRbZiwAswa" target="_blank" rel="noopener noreferrer">Open in Google Maps &nearr;</a></div></div></section>
-  </main>
-  <script src="flow-animation.js"></script>
-  <script src="script.js"></script>
-  <footer><div class="container"><a class="site-brand" href="#home"><img src="assets/terasilicon-iq-symbol.png" alt=""><span>TERASILICON <b>IQ</b><small>ENGINEERING THE FUTURE OF SILICON</small></span></a><p>© 2026 Terasilicon IQ Private Limited. All rights reserved.</p></div></footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terasilicon IQ provides signoff-driven ASIC and SoC semiconductor engineering services.">
+    <title>
+      Terasilicon IQ | Signoff-Driven Semiconductor Engineering
+    </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="site-refresh.css">
+    <link rel="stylesheet" href="layout-fixes.css">
+    <link rel="stylesheet" href="contact-panel-fix.css">
+    <link rel="stylesheet" href="mobile-nav.css">
+    <link rel="stylesheet" href="page-polish.css">
+    <link rel="stylesheet" href="flow.css">
+    <link rel="stylesheet" href="flow-fix.css">
+    <link rel="stylesheet" href="footer-layout.css">
+    <link rel="stylesheet" href="capability-pages.css">
+    <style>
+      .mail-link{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      }
+      .mail-link img{
+      width:16px;
+      height:16px;
+      object-fit:contain;
+      flex:0 0 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="site-brand" href="#home" aria-label="Terasilicon IQ home">
+        <img src="assets/terasilicon-iq-symbol.png" alt="">
+        <span>
+          TERASILICON
+          <b>
+            IQ
+          </b>
+          <small>
+            ENGINEERING THE FUTURE OF SILICON
+          </small>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span>
+        </span>
+        <span>
+        </span>
+        <span>
+        </span>
+      </button>
+      <nav aria-label="Primary navigation">
+        <a href="#home">
+          Home
+        </a>
+        <a href="#signoff">
+          Signoff
+        </a>
+        <a href="#capabilities">
+          Capabilities
+        </a>
+        <a href="#solutions">
+          Solutions
+        </a>
+        <a href="#about">
+          About
+        </a>
+        <a class="nav-cta" href="#contact">
+          Talk to our team
+          <b>
+            →
+          </b>
+        </a>
+      </nav>
+    </header>
+    <main id="home">
+      <section class="hero">
+        <video autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+          <source src="assets/tsiq-hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay">
+        </div>
+        <div class="container hero-content">
+          <p class="eyebrow">
+            SEMICONDUCTOR ENGINEERING SERVICES
+          </p>
+          <h1>
+            Signoff-Driven
+            <br>
+            Semiconductor Engineering
+          </h1>
+          <p class="hero-sub">
+            FORMAL VERIFICATION
+            <i>
+              |
+            </i>
+            STA &amp; TIMING CLOSURE
+            <i>
+              |
+            </i>
+            EMIR &amp; POWER INTEGRITY
+            <i>
+              |
+            </i>
+            PHYSICAL DESIGN &amp; SIGNOFF
+          </p>
+          <p class="hero-copy">
+            Specialized ASIC/SoC engineering support for semiconductor companies worldwide.
+          </p>
+          <div class="actions">
+            <a class="button" href="#contact">
+              Discuss your engineering requirement
+              <b>
+                →
+              </b>
+            </a>
+            <a class="button button-ghost" href="#signoff">
+              Explore our capabilities →
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="flow-section" aria-labelledby="flow-title">
+        <div class="container">
+          <h2 class="visually-hidden" id="flow-title">
+            ASIC implementation flow
+          </h2>
+          <div class="flow-row">
+            <div>
+              RTL
+            </div>
+            <i>
+            </i>
+            <div>
+              Synthesis
+            </div>
+            <i>
+            </i>
+            <div>
+              Floorplan
+            </div>
+            <i>
+            </i>
+            <div>
+              Placement
+            </div>
+            <i>
+            </i>
+            <div>
+              CTS
+            </div>
+            <i>
+            </i>
+            <div>
+              Routing
+            </div>
+            <i>
+            </i>
+            <div>
+              STA
+            </div>
+            <i>
+            </i>
+            <div>
+              EMIR
+            </div>
+            <i>
+            </i>
+            <div>
+              Physical
+              <br>
+              Verification
+            </div>
+            <i>
+            </i>
+            <div class="terminal">
+              Signoff
+            </div>
+          </div>
+          <p>
+            Formal Verification runs as a
+            <strong>
+              parallel functional signoff track
+            </strong>
+            across the implementation flow.
+          </p>
+        </div>
+      </section>
+      <section id="signoff">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">
+              CORE FOCUS
+            </p>
+            <h2>
+              Signoff Is Our Core
+            </h2>
+            <p>
+              Terasilicon IQ focuses on engineering activities that become critical as ASIC/SoC designs move toward closure and signoff.
+            </p>
+          </div>
+          <div class="grid four">
+            <article class="card core">
+              <span>
+                01
+              </span>
+              <h3>
+                Formal Verification
+              </h3>
+              <p>
+                Analyze functional correctness. Find corner cases. Accelerate verification closure.
+              </p>
+              <ul>
+                <li>
+                  Property Checking
+                </li>
+                <li>
+                  Assertion-Based Verification
+                </li>
+                <li>
+                  Formal Debug
+                </li>
+                <li>
+                  Counterexample Analysis
+                </li>
+                <li>
+                  Equivalence
+                </li>
+                <li>
+                  Convergence Support
+                </li>
+              </ul>
+            </article>
+            <article class="card core">
+              <span>
+                02
+              </span>
+              <h3>
+                STA &amp; Timing Closure
+              </h3>
+              <p>
+                Analyze. Debug. Optimize. Close.
+              </p>
+              <ul>
+                <li>
+                  SDC
+                </li>
+                <li>
+                  MCMM
+                </li>
+                <li>
+                  Setup / Hold
+                </li>
+                <li>
+                  Timing Analysis
+                </li>
+                <li>
+                  Critical Paths
+                </li>
+                <li>
+                  Timing Closure
+                </li>
+              </ul>
+            </article>
+            <article class="card core">
+              <span>
+                03
+              </span>
+              <h3>
+                EMIR &amp; Power Integrity
+              </h3>
+              <p>
+                Analyze power integrity and support EM/IR closure.
+              </p>
+              <ul>
+                <li>
+                  Static IR
+                </li>
+                <li>
+                  Dynamic IR
+                </li>
+                <li>
+                  Electromigration
+                </li>
+                <li>
+                  Power Integrity
+                </li>
+                <li>
+                  Violation Analysis
+                </li>
+                <li>
+                  Closure Support
+                </li>
+              </ul>
+            </article>
+            <article class="card core">
+              <span>
+                04
+              </span>
+              <h3>
+                Physical Design &amp; Signoff
+              </h3>
+              <p>
+                Drive implementation toward signoff.
+              </p>
+              <ul>
+                <li>
+                  Floorplanning
+                </li>
+                <li>
+                  Placement
+                </li>
+                <li>
+                  CTS
+                </li>
+                <li>
+                  Routing
+                </li>
+                <li>
+                  Optimization
+                </li>
+                <li>
+                  Physical Closure
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section-shade" id="capabilities">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">
+              CAPABILITIES
+            </p>
+            <h2>
+              Our Engineering Capabilities
+            </h2>
+            <p>
+              Engineering support across the RTL-to-GDSII lifecycle.
+            </p>
+          </div>
+          <div class="capabilities">
+            <a class="capability-row" href="formal-verification.html">
+              <b>Formal Verification</b>
+              <span>Property Checking, Equivalence, Formal Debug, Convergence Support</span>
+              <strong aria-hidden="true">→</strong>
+            </a>
+            <a class="capability-row" href="sta-timing-closure.html">
+              <b>STA &amp; Timing Closure</b>
+              <span>SDC, MCMM, Setup/Hold, Critical Path Analysis, Timing Closure</span>
+              <strong aria-hidden="true">→</strong>
+            </a>
+            <a class="capability-row" href="emir-power-integrity.html">
+              <b>EMIR &amp; Power Integrity</b>
+              <span>Static/Dynamic IR, Electromigration, Violation Analysis, Closure Support</span>
+              <strong aria-hidden="true">→</strong>
+            </a>
+            <a class="capability-row" href="physical-design-signoff.html">
+              <b>Physical Design &amp; Signoff</b>
+              <span>Floorplanning, Placement, CTS, Routing, Optimization, Physical Closure</span>
+              <strong aria-hidden="true">→</strong>
+            </a>
+            <a class="capability-row" href="rtl-dv-dft.html">
+              <b>RTL, Design Verification &amp; DFT</b>
+              <span>RTL development, SystemVerilog, UVM, coverage, scan, ATPG and MBIST</span>
+              <strong aria-hidden="true">→</strong>
+            </a>
+            <a class="capability-row" href="physical-verification.html">
+              <b>Physical Verification</b>
+              <span>DRC, LVS support, layout debugging and physical closure</span>
+              <strong aria-hidden="true">→</strong>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="solutions">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">
+              HOW WE WORK
+            </p>
+            <h2>
+              How We Work With Semiconductor Teams
+            </h2>
+          </div>
+          <div class="grid four">
+            <article class="card">
+              <span>
+                MODEL 01
+              </span>
+              <h3>
+                Focused Signoff Support
+              </h3>
+              <p>
+                For a specific Formal, STA, EMIR or Physical Design requirement.
+              </p>
+            </article>
+            <article class="card">
+              <span>
+                MODEL 02
+              </span>
+              <h3>
+                Project-Based Engineering
+              </h3>
+              <p>
+                A defined technical scope with milestones and deliverables.
+              </p>
+            </article>
+            <article class="card">
+              <span>
+                MODEL 03
+              </span>
+              <h3>
+                Dedicated Engineering Team
+              </h3>
+              <p>
+                Engineering capacity built around your project requirements.
+              </p>
+            </article>
+            <article class="card">
+              <span>
+                MODEL 04
+              </span>
+              <h3>
+                Engineering Extension
+              </h3>
+              <p>
+                Long-term collaboration where Terasilicon IQ operates as an extension of your internal engineering organization.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section-shade">
+        <div class="container split">
+          <div class="section-head">
+            <p class="eyebrow">
+              BEYOND SIGNOFF
+            </p>
+            <h2>
+              Broader ASIC/SoC Engineering Services
+            </h2>
+            <p>
+              While signoff is our primary engineering focus, we provide broader ASIC/SoC capabilities based on customer requirements.
+            </p>
+          </div>
+          <div class="service-list">
+            <div>
+              <b>
+                RTL Design
+              </b>
+              <span>
+                RTL development, optimization and implementation readiness.
+              </span>
+            </div>
+            <div>
+              <b>
+                Design Verification
+              </b>
+              <span>
+                SystemVerilog, UVM, functional verification, coverage and debug.
+              </span>
+            </div>
+            <div>
+              <b>
+                DFT
+              </b>
+              <span>
+                Scan, ATPG, MBIST, DFT verification and test coverage.
+              </span>
+            </div>
+            <div>
+              <b>
+                ASIC/SoC Implementation
+              </b>
+              <span>
+                Support across the RTL-to-GDSII lifecycle.
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container split">
+          <div class="section-head">
+            <p class="eyebrow">
+              GLOBAL ENGINEERING DELIVERY
+            </p>
+            <h2>
+              Engineering Support for Global Teams
+            </h2>
+            <p>
+              Terasilicon IQ provides India-based semiconductor engineering support for global technology and semiconductor teams.
+            </p>
+          </div>
+          <ul class="check-list">
+            <li>
+              India-based engineering team
+            </li>
+            <li>
+              Remote collaboration
+            </li>
+            <li>
+              Flexible engagement
+            </li>
+            <li>
+              Dedicated engineering teams
+            </li>
+            <li>
+              Scalable technical support
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="section-shade">
+        <div class="container split">
+          <div class="section-head">
+            <p class="eyebrow">
+              CONFIDENTIALITY
+            </p>
+            <h2>
+              Built for Confidential Engineering
+            </h2>
+            <p>
+              Semiconductor engineering involves sensitive IP, design information and product roadmaps. We understand the importance of confidentiality and controlled access.
+            </p>
+          </div>
+          <ul class="check-list">
+            <li>
+              NDA-based engagements
+            </li>
+            <li>
+              Controlled access to project information
+            </li>
+            <li>
+              Confidentiality practices across the team
+            </li>
+            <li>
+              Secure engineering workflows
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <div class="container">
+          <p class="eyebrow">
+            GET IN TOUCH
+          </p>
+          <h2>
+            Have an ASIC/SoC
+            <br>
+            Engineering Requirement?
+          </h2>
+          <p>
+            Tell us about your project, signoff challenge or engineering capacity requirement.
+          </p>
+          <div class="actions">
+            <a class="button" href="mailto:hr@terasiliconiq.com">
+              Talk to our engineering team
+              <b>
+                →
+              </b>
+            </a>
+            <a class="button button-ghost" href="#capabilities">
+              View capabilities
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="contact-details" aria-label="Contact, location and engineering services">
+        <div class="container footer-grid">
+          <div class="contact-intro">
+            <p>
+              There is no better time than now
+            </p>
+            <h2>
+              Let’s
+              <i>
+                talk.
+              </i>
+            </h2>
+            <a href="mailto:hr@terasiliconiq.com">
+              Start a conversation
+              <span>
+                &rarr;
+              </span>
+            </a>
+          </div>
+          <div class="footer-column">
+            <h3>
+              Contact us
+            </h3>
+            <a class="mail-link" href="mailto:hr@terasiliconiq.com">
+              <img src="assets/mail-logo.png" alt="" aria-hidden="true">
+              <span>
+                hr@terasiliconiq.com
+              </span>
+            </a>
+            <a class="linkedin-link" href="https://www.linkedin.com/company/tera-silicon-iq-pvt-ltd/" target="_blank" rel="noopener noreferrer" aria-label="Visit Terasilicon IQ on LinkedIn">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.45 3H3.55A.55.55 0 0 0 3 3.55v16.9c0 .3.25.55.55.55h16.9c.3 0 .55-.25.55-.55V3.55A.55.55 0 0 0 20.45 3ZM8.34 18.34H5.66V9.72h2.68v8.62ZM7 8.54a1.55 1.55 0 1 1 0-3.1 1.55 1.55 0 0 1 0 3.1Zm11.35 9.8h-2.67v-4.19c0-1 0-2.28-1.39-2.28-1.4 0-1.6 1.09-1.6 2.2v4.27h-2.67V9.72h2.56v1.18h.04c.36-.68 1.23-1.39 2.53-1.39 2.71 0 3.2 1.78 3.2 4.1v4.73Z"/>
+              </svg>
+              <span>
+                Follow us on LinkedIn
+              </span>
+            </a>
+            <a href="#contact">
+              Partner with Terasilicon IQ &rarr;
+            </a>
+          </div>
+          <div class="footer-column">
+            <h3>
+              Our location
+            </h3>
+            <a class="location-link" href="https://share.google/JlaKoklWRbZiwAswa" target="_blank" rel="noopener noreferrer" aria-label="Open our location in Google Maps">
+              <img src="assets/maps-logo.png" alt="" aria-hidden="true">
+              <span>
+                Nandi InfoTech, 1st cross, Sadaramangala road, Mahadevapura post, Bengaluru, Karnataka, 560048, India
+              </span>
+            </a>
+            <a class="map-link" href="https://share.google/JlaKoklWRbZiwAswa" target="_blank" rel="noopener noreferrer">
+              Open in Google Maps &nearr;
+            </a>
+          </div>
+          <nav class="footer-column footer-directory" aria-label="Engineering services">
+            <h3>
+              Engineering Services
+            </h3>
+            <a href="#signoff">
+              Formal Verification
+            </a>
+            <a href="#signoff">
+              STA &amp; Timing Closure
+            </a>
+            <a href="#signoff">
+              EMIR &amp; Power Integrity
+            </a>
+            <a href="#signoff">
+              Physical Design &amp; Signoff
+            </a>
+          </nav>
+          <nav class="footer-column footer-directory" aria-label="Additional services and training">
+            <h3>
+              Services
+            </h3>
+            <a href="#capabilities">
+              RTL
+            </a>
+            <a href="#capabilities">
+              Design Verification
+            </a>
+            <a href="#capabilities">
+              DFT
+            </a>
+            <a href="#capabilities">
+              Physical Verification
+            </a>
+            <a href="#capabilities">
+              ASIC/SoC Implementation
+            </a>
+            <h3 class="training-heading">
+              Training
+            </h3>
+            <a href="#contact">
+              TSIQ VLSI Finishing School
+            </a>
+          </nav>
+        </div>
+      </section>
+    </main>
+    <script src="flow-animation.js">
+    </script>
+    <script src="script.js">
+    </script>
+    <footer class="site-footer">
+      <div class="container footer-bottom">
+        <a class="site-brand" href="#home">
+          <img src="assets/terasilicon-iq-symbol.png" alt="">
+          <span>
+            TERASILICON
+            <b>
+              IQ
+            </b>
+            <small>
+              ENGINEERING THE FUTURE OF SILICON
+            </small>
+          </span>
+        </a>
+        <p>
+          &copy; 2026 Terasilicon IQ Private Limited. All rights reserved.
+        </p>
+        <div aria-label="Legal information">
+          <span>
+            Privacy Policy
+          </span>
+          <span>
+            Terms of Use
+          </span>
+          <span>
+            Cookie Policy
+          </span>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

@@ -1,5 +1,4 @@
 const flowStages = document.querySelectorAll('.flow-row > div');
-const flowLines = document.querySelectorAll('.flow-row > i');
 const flowSection = document.querySelector('.flow-section');
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -9,28 +8,20 @@ if (flowStages.length && flowSection) {
 
   const updateFlow = () => {
     flowStages.forEach((stage, index) => {
+      // Keep every completed/current implementation stage active.
+      // The terminal Signoff stage remains visually distinct.
       const isSignoff = stage.classList.contains('terminal');
-
-      stage.classList.remove('flow-active', 'flow-current');
-
-      if (isSignoff) {
-        stage.classList.add('flow-active');
-      } else if (index < currentStage) {
-        stage.classList.add('flow-active');
-      } else if (index === currentStage) {
-        stage.classList.add('flow-current');
-      }
+      stage.classList.toggle(
+        'flow-active',
+        !isSignoff && index <= currentStage
+      );
     });
 
-    flowLines.forEach((line, index) => {
-      line.classList.toggle('flow-line-active', index < currentStage);
-    });
-
-    currentStage += 1;
-
-    // Cycle through RTL -> ... -> Physical Verification.
-    // Signoff remains the fixed orange terminal endpoint.
-    if (currentStage >= flowStages.length - 1) {
+    // Stop on Physical Verification, then restart from RTL.
+    // This keeps Signoff as the fixed terminal endpoint.
+    if (currentStage < flowStages.length - 2) {
+      currentStage += 1;
+    } else {
       currentStage = 0;
     }
   };

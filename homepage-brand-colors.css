@@ -1,0 +1,248 @@
+/* =====================================================
+         TERASILICON IQ BRAND COLORS — HOMEPAGE
+         Primary: deep navy
+         Accent: logo orange
+         Supporting: warm off-white
+         ===================================================== */
+
+      :root {
+        --brand-navy: #111936;
+        --brand-navy-soft: #26325c;
+        --brand-orange: #ff7a00;
+        --brand-orange-soft: #fff1e3;
+        --brand-paper: #f7f5ef;
+        --brand-white: #ffffff;
+        --brand-line: #d9d5cd;
+        --brand-muted: #66718a;
+      }
+
+      /* Main identity */
+      body {
+        color: var(--brand-navy);
+        background: var(--brand-paper);
+      }
+
+      .site-header {
+        background: var(--brand-white);
+        border-bottom-color: var(--brand-line);
+      }
+
+      .site-brand,
+      .site-brand span {
+        color: var(--brand-navy);
+      }
+
+      .site-brand b {
+        color: var(--brand-orange);
+      }
+
+      /* Navigation */
+      .site-header nav a {
+        color: var(--brand-navy);
+      }
+
+      .site-header nav a::after {
+        background: var(--brand-orange);
+      }
+
+      .site-header nav a:hover,
+      .site-header nav a:focus-visible {
+        color: var(--brand-orange);
+      }
+
+      .site-header .nav-cta {
+        border-color: var(--brand-orange);
+        color: var(--brand-navy);
+      }
+
+      .site-header .nav-cta:hover,
+      .site-header .nav-cta:focus-visible {
+        background: var(--brand-orange);
+        border-color: var(--brand-orange);
+        color: var(--brand-navy);
+      }
+
+      /* Hero */
+      .hero .eyebrow,
+      .section-head .eyebrow,
+      .contact .eyebrow {
+        color: var(--brand-orange);
+      }
+
+      .hero h1,
+      section h2,
+      section h3 {
+        color: var(--brand-navy);
+      }
+
+      .hero-copy,
+      .section-head > p:last-child,
+      .card p,
+      .capabilities span,
+      .service-list span,
+      .check-list {
+        color: var(--brand-muted);
+      }
+
+      /* Primary actions */
+      .button {
+        background: var(--brand-orange);
+        border-color: var(--brand-orange);
+        color: var(--brand-navy);
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        background: var(--brand-navy);
+        border-color: var(--brand-navy);
+        color: var(--brand-white);
+      }
+
+      .button.button-ghost {
+        background: transparent;
+        border-color: var(--brand-navy);
+        color: var(--brand-navy);
+      }
+
+      .button.button-ghost:hover,
+      .button.button-ghost:focus-visible {
+        background: var(--brand-navy);
+        border-color: var(--brand-navy);
+        color: var(--brand-white);
+      }
+
+      /* ASIC flow */
+      .flow-section {
+        background: var(--brand-white);
+        border-color: var(--brand-line);
+      }
+
+      .flow-row > div {
+        color: var(--brand-muted);
+      }
+
+      .flow-row > div::before {
+        border-color: var(--brand-line);
+      }
+
+      .flow-row > i {
+        background: var(--brand-line);
+      }
+
+      .flow-row > .terminal {
+        color: var(--brand-orange);
+        border-color: var(--brand-orange);
+      }
+
+      .flow-section strong {
+        color: var(--brand-orange);
+      }
+
+      /* Section surfaces */
+      .section-shade {
+        background: #efede7;
+      }
+
+      .card,
+      .capabilities,
+      .service-list {
+        border-color: var(--brand-line);
+      }
+
+      .card {
+        background: var(--brand-white);
+      }
+
+      .card > span {
+        color: var(--brand-orange);
+      }
+
+      .card h3,
+      .capabilities b,
+      .service-list b {
+        color: var(--brand-navy);
+      }
+
+      .card li::before,
+      .check-list li::before {
+        color: var(--brand-orange);
+      }
+
+      /* Links throughout the page */
+      main a {
+        color: var(--brand-navy);
+      }
+
+      main a:hover,
+      main a:focus-visible {
+        color: var(--brand-orange);
+      }
+
+      /* Contact CTA */
+      .contact {
+        background: #eeebf7;
+      }
+
+      .contact h2 {
+        color: var(--brand-navy);
+      }
+
+      /* Footer/contact details */
+      .contact-details {
+        background: var(--brand-white);
+        border-top-color: var(--brand-line);
+      }
+
+      .contact-details h3,
+      .footer-directory h3 {
+        color: var(--brand-navy);
+      }
+
+      .contact-intro h2 {
+        color: var(--brand-navy);
+      }
+
+      .contact-intro a,
+      .footer-column a,
+      .map-link {
+        color: var(--brand-navy);
+      }
+
+      .contact-intro a:hover,
+      .footer-column a:hover,
+      .map-link:hover {
+        color: var(--brand-orange);
+      }
+
+      .site-footer {
+        background: var(--brand-navy);
+        color: var(--brand-white);
+        border-top-color: var(--brand-navy);
+      }
+
+      .site-footer .site-brand,
+      .site-footer .site-brand span,
+      .site-footer p,
+      .site-footer div {
+        color: var(--brand-white);
+      }
+
+      .site-footer .site-brand b {
+        color: var(--brand-orange);
+      }
+
+      /* Mobile menu */
+      .menu-toggle span {
+        background: var(--brand-navy);
+      }
+
+      .menu-toggle:hover span {
+        background: var(--brand-orange);
+      }
+
+      @media (max-width: 800px) {
+        .site-header nav a:hover,
+        .site-header nav a:focus-visible {
+          color: var(--brand-orange);
+        }
+      }

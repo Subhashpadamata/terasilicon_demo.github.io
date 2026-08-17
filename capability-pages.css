@@ -1,0 +1,742 @@
+/* =========================================================
+   TERASILICON IQ — CAPABILITY LINK ROWS
+   ========================================================= */
+
+.capability-links {
+  display: grid;
+  gap: 0;
+  border: 1px solid var(--line);
+  background: var(--white);
+}
+
+.capability-row {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(260px, 0.75fr) minmax(0, 1.65fr) 34px;
+  align-items: center;
+  min-height: 76px;
+  padding: 18px 24px 18px 30px;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink);
+  text-decoration: none;
+  transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    padding-left 0.28s ease;
+}
+
+.capability-row:last-child {
+  border-bottom: 0;
+}
+
+.capability-row::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: var(--violet);
+  transform: scaleY(0);
+  transform-origin: center;
+  transition: transform 0.28s ease;
+}
+
+.capability-row b {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.capability-row span {
+  color: #68708b;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.capability-row strong {
+  justify-self: end;
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid var(--line);
+  color: var(--violet);
+  font-size: 16px;
+  font-weight: 500;
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.capability-row:hover {
+  padding-left: 36px;
+  background: #faf8fc;
+}
+
+.capability-row:hover::before,
+.capability-row:focus-visible::before {
+  transform: scaleY(1);
+}
+
+.capability-row:hover strong,
+.capability-row:focus-visible strong {
+  transform: translateX(4px);
+  background: var(--violet);
+  border-color: var(--violet);
+  color: #fff;
+}
+
+.capability-row:focus-visible {
+  outline: 2px solid var(--violet);
+  outline-offset: -2px;
+}
+
+@media (max-width: 760px) {
+  .capability-row {
+    grid-template-columns: 1fr 30px;
+    gap: 8px 16px;
+    min-height: 82px;
+  }
+
+  .capability-row span {
+    grid-column: 1 / -1;
+    grid-row: 2;
+  }
+
+  .capability-row strong {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
+/* =========================================================
+   DEDICATED CAPABILITY PAGES
+   ========================================================= */
+
+.capability-page {
+  min-height: 100vh;
+  padding: 150px 0 90px;
+  background: var(--paper);
+}
+
+.capability-hero {
+  max-width: 900px;
+  margin-bottom: 54px;
+}
+
+.capability-hero .eyebrow {
+  color: var(--violet);
+}
+
+.capability-hero h1 {
+  max-width: 900px;
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(42px, 5.5vw, 72px);
+  line-height: 1;
+  letter-spacing: -3px;
+  text-transform: uppercase;
+}
+
+.capability-hero p {
+  max-width: 720px;
+  margin: 24px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.capability-content {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.capability-panel {
+  padding: 34px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.capability-panel h2 {
+  margin: 0 0 24px;
+  font-size: 25px;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+}
+
+.capability-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.capability-list li {
+  position: relative;
+  padding: 16px 0 16px 27px;
+  border-top: 1px solid var(--line);
+  color: #59617a;
+  font-size: 14px;
+}
+
+.capability-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--violet);
+  font-weight: 700;
+}
+
+.capability-side {
+  padding-top: 5px;
+}
+
+.capability-side .eyebrow {
+  color: var(--violet);
+}
+
+.capability-side h2 {
+  margin: 10px 0 18px;
+  font-size: clamp(30px, 3vw, 44px);
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.capability-side p {
+  margin: 0 0 24px;
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.capability-actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.capability-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 18px;
+  border: 1px solid var(--violet);
+  color: var(--violet);
+  text-decoration: none;
+  font: 12px "IBM Plex Mono", monospace;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.capability-back:hover {
+  background: var(--violet);
+  color: #fff;
+}
+
+@media (max-width: 800px) {
+  .capability-page {
+    padding: 125px 0 65px;
+  }
+
+  .capability-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .capability-panel {
+    padding: 25px;
+  }
+}
+
+
+/* =========================================================
+   CAPABILITY SUB-PAGES — CONTENT + FOOTER SPACING
+   ========================================================= */
+
+.capability-page {
+  padding-bottom: 150px !important;
+}
+
+/* Extra breathing room before the footer when the shared footer
+   is present on a capability page. */
+.capability-page + .contact-details,
+.capability-page ~ .contact-details {
+  margin-top: 90px;
+}
+
+.capability-detail {
+  margin-top: 80px;
+  padding-top: 75px;
+  border-top: 1px solid var(--line);
+}
+
+.capability-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.capability-detail h2 {
+  margin: 0 0 20px;
+  color: var(--ink);
+  font-size: clamp(28px, 3vw, 42px);
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+
+.capability-detail p {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.capability-detail .detail-eyebrow {
+  margin-bottom: 12px;
+  color: var(--violet);
+  font: 12px "IBM Plex Mono", monospace;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.capability-detail-list {
+  margin: 28px 0 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.capability-detail-list li {
+  padding: 16px 0 16px 28px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  color: #59617a;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.capability-detail-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--violet);
+  font-weight: 700;
+}
+
+.capability-use-cases {
+  margin-top: 80px;
+  padding: 42px;
+  background: var(--white);
+  border: 1px solid var(--line);
+}
+
+.capability-use-cases h2 {
+  margin: 0 0 28px;
+  font-size: clamp(26px, 2.8vw, 38px);
+  letter-spacing: -1.2px;
+  text-transform: uppercase;
+}
+
+.capability-use-case-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0;
+}
+
+.capability-use-case {
+  padding: 24px 28px;
+  border-top: 1px solid var(--line);
+}
+
+.capability-use-case:nth-child(odd) {
+  border-right: 1px solid var(--line);
+}
+
+.capability-use-case h3 {
+  margin: 0 0 10px;
+  color: var(--ink);
+  font-size: 16px;
+}
+
+.capability-use-case p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.capability-contact {
+  margin-top: 90px;
+  padding: 55px 40px;
+  background: #eeebf8;
+  text-align: center;
+}
+
+.capability-contact h2 {
+  margin: 0 auto 14px;
+  max-width: 780px;
+  color: var(--ink);
+  font-size: clamp(30px, 4vw, 52px);
+  line-height: 1.05;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.capability-contact p {
+  max-width: 650px;
+  margin: 0 auto 26px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 800px) {
+  .capability-page {
+    padding-bottom: 100px !important;
+  }
+
+  .capability-detail {
+    margin-top: 55px;
+    padding-top: 50px;
+  }
+
+  .capability-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .capability-use-cases {
+    margin-top: 55px;
+    padding: 28px 22px;
+  }
+
+  .capability-use-case-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capability-use-case:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .capability-contact {
+    margin-top: 60px;
+    padding: 42px 22px;
+  }
+}
+
+/* =========================================================
+   SUB-PAGE HEADER → CONTENT SPACING
+   Reduce the large blank area below the navigation.
+   ========================================================= */
+
+.capability-page {
+  padding-top: 72px !important;
+}
+
+/* Keep the hero comfortably separated from the navigation,
+   without the previous oversized blank area. */
+.capability-hero {
+  margin-top: 0 !important;
+}
+
+@media (max-width: 800px) {
+  .capability-page {
+    padding-top: 52px !important;
+  }
+}
+
+/* =========================================================
+   FORMAL VERIFICATION SUB-PAGE — FULL-WIDTH LAYOUT FIX
+   ========================================================= */
+
+.capability-page .container {
+  width: min(1480px, calc(100% - 96px));
+  max-width: 1480px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.capability-hero {
+  max-width: 1120px;
+}
+
+.capability-content {
+  width: 100%;
+  max-width: 1320px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+}
+
+.capability-detail {
+  width: 100%;
+}
+
+.capability-detail-grid {
+  width: 100%;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 72px;
+}
+
+.capability-use-cases {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.capability-contact {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Prevent the page from becoming a narrow left-side column. */
+.capability-page .capability-detail,
+.capability-page .capability-use-cases,
+.capability-page .capability-contact {
+  max-width: none;
+}
+
+/* More balanced vertical rhythm between major sections. */
+.capability-detail {
+  margin-top: 72px;
+  padding-top: 64px;
+}
+
+.capability-use-cases {
+  margin-top: 64px;
+}
+
+.capability-contact {
+  margin-top: 72px;
+  margin-bottom: 40px;
+}
+
+@media (max-width: 900px) {
+  .capability-page .container {
+    width: min(100% - 40px, 760px);
+  }
+
+  .capability-content,
+  .capability-detail-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+/* =========================================================
+   FORMAL VERIFICATION — TECHNICAL VISUALS
+   ========================================================= */
+
+.fv-visuals {
+  width: 100%;
+  margin-top: 82px;
+  padding-top: 70px;
+  border-top: 1px solid var(--line);
+}
+
+.fv-visual-intro {
+  max-width: 850px;
+  margin-bottom: 38px;
+}
+
+.fv-visual-intro h2 {
+  margin: 8px 0 18px;
+  color: var(--ink);
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: 1.03;
+  letter-spacing: -2px;
+  text-transform: uppercase;
+}
+
+.fv-visual-intro p:last-child {
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.fv-visual {
+  margin: 0;
+  padding: 0;
+  background: var(--white);
+  border: 1px solid var(--line);
+  overflow: hidden;
+}
+
+.fv-visual img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.fv-visual figcaption {
+  padding: 14px 18px 16px;
+  color: var(--muted);
+  font: 12px "IBM Plex Mono", monospace;
+  line-height: 1.5;
+}
+
+.fv-visual-wide {
+  margin-bottom: 28px;
+}
+
+.fv-visual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+}
+
+.fv-dark {
+  background: #111936;
+}
+
+.fv-dark figcaption {
+  color: #d8dbea;
+}
+
+@media (max-width: 800px) {
+  .fv-visuals {
+    margin-top: 60px;
+    padding-top: 50px;
+  }
+
+  .fv-visual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   FORMAL VERIFICATION — FULL-WIDTH SECTION LAYOUT
+   ========================================================= */
+
+.capability-page > .container {
+  width: min(1680px, calc(100% - 96px));
+  max-width: 1680px;
+}
+
+.capability-page .capability-content {
+  width: 100%;
+  max-width: none;
+}
+
+.capability-page .capability-detail {
+  width: 100%;
+  max-width: none;
+}
+
+.capability-page .fv-visuals {
+  width: 100%;
+  max-width: none;
+}
+
+.capability-page .fv-visual-intro {
+  max-width: 1050px;
+}
+
+.capability-page .fv-visual-wide {
+  width: 100%;
+}
+
+.capability-page .fv-visual-grid {
+  width: 100%;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.capability-page .capability-use-cases,
+.capability-page .capability-contact {
+  width: 100%;
+  max-width: none;
+}
+
+@media (max-width: 900px) {
+  .capability-page > .container {
+    width: min(100% - 40px, 760px);
+  }
+
+  .capability-page .capability-content,
+  .capability-page .capability-detail-grid,
+  .capability-page .fv-visual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================================================
+   FINAL FV PAGE SPACING + VISUAL CLEANUP
+   ========================================================= */
+
+/* The shared header is already in normal document flow. Do not reserve
+   another large header-sized blank area above the FV hero. */
+.capability-page {
+  padding-top: 72px !important;
+  padding-bottom: 32px !important;
+}
+
+/* Keep the opening content compact and intentional. */
+.capability-hero {
+  margin-bottom: 46px !important;
+}
+
+/* Bring the technical visual section into the page rhythm. */
+.capability-page .fv-visuals {
+  margin-top: 62px !important;
+  padding-top: 48px !important;
+}
+
+.capability-page .fv-visual-intro {
+  margin-bottom: 30px !important;
+}
+
+/* The flow diagram is a full-width technical feature, but not a giant
+   wall of empty space. */
+.capability-page .fv-visual-wide img {
+  width: 100%;
+  max-height: 560px;
+  object-fit: contain;
+}
+
+/* Keep the two supporting FV visuals balanced. */
+.capability-page .fv-visual-grid {
+  gap: 24px !important;
+  margin-top: 24px;
+}
+
+/* Remove the large blank area after the final CTA. */
+.capability-page .capability-contact {
+  margin-top: 64px !important;
+  margin-bottom: 0 !important;
+}
+
+/* Prevent an inherited min-height from producing a blank tail. */
+.capability-page {
+  min-height: auto !important;
+}
+
+@media (max-width: 800px) {
+  .capability-page {
+    padding-top: 48px !important;
+    padding-bottom: 24px !important;
+  }
+
+  .capability-page .fv-visuals {
+    margin-top: 48px !important;
+    padding-top: 38px !important;
+  }
+
+  .capability-page .fv-visual-wide img {
+    max-height: none;
+  }
+}
+
+/* Keep the FV flow illustration contained within its frame. */
+.fv-visual-wide {
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.fv-visual-wide img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
