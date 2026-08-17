@@ -14,6 +14,6 @@
 .contact-details .linkedin-link svg{width:18px;height:18px;fill:currentColor}
 .contact-details .location-link{display:flex;align-items:flex-start;gap:10px;color:var(--ink);font-weight:600;text-decoration:none;line-height:1.6}
 .contact-details .location-link:hover{color:var(--violet)}
-.contact-details .location-link img{width:24px;height:24px;flex:none;margin-top:2px;object-fit:contain}
+.contact-details .location-link img{display:block!important;width:28px!important;height:28px!important;max-width:28px!important;max-height:28px!important;flex:0 0 28px!important;margin-top:2px;object-fit:contain}
 .contact-details .location-link+p{margin-top:10px}
 .contact-details .map-link{display:inline-flex;margin-top:18px;color:var(--violet);font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
