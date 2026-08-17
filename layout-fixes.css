@@ -1,0 +1,24 @@
+/* Keep the desktop hero entirely inside the visible frame. */
+.hero{height:min(650px,calc(100vh - 82px));min-height:540px;overflow:hidden}
+.hero video{object-position:center center}
+.hero-content{padding:52px 0}
+
+/* The implementation flow advances one stage at a time. */
+.flow-row div:before{background:#fff;border-color:#aaa7b1;box-shadow:none}
+.flow-row div{color:#756e88}
+.flow-row div.flow-active:before{background:var(--teal);border-color:var(--teal);box-shadow:0 0 15px #14c9b055}
+.flow-row div.flow-active{color:#0c9d8a}
+.flow-row .terminal,.flow-row .terminal.flow-active{color:var(--ink)}
+
+/* Override the legacy static highlight so the sequence always begins at RTL. */
+.flow-row div:nth-child(-n+12):not(.flow-active):before{background:#fff;border-color:#aaa7b1;box-shadow:none}
+.flow-row div:nth-child(-n+12):not(.flow-active){color:#756e88}
+
+@media(max-width:900px){.hero{height:630px;min-height:0}}
+@media(max-width:580px){.hero{height:650px}.hero-content{padding:65px 0 70px}}
+
+/* Final contact panel */
+.contact-details{padding:72px 0;background:#291044;color:#fff;border:0;overflow:hidden;position:relative}
+.contact-details:before{content:"";position:absolute;width:500px;height:500px;border:1px solid #c5ef4c33;border-radius:50%;left:-310px;bottom:-390px}
+.contact-details .container{position:relative;display:grid;grid-template-columns:1.25fr 1fr 1.2fr;gap:7vw}
+.contact-details p{margin:0}.contact-details h2{margin:30px 0 34px;font-size:clamp(52px,5.5vw,78px);letter-spacing:-4px;line-height:.95}.contact-details h2 i{font-family:Georgia,serif;font-weight:400}.contact-details h3{margin:0 0 28px;font-size:17px;text-decoration:underline;text-underline-offset:5px}.contact-details a{display:block;margin:0 0 15px;color:#fff;font-size:15px;font-weight:600;text-decoration:none}.contact-details .contact-intro>p{color:#e2d9ea}.contact-details .contact-intro>a{font-size:18px;text-decoration:underline;text-underline-offset:5px}.contact-details .contact-intro>a span{margin-left:10px}.contact-details div:not(.contact-intro)>p{font-size:15px;line-height:1.8}.contact-details div:not(.contact-intro)>p b{color:var(--acid);font-size:12px;margin-right:10px}.contact-details div:not(.contact-intro)>p span{color:#ddd3e7}@media(max-width:700px){.contact-details .container{grid-template-columns:1fr;gap:42px}.contact-details h2{margin:20px 0 28px}}

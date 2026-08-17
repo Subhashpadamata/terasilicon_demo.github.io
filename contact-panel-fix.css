@@ -1,0 +1,14 @@
+/* A light close to the page instead of a separate dark visual block. */
+.contact-details{background:linear-gradient(135deg,#fff 0%,#f4f1fa 100%);color:var(--ink);border-top:1px solid #ded8e9;border-bottom:1px solid #ded8e9}
+.contact-details:before{border-color:#65359326}
+.contact-details h2{color:var(--ink)}
+.contact-details h3{color:var(--violet)}
+.contact-details a{color:var(--ink)}
+.contact-details a:hover{color:var(--violet)}
+.contact-details .contact-intro>p{color:var(--muted)}
+.contact-details .contact-intro>a{color:var(--violet)}
+.contact-details div:not(.contact-intro)>p{color:var(--ink)}
+.contact-details div:not(.contact-intro)>p b{color:var(--violet)}
+.contact-details div:not(.contact-intro)>p span{color:var(--muted)}
+.contact-details .linkedin-link{display:inline-flex;align-items:center;gap:8px;color:#0a66c2}
+.contact-details .linkedin-link svg{width:18px;height:18px;fill:currentColor}
