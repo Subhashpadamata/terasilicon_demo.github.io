@@ -1,3 +1,6 @@
+/* The menu button is only needed once the navigation collapses. */
+.menu-toggle{display:none}
+
 @media (max-width:900px){
   .site-header{height:72px;min-height:72px;padding:0 24px;gap:16px;align-items:center}
   .menu-toggle{display:grid;place-content:center;gap:5px;width:42px;height:42px;padding:0;border:1px solid var(--line);background:var(--white);color:var(--ink);cursor:pointer}
@@ -6,6 +9,12 @@
   .site-header nav.open{display:flex;flex-direction:column}
   .site-header nav a{padding:13px 0;font-size:14px;border-bottom:1px solid var(--line)}
   .site-header nav .nav-cta{margin-top:10px;padding:12px 14px;text-align:center;border:1px solid var(--violet)}
+}
+
+@media (min-width:901px){
+  .site-header .site-brand{gap:12px;font-size:19px;letter-spacing:-.5px}
+  .site-header .site-brand img{width:42px;height:42px}
+  .site-header .site-brand small{font-size:9px;letter-spacing:.13em}
 }
 
 @media (max-width:580px){
