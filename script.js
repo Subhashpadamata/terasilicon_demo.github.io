@@ -1,6 +1,6 @@
 const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.nav');
-const navItems = document.querySelectorAll('.nav > a:not(.nav-cta), .nav-dropdown');
+const nav = document.querySelector('.site-header nav');
+const navItems = document.querySelectorAll('.site-header nav > a:not(.nav-cta), .nav-dropdown');
 const dropdowns = document.querySelectorAll('.nav-dropdown');
 
 const closeDropdowns = () => {
@@ -39,7 +39,7 @@ dropdowns.forEach(dropdown => {
   });
 });
 
-document.querySelectorAll('.nav > a').forEach(link => {
+document.querySelectorAll('.site-header nav > a').forEach(link => {
   link.addEventListener('click', () => {
     navItems.forEach(item => item.classList.remove('active'));
     link.classList.add('active');
