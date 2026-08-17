@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site-refresh.css">
-  <link rel="stylesheet" href="layout-fixes.css">
-  <link rel="stylesheet" href="contact-panel-fix.css">
-  <link rel="stylesheet" href="mobile-nav.css">
-  <link rel="stylesheet" href="page-polish.css">
-  <link rel="stylesheet" href="flow.css">
-  <link rel="stylesheet" href="footer-layout.css">
-  <link rel="stylesheet" href="capability-pages.css">
-  <link rel="stylesheet" href="nav-active.css">
-</head>
+    <link rel="stylesheet" href="css/01-core.css">
+    <link rel="stylesheet" href="css/02-layout.css">
+    <link rel="stylesheet" href="css/03-contact.css">
+    <link rel="stylesheet" href="css/04-header.css">
+    <link rel="stylesheet" href="css/05-footer.css">
+    <link rel="stylesheet" href="css/06-capabilities.css">
+    <link rel="stylesheet" href="css/07-navigation.css">
+    <link rel="stylesheet" href="css/08-flow.css">
+    <link rel="stylesheet" href="css/09-utilities.css">
+  </head>
 <body>
   <header class="site-header">
     <a class="site-brand" href="index.html#home" aria-label="Terasilicon IQ home">
@@ -43,24 +43,19 @@
     <div class="container">
       <div class="capability-hero">
         <p class="eyebrow">TERASILICON IQ / CAPABILITY</p>
-        <h1>STA & Timing Closure</h1>
+        <h1>STA &amp; Timing Closure</h1>
         <p>SDC, MCMM, Setup/Hold, Critical Path Analysis, Timing Closure.</p>
       </div>
 
       <div class="capability-content">
         <section class="capability-panel">
           <h2>Engineering Scope</h2>
-          <ul class="capability-list">
-              <li>SDC constraint development and review</li>
-              <li>MCMM scenario analysis</li>
-              <li>Setup and hold timing analysis</li>
-              <li>Critical path analysis and timing closure</li>
-          </ul>
+          <ul class="capability-list"><li>SDC constraint analysis and timing intent review</li><li>MCMM scenario analysis and timing debug</li><li>Setup and hold violation analysis</li><li>Critical path identification and timing closure support</li></ul>
         </section>
 
         <section class="capability-side">
           <p class="eyebrow">SIGNOFF-DRIVEN ENGINEERING</p>
-          <h2>STA & Timing Closure</h2>
+          <h2>STA &amp; Timing Closure</h2>
           <p>
             Terasilicon IQ provides focused semiconductor engineering support
             for teams moving from implementation through verification,
@@ -71,19 +66,20 @@
             <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
           </div>
         </section>
+      </div>
 
       <section class="capability-detail">
         <div class="capability-detail-grid">
           <div>
             <p class="detail-eyebrow">ENGINEERING APPROACH</p>
             <h2>What we provide</h2>
-            <p>Static Timing Analysis evaluates whether the design meets timing requirements across operating modes and corners. Timing closure combines constraints, path analysis and implementation feedback to systematically remove setup and hold violations.</p>
+            <p>Formal verification uses mathematical proof to exhaustively analyze RTL behavior against intended properties and design intent. It is especially useful for finding corner-case failures that simulation may miss and for building high confidence before signoff.</p>
             <ul class="capability-detail-list">
-            <li>SDC constraint development, review and consistency checks.</li>
-            <li>MCMM analysis across required modes, corners and operating conditions.</li>
-            <li>Setup and hold analysis with critical-path investigation.</li>
-            <li>Timing violation classification and root-cause analysis.</li>
-            <li>Closure support through implementation and optimization iterations.</li>
+            <li>Assertion-based property verification for control, protocol and safety behavior.</li>
+            <li>Sequential and combinational equivalence checking for RTL, revised RTL and implementation changes.</li>
+            <li>Counterexample-driven debug to isolate the failing state, sequence and root cause.</li>
+            <li>Assumption and constraint development to model legal operating environments without hiding real bugs.</li>
+            <li>Proof convergence support using abstraction, decomposition, coverage and proof-depth analysis.</li>
             </ul>
           </div>
 
@@ -109,26 +105,27 @@
           <h2>Typical engineering needs</h2>
           <div class="capability-use-case-grid">
             <article class="capability-use-case">
-              <h3>Constraint quality</h3>
-              <p>Build and review timing constraints so analysis represents the intended design behavior.</p>
+              <h3>Block-level signoff</h3>
+              <p>Prove critical control and datapath behavior before integration.</p>
             </article>
             <article class="capability-use-case">
-              <h3>Critical paths</h3>
-              <p>Identify the paths with the greatest timing impact and prioritize closure work.</p>
+              <h3>SoC integration</h3>
+              <p>Check interface assumptions and cross-block behavior at system boundaries.</p>
             </article>
             <article class="capability-use-case">
-              <h3>MCMM closure</h3>
-              <p>Track timing across multiple scenarios instead of optimizing one corner in isolation.</p>
+              <h3>RTL changes</h3>
+              <p>Re-run focused proofs after ECOs, feature changes and bug fixes.</p>
             </article>
             <article class="capability-use-case">
-              <h3>Signoff readiness</h3>
-              <p>Support final timing checks and closure evidence before release.</p>
+              <h3>Signoff confidence</h3>
+              <p>Provide formal evidence for corner cases that are difficult to reach with simulation.</p>
             </article>
           </div>
         </div>
 
+
         <section class="capability-contact">
-          <h2>Have a what we provide requirement?</h2>
+          <h2>Have a STA &amp; Timing Closure requirement?</h2>
           <p>
             Tell us what you are trying to close, verify or implement and we
             can discuss the engineering support that fits your project.
@@ -136,11 +133,8 @@
           <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
         </section>
       </section>
-      </div>
     </div>
   </main>
-
-  <script src="script.js"></script>
-  <script src="nav-active.js"></script>
+  <script src="script/script.js"></script>
 </body>
 </html>

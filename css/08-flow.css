@@ -1,3 +1,4 @@
+/* ===== flow-fix.css ===== */
 /* =========================================================
    TERASILICON IQ — ASIC FLOW STRIP FIX
    Compact, connected, and visually balanced.
@@ -78,51 +79,32 @@
   box-sizing: border-box;
 }
 
-/* Completed stages use the Terasilicon IQ purple. */
+/* Active stage */
 .flow-row div.flow-active {
-  color: #372582 !important;
+  color: #653593 !important;
 }
 
 .flow-row div.flow-active:before {
-  background: #372582 !important;
-  border-color: #372582 !important;
-  box-shadow: 0 0 0 5px rgba(55,37,130,.08),
-              0 0 18px rgba(55,37,130,.22) !important;
-}
-
-/* Current stage uses the Terasilicon IQ orange accent. */
-.flow-row div.flow-current {
-  color: #ff7900 !important;
-}
-
-.flow-row div.flow-current:before {
-  background: #ff7900 !important;
-  border-color: #ff7900 !important;
-  box-shadow: 0 0 0 5px rgba(255,121,0,.10),
-              0 0 22px rgba(255,121,0,.32) !important;
-  transform: scale(1.12);
-}
-
-/* Active path connectors. */
-.flow-row i.flow-line-active {
-  background: #372582 !important;
-  box-shadow: 0 0 5px rgba(55,37,130,.16);
+  background: #653593 !important;
+  border-color: #653593 !important;
+  box-shadow: 0 0 0 5px rgba(101,53,147,.08),
+              0 0 18px rgba(101,53,147,.22) !important;
 }
 
 /* Signoff is the terminal stage. */
 .flow-row .terminal {
-  color: #ff7900 !important;
+  color: #101638 !important;
   font-weight: 700 !important;
 }
 
 .flow-row .terminal:before {
-  border-color: #ff7900 !important;
+  border-color: #101638 !important;
 }
 
 .flow-row .terminal.flow-active:before {
-  background: #ff7900 !important;
-  border-color: #ff7900 !important;
-  box-shadow: 0 0 0 5px rgba(255,121,0,.10), 0 0 18px rgba(255,121,0,.25) !important;
+  background: #653593 !important;
+  border-color: #653593 !important;
+  box-shadow: 0 0 0 5px rgba(101,53,147,.08) !important;
 }
 
 .flow-section > .container > p {
@@ -208,3 +190,6 @@
     font-size: 10px !important;
   }
 }
+
+.flow-row div.flow-active:nth-of-type(3n + 2):before,.flow-row div.flow-active:nth-of-type(3n + 3):before{background:#ef7700!important;border-color:#ef7700!important;box-shadow:0 0 0 5px rgba(239,119,0,.08),0 0 18px rgba(239,119,0,.20)!important}.flow-row div.flow-active:nth-of-type(3n + 2),.flow-row div.flow-active:nth-of-type(3n + 3){color:#ef7700!important}.flow-row i{background:linear-gradient(90deg,rgba(101,53,147,.35),rgba(239,119,0,.35))!important}.flow-row div{cursor:pointer;transition:transform .22s ease,color .22s ease}.flow-row div:hover{transform:translateY(-3px)}
+

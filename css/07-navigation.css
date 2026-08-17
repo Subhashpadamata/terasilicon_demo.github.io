@@ -1,0 +1,69 @@
+/* ===== nav-active.css ===== */
+/* =========================================================
+   TERASILICON IQ — NAVIGATION ACTIVE + HOVER MOTION
+   ========================================================= */
+
+.site-header nav > a:not(.nav-cta) {
+  position: relative;
+  text-decoration: none !important;
+  color: var(--ink) !important;
+  transition: color 0.25s ease;
+}
+
+.site-header nav > a:not(.nav-cta)::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -7px;
+  height: 2px;
+  background: var(--violet);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition:
+    transform 0.28s cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 0.2s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.site-header nav > a:not(.nav-cta):hover::after,
+.site-header nav > a:not(.nav-cta):focus-visible::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.site-header nav > a:not(.nav-cta).active {
+  color: var(--violet) !important;
+}
+
+.site-header nav > a:not(.nav-cta).active::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.site-header nav > a:not(.nav-cta):focus-visible {
+  outline: none;
+  color: var(--violet) !important;
+}
+
+@media (max-width: 900px) {
+  .site-header nav > a:not(.nav-cta)::after {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform-origin: left center;
+  }
+
+  .site-header nav > a:not(.nav-cta) {
+    transition:
+      color 0.2s ease,
+      padding-left 0.2s ease;
+  }
+
+  .site-header nav > a:not(.nav-cta):hover,
+  .site-header nav > a:not(.nav-cta).active {
+    padding-left: 6px;
+  }
+}
+

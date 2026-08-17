@@ -1,12 +1,16 @@
-TERASILICON IQ BRAND COLOUR CARD FIX
+Terasilicon IQ website
 
-This patch uses the actual logo colours:
-Blue:   #101638
-Orange: #FC7701
+CSS is organized into small, professional files:
+01-core.css
+02-layout.css
+03-contact.css
+04-header.css
+05-footer.css
+06-capabilities.css
+07-navigation.css
+08-flow.css
+09-utilities.css
 
-It applies alternating blue/orange backgrounds to:
-- Signoff cards (#signoff)
-- How We Work / Solutions cards (#solutions)
-
-index.html has already been linked to brand-colors.css.
-Copy brand-colors.css into the same folder as index.html if integrating manually.
+JavaScript is consolidated in script.js.
+Existing asset filenames are preserved.
+The hero video reference remains unchanged so the video can be added under assets later.

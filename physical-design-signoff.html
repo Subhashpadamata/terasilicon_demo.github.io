@@ -8,16 +8,16 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="site-refresh.css">
-  <link rel="stylesheet" href="layout-fixes.css">
-  <link rel="stylesheet" href="contact-panel-fix.css">
-  <link rel="stylesheet" href="mobile-nav.css">
-  <link rel="stylesheet" href="page-polish.css">
-  <link rel="stylesheet" href="flow.css">
-  <link rel="stylesheet" href="footer-layout.css">
-  <link rel="stylesheet" href="capability-pages.css">
-  <link rel="stylesheet" href="nav-active.css">
-</head>
+    <link rel="stylesheet" href="css/01-core.css">
+    <link rel="stylesheet" href="css/02-layout.css">
+    <link rel="stylesheet" href="css/03-contact.css">
+    <link rel="stylesheet" href="css/04-header.css">
+    <link rel="stylesheet" href="css/05-footer.css">
+    <link rel="stylesheet" href="css/06-capabilities.css">
+    <link rel="stylesheet" href="css/07-navigation.css">
+    <link rel="stylesheet" href="css/08-flow.css">
+    <link rel="stylesheet" href="css/09-utilities.css">
+  </head>
 <body>
   <header class="site-header">
     <a class="site-brand" href="index.html#home" aria-label="Terasilicon IQ home">
@@ -43,24 +43,19 @@
     <div class="container">
       <div class="capability-hero">
         <p class="eyebrow">TERASILICON IQ / CAPABILITY</p>
-        <h1>Physical Design & Signoff</h1>
+        <h1>Physical Design &amp; Signoff</h1>
         <p>Floorplanning, Placement, CTS, Routing, Optimization, Physical Closure.</p>
       </div>
 
       <div class="capability-content">
         <section class="capability-panel">
           <h2>Engineering Scope</h2>
-          <ul class="capability-list">
-              <li>Floorplanning and implementation planning</li>
-              <li>Placement optimization</li>
-              <li>Clock Tree Synthesis (CTS)</li>
-              <li>Routing, optimization and physical closure</li>
-          </ul>
+          <ul class="capability-list"><li>Floorplanning and implementation readiness</li><li>Placement and congestion optimization</li><li>Clock-tree synthesis and timing-aware implementation</li><li>Routing, optimization and physical closure support</li></ul>
         </section>
 
         <section class="capability-side">
           <p class="eyebrow">SIGNOFF-DRIVEN ENGINEERING</p>
-          <h2>Physical Design & Signoff</h2>
+          <h2>Physical Design &amp; Signoff</h2>
           <p>
             Terasilicon IQ provides focused semiconductor engineering support
             for teams moving from implementation through verification,
@@ -71,19 +66,20 @@
             <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
           </div>
         </section>
+      </div>
 
       <section class="capability-detail">
         <div class="capability-detail-grid">
           <div>
             <p class="detail-eyebrow">ENGINEERING APPROACH</p>
             <h2>What we provide</h2>
-            <p>Physical design turns the logical implementation into a manufacturable layout through floorplanning, placement, clock-tree construction, routing and optimization. Signoff requires coordinated closure across timing, power, physical rules and implementation quality.</p>
+            <p>Formal verification uses mathematical proof to exhaustively analyze RTL behavior against intended properties and design intent. It is especially useful for finding corner-case failures that simulation may miss and for building high confidence before signoff.</p>
             <ul class="capability-detail-list">
-            <li>Floorplanning and implementation planning.</li>
-            <li>Placement optimization and congestion analysis.</li>
-            <li>Clock Tree Synthesis and clock-quality analysis.</li>
-            <li>Routing, optimization and physical violation investigation.</li>
-            <li>Physical closure support across timing, congestion and implementation constraints.</li>
+            <li>Assertion-based property verification for control, protocol and safety behavior.</li>
+            <li>Sequential and combinational equivalence checking for RTL, revised RTL and implementation changes.</li>
+            <li>Counterexample-driven debug to isolate the failing state, sequence and root cause.</li>
+            <li>Assumption and constraint development to model legal operating environments without hiding real bugs.</li>
+            <li>Proof convergence support using abstraction, decomposition, coverage and proof-depth analysis.</li>
             </ul>
           </div>
 
@@ -109,26 +105,27 @@
           <h2>Typical engineering needs</h2>
           <div class="capability-use-case-grid">
             <article class="capability-use-case">
-              <h3>Floorplan quality</h3>
-              <p>Balance utilization, macro placement, routing resources and timing needs.</p>
+              <h3>Block-level signoff</h3>
+              <p>Prove critical control and datapath behavior before integration.</p>
             </article>
             <article class="capability-use-case">
-              <h3>Placement closure</h3>
-              <p>Reduce congestion and improve timing-critical regions.</p>
+              <h3>SoC integration</h3>
+              <p>Check interface assumptions and cross-block behavior at system boundaries.</p>
             </article>
             <article class="capability-use-case">
-              <h3>Clock implementation</h3>
-              <p>Build and analyze clock distribution for predictable timing behavior.</p>
+              <h3>RTL changes</h3>
+              <p>Re-run focused proofs after ECOs, feature changes and bug fixes.</p>
             </article>
             <article class="capability-use-case">
-              <h3>Physical signoff</h3>
-              <p>Coordinate implementation fixes with final closure requirements.</p>
+              <h3>Signoff confidence</h3>
+              <p>Provide formal evidence for corner cases that are difficult to reach with simulation.</p>
             </article>
           </div>
         </div>
 
+
         <section class="capability-contact">
-          <h2>Have a what we provide requirement?</h2>
+          <h2>Have a Physical Design &amp; Signoff requirement?</h2>
           <p>
             Tell us what you are trying to close, verify or implement and we
             can discuss the engineering support that fits your project.
@@ -136,11 +133,8 @@
           <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
         </section>
       </section>
-      </div>
     </div>
   </main>
-
-  <script src="script.js"></script>
-  <script src="nav-active.js"></script>
+  <script src="script/script.js"></script>
 </body>
 </html>

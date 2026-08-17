@@ -1,3 +1,4 @@
+/* ===== capability-pages.css ===== */
 /* =========================================================
    TERASILICON IQ — CAPABILITY LINK ROWS
    ========================================================= */
@@ -740,3 +741,6 @@
   height: auto;
   display: block;
 }
+
+#capabilities .capability-row{cursor:pointer}#capabilities .capability-row span,#capabilities .capability-row strong{text-decoration:none}
+
