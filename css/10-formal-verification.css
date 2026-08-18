@@ -1,0 +1,9 @@
+/*
+ * Formal Verification page compatibility layer.
+ * Page content and visual styling come directly from formal_verification(3).html.
+ * This file only prevents the existing site shell from overriding the source page.
+ */
+.formal-source-page,
+.fv-source {
+  width: 100%;
+}

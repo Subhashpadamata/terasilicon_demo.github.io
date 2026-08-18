@@ -3,176 +3,471 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Terasilicon IQ — Formal Verification.">
-  <title>Formal Verification | Terasilicon IQ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/01-core.css">
-    <link rel="stylesheet" href="css/02-layout.css">
-    <link rel="stylesheet" href="css/03-contact.css">
-    <link rel="stylesheet" href="css/04-header.css">
-    <link rel="stylesheet" href="css/05-footer.css">
-    <link rel="stylesheet" href="css/06-capabilities.css">
-    <link rel="stylesheet" href="css/07-navigation.css">
-    <link rel="stylesheet" href="css/08-flow.css">
-    <link rel="stylesheet" href="css/09-utilities.css">
-  </head>
-<body>
-  <header class="site-header">
+  <meta name="description" content="Formal Verification Services | Terasilicon IQ">
+  <title>Formal Verification Services | Terasilicon IQ</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="css/01-core.css">
+  <link rel="stylesheet" href="css/02-layout.css">
+  <link rel="stylesheet" href="css/03-contact.css">
+  <link rel="stylesheet" href="css/04-header.css">
+  <link rel="stylesheet" href="css/05-footer.css">
+  <link rel="stylesheet" href="css/06-capabilities.css">
+  <link rel="stylesheet" href="css/07-navigation.css">
+  <link rel="stylesheet" href="css/08-flow.css">
+  <link rel="stylesheet" href="css/09-utilities.css">
+  <link rel="stylesheet" href="css/10-formal-verification.css">
+</head>
+<body class="antialiased selection:bg-indigo-500 selection:text-white">
+<header class="site-header">
     <a class="site-brand" href="index.html#home" aria-label="Terasilicon IQ home">
       <img src="assets/terasilicon-iq-symbol.png" alt="">
       <span>TERASILICON <b>IQ</b><small>ENGINEERING THE FUTURE OF SILICON</small></span>
     </a>
-
     <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-
     <nav aria-label="Primary navigation">
       <a href="index.html#home">Home</a>
       <a href="index.html#signoff">Signoff</a>
-      <a href="index.html#capabilities">Capabilities</a>
+      <a href="index.html#capabilities" class="active" aria-current="page">Capabilities</a>
       <a href="index.html#solutions">Solutions</a>
       <a href="index.html#about">About</a>
       <a class="nav-cta" href="index.html#contact">Talk to our team <b>→</b></a>
     </nav>
   </header>
+<!-- Navigation Bar -->
+  
 
-  <main class="capability-page">
-    <div class="container">
-      <div class="capability-hero">
-        <p class="eyebrow">TERASILICON IQ / CAPABILITY</p>
-        <h1>Formal Verification</h1>
-        <p>Property Checking, Equivalence, Formal Debug, Convergence Support.</p>
+  <!-- Hero Section -->
+  <section class="relative pt-16 pb-20 overflow-hidden border-b border-slate-200 bg-white grid-pattern">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <!-- Breadcrumb / Eyebrow -->
+      <div class="flex items-center gap-2 text-xs font-semibold tracking-wider text-slate-500 uppercase mb-4">
+        <span>Strategic IP</span>
+        <span>/</span>
+        <span class="text-indigo-600">Capabilities</span>
       </div>
 
-      <div class="capability-content">
-        <section class="capability-panel">
-          <h2>Engineering Scope</h2>
-          <ul class="capability-list">
-              <li>Property checking and assertion-based verification</li>
-              <li>Sequential and combinational equivalence checking</li>
-              <li>Formal debug and counterexample analysis</li>
-              <li>Convergence and proof-depth support</li>
-          </ul>
-        </section>
-
-        <section class="capability-side">
-          <p class="eyebrow">SIGNOFF-DRIVEN ENGINEERING</p>
-          <h2>Formal Verification</h2>
-          <p>
-            Terasilicon IQ provides focused semiconductor engineering support
-            for teams moving from implementation through verification,
-            closure and signoff.
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left Title & Intro -->
+        <div class="lg:col-span-7">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.1] mb-6">
+            FORMAL <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">VERIFICATION</span>
+          </h1>
+          <p class="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl">
+            Exhaustive property checking, mathematical assertion proofs, and equivalence verification to guarantee zero corner-case silicon bugs before tape-out.
           </p>
-          <div class="capability-actions">
-            <a class="capability-back" href="index.html#capabilities">← All capabilities</a>
-            <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
-          </div>
-        </section>
-      </div>
 
-      <section class="capability-detail">
-        <div class="capability-detail-grid">
-          <div>
-            <p class="detail-eyebrow">ENGINEERING APPROACH</p>
-            <h2>What we provide</h2>
-            <p>Formal verification uses mathematical proof to exhaustively analyze RTL behavior against intended properties and design intent. It is especially useful for finding corner-case failures that simulation may miss and for building high confidence before signoff.</p>
-            <ul class="capability-detail-list">
-            <li>Assertion-based property verification for control, protocol and safety behavior.</li>
-            <li>Sequential and combinational equivalence checking for RTL, revised RTL and implementation changes.</li>
-            <li>Counterexample-driven debug to isolate the failing state, sequence and root cause.</li>
-            <li>Assumption and constraint development to model legal operating environments without hiding real bugs.</li>
-            <li>Proof convergence support using abstraction, decomposition, coverage and proof-depth analysis.</li>
+          <!-- Engineering Scope Card -->
+          <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 shadow-sm">
+            <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 flex items-center gap-2">
+              <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i> Engineering Scope
+            </h3>
+            <ul class="space-y-3 text-sm text-slate-700">
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+                <span>High-level safety property checking and control path state space exploration.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+                <span>Deadlock & livelock detection across complex arbitration and protocol bridges.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+                <span>Automated counter-example waveform debug and root-cause tracing.</span>
+              </li>
+              <li class="flex items-start gap-3">
+                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+                <span>Proof convergence acceleration and sign-off readiness auditing.</span>
+              </li>
             </ul>
           </div>
+        </div>
 
-          <div>
-            <p class="detail-eyebrow">WHERE IT FITS</p>
-            <h2>From requirement to signoff</h2>
-            <p>
-              Our engineering support is structured around the actual closure
-              problem: understand the requirement, isolate risk, apply the
-              right analysis or verification method, and provide clear
-              evidence for the next signoff decision.
+        <!-- Right Side: Service Overview Card -->
+        <div class="lg:col-span-5">
+          <div class="bg-gradient-to-br from-slate-900 via-slate-850 to-indigo-950 text-white rounded-2xl p-8 border border-slate-800 shadow-xl relative overflow-hidden">
+            <div class="absolute -right-8 -top-8 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl"></div>
+            
+            <span class="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider text-indigo-400 uppercase mb-3">
+              <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse"></span>
+              Service Overview
+            </span>
+            <h2 class="text-2xl font-bold mb-4 tracking-tight">Full-Stack Proof Services</h2>
+            <p class="text-sm text-slate-300 leading-relaxed mb-8">
+              TeraBlock IQ provides dedicated senior verification engineering expertise for teams moving from initial RTL architecture through formal sign-off closure.
             </p>
-            <p>
-              Engagement can be focused on a specific block, flow, violation
-              class or closure milestone, while keeping communication aligned
-              with the wider semiconductor team.
-            </p>
+
+            <div class="space-y-4">
+              <a href="#contact" class="flex items-center justify-between w-full px-5 py-3.5 bg-lime-400 hover:bg-lime-300 text-slate-950 font-semibold text-sm rounded-xl transition duration-200 shadow-md">
+                <span>View our engagement model</span>
+                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+              </a>
+              <div class="flex items-center gap-6 pt-4 border-t border-slate-800/80 text-xs text-slate-400">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> ISO 26262 / ASIL-D
+                </div>
+                <div class="flex items-center gap-2">
+                  <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i> 10x Coverage Depth
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
-        <div class="capability-use-cases">
-          <p class="detail-eyebrow">APPLICATIONS</p>
-          <h2>Typical engineering needs</h2>
-          <div class="capability-use-case-grid">
-            <article class="capability-use-case">
-              <h3>Block-level signoff</h3>
-              <p>Prove critical control and datapath behavior before integration.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>SoC integration</h3>
-              <p>Check interface assumptions and cross-block behavior at system boundaries.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>RTL changes</h3>
-              <p>Re-run focused proofs after ECOs, feature changes and bug fixes.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>Signoff confidence</h3>
-              <p>Provide formal evidence for corner cases that are difficult to reach with simulation.</p>
-            </article>
-          </div>
-        </div>
-
-
-      <section class="fv-visuals">
-        <div class="fv-visual-intro">
-          <p class="detail-eyebrow">FORMAL VERIFICATION IN PRACTICE</p>
-          <h2>Proof-driven confidence at RTL</h2>
-          <p>
-            Formal verification turns design intent into properties that can
-            be exhaustively analyzed across legal state transitions. It
-            complements simulation by targeting corner cases, control logic,
-            protocol behavior and equivalence between design versions.
-          </p>
-        </div>
-
-        <figure class="fv-visual fv-visual-wide">
-          <img src="assets/formal-verification-flow.svg"
-               alt="Formal verification flow from RTL and properties through a formal engine to proof, counterexample and coverage results">
-          <figcaption>Property-driven formal verification flow.</figcaption>
-        </figure>
-
-        <div class="fv-visual-grid">
-          <figure class="fv-visual">
-            <img src="assets/formal-property-verification.svg"
-                 alt="Property-driven verification showing design intent, SystemVerilog Assertions and formal results">
-            <figcaption>Assertions connect design intent to measurable proof results.</figcaption>
-          </figure>
-
-          <figure class="fv-visual fv-dark">
-            <img src="assets/formal-equivalence-checking.svg"
-                 alt="Formal equivalence checking comparing reference RTL with implementation">
-            <figcaption>Equivalence checking compares observable behavior across implementations.</figcaption>
-          </figure>
-        </div>
-      </section>
-
-        <section class="capability-contact">
-          <h2>Have a Formal Verification requirement?</h2>
-          <p>
-            Tell us what you are trying to close, verify or implement and we
-            can discuss the engineering support that fits your project.
-          </p>
-          <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
-        </section>
-      </section>
+      </div>
     </div>
-  </main>
-  <script src="script/script.js"></script>
+  </section>
+
+  <!-- Detailed Offerings Section -->
+  <section class="py-20 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left: What We Provide -->
+        <div class="lg:col-span-7">
+          <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Integration & Delivery</div>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4">WHAT WE PROVIDE</h2>
+          <p class="text-sm text-slate-600 mb-8 leading-relaxed">
+            Our formal verification methodology mathematically guarantees design correctness, uncovering elusive edge cases that simulation testbenches routinely miss.
+          </p>
+
+          <div class="space-y-4">
+            
+            <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
+              <div class="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center shrink-0">
+                <i data-lucide="shield-alert" class="w-5 h-5 text-indigo-600"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Assertion-Based Verification (SVA / PSL)</h4>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Development of rigorous formal properties targeting control logic, arbitration fairness, and functional safety properties.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
+              <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
+                <i data-lucide="git-branch" class="w-5 h-5 text-emerald-600"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Sequential Equivalence Checking (SEC)</h4>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Proving equivalence across aggressive clock-gating, retiming transformations, and microarchitectural ECOs.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
+              <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0">
+                <i data-lucide="bug" class="w-5 h-5 text-amber-600"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Counter-Example Driven Root-Cause Debug</h4>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  Extraction of exact cycle-by-cycle failure traces to pinpoint underlying RTL hazards instantly.
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
+              <div class="w-10 h-10 rounded-lg bg-rose-50 border border-rose-100 flex items-center justify-center shrink-0">
+                <i data-lucide="gauge" class="w-5 h-5 text-rose-600"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-slate-900">Proof Convergence & Complexity Management</h4>
+                <p class="text-xs text-slate-600 mt-1 leading-relaxed">
+                  State-space abstraction, helper assertions, and solver orchestration to achieve full mathematical proof closure.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Right: From Requirement to Signoff -->
+        <div class="lg:col-span-5">
+          <div class="bg-white border border-slate-200/80 rounded-2xl p-8 shadow-sm h-full flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Methodology</div>
+              <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-4">FROM REQUIREMENT TO SIGNOFF</h2>
+              <p class="text-sm text-slate-600 leading-relaxed mb-6">
+                Our verification support structures end-to-end mathematical guarantees into your project lifecycle. We formalize technical specs into provable assertions, isolate state spaces, and provide unambiguous proof results.
+              </p>
+
+              <div class="space-y-4 text-xs text-slate-600">
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
+                  <span class="font-bold text-slate-900 block mb-1">01. Architectural Analysis</span>
+                  Extraction of formal assumptions, interfaces, and protocol contract invariants.
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
+                  <span class="font-bold text-slate-900 block mb-1">02. SVA Harness Creation</span>
+                  Layered property suites matching IEEE 1800 SystemVerilog standard.
+                </div>
+                <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
+                  <span class="font-bold text-slate-900 block mb-1">03. Bounded & Full Proof Convergence</span>
+                  Execution across industrial formal solvers with formal coverage sign-off metrics.
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 font-medium">
+              <i data-lucide="check-check" class="w-4 h-4 text-indigo-600"></i> Seamless synchronization with standard UVM/Simulation regression suites.
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Typical Engineering Needs Grid -->
+  <section class="py-16 bg-white border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Use Cases</div>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-8">TYPICAL ENGINEERING NEEDS</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
+          <div class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center mb-4">
+            <i data-lucide="component" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Block-Level Signoff</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Exhaustive proof that primary IP blocks perform strictly to functional spec before integration.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
+          <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
+            <i data-lucide="network" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">SoC Integration</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Verify cross-domain interface assumptions, bus arbiters, and multi-clock CDC/RDC synchronization.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
+          <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mb-4">
+            <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">RTL & ECO Changes</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Instant regression verification after fast-turnaround ECOs, feature expansions, and bug-fix patches.
+          </p>
+        </div>
+
+        <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
+          <div class="w-9 h-9 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center mb-4">
+            <i data-lucide="badge-check" class="w-5 h-5"></i>
+          </div>
+          <h3 class="text-base font-bold text-slate-900 mb-2">Signoff Confidence</h3>
+          <p class="text-xs text-slate-600 leading-relaxed">
+            Provide mathematical guarantees for deep corner cases that simulation testbenches cannot hit in time.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Technical Verification Flow Architecture -->
+  <section class="py-20 bg-slate-50 border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-6">
+      
+      <div class="mb-12">
+        <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">System Architecture</div>
+        <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mb-4">
+          PROOF-DRIVEN CONFIDENCE AT RTL
+        </h2>
+        <p class="text-sm text-slate-600 max-w-3xl leading-relaxed">
+          A visual overview of our formal proof execution architecture: mathematical exploration of the complete state space guaranteeing no unhandled design states escape to silicon.
+        </p>
+      </div>
+
+      <!-- Main Flow Diagram Card -->
+      <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm mb-12">
+        <div class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-8 flex items-center gap-2">
+          <i data-lucide="workflow" class="w-4 h-4 text-indigo-600"></i> Formal Verification Pipeline Flow
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          
+          <!-- Stage 1: Design Input -->
+          <div class="lg:col-span-3">
+            <div class="p-6 bg-slate-900 text-white rounded-xl border border-slate-800 shadow-md text-center">
+              <span class="text-[11px] font-mono text-indigo-400 uppercase tracking-wider block mb-1">Design Under Test</span>
+              <h4 class="text-lg font-bold">RTL DESIGN</h4>
+              <p class="text-xs text-slate-400 mt-2 font-mono">SystemVerilog / VHDL</p>
+            </div>
+          </div>
+
+          <!-- Connector 1 -->
+          <div class="hidden lg:flex lg:col-span-1 justify-center">
+            <i data-lucide="arrow-right" class="w-6 h-6 text-slate-300"></i>
+          </div>
+
+          <!-- Stage 2: Property Specifications -->
+          <div class="lg:col-span-3 space-y-3">
+            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-center font-semibold text-xs text-slate-800 shadow-sm flex items-center justify-center gap-2">
+              <i data-lucide="filter" class="w-3.5 h-3.5 text-indigo-500"></i> ASSUMPTIONS (Environment)
+            </div>
+            <div class="p-3.5 bg-indigo-50/70 border border-indigo-200 rounded-lg text-center font-bold text-xs text-indigo-950 shadow-sm flex items-center justify-center gap-2">
+              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-indigo-600"></i> SVA PROPERTIES (Assertions)
+            </div>
+            <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-center font-semibold text-xs text-slate-800 shadow-sm flex items-center justify-center gap-2">
+              <i data-lucide="crosshair" class="w-3.5 h-3.5 text-emerald-600"></i> COVER PROPERTIES (Reachable)
+            </div>
+          </div>
+
+          <!-- Connector 2 -->
+          <div class="hidden lg:flex lg:col-span-1 justify-center">
+            <i data-lucide="arrow-right" class="w-6 h-6 text-slate-300"></i>
+          </div>
+
+          <!-- Stage 3: Formal Engine Solver -->
+          <div class="lg:col-span-2">
+            <div class="p-5 bg-gradient-to-b from-slate-900 to-indigo-950 text-white rounded-xl border border-indigo-900/60 shadow-lg text-center">
+              <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white mx-auto flex items-center justify-center mb-2 shadow">
+                <i data-lucide="binary" class="w-4 h-4"></i>
+              </div>
+              <h4 class="text-sm font-bold tracking-tight">FORMAL ENGINE</h4>
+              <ul class="text-[10px] text-slate-300 font-mono mt-3 space-y-1 text-left">
+                <li>• Bounded Model Checking</li>
+                <li>• k-Induction Proof</li>
+                <li>• Invariant Generation</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Stage 4: Outcomes -->
+          <div class="lg:col-span-2 space-y-2.5">
+            <!-- Proved -->
+            <div class="p-3 rounded-lg bg-emerald-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
+              <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> PROVED</span>
+              <span class="text-[10px] font-mono opacity-80">100% Signoff</span>
+            </div>
+            <!-- Failed -->
+            <div class="p-3 rounded-lg bg-rose-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
+              <span class="flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4"></i> FAILED</span>
+              <span class="text-[10px] font-mono opacity-80">Counter-Trace</span>
+            </div>
+            <!-- Coverage -->
+            <div class="p-3 rounded-lg bg-amber-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
+              <span class="flex items-center gap-1.5"><i data-lucide="pie-chart" class="w-4 h-4"></i> COVERAGE</span>
+              <span class="text-[10px] font-mono opacity-80">Witness Hit</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Secondary Sub-Diagrams: Design Clarification & Equivalence -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        
+        <!-- Design Intent Verification -->
+        <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+          <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4 flex items-center gap-2">
+            <i data-lucide="file-check-2" class="w-4 h-4"></i> Formal Design Clarification
+          </div>
+          <div class="grid grid-cols-3 gap-2 text-center text-xs mb-4">
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-slate-900 mb-1">DESIGN INTENT</div>
+              <p class="text-[10px] text-slate-500 font-mono">Specs & Constraints</p>
+            </div>
+            <div class="p-3 rounded-lg bg-indigo-900 text-white border border-indigo-800">
+              <div class="font-bold text-indigo-200 mb-1">SVA HARNESS</div>
+              <p class="text-[10px] text-indigo-300 font-mono">Formal Assertions</p>
+            </div>
+            <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
+              <div class="font-bold text-emerald-600 mb-1">RESULT</div>
+              <p class="text-[10px] text-slate-500 font-mono">Math Proof / Bug</p>
+            </div>
+          </div>
+          <p class="text-xs text-slate-500 leading-relaxed">
+            Transforms ambiguous human-written specification documents into unambiguous, mathematically testable invariants.
+          </p>
+        </div>
+
+        <!-- Equivalence Checking (SEC) -->
+        <div class="bg-slate-900 text-white border border-slate-800 rounded-2xl p-6 shadow-sm">
+          <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4 flex items-center gap-2">
+            <i data-lucide="git-compare" class="w-4 h-4"></i> Formal Equivalence (SEC / LEC)
+          </div>
+          <div class="flex items-center justify-between gap-2 text-center text-xs mb-4">
+            <div class="flex-1 p-3 rounded-lg bg-slate-800 border border-slate-700">
+              <div class="font-bold text-slate-200 text-[11px]">REFERENCE RTL</div>
+              <span class="text-[9px] text-slate-400 font-mono">Golden Model</span>
+            </div>
+            <div class="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center shrink-0">
+              <span class="text-[10px] font-bold text-amber-400 font-mono">MATCH</span>
+            </div>
+            <div class="flex-1 p-3 rounded-lg bg-slate-800 border border-slate-700">
+              <div class="font-bold text-slate-200 text-[11px]">IMPLEMENTATION</div>
+              <span class="text-[9px] text-slate-400 font-mono">Optimized Netlist</span>
+            </div>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Zero-simulation formal equivalence checking guarantees no functional deviations after synthesis optimizations or manual ECOs.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Call to Action Banner -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-950 rounded-3xl p-10 sm:p-14 text-center text-white relative overflow-hidden shadow-2xl">
+        <div class="absolute -left-12 -bottom-12 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute -right-12 -top-12 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl"></div>
+
+        <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 relative z-10">
+          HAVE A FORMAL VERIFICATION REQUIREMENT?
+        </h2>
+        <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed mb-8 relative z-10">
+          Tell us what you are trying to clean, verify, or prove mathematically, and let's explore the right verification engagement model for your tape-out timeline.
+        </p>
+
+        <div class="inline-flex flex-col sm:flex-row items-center gap-4 relative z-10">
+          <a href="mailto:contact@terablock.iq" class="px-8 py-4 bg-lime-400 hover:bg-lime-300 text-slate-950 font-bold rounded-xl text-sm transition duration-200 shadow-lg flex items-center gap-2">
+            <span>Start your requirement discussion</span>
+            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+<footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900 text-xs">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div>
+        © 2026 TeraBlock IQ Inc. All rights reserved. Precision Silicon Verification & EDA Services.
+      </div>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-slate-400 transition">Privacy Policy</a>
+        <a href="#" class="hover:text-slate-400 transition">Terms of Service</a>
+        <a href="#" class="hover:text-slate-400 transition">Security</a>
+      </div>
+    </div>
+  </footer>
+<script>
+  lucide.createIcons();
+</script>
 </body>
 </html>
