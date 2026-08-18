@@ -5,9 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Formal Verification Services | Terasilicon IQ">
   <title>Formal Verification Services | Terasilicon IQ</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://unpkg.com/lucide@latest"></script>
+      <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="css/01-core.css">
   <link rel="stylesheet" href="css/02-layout.css">
   <link rel="stylesheet" href="css/03-contact.css">
@@ -19,7 +17,8 @@
   <link rel="stylesheet" href="css/09-utilities.css">
   <link rel="stylesheet" href="css/10-formal-verification.css">
 </head>
-<body class="antialiased selection:bg-indigo-500 selection:text-white">
+<body class="formal-verification-page">
+  <div class="fv-background" aria-hidden="true"><span class="fv-orb fv-orb-one"></span><span class="fv-orb fv-orb-two"></span><span class="fv-grid"></span></div>
 <header class="site-header">
     <a class="site-brand" href="index.html#home" aria-label="Terasilicon IQ home">
       <img src="assets/terasilicon-iq-symbol.png" alt="">
@@ -297,10 +296,10 @@
           <i data-lucide="workflow" class="w-4 h-4 text-indigo-600"></i> Formal Verification Pipeline Flow
         </div>
 
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <div class="fv-pipeline-grid grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           
           <!-- Stage 1: Design Input -->
-          <div class="lg:col-span-3">
+          <div class="fv-pipeline-stage fv-pipeline-dut lg:col-span-3">
             <div class="p-6 bg-slate-900 text-white rounded-xl border border-slate-800 shadow-md text-center">
               <span class="text-[11px] font-mono text-indigo-400 uppercase tracking-wider block mb-1">Design Under Test</span>
               <h4 class="text-lg font-bold">RTL DESIGN</h4>
@@ -314,7 +313,7 @@
           </div>
 
           <!-- Stage 2: Property Specifications -->
-          <div class="lg:col-span-3 space-y-3">
+          <div class="fv-pipeline-properties lg:col-span-3 space-y-3">
             <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-center font-semibold text-xs text-slate-800 shadow-sm flex items-center justify-center gap-2">
               <i data-lucide="filter" class="w-3.5 h-3.5 text-indigo-500"></i> ASSUMPTIONS (Environment)
             </div>
@@ -332,7 +331,7 @@
           </div>
 
           <!-- Stage 3: Formal Engine Solver -->
-          <div class="lg:col-span-2">
+          <div class="fv-pipeline-engine lg:col-span-2">
             <div class="p-5 bg-gradient-to-b from-slate-900 to-indigo-950 text-white rounded-xl border border-indigo-900/60 shadow-lg text-center">
               <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white mx-auto flex items-center justify-center mb-2 shadow">
                 <i data-lucide="binary" class="w-4 h-4"></i>
@@ -347,7 +346,7 @@
           </div>
 
           <!-- Stage 4: Outcomes -->
-          <div class="lg:col-span-2 space-y-2.5">
+          <div class="fv-pipeline-outcomes lg:col-span-2 space-y-2.5">
             <!-- Proved -->
             <div class="p-3 rounded-lg bg-emerald-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
               <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> PROVED</span>
@@ -451,23 +450,36 @@
   
 
   <!-- Initialize Lucide Icons -->
-  <script>
-    lucide.createIcons();
-  </script>
-<footer class="bg-slate-950 text-slate-500 py-12 border-t border-slate-900 text-xs">
-    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>
-        © 2026 TeraBlock IQ Inc. All rights reserved. Precision Silicon Verification & EDA Services.
+<footer class="site-footer">
+      <div class="container footer-bottom">
+        <a class="site-brand" href="#home">
+          <img src="assets/terasilicon-iq-symbol.png" alt="">
+          <span>
+            TERASILICON
+            <b>
+              IQ
+            </b>
+            <small>
+              ENGINEERING THE FUTURE OF SILICON
+            </small>
+          </span>
+        </a>
+        <p>
+          &copy; 2026 Terasilicon IQ Private Limited. All rights reserved.
+        </p>
+        <div aria-label="Legal information">
+          <span>
+            Privacy Policy
+          </span>
+          <span>
+            Terms of Use
+          </span>
+          <span>
+            Cookie Policy
+          </span>
+        </div>
       </div>
-      <div class="flex gap-6">
-        <a href="#" class="hover:text-slate-400 transition">Privacy Policy</a>
-        <a href="#" class="hover:text-slate-400 transition">Terms of Service</a>
-        <a href="#" class="hover:text-slate-400 transition">Security</a>
-      </div>
-    </div>
-  </footer>
-<script>
-  lucide.createIcons();
-</script>
+    </footer>
+<script src="script/script.js"></script>
 </body>
 </html>

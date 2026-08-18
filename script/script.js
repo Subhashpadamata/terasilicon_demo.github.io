@@ -818,4 +818,37 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  /*
+   * ==========================================================
+   * 4. FORMAL VERIFICATION — INTERACTIVE BACKGROUND
+   * ==========================================================
+   * Keeps the page visually connected to the main site while
+   * adding a restrained pointer-responsive technical grid.
+   */
+  const formalPage = document.querySelector(".formal-verification-page");
+  const formalBackground = document.querySelector(".fv-background");
+
+  if (formalPage && formalBackground && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    let rafId = 0;
+
+    const updateFormalBackground = (event) => {
+      const x = (event.clientX / window.innerWidth - 0.5) * 70;
+      const y = (event.clientY / window.innerHeight - 0.5) * 55;
+
+      cancelAnimationFrame(rafId);
+      rafId = requestAnimationFrame(() => {
+        formalPage.style.setProperty("--fv-mx", `${x}px`);
+        formalPage.style.setProperty("--fv-my", `${y}px`);
+      });
+    };
+
+    window.addEventListener("pointermove", updateFormalBackground, { passive: true });
+
+    window.addEventListener("pointerleave", () => {
+      formalPage.style.setProperty("--fv-mx", "0px");
+      formalPage.style.setProperty("--fv-my", "0px");
+    });
+  }
+
 });
