@@ -1,136 +1,381 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Terasilicon IQ — RTL, Design Verification & DFT.">
-  <title>RTL, Design Verification & DFT | Terasilicon IQ</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/01-core.css">
-  <link rel="stylesheet" href="css/02-layout.css">
-  <link rel="stylesheet" href="css/03-contact.css">
-  <link rel="stylesheet" href="css/04-header.css">
-  <link rel="stylesheet" href="css/05-footer.css">
-  <link rel="stylesheet" href="css/06-capabilities.css">
-  <link rel="stylesheet" href="css/07-navigation.css">
-  <link rel="stylesheet" href="css/08-flow.css">
-  <link rel="stylesheet" href="css/09-utilities.css">
-  <link rel="stylesheet" href="css/11-logo-loader.css">
-  <link rel="stylesheet" href="css/12-subpage-consistency.css">
-  <link rel="stylesheet" href="css/14-quality-polish.css">
-</head>
-<body data-capability-page="rtl-dv-dft.html">
-    <div id="tsiq-loader" aria-label="Loading Terasilicon IQ" role="status">
-      <div class="tsiq-loader-inner">
-        <div class="tsiq-loader-logo" aria-hidden="true">
-          <img class="tsiq-logo-base" src="assets/terasilicon-iq-symbol.png" alt="">
-          <img class="tsiq-logo-purple" src="assets/terasilicon-iq-symbol.png" alt="">
-          <img class="tsiq-logo-orange" src="assets/terasilicon-iq-symbol.png" alt="">
-          <img class="tsiq-logo-glow" src="assets/terasilicon-iq-symbol.png" alt="">
-        </div>
-        <div class="tsiq-loader-brand">TERASILICON <b>IQ</b></div>
-        <div class="tsiq-loader-tagline">ENGINEERING THE FUTURE OF SILICON</div>
-        <div class="tsiq-loader-line" aria-hidden="true"></div>
-        <div class="tsiq-loader-status">Loading</div>
-        <div class="tsiq-loader-substatus">Initializing Verification Flow</div>
-      </div>
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Terasilicon IQ &mdash; RTL, Design Verification &amp; DFT." name="description"/>
+  <title>
+   RTL, Design Verification &amp; DFT | Terasilicon IQ
+  </title>
+  <link href="https://fonts.googleapis.com" rel="preconnect"/>
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+  <link href="css/01-core.css" rel="stylesheet"/>
+  <link href="css/02-layout.css" rel="stylesheet"/>
+  <link href="css/03-contact.css" rel="stylesheet"/>
+  <link href="css/04-header.css" rel="stylesheet"/>
+  <link href="css/05-footer.css" rel="stylesheet"/>
+  <link href="css/06-capabilities.css" rel="stylesheet"/>
+  <link href="css/07-navigation.css" rel="stylesheet"/>
+  <link href="css/08-flow.css" rel="stylesheet"/>
+  <link href="css/09-utilities.css" rel="stylesheet"/>
+  <link href="css/11-logo-loader.css" rel="stylesheet"/>
+  <link href="css/12-subpage-consistency.css" rel="stylesheet"/>
+  <link href="css/14-quality-polish.css" rel="stylesheet"/>
+ </head>
+ <body data-capability-page="rtl-dv-dft.html">
+  <div aria-label="Loading Terasilicon IQ" id="tsiq-loader" role="status">
+   <div class="tsiq-loader-inner">
+    <div aria-hidden="true" class="tsiq-loader-logo">
+     <img alt="" class="tsiq-logo-base" src="assets/terasilicon-iq-symbol.png"/>
+     <img alt="" class="tsiq-logo-purple" src="assets/terasilicon-iq-symbol.png"/>
+     <img alt="" class="tsiq-logo-orange" src="assets/terasilicon-iq-symbol.png"/>
+     <img alt="" class="tsiq-logo-glow" src="assets/terasilicon-iq-symbol.png"/>
     </div>
-
-  <header class="site-header">
-    <a class="site-brand" href="index.html#home" aria-label="Terasilicon IQ home">
-      <img src="assets/terasilicon-iq-symbol.png" alt="">
-      <span>TERASILICON <b>IQ</b><small>ENGINEERING THE FUTURE OF SILICON</small></span>
-    </a>
-
-    <button class="menu-toggle" type="button" aria-label="Toggle navigation menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-
-    <nav aria-label="Primary navigation">
-      <a href="index.html#home">Home</a>
-      <a href="index.html#signoff">Signoff</a>
-      <div class="nav-capabilities subpage-active">
-        <div class="nav-capabilities-main">
-          <a href="index.html#capabilities" class="capabilities-nav-link">Capabilities</a>
-          <button class="capabilities-toggle" type="button" aria-label="Show capability pages" aria-expanded="false">⌄</button>
-        </div>
-        <div class="capabilities-dropdown" aria-label="Capability pages">
-          <a href="formal-verification.html">Formal Verification</a>
-          <a href="sta-timing-closure.html">STA & Timing Closure</a>
-          <a href="emir-power-integrity.html">EMIR & Power Integrity</a>
-          <a href="physical-design-signoff.html">Physical Design & Signoff</a>
-          <a href="rtl-dv-dft.html" class="current" aria-current="page">RTL, Design Verification & DFT</a>
-          <a href="physical-verification.html">Physical Verification</a>
-        </div>
-      </div>
-      <a href="index.html#solutions">Solutions</a>
-      <a href="index.html#about">About</a>
-      <a class="nav-cta" href="https://mail.google.com/mail/?view=cm&fs=1&to=hr%40terasiliconiq.com" target="_blank" rel="noopener">Talk to our team <b>→</b></a>
-    </nav>
-  </header>
-
-  <main class="capability-page capability-rich-page capability-page-polished">
-  <div class="container">
-    <section class="capability-hero-rich">
-      <div class="capability-hero-copy">
-        <p class="eyebrow">RTL / DV / DFT / CAPABILITY</p>
-        <h1>RTL, Design Verification &amp; DFT</h1>
-        <p class="capability-tag">SYSTEMVERILOG • UVM • COVERAGE • SCAN • ATPG • MBIST</p>
-        <p class="capability-intro">Terasilicon IQ supports RTL development, simulation-based verification and DFT engineering across the design cycle, with clear coverage and signoff evidence.</p>
-        <a class="button" href="https://mail.google.com/mail/?view=cm&fs=1&to=hr%40terasiliconiq.com" target="_blank" rel="noopener">Discuss your requirement <b>→</b></a>
-      </div>
-      <div class="capability-visual-card">
-        <img src="assets/capabilities/rtl-dv-dft.svg" alt="RTL / DV / DFT engineering overview">
-        <div class="capability-visual-caption"><img src="assets/icons/component.svg" alt="" aria-hidden="true"> RTL / DV / DFT / SIGNOFF FLOW</div>
-      </div>
-    </section>
-
-    <section class="capability-scope-rich">
-      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/layers.svg" alt="" aria-hidden="true">ENGINEERING SCOPE</p><h2>Where we contribute</h2></div>
-      <div class="cap-scope-list"><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">RTL development and implementation support</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">SystemVerilog and UVM-based design verification</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">Functional coverage and debug support</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">Scan, ATPG and MBIST engineering support</li></div>
-    </section>
-
-    <section class="capability-detail-rich">
-      <div class="cap-detail-intro"><p class="detail-eyebrow"><img src="assets/icons/file-check-2.svg" alt="" aria-hidden="true">ENGINEERING APPROACH</p><h2>What we provide</h2><p>Terasilicon IQ supports RTL development, simulation-based verification and DFT engineering across the design cycle, with clear coverage and signoff evidence.</p></div>
-      <ul class="cap-provide-list"><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">SystemVerilog RTL development and focused implementation support.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">UVM-based verification environments, sequences, assertions and coverage analysis.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">Counterexample and waveform-driven debug for functional failures and regressions.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">Scan, ATPG and MBIST support for production test readiness.</li></ul>
-    </section>
-
-    <section class="capability-method-rich">
-      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/workflow.svg" alt="" aria-hidden="true">FROM REQUIREMENT TO SIGNOFF</p><h2>A focused closure path</h2></div>
-      <div class="cap-steps"><article class="cap-step"><span class="cap-step-no">01</span><div><h3>01. RTL & Test Planning</h3><p>Translate design intent into RTL, verification strategy and DFT requirements.</p></div></article><article class="cap-step"><span class="cap-step-no">02</span><div><h3>02. Verify & Debug</h3><p>Run UVM regressions, analyze coverage and isolate functional issues.</p></div></article><article class="cap-step"><span class="cap-step-no">03</span><div><h3>03. DFT & Signoff</h3><p>Close scan, ATPG and memory-test requirements with measurable evidence.</p></div></article></div>
-    </section>
-
-    <section class="capability-use-rich">
-      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/boxes.svg" alt="" aria-hidden="true">APPLICATIONS</p><h2>Typical engineering needs</h2></div>
-      <div class="cap-use-grid"><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/component.svg" alt="" aria-hidden="true"></div><h3>Block-Level Verification</h3><p>Verify functional intent before SoC integration.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/component.svg" alt="" aria-hidden="true"></div><h3>UVM Regression</h3><p>Build repeatable verification flows with measurable coverage.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/component.svg" alt="" aria-hidden="true"></div><h3>DFT Readiness</h3><p>Support scan, ATPG and MBIST implementation and debug.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/component.svg" alt="" aria-hidden="true"></div><h3>Signoff Confidence</h3><p>Consolidate coverage and test evidence for release decisions.</p></article></div>
-    </section>
-
-    <section class="capability-contact-rich" id="contact">
-      <p class="eyebrow">SIGNOFF SUPPORT</p><h2>Have a RTL, Design Verification &amp; DFT requirement?</h2><p>Tell us what you are trying to close, verify or implement and we can discuss the engineering support that fits your project.</p><a class="button" href="https://mail.google.com/mail/?view=cm&fs=1&to=hr%40terasiliconiq.com" target="_blank" rel="noopener">Start your requirement discussion <b>→</b></a>
-    </section>
+    <div class="tsiq-loader-brand">
+     TERASILICON
+     <b>
+      IQ
+     </b>
+    </div>
+    <div class="tsiq-loader-tagline">
+     ENGINEERING THE FUTURE OF SILICON
+    </div>
+    <div aria-hidden="true" class="tsiq-loader-line">
+    </div>
+    <div class="tsiq-loader-status">
+     Loading
+    </div>
+    <div class="tsiq-loader-substatus">
+     Initializing Verification Flow
+    </div>
+   </div>
   </div>
-</main>
-  <script src="script/script.js"></script>
-  <script src="script/logo-loader.js"></script>
-<footer class="site-footer">
-      <div class="container footer-bottom">
-        <a class="site-brand" href="index.html#home">
-          <img src="assets/terasilicon-iq-symbol.png" alt="">
-          <span>
-            TERASILICON
-            <b>IQ</b>
-            <small>ENGINEERING THE FUTURE OF SILICON</small>
-          </span>
-        </a>
-        <p>&copy; 2026 Terasilicon IQ Private Limited. All rights reserved.</p>
-        <div aria-label="Legal information">
-          <span>Privacy Policy</span>
-          <span>Terms of Use</span>
-          <span>Cookie Policy</span>
-        </div>
+  <header class="site-header">
+   <a aria-label="Terasilicon IQ home" class="site-brand" href="index.html#home">
+    <img alt="" src="assets/terasilicon-iq-symbol.png"/>
+    <span>
+     TERASILICON
+     <b>
+      IQ
+     </b>
+     <small>
+      ENGINEERING THE FUTURE OF SILICON
+     </small>
+    </span>
+   </a>
+   <button aria-expanded="false" aria-label="Toggle navigation menu" class="menu-toggle" type="button">
+    <span>
+    </span>
+    <span>
+    </span>
+    <span>
+    </span>
+   </button>
+   <nav aria-label="Primary navigation">
+    <a href="index.html#home">
+     Home
+    </a>
+    <a href="index.html#signoff">
+     Signoff
+    </a>
+    <div class="nav-capabilities subpage-active">
+     <div class="nav-capabilities-main">
+      <a class="capabilities-nav-link" href="index.html#capabilities">
+       Capabilities
+      </a>
+      <button aria-expanded="false" aria-label="Show capability pages" class="capabilities-toggle" type="button">
+       ⌄
+      </button>
+     </div>
+     <div aria-label="Capability pages" class="capabilities-dropdown">
+      <a href="formal-verification.html">
+       Formal Verification
+      </a>
+      <a href="sta-timing-closure.html">
+       STA &amp; Timing Closure
+      </a>
+      <a href="emir-power-integrity.html">
+       EMIR &amp; Power Integrity
+      </a>
+      <a href="physical-design-signoff.html">
+       Physical Design &amp; Signoff
+      </a>
+      <a aria-current="page" class="current" href="rtl-dv-dft.html">
+       RTL, Design Verification &amp; DFT
+      </a>
+      <a href="physical-verification.html">
+       Physical Verification
+      </a>
+     </div>
+    </div>
+    <a href="index.html#solutions">
+     Solutions
+    </a>
+    <a href="index.html#about">
+     About
+    </a>
+    <a class="nav-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">
+     Talk to our team
+     <b>
+      &rarr;
+     </b>
+    </a>
+   </nav>
+  </header>
+  <main class="capability-page capability-rich-page capability-page-polished">
+   <div class="container">
+    <section class="capability-hero-rich">
+     <div class="capability-hero-copy">
+      <p class="eyebrow">
+       RTL / DV / DFT / CAPABILITY
+      </p>
+      <h1>
+       RTL, Design Verification &amp; DFT
+      </h1>
+      <p class="capability-tag">
+       SYSTEMVERILOG &bull; UVM &bull; COVERAGE &bull; SCAN &bull; ATPG &bull; MBIST
+      </p>
+      <p class="capability-intro">
+       Terasilicon IQ supports RTL development, simulation-based verification and DFT engineering across the design cycle, with clear coverage and signoff evidence.
+      </p>
+      <a class="button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">
+       Discuss your requirement
+       <b>
+        &rarr;
+       </b>
+      </a>
+     </div>
+     <div class="capability-visual-card">
+      <img alt="RTL / DV / DFT engineering overview" src="assets/capabilities/rtl-dv-dft.svg"/>
+      <div class="capability-visual-caption">
+       <img alt="" aria-hidden="true" src="assets/icons/component.svg"/>
+       RTL / DV / DFT / SIGNOFF FLOW
       </div>
-    </footer>
-</body>
+     </div>
+    </section>
+    <section class="capability-scope-rich">
+     <div class="cap-section-heading">
+      <p class="detail-eyebrow">
+       <img alt="" aria-hidden="true" src="assets/icons/layers.svg"/>
+       ENGINEERING SCOPE
+      </p>
+      <h2>
+       Where we contribute
+      </h2>
+     </div>
+     <ul class="cap-scope-list">
+      <li>
+       <img alt="" aria-hidden="true" src="assets/icons/check-circle-2.svg"/>
+       RTL development and implementation support
+      </li>
+      <li>
+       <img alt="" aria-hidden="true" src="assets/icons/check-circle-2.svg"/>
+       SystemVerilog and UVM-based design verification
+      </li>
+      <li>
+       <img alt="" aria-hidden="true" src="assets/icons/check-circle-2.svg"/>
+       Functional coverage and debug support
+      </li>
+      <li>
+       <img alt="" aria-hidden="true" src="assets/icons/check-circle-2.svg"/>
+       Scan, ATPG and MBIST engineering support
+      </li>
+     </ul>
+    </section>
+    <section class="capability-detail-rich">
+     <div class="cap-detail-intro">
+      <p class="detail-eyebrow">
+       <img alt="" aria-hidden="true" src="assets/icons/file-check-2.svg"/>
+       ENGINEERING APPROACH
+      </p>
+      <h2>
+       What we provide
+      </h2>
+      <p>
+       Terasilicon IQ supports RTL development, simulation-based verification and DFT engineering across the design cycle, with clear coverage and signoff evidence.
+      </p>
+     </div>
+     <ul class="cap-provide-list">
+      <li>
+       <img alt="" aria-hidden="true" src="assets/icons/check-circle.svg"/>
+       SystemVerilog RTL development and focused implementation support.
+      </li>
+      <li>
+       <img alt="" aria-hidden="true" src="assets/icons/check-circle.svg"/>
+       UVM-based verification environments, sequences, assertions and coverage analysis.
+      </li>
+      <li>
+       <img alt="" aria-hidden="true" src="assets/icons/check-circle.svg"/>
+       Counterexample and waveform-driven debug for functional failures and regressions.
+      </li>
+      <li>
+       <img alt="" aria-hidden="true" src="assets/icons/check-circle.svg"/>
+       Scan, ATPG and MBIST support for production test readiness.
+      </li>
+     </ul>
+    </section>
+    <section class="capability-method-rich">
+     <div class="cap-section-heading">
+      <p class="detail-eyebrow">
+       <img alt="" aria-hidden="true" src="assets/icons/workflow.svg"/>
+       FROM REQUIREMENT TO SIGNOFF
+      </p>
+      <h2>
+       A focused closure path
+      </h2>
+     </div>
+     <div class="cap-steps">
+      <article class="cap-step">
+       <span class="cap-step-no">
+        01
+       </span>
+       <div>
+        <h3>
+         01. RTL &amp; Test Planning
+        </h3>
+        <p>
+         Translate design intent into RTL, verification strategy and DFT requirements.
+        </p>
+       </div>
+      </article>
+      <article class="cap-step">
+       <span class="cap-step-no">
+        02
+       </span>
+       <div>
+        <h3>
+         02. Verify &amp; Debug
+        </h3>
+        <p>
+         Run UVM regressions, analyze coverage and isolate functional issues.
+        </p>
+       </div>
+      </article>
+      <article class="cap-step">
+       <span class="cap-step-no">
+        03
+       </span>
+       <div>
+        <h3>
+         03. DFT &amp; Signoff
+        </h3>
+        <p>
+         Close scan, ATPG and memory-test requirements with measurable evidence.
+        </p>
+       </div>
+      </article>
+     </div>
+    </section>
+    <section class="capability-use-rich">
+     <div class="cap-section-heading">
+      <p class="detail-eyebrow">
+       <img alt="" aria-hidden="true" src="assets/icons/boxes.svg"/>
+       APPLICATIONS
+      </p>
+      <h2>
+       Typical engineering needs
+      </h2>
+     </div>
+     <div class="cap-use-grid">
+      <article class="cap-use-card">
+       <div class="cap-use-icon">
+        <img alt="" aria-hidden="true" src="assets/icons/component.svg"/>
+       </div>
+       <h3>
+        Block-Level Verification
+       </h3>
+       <p>
+        Verify functional intent before SoC integration.
+       </p>
+      </article>
+      <article class="cap-use-card">
+       <div class="cap-use-icon">
+        <img alt="" aria-hidden="true" src="assets/icons/component.svg"/>
+       </div>
+       <h3>
+        UVM Regression
+       </h3>
+       <p>
+        Build repeatable verification flows with measurable coverage.
+       </p>
+      </article>
+      <article class="cap-use-card">
+       <div class="cap-use-icon">
+        <img alt="" aria-hidden="true" src="assets/icons/component.svg"/>
+       </div>
+       <h3>
+        DFT Readiness
+       </h3>
+       <p>
+        Support scan, ATPG and MBIST implementation and debug.
+       </p>
+      </article>
+      <article class="cap-use-card">
+       <div class="cap-use-icon">
+        <img alt="" aria-hidden="true" src="assets/icons/component.svg"/>
+       </div>
+       <h3>
+        Signoff Confidence
+       </h3>
+       <p>
+        Consolidate coverage and test evidence for release decisions.
+       </p>
+      </article>
+     </div>
+    </section>
+    <section class="capability-contact-rich" id="contact">
+     <p class="eyebrow">
+      SIGNOFF SUPPORT
+     </p>
+     <h2>
+      Have a RTL, Design Verification &amp; DFT requirement?
+     </h2>
+     <p>
+      Tell us what you are trying to close, verify or implement and we can discuss the engineering support that fits your project.
+     </p>
+     <a class="button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">
+      Start your requirement discussion
+      <b>
+       &rarr;
+      </b>
+     </a>
+    </section>
+   </div>
+  </main>
+  <script src="script/script.js">
+  </script>
+  <script src="script/logo-loader.js">
+  </script>
+  <footer class="site-footer">
+   <div class="container footer-bottom">
+    <a class="site-brand" href="index.html#home">
+     <img alt="" src="assets/terasilicon-iq-symbol.png"/>
+     <span>
+      TERASILICON
+      <b>
+       IQ
+      </b>
+      <small>
+       ENGINEERING THE FUTURE OF SILICON
+      </small>
+     </span>
+    </a>
+    <p>
+     &copy; 2026 Terasilicon IQ Private Limited. All rights reserved.
+    </p>
+    <div aria-label="Legal information">
+     <a href="privacy-policy.html">
+      Privacy Policy
+     </a>
+     <a href="terms-of-use.html">
+      Terms of Use
+     </a>
+     <a href="cookie-policy.html">
+      Cookie Policy
+     </a>
+    </div>
+   </div>
+  </footer>
+ </body>
 </html>
