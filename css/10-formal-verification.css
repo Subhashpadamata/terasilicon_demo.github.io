@@ -1519,10 +1519,10 @@
 .formal-verification-page .fv-equivalence-label {
   display: flex !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: flex-start !important;
   gap: .5rem !important;
-  width: 100%;
-  text-align: center !important;
+  width: auto !important;
+  text-align: left !important;
   white-space: nowrap !important;
 }
 .formal-verification-page .fv-equivalence-label .fv-local-icon {
