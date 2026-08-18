@@ -107,3 +107,8 @@ The existing logo and supplied local assets are used throughout the website.
 ## Final QA
 
 The package should be served from the `final_site` directory so `index.html` is the site root. Relative local asset paths are preserved.
+
+## Final navigation fixes
+- Added the Terasilicon IQ symbol as the browser favicon on every HTML page.
+- Fixed the Capabilities dropdown hover gap so the menu remains open while moving the pointer from the header to a capability page.
+- Preserved the existing visual design, page structure, CSS architecture, animations, and capability subpages.

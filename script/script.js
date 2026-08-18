@@ -868,6 +868,13 @@ document.addEventListener("DOMContentLoaded", () => {
       capabilitiesToggle.setAttribute("aria-expanded", String(isOpen));
     });
 
+    capabilitiesMenu.querySelectorAll(".capabilities-dropdown a").forEach((link) => {
+      link.addEventListener("click", () => {
+        capabilitiesMenu.classList.remove("open");
+        capabilitiesToggle.setAttribute("aria-expanded", "false");
+      });
+    });
+
     document.addEventListener("click", (event) => {
       if (!capabilitiesMenu.contains(event.target)) {
         capabilitiesMenu.classList.remove("open");
