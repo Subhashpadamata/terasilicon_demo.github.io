@@ -196,12 +196,12 @@
 .formal-verification-page .text-indigo-700 { color: var(--fv-accent) !important; }
 .formal-verification-page .text-indigo-500 { color: var(--fv-accent) !important; }
 .formal-verification-page .text-emerald-600,
-.formal-verification-page .text-emerald-700 { color: #0c9d8a !important; }
+.formal-verification-page .text-emerald-700 { color: var(--fv-accent) !important; }
 .formal-verification-page .text-amber-400,
 .formal-verification-page .text-amber-500,
 .formal-verification-page .text-amber-700 { color: var(--fv-orange) !important; }
 .formal-verification-page .text-rose-600,
-.formal-verification-page .text-rose-700 { color: #9b4660 !important; }
+.formal-verification-page .text-rose-700 { color: var(--fv-orange) !important; }
 
 .formal-verification-page .bg-white { background: rgba(255,255,255,.94) !important; }
 .formal-verification-page .bg-slate-50 { background: #fbfaf7 !important; }
@@ -282,16 +282,16 @@
   margin: 0 0 24px;
   max-width: 940px;
   color: var(--fv-ink) !important;
-  font-size: clamp(52px, 6.2vw, 82px);
+  font-size: clamp(42px, 5.1vw, 66px);
   line-height: .96;
-  letter-spacing: -3.8px;
+  letter-spacing: -3px;
   text-transform: uppercase;
 }
 
 .formal-verification-page > section:first-of-type h1 span {
-  color: var(--fv-accent) !important;
+  color: var(--fv-ink) !important;
   background: none !important;
-  -webkit-text-fill-color: var(--fv-accent) !important;
+  -webkit-text-fill-color: var(--fv-ink) !important;
 }
 
 .formal-verification-page > section:first-of-type > .max-w-7xl > .grid > div:first-child > p {
@@ -334,14 +334,32 @@
 }
 
 .formal-verification-page > section:first-of-type .bg-slate-50 li {
+  position: relative;
   display: flex;
   gap: 12px;
   align-items: flex-start;
-  padding: 12px 0;
+  margin: 0 -10px;
+  padding: 14px 10px 14px 18px;
   border-top: 1px solid var(--fv-line);
+  border-radius: 8px;
   color: #59617a !important;
   font-size: 14px;
   line-height: 1.55;
+  cursor: default;
+  transition: background .22s ease, transform .22s ease, color .22s ease, box-shadow .22s ease;
+}
+
+.formal-verification-page > section:first-of-type .bg-slate-50 li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 3px;
+  height: 0;
+  border-radius: 0 3px 3px 0;
+  background: var(--fv-orange);
+  transform: translateY(-50%);
+  transition: height .22s ease;
 }
 
 .formal-verification-page > section:first-of-type .bg-slate-50 li svg {
@@ -349,7 +367,24 @@
   height: 17px;
   flex: 0 0 17px;
   margin-top: 2px;
+  color: var(--fv-accent) !important;
+  transition: color .22s ease, transform .22s ease;
+}
+
+.formal-verification-page > section:first-of-type .bg-slate-50 li:hover {
+  background: var(--fv-soft-purple);
+  color: var(--fv-ink) !important;
+  transform: translateX(4px);
+  box-shadow: 0 8px 20px rgba(101,53,147,.08);
+}
+
+.formal-verification-page > section:first-of-type .bg-slate-50 li:hover::before {
+  height: 26px;
+}
+
+.formal-verification-page > section:first-of-type .bg-slate-50 li:hover svg {
   color: var(--fv-orange) !important;
+  transform: scale(1.08);
 }
 
 /* Dark overview card. */
@@ -412,6 +447,36 @@
 .formal-verification-page > section:first-of-type .bg-gradient-to-br .border-t { border-color: rgba(255,255,255,.13) !important; }
 .formal-verification-page > section:first-of-type .bg-gradient-to-br .text-emerald-400 { color: #14c9b0 !important; }
 .formal-verification-page > section:first-of-type .bg-gradient-to-br .text-amber-400 { color: #ff9b3d !important; }
+
+/* =========================================================
+   SECTION ICONS — TERASILICON IQ LOGO PALETTE
+   ========================================================= */
+.section-icon-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.section-label-icon {
+  width: 17px;
+  height: 17px;
+  color: var(--fv-accent) !important;
+  stroke-width: 2;
+}
+.step-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.step-icon {
+  width: 16px;
+  height: 16px;
+  color: var(--fv-accent) !important;
+  flex: 0 0 16px;
+}
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(2) .step-icon,
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(3) .step-icon {
+  color: var(--fv-orange) !important;
+}
 
 /* =========================================================
    04. WHAT WE PROVIDE + METHODOLOGY
@@ -712,9 +777,9 @@
   border-radius: 9px !important;
   color: #fff !important;
 }
-.formal-verification-page > section:nth-of-type(4) > .max-w-7xl > .bg-white.border.rounded-2xl > .grid > div:nth-child(7) > div:nth-child(1) { background: #148d79 !important; }
-.formal-verification-page > section:nth-of-type(4) > .max-w-7xl > .bg-white.border.rounded-2xl > .grid > div:nth-child(7) > div:nth-child(2) { background: #a14d62 !important; }
-.formal-verification-page > section:nth-of-type(4) > .max-w-7xl > .bg-white.border.rounded-2xl > .grid > div:nth-child(7) > div:nth-child(3) { background: #c66c12 !important; }
+.formal-verification-page > section:nth-of-type(4) > .max-w-7xl > .bg-white.border.rounded-2xl > .grid > div:nth-child(7) > div:nth-child(1) { background: var(--fv-accent) !important; }
+.formal-verification-page > section:nth-of-type(4) > .max-w-7xl > .bg-white.border.rounded-2xl > .grid > div:nth-child(7) > div:nth-child(2) { background: #7d4aa5 !important; }
+.formal-verification-page > section:nth-of-type(4) > .max-w-7xl > .bg-white.border.rounded-2xl > .grid > div:nth-child(7) > div:nth-child(3) { background: var(--fv-orange) !important; }
 
 /* Secondary technical panels. */
 .formal-verification-page > section:nth-of-type(4) > .max-w-7xl > .grid.grid-cols-1.md\:grid-cols-2 {
@@ -1122,13 +1187,13 @@
 }
 
 .formal-verification-page .fv-pipeline-outcomes > div:nth-child(1) {
-  background: #148d79 !important;
+  background: var(--fv-accent) !important;
 }
 .formal-verification-page .fv-pipeline-outcomes > div:nth-child(2) {
-  background: #a14d62 !important;
+  background: #7d4aa5 !important;
 }
 .formal-verification-page .fv-pipeline-outcomes > div:nth-child(3) {
-  background: #c66c12 !important;
+  background: var(--fv-orange) !important;
 }
 
 .formal-verification-page .fv-pipeline-outcomes span {
@@ -1152,6 +1217,26 @@
   width: 20px !important;
   height: 20px !important;
   flex: 0 0 20px;
+}
+
+/* Brand palette for formal-page service boxes. */
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(odd) > div:first-child {
+  background: var(--fv-soft-purple) !important;
+  border-color: rgba(101,53,147,.22) !important;
+  color: var(--fv-accent) !important;
+}
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(even) > div:first-child {
+  background: var(--fv-soft-orange) !important;
+  border-color: rgba(239,119,0,.25) !important;
+  color: var(--fv-orange) !important;
+}
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(odd):hover {
+  border-color: rgba(101,53,147,.42) !important;
+  box-shadow: 0 14px 30px rgba(101,53,147,.10) !important;
+}
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(even):hover {
+  border-color: rgba(239,119,0,.42) !important;
+  box-shadow: 0 14px 30px rgba(239,119,0,.10) !important;
 }
 
 @media (max-width: 1150px) and (min-width: 781px) {
@@ -1233,4 +1318,219 @@
 
 .formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(even) h3 {
   color: #101638 !important;
+}
+
+
+/* =========================================================
+   FINAL FORMAL PAGE POLISH
+   - Smaller, branded heading typography
+   - Terasilicon IQ purple/orange accents
+   - Compact bottom footer
+   - Existing row interactions preserved
+   ========================================================= */
+
+/* Formal Verification heading: reduce size and use the real
+   Terasilicon IQ palette without the oversized template look. */
+.formal-verification-page > section:first-of-type h1 {
+  font-size: clamp(46px, 4.35vw, 58px) !important;
+  line-height: 1.02 !important;
+  letter-spacing: -2.6px !important;
+  color: var(--fv-ink) !important;
+  max-width: 760px;
+}
+
+.formal-verification-page > section:first-of-type h1 span {
+  color: var(--fv-accent) !important;
+  background: none !important;
+  -webkit-text-fill-color: var(--fv-accent) !important;
+}
+
+/* Keep the introductory copy slightly smaller and give the
+   important technical words a restrained branded emphasis. */
+.formal-verification-page > section:first-of-type > .max-w-7xl > .grid > div:first-child > p {
+  font-size: 15px !important;
+  line-height: 1.65 !important;
+  color: #59617a !important;
+}
+
+/* Logo-colour accents for the existing content boxes. */
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(odd) > div:first-child {
+  background: var(--fv-soft-purple) !important;
+  border-color: #d8c8e7 !important;
+  color: var(--fv-accent) !important;
+}
+
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(even) > div:first-child {
+  background: var(--fv-soft-orange) !important;
+  border-color: #f2d5ba !important;
+  color: var(--fv-orange) !important;
+}
+
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:hover h4 {
+  color: var(--fv-accent) !important;
+}
+
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(even):hover h4 {
+  color: var(--fv-orange) !important;
+}
+
+/* Branded text accents in section labels and key headings. */
+.formal-verification-page > section:nth-of-type(2) h2,
+.formal-verification-page > section:nth-of-type(3) h2,
+.formal-verification-page > section:nth-of-type(4) h2 {
+  color: var(--fv-ink) !important;
+}
+
+.formal-verification-page > section:nth-of-type(2) .text-xs.font-bold.uppercase,
+.formal-verification-page > section:nth-of-type(3) .text-xs.font-bold.uppercase,
+.formal-verification-page > section:nth-of-type(4) .text-xs.font-bold.uppercase {
+  color: var(--fv-accent) !important;
+}
+
+/* Keep both formal-page contact buttons clearly branded orange. */
+.formal-verification-page > section:first-of-type .bg-gradient-to-br a,
+.formal-verification-page > section#contact a {
+  background: var(--fv-orange) !important;
+  color: #fff !important;
+  border-color: var(--fv-orange) !important;
+}
+
+.formal-verification-page > section:first-of-type .bg-gradient-to-br a:hover,
+.formal-verification-page > section#contact a:hover {
+  background: #ff8b22 !important;
+  border-color: #ff8b22 !important;
+}
+
+/* Compact the simple legal footer without changing its content. */
+.formal-verification-page > footer.site-footer {
+  padding: 10px 0 !important;
+  min-height: 0 !important;
+}
+
+.formal-verification-page > footer.site-footer .footer-bottom {
+  padding: 10px 0 !important;
+  min-height: 0 !important;
+  gap: 18px !important;
+}
+
+.formal-verification-page > footer.site-footer .site-brand img {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.formal-verification-page > footer.site-footer .site-brand {
+  font-size: 15px !important;
+}
+
+.formal-verification-page > footer.site-footer .site-brand small {
+  font-size: 7px !important;
+}
+
+.formal-verification-page > footer.site-footer .footer-bottom p,
+.formal-verification-page > footer.site-footer .footer-bottom div {
+  font-size: 10px !important;
+}
+
+@media (max-width: 900px) {
+  .formal-verification-page > section:first-of-type h1 {
+    font-size: clamp(42px, 9vw, 54px) !important;
+  }
+}
+
+@media (max-width: 580px) {
+  .formal-verification-page > section:first-of-type h1 {
+    font-size: clamp(36px, 11vw, 48px) !important;
+    letter-spacing: -1.8px !important;
+  }
+
+  .formal-verification-page > section:first-of-type > .max-w-7xl > .grid > div:first-child > p {
+    font-size: 14px !important;
+  }
+
+  .formal-verification-page > footer.site-footer .footer-bottom {
+    padding: 8px 0 !important;
+  }
+}
+
+/* Use only the Terasilicon IQ purple/orange palette for content icons. */
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(odd) > div:first-child,
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(odd) > div:first-child {
+  background: var(--fv-soft-purple) !important;
+  border-color: #dfd2ea !important;
+  color: var(--fv-accent) !important;
+}
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div:nth-child(even) > div:first-child,
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(even) > div:first-child {
+  background: var(--fv-soft-orange) !important;
+  border-color: #f2d5ba !important;
+  color: var(--fv-orange) !important;
+}
+.formal-verification-page > section:nth-of-type(2) .space-y-4 > div svg,
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div svg {
+  color: inherit !important;
+}
+
+
+/* Final polish: single BMC bullets, green PROVED outcome, and compact SEC/LEC label. */
+.formal-verification-page .fv-pipeline-engine li::before {
+  background: var(--fv-accent) !important;
+}
+
+.formal-verification-page .fv-pipeline-outcomes > div:nth-child(1) {
+  background: #16b979 !important;
+}
+
+.formal-verification-page .fv-pipeline-outcomes > div:nth-child(2) {
+  background: #7d4aa5 !important;
+}
+
+.formal-verification-page .fv-pipeline-outcomes > div:nth-child(3) {
+  background: var(--fv-orange) !important;
+}
+
+.formal-verification-page .fv-equivalence-label {
+  white-space: nowrap !important;
+  font-size: 11px !important;
+  letter-spacing: .08em !important;
+}
+
+.formal-verification-page .fv-equivalence-label svg {
+  color: var(--fv-accent) !important;
+}
+
+@media (max-width: 700px) {
+  .formal-verification-page .fv-equivalence-label {
+    white-space: normal !important;
+  }
+}
+
+
+/* Local icon assets: no external icon library required. */
+.formal-verification-page .fv-local-icon {
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  display: inline-block;
+  object-fit: contain;
+}
+.formal-verification-page .fv-pipeline-outcomes .fv-local-icon {
+  filter: brightness(0) invert(1);
+}
+.formal-verification-page .fv-equivalence-label {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: .5rem !important;
+  width: 100%;
+  text-align: center !important;
+  white-space: nowrap !important;
+}
+.formal-verification-page .fv-equivalence-label .fv-local-icon {
+  width: 1.05rem;
+  height: 1.05rem;
+}
+@media (max-width: 700px) {
+  .formal-verification-page .fv-equivalence-label {
+    white-space: normal !important;
+  }
 }

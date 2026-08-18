@@ -5,7 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Formal Verification Services | Terasilicon IQ">
   <title>Formal Verification Services | Terasilicon IQ</title>
-      <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/01-core.css">
   <link rel="stylesheet" href="css/02-layout.css">
   <link rel="stylesheet" href="css/03-contact.css">
@@ -16,8 +18,25 @@
   <link rel="stylesheet" href="css/08-flow.css">
   <link rel="stylesheet" href="css/09-utilities.css">
   <link rel="stylesheet" href="css/10-formal-verification.css">
-</head>
+    <link rel="stylesheet" href="css/11-logo-loader.css">
+  </head>
 <body class="formal-verification-page">
+  <div id="tsiq-loader" aria-label="Loading Terasilicon IQ" role="status">
+    <div class="tsiq-loader-inner">
+      <div class="tsiq-loader-logo" aria-hidden="true">
+        <img class="tsiq-logo-base" src="assets/terasilicon-iq-symbol.png" alt="">
+        <img class="tsiq-logo-purple" src="assets/terasilicon-iq-symbol.png" alt="">
+        <img class="tsiq-logo-orange" src="assets/terasilicon-iq-symbol.png" alt="">
+        <img class="tsiq-logo-glow" src="assets/terasilicon-iq-symbol.png" alt="">
+      </div>
+      <div class="tsiq-loader-brand">TERASILICON <b>IQ</b></div>
+      <div class="tsiq-loader-tagline">ENGINEERING THE FUTURE OF SILICON</div>
+      <div class="tsiq-loader-line" aria-hidden="true"></div>
+      <div class="tsiq-loader-status" aria-live="polite"></div>
+      <div class="tsiq-loader-substatus">Initializing Verification Flow</div>
+    </div>
+  </div>
+
   <div class="fv-background" aria-hidden="true"><span class="fv-orb fv-orb-one"></span><span class="fv-orb fv-orb-two"></span><span class="fv-grid"></span></div>
 <header class="site-header">
     <a class="site-brand" href="index.html#home" aria-label="Terasilicon IQ home">
@@ -64,23 +83,23 @@
           <!-- Engineering Scope Card -->
           <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 shadow-sm">
             <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 flex items-center gap-2">
-              <i data-lucide="layers" class="w-4 h-4 text-indigo-600"></i> Engineering Scope
+              <img src="assets/icons/layers.svg" alt="" aria-hidden="true" class="w-4 h-4 text-indigo-600 fv-local-icon"> Engineering Scope
             </h3>
             <ul class="space-y-3 text-sm text-slate-700">
               <li class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+                <img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0 fv-local-icon">
                 <span>High-level safety property checking and control path state space exploration.</span>
               </li>
               <li class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+                <img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0 fv-local-icon">
                 <span>Deadlock & livelock detection across complex arbitration and protocol bridges.</span>
               </li>
               <li class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+                <img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0 fv-local-icon">
                 <span>Automated counter-example waveform debug and root-cause tracing.</span>
               </li>
               <li class="flex items-start gap-3">
-                <i data-lucide="check-circle-2" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0"></i>
+                <img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0 fv-local-icon">
                 <span>Proof convergence acceleration and sign-off readiness auditing.</span>
               </li>
             </ul>
@@ -102,16 +121,16 @@
             </p>
 
             <div class="space-y-4">
-              <a href="#contact" class="flex items-center justify-between w-full px-5 py-3.5 bg-lime-400 hover:bg-lime-300 text-slate-950 font-semibold text-sm rounded-xl transition duration-200 shadow-md">
+              <a href="index.html#contact" class="flex items-center justify-between w-full px-5 py-3.5 bg-lime-400 hover:bg-lime-300 text-slate-950 font-semibold text-sm rounded-xl transition duration-200 shadow-md">
                 <span>HAVE A FORMAL VERIFICATION REQUIREMENT?</span>
-                <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                <img src="assets/icons/arrow-right.svg" alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon">
               </a>
               <div class="flex items-center gap-6 pt-4 border-t border-slate-800/80 text-xs text-slate-400">
                 <div class="flex items-center gap-2">
-                  <i data-lucide="shield-check" class="w-4 h-4 text-emerald-400"></i> ISO 26262 / ASIL-D
+                  <img src="assets/icons/shield-check.svg" alt="" aria-hidden="true" class="w-4 h-4 text-emerald-400 fv-local-icon"> ISO 26262 / ASIL-D
                 </div>
                 <div class="flex items-center gap-2">
-                  <i data-lucide="zap" class="w-4 h-4 text-amber-400"></i> 10x Coverage Depth
+                  <img src="assets/icons/zap.svg" alt="" aria-hidden="true" class="w-4 h-4 text-amber-400 fv-local-icon"> 10x Coverage Depth
                 </div>
               </div>
             </div>
@@ -129,7 +148,7 @@
         
         <!-- Left: What We Provide -->
         <div class="lg:col-span-7">
-          <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Integration & Delivery</div>
+          <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2 section-icon-label"><img src="assets/icons/file-check-2.svg" alt="" aria-hidden="true" class="section-label-icon fv-local-icon"><span>Integration & Delivery</span></div>
           <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4">WHAT WE PROVIDE</h2>
           <p class="text-sm text-slate-600 mb-8 leading-relaxed">
             Our formal verification methodology mathematically guarantees design correctness, uncovering elusive edge cases that simulation testbenches routinely miss.
@@ -139,7 +158,7 @@
             
             <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
               <div class="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center shrink-0">
-                <i data-lucide="shield-alert" class="w-5 h-5 text-indigo-600"></i>
+                <img src="assets/icons/shield-alert.svg" alt="" aria-hidden="true" class="w-5 h-5 text-indigo-600 fv-local-icon">
               </div>
               <div>
                 <h4 class="text-sm font-bold text-slate-900">Assertion-Based Verification (SVA / PSL)</h4>
@@ -151,7 +170,7 @@
 
             <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
               <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
-                <i data-lucide="git-branch" class="w-5 h-5 text-emerald-600"></i>
+                <img src="assets/icons/git-branch.svg" alt="" aria-hidden="true" class="w-5 h-5 text-emerald-600 fv-local-icon">
               </div>
               <div>
                 <h4 class="text-sm font-bold text-slate-900">Sequential Equivalence Checking (SEC)</h4>
@@ -163,7 +182,7 @@
 
             <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
               <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0">
-                <i data-lucide="bug" class="w-5 h-5 text-amber-600"></i>
+                <img src="assets/icons/bug.svg" alt="" aria-hidden="true" class="w-5 h-5 text-amber-600 fv-local-icon">
               </div>
               <div>
                 <h4 class="text-sm font-bold text-slate-900">Counter-Example Driven Root-Cause Debug</h4>
@@ -175,7 +194,7 @@
 
             <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
               <div class="w-10 h-10 rounded-lg bg-rose-50 border border-rose-100 flex items-center justify-center shrink-0">
-                <i data-lucide="gauge" class="w-5 h-5 text-rose-600"></i>
+                <img src="assets/icons/gauge.svg" alt="" aria-hidden="true" class="w-5 h-5 text-rose-600 fv-local-icon">
               </div>
               <div>
                 <h4 class="text-sm font-bold text-slate-900">Proof Convergence & Complexity Management</h4>
@@ -192,7 +211,7 @@
         <div class="lg:col-span-5">
           <div class="bg-white border border-slate-200/80 rounded-2xl p-8 shadow-sm h-full flex flex-col justify-between">
             <div>
-              <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Methodology</div>
+              <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2 section-icon-label"><img src="assets/icons/file-text.svg" alt="" aria-hidden="true" class="section-label-icon fv-local-icon"><span>Methodology</span></div>
               <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-4">FROM REQUIREMENT TO SIGNOFF</h2>
               <p class="text-sm text-slate-600 leading-relaxed mb-6">
                 Our verification support structures end-to-end mathematical guarantees into your project lifecycle. We formalize technical specs into provable assertions, isolate state spaces, and provide unambiguous proof results.
@@ -200,22 +219,22 @@
 
               <div class="space-y-4 text-xs text-slate-600">
                 <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
-                  <span class="font-bold text-slate-900 block mb-1">01. Architectural Analysis</span>
+                  <span class="font-bold text-slate-900 block mb-1 step-title"><img src="assets/icons/scan-search.svg" alt="" aria-hidden="true" class="step-icon fv-local-icon"><span>01. Architectural Analysis</span></span>
                   Extraction of formal assumptions, interfaces, and protocol contract invariants.
                 </div>
                 <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
-                  <span class="font-bold text-slate-900 block mb-1">02. SVA Harness Creation</span>
+                  <span class="font-bold text-slate-900 block mb-1 step-title"><img src="assets/icons/file-code-2.svg" alt="" aria-hidden="true" class="step-icon fv-local-icon"><span>02. SVA Harness Creation</span></span>
                   Layered property suites matching IEEE 1800 SystemVerilog standard.
                 </div>
                 <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
-                  <span class="font-bold text-slate-900 block mb-1">03. Bounded & Full Proof Convergence</span>
+                  <span class="font-bold text-slate-900 block mb-1 step-title"><img src="assets/icons/badge-check.svg" alt="" aria-hidden="true" class="step-icon fv-local-icon"><span>03. Bounded & Full Proof Convergence</span></span>
                   Execution across industrial formal solvers with formal coverage sign-off metrics.
                 </div>
               </div>
             </div>
 
             <div class="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 font-medium">
-              <i data-lucide="check-check" class="w-4 h-4 text-indigo-600"></i> Seamless synchronization with standard UVM/Simulation regression suites.
+              <img src="assets/icons/check-check.svg" alt="" aria-hidden="true" class="w-4 h-4 text-indigo-600 fv-local-icon"> Seamless synchronization with standard UVM/Simulation regression suites.
             </div>
           </div>
         </div>
@@ -227,14 +246,14 @@
   <!-- Typical Engineering Needs Grid -->
   <section class="py-16 bg-white border-b border-slate-200">
     <div class="max-w-7xl mx-auto px-6">
-      <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">Use Cases</div>
+      <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2 section-icon-label"><img src="assets/icons/layers-3.svg" alt="" aria-hidden="true" class="section-label-icon fv-local-icon"><span>Use Cases</span></div>
       <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-8">TYPICAL ENGINEERING NEEDS</h2>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         
         <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
           <div class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center mb-4">
-            <i data-lucide="component" class="w-5 h-5"></i>
+            <img src="assets/icons/component.svg" alt="" aria-hidden="true" class="w-5 h-5 fv-local-icon">
           </div>
           <h3 class="text-base font-bold text-slate-900 mb-2">Block-Level Signoff</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
@@ -244,7 +263,7 @@
 
         <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
           <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
-            <i data-lucide="network" class="w-5 h-5"></i>
+            <img src="assets/icons/network.svg" alt="" aria-hidden="true" class="w-5 h-5 fv-local-icon">
           </div>
           <h3 class="text-base font-bold text-slate-900 mb-2">SoC Integration</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
@@ -254,7 +273,7 @@
 
         <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
           <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mb-4">
-            <i data-lucide="refresh-cw" class="w-5 h-5"></i>
+            <img src="assets/icons/refresh-cw.svg" alt="" aria-hidden="true" class="w-5 h-5 fv-local-icon">
           </div>
           <h3 class="text-base font-bold text-slate-900 mb-2">RTL & ECO Changes</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
@@ -264,7 +283,7 @@
 
         <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
           <div class="w-9 h-9 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center mb-4">
-            <i data-lucide="badge-check" class="w-5 h-5"></i>
+            <img src="assets/icons/badge-check.svg" alt="" aria-hidden="true" class="w-5 h-5 fv-local-icon">
           </div>
           <h3 class="text-base font-bold text-slate-900 mb-2">Signoff Confidence</h3>
           <p class="text-xs text-slate-600 leading-relaxed">
@@ -281,7 +300,7 @@
     <div class="max-w-7xl mx-auto px-6">
       
       <div class="mb-12">
-        <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2">System Architecture</div>
+        <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2 section-icon-label"><img src="assets/icons/boxes.svg" alt="" aria-hidden="true" class="section-label-icon fv-local-icon"><span>System Architecture</span></div>
         <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mb-4">
           PROOF-DRIVEN CONFIDENCE AT RTL
         </h2>
@@ -293,7 +312,7 @@
       <!-- Main Flow Diagram Card -->
       <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm mb-12">
         <div class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-8 flex items-center gap-2">
-          <i data-lucide="workflow" class="w-4 h-4 text-indigo-600"></i> Formal Verification Pipeline Flow
+          <img src="assets/icons/workflow.svg" alt="" aria-hidden="true" class="w-4 h-4 text-indigo-600 fv-local-icon"> Formal Verification Pipeline Flow
         </div>
 
         <div class="fv-pipeline-grid grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
@@ -309,38 +328,38 @@
 
           <!-- Connector 1 -->
           <div class="hidden lg:flex lg:col-span-1 justify-center">
-            <i data-lucide="arrow-right" class="w-6 h-6 text-slate-300"></i>
+            <img src="assets/icons/arrow-right.svg" alt="" aria-hidden="true" class="w-6 h-6 text-slate-300 fv-local-icon">
           </div>
 
           <!-- Stage 2: Property Specifications -->
           <div class="fv-pipeline-properties lg:col-span-3 space-y-3">
             <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-center font-semibold text-xs text-slate-800 shadow-sm flex items-center justify-center gap-2">
-              <i data-lucide="filter" class="w-3.5 h-3.5 text-indigo-500"></i> ASSUMPTIONS (Environment)
+              <img src="assets/icons/filter.svg" alt="" aria-hidden="true" class="w-3.5 h-3.5 text-indigo-500 fv-local-icon"> ASSUMPTIONS (Environment)
             </div>
             <div class="p-3.5 bg-indigo-50/70 border border-indigo-200 rounded-lg text-center font-bold text-xs text-indigo-950 shadow-sm flex items-center justify-center gap-2">
-              <i data-lucide="shield-check" class="w-3.5 h-3.5 text-indigo-600"></i> SVA PROPERTIES (Assertions)
+              <img src="assets/icons/shield-check.svg" alt="" aria-hidden="true" class="w-3.5 h-3.5 text-indigo-600 fv-local-icon"> SVA PROPERTIES (Assertions)
             </div>
             <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-center font-semibold text-xs text-slate-800 shadow-sm flex items-center justify-center gap-2">
-              <i data-lucide="crosshair" class="w-3.5 h-3.5 text-emerald-600"></i> COVER PROPERTIES (Reachable)
+              <img src="assets/icons/crosshair.svg" alt="" aria-hidden="true" class="w-3.5 h-3.5 text-emerald-600 fv-local-icon"> COVER PROPERTIES (Reachable)
             </div>
           </div>
 
           <!-- Connector 2 -->
           <div class="hidden lg:flex lg:col-span-1 justify-center">
-            <i data-lucide="arrow-right" class="w-6 h-6 text-slate-300"></i>
+            <img src="assets/icons/arrow-right.svg" alt="" aria-hidden="true" class="w-6 h-6 text-slate-300 fv-local-icon">
           </div>
 
           <!-- Stage 3: Formal Engine Solver -->
           <div class="fv-pipeline-engine lg:col-span-2">
             <div class="p-5 bg-gradient-to-b from-slate-900 to-indigo-950 text-white rounded-xl border border-indigo-900/60 shadow-lg text-center">
               <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white mx-auto flex items-center justify-center mb-2 shadow">
-                <i data-lucide="binary" class="w-4 h-4"></i>
+                <img src="assets/icons/binary.svg" alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon">
               </div>
               <h4 class="text-sm font-bold tracking-tight">FORMAL ENGINE</h4>
               <ul class="text-[10px] text-slate-300 font-mono mt-3 space-y-1 text-left">
-                <li>• Bounded Model Checking</li>
-                <li>• k-Induction Proof</li>
-                <li>• Invariant Generation</li>
+                <li>Bounded Model Checking</li>
+                <li>k-Induction Proof</li>
+                <li>Invariant Generation</li>
               </ul>
             </div>
           </div>
@@ -349,17 +368,17 @@
           <div class="fv-pipeline-outcomes lg:col-span-2 space-y-2.5">
             <!-- Proved -->
             <div class="p-3 rounded-lg bg-emerald-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
-              <span class="flex items-center gap-1.5"><i data-lucide="check-circle" class="w-4 h-4"></i> PROVED</span>
+              <span class="flex items-center gap-1.5"><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon"> PROVED</span>
               <span class="text-[10px] font-mono opacity-80">100% Signoff</span>
             </div>
             <!-- Failed -->
             <div class="p-3 rounded-lg bg-rose-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
-              <span class="flex items-center gap-1.5"><i data-lucide="x-circle" class="w-4 h-4"></i> FAILED</span>
+              <span class="flex items-center gap-1.5"><img src="assets/icons/x-circle.svg" alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon"> FAILED</span>
               <span class="text-[10px] font-mono opacity-80">Counter-Trace</span>
             </div>
             <!-- Coverage -->
             <div class="p-3 rounded-lg bg-amber-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
-              <span class="flex items-center gap-1.5"><i data-lucide="pie-chart" class="w-4 h-4"></i> COVERAGE</span>
+              <span class="flex items-center gap-1.5"><img src="assets/icons/pie-chart.svg" alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon"> COVERAGE</span>
               <span class="text-[10px] font-mono opacity-80">Witness Hit</span>
             </div>
           </div>
@@ -373,7 +392,7 @@
         <!-- Design Intent Verification -->
         <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
           <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4 flex items-center gap-2">
-            <i data-lucide="file-check-2" class="w-4 h-4"></i> Formal Design Clarification
+            <img src="assets/icons/file-check-2.svg" alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon"> Formal Design Clarification
           </div>
           <div class="grid grid-cols-3 gap-2 text-center text-xs mb-4">
             <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
@@ -396,8 +415,8 @@
 
         <!-- Equivalence Checking (SEC) -->
         <div class="bg-slate-900 text-white border border-slate-800 rounded-2xl p-6 shadow-sm">
-          <div class="text-xs font-bold uppercase tracking-wider text-amber-400 mb-4 flex items-center gap-2">
-            <i data-lucide="git-compare" class="w-4 h-4"></i> Formal Equivalence (SEC / LEC)
+          <div class="fv-equivalence-label text-xs font-bold uppercase tracking-wider text-amber-400 mb-4 flex items-center gap-2">
+            <img src="assets/icons/git-compare.svg" alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon"> Formal Equivalence (SEC / LEC)
           </div>
           <div class="flex items-center justify-between gap-2 text-center text-xs mb-4">
             <div class="flex-1 p-3 rounded-lg bg-slate-800 border border-slate-700">
@@ -437,9 +456,9 @@
         </p>
 
         <div class="inline-flex flex-col sm:flex-row items-center gap-4 relative z-10">
-          <a href="mailto:contact@terablock.iq" class="px-8 py-4 bg-lime-400 hover:bg-lime-300 text-slate-950 font-bold rounded-xl text-sm transition duration-200 shadow-lg flex items-center gap-2">
+          <a href="index.html#contact" class="px-8 py-4 bg-lime-400 hover:bg-lime-300 text-slate-950 font-bold rounded-xl text-sm transition duration-200 shadow-lg flex items-center gap-2">
             <span>Start your requirement discussion</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            <img src="assets/icons/arrow-right.svg" alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon">
           </a>
         </div>
       </div>
@@ -449,10 +468,9 @@
   <!-- Footer -->
   
 
-  <!-- Initialize Lucide Icons -->
 <footer class="site-footer">
       <div class="container footer-bottom">
-        <a class="site-brand" href="#home">
+        <a class="site-brand" href="index.html#home">
           <img src="assets/terasilicon-iq-symbol.png" alt="">
           <span>
             TERASILICON
@@ -481,5 +499,6 @@
       </div>
     </footer>
 <script src="script/script.js"></script>
+  <script src="script/logo-loader.js"></script>
 </body>
 </html>

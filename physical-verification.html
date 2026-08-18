@@ -17,8 +17,25 @@
     <link rel="stylesheet" href="css/07-navigation.css">
     <link rel="stylesheet" href="css/08-flow.css">
     <link rel="stylesheet" href="css/09-utilities.css">
+      <link rel="stylesheet" href="css/11-logo-loader.css">
   </head>
 <body>
+    <div id="tsiq-loader" aria-label="Loading Terasilicon IQ" role="status">
+      <div class="tsiq-loader-inner">
+        <div class="tsiq-loader-logo" aria-hidden="true">
+          <img class="tsiq-logo-base" src="assets/terasilicon-iq-symbol.png" alt="">
+          <img class="tsiq-logo-purple" src="assets/terasilicon-iq-symbol.png" alt="">
+          <img class="tsiq-logo-orange" src="assets/terasilicon-iq-symbol.png" alt="">
+          <img class="tsiq-logo-glow" src="assets/terasilicon-iq-symbol.png" alt="">
+        </div>
+        <div class="tsiq-loader-brand">TERASILICON <b>IQ</b></div>
+        <div class="tsiq-loader-tagline">ENGINEERING THE FUTURE OF SILICON</div>
+        <div class="tsiq-loader-line" aria-hidden="true"></div>
+        <div class="tsiq-loader-status">Loading</div>
+        <div class="tsiq-loader-substatus">Initializing Verification Flow</div>
+      </div>
+    </div>
+
   <header class="site-header">
     <a class="site-brand" href="index.html#home" aria-label="Terasilicon IQ home">
       <img src="assets/terasilicon-iq-symbol.png" alt="">
@@ -136,5 +153,6 @@
     </div>
   </main>
   <script src="script/script.js"></script>
+  <script src="script/logo-loader.js"></script>
 </body>
 </html>
