@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="Timing closure analysis diagram">
+<rect width="720" height="360" rx="28" fill="#0b102f"/>
+<path d="M50 270H670" stroke="#2b3150" stroke-width="2"/>
+<path d="M60 250 L140 250 L140 170 L230 170 L230 220 L320 220 L320 110 L420 110 L420 190 L520 190 L520 80 L660 80" fill="none" stroke="#653593" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M60 300H190V275H320V245H450V210H660" fill="none" stroke="#ef7700" stroke-width="4" stroke-linecap="round"/>
+<circle cx="520" cy="80" r="10" fill="#ef7700"/><circle cx="420" cy="110" r="8" fill="#653593"/>
+<text x="50" y="55" fill="#ffffff" font-family="Space Grotesk, sans-serif" font-size="24" font-weight="700">MCMM TIMING CLOSURE</text>
+<text x="50" y="88" fill="#a9aec4" font-family="IBM Plex Mono, monospace" font-size="14">SETUP • HOLD • CRITICAL PATH</text>
+<text x="60" y="332" fill="#653593" font-family="IBM Plex Mono, monospace" font-size="13">PATH ANALYSIS</text>
+<text x="530" y="332" fill="#ef7700" font-family="IBM Plex Mono, monospace" font-size="13">CLOSURE READY</text>
+</svg>

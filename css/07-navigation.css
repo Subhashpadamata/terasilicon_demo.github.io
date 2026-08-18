@@ -67,3 +67,44 @@
   }
 }
 
+
+
+/* =========================================================
+   CAPABILITIES SUB-PAGE MENU
+   ========================================================= */
+.nav-capabilities{position:relative;display:flex;align-items:center}
+.nav-capabilities-main{display:flex;align-items:center;position:relative}
+.nav-capabilities-main > .capabilities-nav-link{position:relative}
+
+/* Homepage section-active state: capabilities becomes active only when its section is reached. */
+.nav-capabilities-main > .capabilities-nav-link.active{color:var(--violet)!important}
+.nav-capabilities-main > .capabilities-nav-link.active::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--orange);vertical-align:middle;margin:0 8px 1px 0;box-shadow:0 0 0 3px rgba(239,119,0,.14)}
+.nav-capabilities-main > .capabilities-nav-link.active::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:var(--violet);transform:scaleX(1);transform-origin:center;opacity:1;pointer-events:none}
+.nav-capabilities.active .capabilities-nav-link{color:var(--violet)!important}
+.nav-capabilities.active .capabilities-nav-link::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--orange);vertical-align:middle;margin:0 8px 1px 0;box-shadow:0 0 0 3px rgba(239,119,0,.14)}
+.nav-capabilities.active .capabilities-nav-link::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:var(--violet);transform:scaleX(1);transform-origin:center;opacity:1;pointer-events:none}
+.subpage-active .capabilities-nav-link{color:var(--violet)!important}
+.subpage-active .capabilities-nav-link::before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--orange);vertical-align:middle;margin:0 8px 1px 0;box-shadow:0 0 0 3px rgba(101,53,147,.14)}
+.subpage-active .capabilities-nav-link::after{content:"";position:absolute;left:0;right:0;bottom:-7px;height:2px;background:var(--violet);transform:scaleX(1);transform-origin:center;opacity:1;pointer-events:none}
+.capabilities-toggle{display:none;border:0;background:transparent;color:var(--ink);font:inherit;cursor:pointer;padding:2px 0 2px 5px;line-height:1}
+.capabilities-dropdown{position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%, -6px);width:330px;padding:9px;background:#fff;border:1px solid var(--line);box-shadow:0 18px 36px #10163818;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .2s ease,transform .2s ease,visibility .2s ease;z-index:30}
+.capabilities-dropdown::before{content:"";position:absolute;top:-7px;left:50%;width:12px;height:12px;background:#fff;border-left:1px solid var(--line);border-top:1px solid var(--line);transform:translateX(-50%) rotate(45deg)}
+.nav-capabilities:hover .capabilities-dropdown,.nav-capabilities:focus-within .capabilities-dropdown,.nav-capabilities.open .capabilities-dropdown{opacity:1;visibility:visible;pointer-events:auto;transform:translate(-50%,0)}
+.capabilities-dropdown a{display:flex;align-items:center;gap:9px;padding:10px 12px;color:var(--ink);text-decoration:none;font-size:12px;line-height:1.3;border-left:2px solid transparent;transition:background .18s ease,color .18s ease,border-color .18s ease}
+.capabilities-dropdown a::before{content:"";width:5px;height:5px;border-radius:50%;background:#c8c5cf;flex:0 0 auto}
+.capabilities-dropdown a:hover,.capabilities-dropdown a:focus-visible{background:#f7f2fb;color:var(--violet);border-left-color:var(--violet);outline:none}
+.capabilities-dropdown a.current{background:#f7f2fb;color:var(--violet);border-left-color:var(--orange);font-weight:600}
+.capabilities-dropdown a.current::before{background:var(--orange);box-shadow:0 0 0 3px #ef77001c}
+.capabilities-dropdown a.current::after{content:"CURRENT";margin-left:auto;font:500 8px/1 "IBM Plex Mono",monospace;letter-spacing:.08em;color:var(--orange)}
+@media (max-width:900px){
+  .nav-capabilities{display:block}
+  .nav-capabilities-main{justify-content:space-between;border-bottom:1px solid var(--line)}
+  .nav-capabilities-main > .capabilities-nav-link{padding:13px 0;border-bottom:0!important;flex:1}
+  .capabilities-toggle{display:block;width:42px;height:42px;font-size:18px}
+  .capabilities-dropdown{position:static;transform:none;width:auto;padding:4px 0 8px;background:#faf9fc;border:0;border-bottom:1px solid var(--line);box-shadow:none;display:none;opacity:1;visibility:visible;pointer-events:auto}
+  .nav-capabilities.open .capabilities-dropdown{display:block;transform:none}
+  .capabilities-dropdown::before{display:none}
+  .capabilities-dropdown a{padding:10px 12px 10px 22px;font-size:12px}
+  .capabilities-dropdown a.current::after{font-size:7px}
+  .nav-capabilities-main .capabilities-nav-link.active::after{bottom:-1px}
+}

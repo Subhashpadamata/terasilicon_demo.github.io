@@ -18,8 +18,9 @@
     <link rel="stylesheet" href="css/08-flow.css">
     <link rel="stylesheet" href="css/09-utilities.css">
       <link rel="stylesheet" href="css/11-logo-loader.css">
+  <link rel="stylesheet" href="css/12-subpage-consistency.css">
   </head>
-<body>
+<body data-capability-page="physical-verification.html">
     <div id="tsiq-loader" aria-label="Loading Terasilicon IQ" role="status">
       <div class="tsiq-loader-inner">
         <div class="tsiq-loader-logo" aria-hidden="true">
@@ -49,110 +50,81 @@
     <nav aria-label="Primary navigation">
       <a href="index.html#home">Home</a>
       <a href="index.html#signoff">Signoff</a>
-      <a href="index.html#capabilities">Capabilities</a>
+      <div class="nav-capabilities subpage-active">
+        <div class="nav-capabilities-main">
+          <a href="index.html#capabilities" class="capabilities-nav-link">Capabilities</a>
+          <button class="capabilities-toggle" type="button" aria-label="Show capability pages" aria-expanded="false">⌄</button>
+        </div>
+        <div class="capabilities-dropdown" aria-label="Capability pages">
+          <a href="formal-verification.html">Formal Verification</a><a href="sta-timing-closure.html">STA & Timing Closure</a><a href="emir-power-integrity.html">EMIR & Power Integrity</a><a href="physical-design-signoff.html">Physical Design & Signoff</a><a href="rtl-dv-dft.html">RTL, Design Verification & DFT</a><a href="physical-verification.html" class="current" aria-current="page">Physical Verification</a>
+        </div>
+      </div>
       <a href="index.html#solutions">Solutions</a>
       <a href="index.html#about">About</a>
       <a class="nav-cta" href="index.html#contact">Talk to our team <b>→</b></a>
     </nav>
   </header>
 
-  <main class="capability-page">
-    <div class="container">
-      <div class="capability-hero">
-        <p class="eyebrow">TERASILICON IQ / CAPABILITY</p>
+  <main class="capability-page capability-rich-page">
+  <div class="container">
+    <section class="capability-hero-rich">
+      <div class="capability-hero-copy">
+        <p class="eyebrow">PHYSICAL SIGNOFF / CAPABILITY</p>
         <h1>Physical Verification</h1>
-        <p>DRC, LVS support, layout debugging and physical closure.</p>
+        <p class="capability-tag">DRC • LVS • LAYOUT DEBUG • PHYSICAL CLOSURE</p>
+        <p class="capability-intro">Terasilicon IQ supports physical-verification analysis from DRC and LVS debug through layout issue tracking and final physical signoff readiness.</p>
+        <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
       </div>
-
-      <div class="capability-content">
-        <section class="capability-panel">
-          <h2>Engineering Scope</h2>
-          <ul class="capability-list"><li>DRC analysis and violation debug</li><li>LVS support and connectivity checks</li><li>Layout debugging and physical verification closure</li><li>Signoff readiness and issue tracking</li></ul>
-        </section>
-
-        <section class="capability-side">
-          <p class="eyebrow">SIGNOFF-DRIVEN ENGINEERING</p>
-          <h2>Physical Verification</h2>
-          <p>
-            Terasilicon IQ provides focused semiconductor engineering support
-            for teams moving from implementation through verification,
-            closure and signoff.
-          </p>
-          <div class="capability-actions">
-            <a class="capability-back" href="index.html#capabilities">← All capabilities</a>
-            <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
-          </div>
-        </section>
+      <div class="capability-visual-card">
+        <img src="assets/capabilities/physical-verification.svg" alt="Physical Verification engineering overview">
+        <div class="capability-visual-caption"><img src="assets/icons/shield-check.svg" alt="" aria-hidden="true"> Physical Verification / SIGNOFF FLOW</div>
       </div>
+    </section>
 
-      <section class="capability-detail">
-        <div class="capability-detail-grid">
-          <div>
-            <p class="detail-eyebrow">ENGINEERING APPROACH</p>
-            <h2>What we provide</h2>
-            <p>Formal verification uses mathematical proof to exhaustively analyze RTL behavior against intended properties and design intent. It is especially useful for finding corner-case failures that simulation may miss and for building high confidence before signoff.</p>
-            <ul class="capability-detail-list">
-            <li>Assertion-based property verification for control, protocol and safety behavior.</li>
-            <li>Sequential and combinational equivalence checking for RTL, revised RTL and implementation changes.</li>
-            <li>Counterexample-driven debug to isolate the failing state, sequence and root cause.</li>
-            <li>Assumption and constraint development to model legal operating environments without hiding real bugs.</li>
-            <li>Proof convergence support using abstraction, decomposition, coverage and proof-depth analysis.</li>
-            </ul>
-          </div>
+    <section class="capability-scope-rich">
+      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/layers.svg" alt="" aria-hidden="true">ENGINEERING SCOPE</p><h2>Where we contribute</h2></div>
+      <div class="cap-scope-list"><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">DRC analysis and violation debug</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">LVS support and connectivity checks</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">Layout debugging and physical verification closure</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">Signoff readiness and issue tracking</li></div>
+    </section>
 
-          <div>
-            <p class="detail-eyebrow">WHERE IT FITS</p>
-            <h2>From requirement to signoff</h2>
-            <p>
-              Our engineering support is structured around the actual closure
-              problem: understand the requirement, isolate risk, apply the
-              right analysis or verification method, and provide clear
-              evidence for the next signoff decision.
-            </p>
-            <p>
-              Engagement can be focused on a specific block, flow, violation
-              class or closure milestone, while keeping communication aligned
-              with the wider semiconductor team.
-            </p>
-          </div>
-        </div>
+    <section class="capability-detail-rich">
+      <div class="cap-detail-intro"><p class="detail-eyebrow"><img src="assets/icons/file-check-2.svg" alt="" aria-hidden="true">ENGINEERING APPROACH</p><h2>What we provide</h2><p>Terasilicon IQ supports physical-verification analysis from DRC and LVS debug through layout issue tracking and final physical signoff readiness.</p></div>
+      <ul class="cap-provide-list"><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">DRC violation triage with focused layout debug and rule interpretation.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">LVS connectivity review and mismatch isolation.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">Layout-level issue tracking through correction and re-check.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">Physical signoff readiness reporting with clear residual-risk visibility.</li></ul>
+    </section>
 
-        <div class="capability-use-cases">
-          <p class="detail-eyebrow">APPLICATIONS</p>
-          <h2>Typical engineering needs</h2>
-          <div class="capability-use-case-grid">
-            <article class="capability-use-case">
-              <h3>Block-level signoff</h3>
-              <p>Prove critical control and datapath behavior before integration.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>SoC integration</h3>
-              <p>Check interface assumptions and cross-block behavior at system boundaries.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>RTL changes</h3>
-              <p>Re-run focused proofs after ECOs, feature changes and bug fixes.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>Signoff confidence</h3>
-              <p>Provide formal evidence for corner cases that are difficult to reach with simulation.</p>
-            </article>
-          </div>
-        </div>
+    <section class="capability-method-rich">
+      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/workflow.svg" alt="" aria-hidden="true">FROM REQUIREMENT TO SIGNOFF</p><h2>A focused closure path</h2></div>
+      <div class="cap-steps"><article class="cap-step"><span class="cap-step-no">01</span><div><h3>01. Rule & Layout Review</h3><p>Establish the verification baseline and prioritize high-impact violations.</p></div></article><article class="cap-step"><span class="cap-step-no">02</span><div><h3>02. Debug & Re-check</h3><p>Trace geometry or connectivity issues and validate corrections.</p></div></article><article class="cap-step"><span class="cap-step-no">03</span><div><h3>03. Signoff Readiness</h3><p>Consolidate clean checks and outstanding issue evidence for release.</p></div></article></div>
+    </section>
 
+    <section class="capability-use-rich">
+      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/boxes.svg" alt="" aria-hidden="true">APPLICATIONS</p><h2>Typical engineering needs</h2></div>
+      <div class="cap-use-grid"><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/shield-check.svg" alt="" aria-hidden="true"></div><h3>Block DRC Closure</h3><p>Drive critical rule violations to clean status.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/shield-check.svg" alt="" aria-hidden="true"></div><h3>LVS Debug</h3><p>Resolve connectivity and device-matching mismatches.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/shield-check.svg" alt="" aria-hidden="true"></div><h3>Layout ECO Review</h3><p>Re-check physical changes without losing closure visibility.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/shield-check.svg" alt="" aria-hidden="true"></div><h3>Final Physical Signoff</h3><p>Provide evidence for the final layout release decision.</p></article></div>
+    </section>
 
-        <section class="capability-contact">
-          <h2>Have a Physical Verification requirement?</h2>
-          <p>
-            Tell us what you are trying to close, verify or implement and we
-            can discuss the engineering support that fits your project.
-          </p>
-          <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
-        </section>
-      </section>
-    </div>
-  </main>
+    <section class="capability-contact-rich" id="contact">
+      <p class="eyebrow">SIGNOFF SUPPORT</p><h2>Have a Physical Verification requirement?</h2><p>Tell us what you are trying to close, verify or implement and we can discuss the engineering support that fits your project.</p><a class="button" href="index.html#contact">Start your requirement discussion <b>→</b></a>
+    </section>
+  </div>
+</main>
   <script src="script/script.js"></script>
   <script src="script/logo-loader.js"></script>
+<footer class="site-footer">
+      <div class="container footer-bottom">
+        <a class="site-brand" href="index.html#home">
+          <img src="assets/terasilicon-iq-symbol.png" alt="">
+          <span>
+            TERASILICON
+            <b>IQ</b>
+            <small>ENGINEERING THE FUTURE OF SILICON</small>
+          </span>
+        </a>
+        <p>&copy; 2026 Terasilicon IQ Private Limited. All rights reserved.</p>
+        <div aria-label="Legal information">
+          <span>Privacy Policy</span>
+          <span>Terms of Use</span>
+          <span>Cookie Policy</span>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

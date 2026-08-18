@@ -113,7 +113,10 @@
 
 .tsiq-loader-status::after {
   content: "";
-  animation: tsiq-status 1.65s steps(4,end) both;
+  display: inline-block;
+  width: 1.4em;
+  text-align: left;
+  animation: tsiq-loading-dots 1.35s steps(4, end) infinite;
 }
 
 .tsiq-loader-substatus {
@@ -140,11 +143,12 @@
   100% { transform: translateX(360%); }
 }
 
-@keyframes tsiq-status {
-  0% { content: "Initializing"; }
-  35% { content: "Assembling logo"; }
-  70% { content: "Building verification engine"; }
-  100% { content: "Ready"; }
+@keyframes tsiq-loading-dots {
+  0% { content: ""; }
+  25% { content: "."; }
+  50% { content: ".."; }
+  75% { content: "..."; }
+  100% { content: ""; }
 }
 
 @media (prefers-reduced-motion: reduce) {

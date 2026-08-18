@@ -18,8 +18,9 @@
     <link rel="stylesheet" href="css/08-flow.css">
     <link rel="stylesheet" href="css/09-utilities.css">
       <link rel="stylesheet" href="css/11-logo-loader.css">
+  <link rel="stylesheet" href="css/12-subpage-consistency.css">
   </head>
-<body>
+<body data-capability-page="emir-power-integrity.html">
     <div id="tsiq-loader" aria-label="Loading Terasilicon IQ" role="status">
       <div class="tsiq-loader-inner">
         <div class="tsiq-loader-logo" aria-hidden="true">
@@ -49,110 +50,81 @@
     <nav aria-label="Primary navigation">
       <a href="index.html#home">Home</a>
       <a href="index.html#signoff">Signoff</a>
-      <a href="index.html#capabilities">Capabilities</a>
+      <div class="nav-capabilities subpage-active">
+        <div class="nav-capabilities-main">
+          <a href="index.html#capabilities" class="capabilities-nav-link">Capabilities</a>
+          <button class="capabilities-toggle" type="button" aria-label="Show capability pages" aria-expanded="false">⌄</button>
+        </div>
+        <div class="capabilities-dropdown" aria-label="Capability pages">
+          <a href="formal-verification.html">Formal Verification</a><a href="sta-timing-closure.html">STA & Timing Closure</a><a href="emir-power-integrity.html" class="current" aria-current="page">EMIR & Power Integrity</a><a href="physical-design-signoff.html">Physical Design & Signoff</a><a href="rtl-dv-dft.html">RTL, Design Verification & DFT</a><a href="physical-verification.html">Physical Verification</a>
+        </div>
+      </div>
       <a href="index.html#solutions">Solutions</a>
       <a href="index.html#about">About</a>
       <a class="nav-cta" href="index.html#contact">Talk to our team <b>→</b></a>
     </nav>
   </header>
 
-  <main class="capability-page">
-    <div class="container">
-      <div class="capability-hero">
-        <p class="eyebrow">TERASILICON IQ / CAPABILITY</p>
+  <main class="capability-page capability-rich-page">
+  <div class="container">
+    <section class="capability-hero-rich">
+      <div class="capability-hero-copy">
+        <p class="eyebrow">POWER SIGNOFF / CAPABILITY</p>
         <h1>EMIR &amp; Power Integrity</h1>
-        <p>Static/Dynamic IR, Electromigration, Violation Analysis, Closure Support.</p>
+        <p class="capability-tag">STATIC IR • DYNAMIC IR • ELECTROMIGRATION • HOTSPOT DEBUG</p>
+        <p class="capability-intro">Terasilicon IQ supports power-integrity analysis from violation triage through hotspot investigation, electromigration review and closure reporting.</p>
+        <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
       </div>
-
-      <div class="capability-content">
-        <section class="capability-panel">
-          <h2>Engineering Scope</h2>
-          <ul class="capability-list"><li>Static IR drop analysis and violation review</li><li>Dynamic IR analysis and hotspot investigation</li><li>Electromigration analysis and closure support</li><li>Power integrity violation debug and reporting</li></ul>
-        </section>
-
-        <section class="capability-side">
-          <p class="eyebrow">SIGNOFF-DRIVEN ENGINEERING</p>
-          <h2>EMIR &amp; Power Integrity</h2>
-          <p>
-            Terasilicon IQ provides focused semiconductor engineering support
-            for teams moving from implementation through verification,
-            closure and signoff.
-          </p>
-          <div class="capability-actions">
-            <a class="capability-back" href="index.html#capabilities">← All capabilities</a>
-            <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
-          </div>
-        </section>
+      <div class="capability-visual-card">
+        <img src="assets/capabilities/emir-power.svg" alt="Power Integrity engineering overview">
+        <div class="capability-visual-caption"><img src="assets/icons/zap.svg" alt="" aria-hidden="true"> Power Integrity / SIGNOFF FLOW</div>
       </div>
+    </section>
 
-      <section class="capability-detail">
-        <div class="capability-detail-grid">
-          <div>
-            <p class="detail-eyebrow">ENGINEERING APPROACH</p>
-            <h2>What we provide</h2>
-            <p>Formal verification uses mathematical proof to exhaustively analyze RTL behavior against intended properties and design intent. It is especially useful for finding corner-case failures that simulation may miss and for building high confidence before signoff.</p>
-            <ul class="capability-detail-list">
-            <li>Assertion-based property verification for control, protocol and safety behavior.</li>
-            <li>Sequential and combinational equivalence checking for RTL, revised RTL and implementation changes.</li>
-            <li>Counterexample-driven debug to isolate the failing state, sequence and root cause.</li>
-            <li>Assumption and constraint development to model legal operating environments without hiding real bugs.</li>
-            <li>Proof convergence support using abstraction, decomposition, coverage and proof-depth analysis.</li>
-            </ul>
-          </div>
+    <section class="capability-scope-rich">
+      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/layers.svg" alt="" aria-hidden="true">ENGINEERING SCOPE</p><h2>Where we contribute</h2></div>
+      <div class="cap-scope-list"><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">Static IR drop analysis and violation review</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">Dynamic IR analysis and hotspot investigation</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">Electromigration analysis and closure support</li><li><img src="assets/icons/check-circle-2.svg" alt="" aria-hidden="true">Power integrity violation debug and reporting</li></div>
+    </section>
 
-          <div>
-            <p class="detail-eyebrow">WHERE IT FITS</p>
-            <h2>From requirement to signoff</h2>
-            <p>
-              Our engineering support is structured around the actual closure
-              problem: understand the requirement, isolate risk, apply the
-              right analysis or verification method, and provide clear
-              evidence for the next signoff decision.
-            </p>
-            <p>
-              Engagement can be focused on a specific block, flow, violation
-              class or closure milestone, while keeping communication aligned
-              with the wider semiconductor team.
-            </p>
-          </div>
-        </div>
+    <section class="capability-detail-rich">
+      <div class="cap-detail-intro"><p class="detail-eyebrow"><img src="assets/icons/file-check-2.svg" alt="" aria-hidden="true">ENGINEERING APPROACH</p><h2>What we provide</h2><p>Terasilicon IQ supports power-integrity analysis from violation triage through hotspot investigation, electromigration review and closure reporting.</p></div>
+      <ul class="cap-provide-list"><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">Static and dynamic IR violation review with focused hotspot analysis.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">Electromigration checks tied to physical implementation and current-density risk.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">Root-cause debug for power-grid and integrity violations.</li><li><img src="assets/icons/check-circle.svg" alt="" aria-hidden="true">Closure reporting that tracks fixes, residual risk and signoff readiness.</li></ul>
+    </section>
 
-        <div class="capability-use-cases">
-          <p class="detail-eyebrow">APPLICATIONS</p>
-          <h2>Typical engineering needs</h2>
-          <div class="capability-use-case-grid">
-            <article class="capability-use-case">
-              <h3>Block-level signoff</h3>
-              <p>Prove critical control and datapath behavior before integration.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>SoC integration</h3>
-              <p>Check interface assumptions and cross-block behavior at system boundaries.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>RTL changes</h3>
-              <p>Re-run focused proofs after ECOs, feature changes and bug fixes.</p>
-            </article>
-            <article class="capability-use-case">
-              <h3>Signoff confidence</h3>
-              <p>Provide formal evidence for corner cases that are difficult to reach with simulation.</p>
-            </article>
-          </div>
-        </div>
+    <section class="capability-method-rich">
+      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/workflow.svg" alt="" aria-hidden="true">FROM REQUIREMENT TO SIGNOFF</p><h2>A focused closure path</h2></div>
+      <div class="cap-steps"><article class="cap-step"><span class="cap-step-no">01</span><div><h3>01. Power Intent Review</h3><p>Understand the power-grid assumptions, modes and analysis setup.</p></div></article><article class="cap-step"><span class="cap-step-no">02</span><div><h3>02. Violation Analysis</h3><p>Rank hotspots, investigate contributors and separate systemic from local issues.</p></div></article><article class="cap-step"><span class="cap-step-no">03</span><div><h3>03. Closure Tracking</h3><p>Re-analyze fixes and maintain evidence toward power-integrity signoff.</p></div></article></div>
+    </section>
 
+    <section class="capability-use-rich">
+      <div class="cap-section-heading"><p class="detail-eyebrow"><img src="assets/icons/boxes.svg" alt="" aria-hidden="true">APPLICATIONS</p><h2>Typical engineering needs</h2></div>
+      <div class="cap-use-grid"><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/zap.svg" alt="" aria-hidden="true"></div><h3>Block Power Review</h3><p>Identify local IR and EM risk before integration.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/zap.svg" alt="" aria-hidden="true"></div><h3>Dynamic Activity Analysis</h3><p>Investigate transient current demand and hotspot behavior.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/zap.svg" alt="" aria-hidden="true"></div><h3>ECO Impact Review</h3><p>Assess power-integrity impact after implementation changes.</p></article><article class="cap-use-card"><div class="cap-use-icon"><img src="assets/icons/zap.svg" alt="" aria-hidden="true"></div><h3>Signoff Confidence</h3><p>Track open violations and closure evidence for final review.</p></article></div>
+    </section>
 
-        <section class="capability-contact">
-          <h2>Have a EMIR &amp; Power Integrity requirement?</h2>
-          <p>
-            Tell us what you are trying to close, verify or implement and we
-            can discuss the engineering support that fits your project.
-          </p>
-          <a class="button" href="index.html#contact">Discuss your requirement <b>→</b></a>
-        </section>
-      </section>
-    </div>
-  </main>
+    <section class="capability-contact-rich" id="contact">
+      <p class="eyebrow">SIGNOFF SUPPORT</p><h2>Have a EMIR &amp; Power Integrity requirement?</h2><p>Tell us what you are trying to close, verify or implement and we can discuss the engineering support that fits your project.</p><a class="button" href="index.html#contact">Start your requirement discussion <b>→</b></a>
+    </section>
+  </div>
+</main>
   <script src="script/script.js"></script>
   <script src="script/logo-loader.js"></script>
+<footer class="site-footer">
+      <div class="container footer-bottom">
+        <a class="site-brand" href="index.html#home">
+          <img src="assets/terasilicon-iq-symbol.png" alt="">
+          <span>
+            TERASILICON
+            <b>IQ</b>
+            <small>ENGINEERING THE FUTURE OF SILICON</small>
+          </span>
+        </a>
+        <p>&copy; 2026 Terasilicon IQ Private Limited. All rights reserved.</p>
+        <div aria-label="Legal information">
+          <span>Privacy Policy</span>
+          <span>Terms of Use</span>
+          <span>Cookie Policy</span>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>

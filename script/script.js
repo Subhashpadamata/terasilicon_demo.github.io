@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const navigationLinks = Array.from(
       navigation.querySelectorAll(
-        "a:not(.nav-cta)"
+        ":scope > a:not(.nav-cta), :scope > .nav-capabilities > .nav-capabilities-main > a:not(.nav-cta)"
       )
     );
 
@@ -848,6 +848,38 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("pointerleave", () => {
       formalPage.style.setProperty("--fv-mx", "0px");
       formalPage.style.setProperty("--fv-my", "0px");
+    });
+  }
+
+
+  /*
+   * ==========================================================
+   * 3. CAPABILITIES SUB-PAGE DROPDOWN
+   * ==========================================================
+   */
+  const capabilitiesMenu = document.querySelector(".nav-capabilities");
+  const capabilitiesToggle = document.querySelector(".capabilities-toggle");
+
+  if (capabilitiesMenu && capabilitiesToggle) {
+    capabilitiesToggle.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.stopPropagation();
+      const isOpen = capabilitiesMenu.classList.toggle("open");
+      capabilitiesToggle.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!capabilitiesMenu.contains(event.target)) {
+        capabilitiesMenu.classList.remove("open");
+        capabilitiesToggle.setAttribute("aria-expanded", "false");
+      }
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") {
+        capabilitiesMenu.classList.remove("open");
+        capabilitiesToggle.setAttribute("aria-expanded", "false");
+      }
     });
   }
 

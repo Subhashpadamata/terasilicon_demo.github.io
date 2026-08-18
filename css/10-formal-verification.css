@@ -1534,3 +1534,63 @@
     white-space: normal !important;
   }
 }
+
+
+/* Keep the Formal Verification intro on one line on desktop,
+   while allowing normal wrapping on smaller screens. */
+.fv-hero-intro{white-space:normal;max-width:760px;width:100%;font-size:15px;letter-spacing:-.012em}
+@media (max-width:1050px){.fv-hero-intro{max-width:42rem}}
+
+/* =========================================================
+   FORMAL PAGE — TYPICAL ENGINEERING NEEDS CARD PALETTE
+   Match the capability-card treatment used on the main site:
+   alternating soft purple / soft orange cards with branded
+   top borders and icon treatments.
+   ========================================================= */
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(odd) {
+  background: #f7f2fb !important;
+  border-top: 2px solid #653593 !important;
+  border-color: rgba(101,53,147,.20) !important;
+}
+
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(even) {
+  background: #fff7ee !important;
+  border-top: 2px solid #ef7700 !important;
+  border-color: rgba(239,119,0,.22) !important;
+}
+
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(odd) > div:first-child {
+  background: #f1e7fa !important;
+  border: 1px solid #d8c5e9 !important;
+  color: #653593 !important;
+}
+
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(even) > div:first-child {
+  background: #fff0e2 !important;
+  border: 1px solid #f2d0b1 !important;
+  color: #ef7700 !important;
+}
+
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(odd) .fv-local-icon {
+  color: #653593 !important;
+}
+
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(even) .fv-local-icon {
+  color: #ef7700 !important;
+}
+
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:hover {
+  transform: translateY(-3px);
+}
+
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(odd):hover {
+  background: #fbf8ff !important;
+  border-color: rgba(101,53,147,.38) !important;
+  box-shadow: 0 18px 38px rgba(101,53,147,.12) !important;
+}
+
+.formal-verification-page > section:nth-of-type(3) > .max-w-7xl > .grid > div:nth-child(even):hover {
+  background: #fffaf5 !important;
+  border-color: rgba(239,119,0,.40) !important;
+  box-shadow: 0 18px 38px rgba(239,119,0,.12) !important;
+}

@@ -1,0 +1,10 @@
+/* Main-page-only refinement. Keeps capability subpages unchanged. */
+.signoff-intro {
+  white-space: nowrap;
+}
+
+@media (max-width: 900px) {
+  .signoff-intro {
+    white-space: normal;
+  }
+}
