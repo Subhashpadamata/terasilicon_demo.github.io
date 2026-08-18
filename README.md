@@ -94,3 +94,16 @@ Primary site colours:
 - Orange: `#ef7700`
 
 The existing logo and supplied local assets are used throughout the website.
+
+
+## Production legal and licensing notes
+
+- `privacy-policy.html`, `terms-of-use.html`, and `cookie-policy.html` describe the current website behavior and are no longer placeholder navigation pages.
+- `THIRD-PARTY-NOTICES.txt` records the Lucide/Feather icon licensing information and the use of Google Fonts.
+- Formal Verification marketing copy is scoped to defined properties, assumptions, and modeled equivalence/verification scope; it does not claim that formal verification guarantees an entire silicon design is bug-free.
+- The ISO 26262 / ASIL-D wording is presented as verification support orientation, not as a certification claim.
+- Company-provided media such as `assets/tsiq-hero.mp4` should be retained with its source/permission record by the site owner if it was not created in-house.
+
+## Final QA
+
+The package should be served from the `final_site` directory so `index.html` is the site root. Relative local asset paths are preserved.

@@ -1,0 +1,32 @@
+THIRD-PARTY NOTICES
+=====================
+
+Lucide Icons
+------------
+This website includes local SVG icon assets derived from or matching the Lucide icon set. Lucide is licensed under the ISC License. Some Lucide icons are derived from the Feather project and are covered by the MIT License as described by Lucide's official license notice.
+
+Lucide project: https://github.com/lucide-icons/lucide
+Lucide license: https://github.com/lucide-icons/lucide/blob/main/LICENSE
+
+ISC License
+Copyright (c) 2026 Lucide Icons and Contributors
+
+Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS.
+
+Feather-derived icons
+---------------------
+Lucide identifies certain icons as derived from Feather. Those portions are distributed under the MIT License with the copyright notice for Cole Bemis retained. See the Lucide LICENSE above for the complete list of derived icons and the complete MIT notice.
+
+Google Fonts
+------------
+The site currently uses IBM Plex Mono and Space Grotesk through Google Fonts. These fonts are open-source; their respective font licenses apply. Google Fonts is a separate service and is disclosed in the Privacy Policy.
+
+Site-owned assets
+-----------------
+Terasilicon IQ logos, branding, original page layouts, and other company-provided assets are intended to remain the property of or licensed to Terasilicon IQ Private Limited unless otherwise stated.
+
+Asset provenance note
+---------------------
+Before public deployment, the site owner should retain source/licensing records for any company-provided photography, video, stock media, or other assets not created by Terasilicon IQ.
