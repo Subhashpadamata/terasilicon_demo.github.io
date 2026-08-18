@@ -130,24 +130,6 @@
 .cap-scope-list li img,.cap-provide-list img {
   filter:none
 }
-.cap-step,.cap-use-card {
-  overflow:hidden;
-  position:relative
-}
-.cap-step:after,.cap-use-card:after {
-  content:"";
-  position:absolute;
-  right:-50px;
-  bottom:-55px;
-  width:120px;
-  height:120px;
-  border-radius:50%;
-  background:rgba(101,53,147,.05);
-  pointer-events:none
-}
-.cap-step:nth-child(even):after,.cap-use-card:nth-child(even):after {
-  background:rgba(239,119,0,.06)
-}
 /* Subpage contact CTA */
 .capability-contact-rich {
   box-shadow:0 18px 45px rgba(16,22,56,.10)
