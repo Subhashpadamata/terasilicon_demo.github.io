@@ -4,24 +4,11 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Formal Verification Services | Terasilicon IQ" name="description"/>
+<meta content="Formal property checking, SVA, counterexample debug and formal equivalence checking for ASIC and SoC designs." name="description"/>
 <title>Formal Verification Services | Terasilicon IQ</title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="css/site-bundle.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/01-core.css" rel="stylesheet"/>
-<link href="css/02-layout.css" rel="stylesheet"/>
-<link href="css/03-contact.css" rel="stylesheet"/>
-<link href="css/04-header.css" rel="stylesheet"/>
-<link href="css/05-footer.css" rel="stylesheet"/>
-<link href="css/06-capabilities.css" rel="stylesheet"/>
-<link href="css/07-navigation.css" rel="stylesheet"/>
-<link href="css/08-flow.css" rel="stylesheet"/>
-<link href="css/09-utilities.css" rel="stylesheet"/>
-<link href="css/11-logo-loader.css" rel="stylesheet"/>
-<link href="css/12-subpage-consistency.css" rel="stylesheet"/>
 <link href="assets/terasilicon-iq-symbol.png" rel="icon" type="image/png"/>
-<link href="css/15-detailed-subpages.css" rel="stylesheet"/><link href="css/16-final-visual-polish.css" rel="stylesheet"/>
 <style>
 /* Formal Verification — property checking + equivalence checking presentation. */
 .formal-reference-page{font-family:Inter,"Space Grotesk",Arial,sans-serif;background:var(--paper);color:var(--ink)}
@@ -53,24 +40,27 @@
 @media(max-width:1050px){.formal-reference-page .formal-hero-grid{grid-template-columns:1fr}.formal-reference-page .formal-copy{max-width:900px}.formal-reference-page .formal-visuals{max-width:900px}}
 @media(max-width:700px){.formal-reference-page .detailed-container{width:min(100% - 32px,760px)!important}.formal-reference-page .formal-hero{padding-top:36px}.formal-reference-page .formal-visuals{grid-template-columns:1fr}.formal-reference-page .cols{grid-template-columns:1fr}.formal-reference-page .info-card{min-height:auto}.formal-reference-page .formal-copy h1{letter-spacing:-2px}}
 @media(max-width:560px){.formal-reference-page .detailed-container{width:min(100% - 24px,760px)!important}.formal-reference-page .formal-copy h1{font-size:clamp(36px,12vw,52px)}.formal-reference-page .detailed-contact{padding:38px 18px}}
+
+/* Final desktop alignment: lower the stacked diagrams so they align more naturally with the formal copy. */
+@media(min-width:901px){
+  .formal-reference-page .formal-hero{padding-bottom:86px !important}
+  .formal-reference-page .formal-visuals{position:relative;top:44px !important}
+}
 </style>
-</head>
+<meta content="Formal Verification Services | Terasilicon IQ" property="og:title"/><meta content="Formal property checking, SVA, counterexample debug and formal equivalence checking for ASIC and SoC designs." property="og:description"/><meta content="website" property="og:type"/><meta content="https://subhashpadamata.github.io/terasilicon_demo.github.io/formal/4k/formal-property-checking.png" property="og:image"/><meta content="https://subhashpadamata.github.io/terasilicon_demo.github.io/formal-verification.html" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="Formal Verification Services | Terasilicon IQ" name="twitter:title"/><meta content="Formal property checking, SVA, counterexample debug and formal equivalence checking for ASIC and SoC designs." name="twitter:description"/><meta content="formal/4k/formal-property-checking.png" name="twitter:image"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Formal Verification",
+  "description": "Formal property checking, SVA, counterexample debug and formal equivalence checking for ASIC and SoC designs.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Terasilicon IQ",
+    "url": "https://subhashpadamata.github.io/terasilicon_demo.github.io/"
+  },
+  "serviceType": "Formal Verification",
+  "url": "https://subhashpadamata.github.io/terasilicon_demo.github.io/formal-verification.html"
+}</script><link href="https://subhashpadamata.github.io/terasilicon_demo.github.io/formal-verification.html" rel="canonical"/></head>
 <body class="formal-verification-page">
-<div aria-label="Loading Terasilicon IQ" id="tsiq-loader" role="status">
-<div class="tsiq-loader-inner">
-<div aria-hidden="true" class="tsiq-loader-logo">
-<img alt="" class="tsiq-logo-base" src="assets/terasilicon-iq-symbol.png"/>
-<img alt="" class="tsiq-logo-purple" src="assets/terasilicon-iq-symbol.png"/>
-<img alt="" class="tsiq-logo-orange" src="assets/terasilicon-iq-symbol.png"/>
-<img alt="" class="tsiq-logo-glow" src="assets/terasilicon-iq-symbol.png"/>
-</div>
-<div class="tsiq-loader-brand">TERASILICON <b>IQ</b></div>
-<div class="tsiq-loader-tagline">ENGINEERING THE FUTURE OF SILICON</div>
-<div aria-hidden="true" class="tsiq-loader-line"></div>
-<div aria-live="polite" class="tsiq-loader-status">Loading</div>
-<div class="tsiq-loader-substatus">Initializing Verification Flow</div>
-</div>
-</div>
 <header class="site-header">
 <a aria-label="Terasilicon IQ home" class="site-brand" href="index.html#home">
 <img alt="Terasilicon IQ symbol" src="assets/terasilicon-iq-symbol.png"/>
@@ -91,11 +81,11 @@
 </div>
 <a href="index.html#solutions">Solutions</a>
 <a href="index.html#about">About</a>
-<a class="nav-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">Talk to our team <b>→</b></a>
+<a class="nav-cta" href="mailto:contact@terasiliconiq.com">Talk to our team <b>→</b></a>
 </nav>
 </header>
 <main class="capability-page detailed-capability-page formal-reference-page">
-<div class="container detailed-container">
+<div class="container detailed-container"><nav aria-label="Breadcrumb" class="cap-breadcrumb"><a href="index.html#home">Home</a><span aria-hidden="true">→</span><a href="index.html#capabilities">Capabilities</a><span aria-hidden="true">→</span><span aria-current="page">Formal Verification</span></nav>
 <section class="formal-hero">
 <div class="formal-hero-grid">
 <div class="formal-copy">
@@ -111,8 +101,8 @@
 <div class="tags"><span class="tag">SVA</span><span class="tag">Property Proof</span><span class="tag">Counterexample Debug</span><span class="tag">RTL-to-RTL</span><span class="tag">RTL-to-Gate</span><span class="tag">LEC / FEV</span></div>
 </div>
 <div class="formal-visuals">
-<figure><img src="assets/formal/4k/formal-property-checking.png" alt="Formal property checking flow from RTL and assumptions through assertions to proof or counterexample"/><figcaption>Formal property checking</figcaption></figure>
-<figure><img src="assets/formal/4k/formal-equivalence-checking.png" alt="Formal equivalence checking between original and modified RTL with mismatch analysis"/><figcaption>Formal equivalence checking</figcaption></figure>
+<figure><picture class="responsive-diagram" data-lightbox="technical-diagram"><source sizes="(max-width: 900px) 100vw, 92vw" srcset="assets/formal/4k/formal-property-checking-960.webp 960w, assets/formal/4k/formal-property-checking-1691.webp 1691w" type="image/webp"/><img alt="Formal property checking flow from RTL and assumptions through assertions to proof or counterexample" decoding="async" loading="lazy" role="button" sizes="(max-width: 900px) 100vw, 92vw" src="assets/formal/4k/formal-property-checking.png" srcset="assets/formal/4k/formal-property-checking.png 1691w" tabindex="0"/></picture><figcaption>Formal property checking</figcaption></figure>
+<figure><picture class="responsive-diagram" data-lightbox="technical-diagram"><source sizes="(max-width: 900px) 100vw, 92vw" srcset="assets/formal/4k/formal-equivalence-checking-960.webp 960w, assets/formal/4k/formal-equivalence-checking-1737.webp 1737w" type="image/webp"/><img alt="Formal equivalence checking between original and modified RTL with mismatch analysis" decoding="async" loading="lazy" role="button" sizes="(max-width: 900px) 100vw, 92vw" src="assets/formal/4k/formal-equivalence-checking.png" srcset="assets/formal/4k/formal-equivalence-checking.png 1737w" tabindex="0"/></picture><figcaption>Formal equivalence checking</figcaption></figure>
 </div>
 </div>
 </section>
@@ -121,8 +111,8 @@
 <div class="info-card"><h4>FORMAL EQUIVALENCE CHECKING</h4><p>Equivalence checking compares a reference design with a revised implementation to determine whether the intended functionality is preserved.</p><ul><li>RTL-to-RTL equivalence</li><li>RTL-to-gate equivalence</li><li>Gate-to-gate comparison</li><li>ECO and optimization validation</li><li>Mismatch root-cause analysis</li></ul></div>
 <div class="info-card"><h4>ENGINEERING OUTCOME</h4><p>Formal analysis provides mathematically rigorous evidence for the behaviors and transformations being checked, helping teams identify corner cases before signoff.</p><ul><li>Earlier bug discovery</li><li>Targeted debug evidence</li><li>Controlled implementation changes</li><li>Higher verification confidence</li><li>Signoff-ready proof results</li></ul></div>
 </div>
-<div class="outcome"><strong>ENGINEERING OUTCOME</strong><span>Mathematical proof of defined design intent and controlled validation of functional equivalence across design transformations.</span></div>
-<section class="detailed-contact"><p class="eyebrow">SIGNOFF SUPPORT</p><h2>NEED FORMAL VERIFICATION SUPPORT?</h2><p>Tell us what you are trying to prove or compare and we can discuss the verification approach that fits your project.</p><a class="button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">Talk to our team →</a></section>
+<section aria-labelledby="eda-title" class="eda-ecosystem"><div><p class="eyebrow">EDA ECOSYSTEM</p><h2 id="eda-title">Formal Verification Tool Environments</h2><p>Formal verification workflows can be integrated around the major commercial formal-analysis environments used by ASIC and SoC teams.</p></div><div class="tool-badges"><span>Synopsys VC Formal</span><span>Synopsys Formality</span><span>Cadence JasperGold</span><span>Cadence Conformal LEC</span><span>Siemens Questa Formal</span><span>OneSpin</span></div></section><div class="outcome"><strong>ENGINEERING OUTCOME</strong><span>Mathematical proof of defined design intent and controlled validation of functional equivalence across design transformations.</span></div>
+<section aria-labelledby="related-title" class="related-capabilities"><div class="related-head"><div><p class="eyebrow">CONTINUE EXPLORING</p><h2 id="related-title">Related Capabilities</h2></div><a class="related-all" href="index.html#capabilities">View all capabilities →</a></div><div class="related-grid"><a class="related-card" href="sta-timing-closure.html"><span class="related-label">RELATED CAPABILITY</span><strong>STA &amp; Timing Closure</strong><span>Timing paths, constraints and closure analysis.</span><b aria-hidden="true">→</b></a><a class="related-card" href="rtl-dv-dft.html"><span class="related-label">RELATED CAPABILITY</span><strong>RTL, Design Verification &amp; DFT</strong><span>RTL, UVM, assertions, coverage and testability.</span><b aria-hidden="true">→</b></a></div></section><section aria-labelledby="contact-title" class="detailed-contact enhanced-contact" id="requirement-form"><div class="contact-copy"><p class="eyebrow">ENGINEERING INQUIRY</p><h2 id="contact-title">Discuss Your Formal Verification Requirement</h2><p>Share the scope, design stage and verification or signoff challenge. We will route the request to the engineering team.</p><p class="contact-direct">Prefer email? <a href="mailto:contact@terasiliconiq.com">contact@terasiliconiq.com</a></p></div><form action="mailto:contact@terasiliconiq.com" class="engineering-form" enctype="text/plain" method="post"><div class="form-grid"><label>Name<input autocomplete="name" name="Name" required=""/></label><label>Work Email<input autocomplete="email" name="Work Email" required="" type="email"/></label><label>Company<input autocomplete="organization" name="Company"/></label><label>EDA Tools / Flow<input name="EDA Tools / Flow" placeholder="e.g. VC Formal, JasperGold, VCS"/></label></div><label>Verification / Signoff Scope<textarea name="Scope" placeholder="Briefly describe the block, interface, flow or closure challenge." required="" rows="4"></textarea></label><label>Attachment / Specs<input accept=".pdf,.doc,.docx,.zip,.txt,.png,.jpg,.jpeg" name="Attachment / Specs" type="file"/></label><div class="form-actions"><button class="button" type="submit">Prepare Engineering Inquiry →</button><span>Submitting opens your configured email client with the details.</span></div></form></section>
 </div>
 </main>
 <footer class="site-footer">
@@ -140,6 +130,5 @@
 </div>
 </footer>
 <script src="script/script.js"></script>
-<script src="script/logo-loader.js"></script>
-</body>
+<script defer="True" src="script/site-enhancements.js"></script></body>
 </html>

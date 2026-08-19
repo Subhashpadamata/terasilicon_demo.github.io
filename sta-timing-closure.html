@@ -4,55 +4,25 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<meta content="Terasilicon IQ — STA &amp; Timing Closure." name="description"/>
-<title>
-   STA &amp; Timing Closure | Terasilicon IQ
-  </title>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<meta content="Static timing analysis, setup and hold closure, MMMC analysis and implementation guidance for ASIC and SoC signoff." name="description"/>
+<title>STA &amp; Timing Closure | Terasilicon IQ</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/><link href="css/site-bundle.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="css/01-core.css" rel="stylesheet"/>
-<link href="css/02-layout.css" rel="stylesheet"/>
-<link href="css/03-contact.css" rel="stylesheet"/>
-<link href="css/04-header.css" rel="stylesheet"/>
-<link href="css/05-footer.css" rel="stylesheet"/>
-<link href="css/06-capabilities.css" rel="stylesheet"/>
-<link href="css/07-navigation.css" rel="stylesheet"/>
-<link href="css/08-flow.css" rel="stylesheet"/>
-<link href="css/09-utilities.css" rel="stylesheet"/>
-<link href="css/11-logo-loader.css" rel="stylesheet"/>
-<link href="css/12-subpage-consistency.css" rel="stylesheet"/>
-<link href="css/14-quality-polish.css" rel="stylesheet"/>
 <link href="assets/terasilicon-iq-symbol.png" rel="icon" type="image/png"/>
-<link href="css/15-detailed-subpages.css" rel="stylesheet"/><link href="css/16-final-visual-polish.css" rel="stylesheet"/></head>
+<meta content="STA &amp; Timing Closure | Terasilicon IQ" property="og:title"/><meta content="Static timing analysis, setup and hold closure, MMMC analysis and implementation guidance for ASIC and SoC signoff." property="og:description"/><meta content="website" property="og:type"/><meta content="https://subhashpadamata.github.io/terasilicon_demo.github.io/subpage-diagrams/4k/sta-timing-closure.png" property="og:image"/><meta content="https://subhashpadamata.github.io/terasilicon_demo.github.io/sta-timing-closure.html" property="og:url"/><meta content="summary_large_image" name="twitter:card"/><meta content="STA &amp; Timing Closure | Terasilicon IQ" name="twitter:title"/><meta content="Static timing analysis, setup and hold closure, MMMC analysis and implementation guidance for ASIC and SoC signoff." name="twitter:description"/><meta content="subpage-diagrams/4k/sta-timing-closure.png" name="twitter:image"/><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "STA & Timing Closure",
+  "description": "Static timing analysis, setup and hold closure, MMMC analysis and implementation guidance for ASIC and SoC signoff.",
+  "provider": {
+    "@type": "Organization",
+    "name": "Terasilicon IQ",
+    "url": "https://subhashpadamata.github.io/terasilicon_demo.github.io/"
+  },
+  "serviceType": "STA & Timing Closure",
+  "url": "https://subhashpadamata.github.io/terasilicon_demo.github.io/sta-timing-closure.html"
+}</script><link href="https://subhashpadamata.github.io/terasilicon_demo.github.io/sta-timing-closure.html" rel="canonical"/></head>
 <body data-capability-page="sta-timing-closure.html">
-<div aria-label="Loading Terasilicon IQ" id="tsiq-loader" role="status">
-<div class="tsiq-loader-inner">
-<div aria-hidden="true" class="tsiq-loader-logo">
-<img alt="" class="tsiq-logo-base" src="assets/terasilicon-iq-symbol.png"/>
-<img alt="" class="tsiq-logo-purple" src="assets/terasilicon-iq-symbol.png"/>
-<img alt="" class="tsiq-logo-orange" src="assets/terasilicon-iq-symbol.png"/>
-<img alt="" class="tsiq-logo-glow" src="assets/terasilicon-iq-symbol.png"/>
-</div>
-<div class="tsiq-loader-brand">
-     TERASILICON
-     <b>
-      IQ
-     </b>
-</div>
-<div class="tsiq-loader-tagline">
-     ENGINEERING THE FUTURE OF SILICON
-    </div>
-<div aria-hidden="true" class="tsiq-loader-line">
-</div>
-<div class="tsiq-loader-status">
-     Loading
-    </div>
-<div class="tsiq-loader-substatus">
-     Initializing Verification Flow
-    </div>
-</div>
-</div>
 <header class="site-header">
 <a aria-label="Terasilicon IQ home" class="site-brand" href="index.html#home">
 <img alt="Terasilicon IQ symbol" src="assets/terasilicon-iq-symbol.png"/>
@@ -98,7 +68,7 @@
 <a href="index.html#about">
      About
     </a>
-<a class="nav-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">
+<a class="nav-cta" href="mailto:contact@terasiliconiq.com">
      Talk to our team
      <b>
       →
@@ -106,13 +76,11 @@
 </a>
 </nav>
 </header>
-<main class="capability-page detailed-capability-page"><div class="container detailed-container"><article class="detailed-domain"><div class="domain-top"><div class="domain-info"><div class="eyebrow">TIMING</div><h3>Static Timing Analysis &amp; Timing Closure</h3><p>Timing closure requires more than identifying a negative slack number. We analyse timing paths, constraints, clock relationships and implementation conditions to determine the root cause and guide the appropriate fix.</p><div class="tags"><span class="tag">SDC</span><span class="tag">MMMC</span><span class="tag">Setup</span><span class="tag">Hold</span><span class="tag">Slack Analysis</span></div></div>
-<div class="visual svgvisual"><img alt="Static Timing Analysis &amp; Timing Closure technical diagram" loading="lazy" src="assets/subpage-diagrams/4k/sta-timing-closure.png"/><div class="visual-note">Timing analysis identifies where and why a path fails</div></div></div>
+<main class="capability-page detailed-capability-page"><div class="container detailed-container"><nav aria-label="Breadcrumb" class="cap-breadcrumb"><a href="index.html#home">Home</a><span aria-hidden="true">→</span><a href="index.html#capabilities">Capabilities</a><span aria-hidden="true">→</span><span aria-current="page">STA &amp; Timing Closure</span></nav><article class="detailed-domain"><div class="domain-top"><div class="domain-info"><div class="eyebrow">TIMING</div><h3>Static Timing Analysis &amp; Timing Closure</h3><p>Timing closure requires more than identifying a negative slack number. We analyse timing paths, constraints, clock relationships and implementation conditions to determine the root cause and guide the appropriate fix.</p><div class="tags"><span class="tag">SDC</span><span class="tag">MMMC</span><span class="tag">Setup</span><span class="tag">Hold</span><span class="tag">Slack Analysis</span></div></div>
+<div class="visual svgvisual"><picture class="responsive-diagram" data-lightbox="technical-diagram"><source sizes="(max-width: 900px) 100vw, 92vw" srcset="assets/subpage-diagrams/4k/sta-timing-closure-960.webp 960w, assets/subpage-diagrams/4k/sta-timing-closure-1743.webp 1743w" type="image/webp"/><img alt="Static Timing Analysis &amp; Timing Closure technical diagram" decoding="async" loading="lazy" role="button" sizes="(max-width: 900px) 100vw, 92vw" src="assets/subpage-diagrams/4k/sta-timing-closure.png" srcset="assets/subpage-diagrams/4k/sta-timing-closure.png 1743w" tabindex="0"/></picture><div class="visual-note">Timing analysis identifies where and why a path fails</div></div></div>
 <div class="cols"><div class="info-card"><h4>What we analyse</h4><ul><li>Setup and hold paths</li><li>Clock propagation and skew</li><li>Constraints and exceptions</li><li>MMMC scenarios</li><li>Critical-path behaviour</li></ul></div><div class="info-card"><h4>Closure activities</h4><ul><li>Cell sizing and buffering</li><li>Placement optimization</li><li>Clock optimization</li><li>Routing-aware fixes</li><li>ECO implementation</li></ul></div><div class="info-card"><h4>Client outcome</h4><ul><li>Prioritised critical paths</li><li>Root-cause analysis</li><li>Fix recommendations</li><li>Before/after timing comparison</li><li>Signoff readiness tracking</li></ul></div></div>
-<div class="outcome"><strong>Engineering outcome</strong><span>Clear visibility into timing risk and an engineering-led path from violation analysis to closure.</span></div></article><section class="detailed-contact"><p class="eyebrow">SIGNOFF SUPPORT</p><h2>Have a Sta &amp; Timing Closure requirement?</h2><p>Tell us what you are trying to close, verify or implement and we can discuss the engineering support that fits your project.</p><a class="button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">Start your requirement discussion →</a></section></div></main>
+<div class="outcome"><strong>Engineering outcome</strong><span>Clear visibility into timing risk and an engineering-led path from violation analysis to closure.</span></div></article><section aria-labelledby="related-title" class="related-capabilities"><div class="related-head"><div><p class="eyebrow">CONTINUE EXPLORING</p><h2 id="related-title">Related Capabilities</h2></div><a class="related-all" href="index.html#capabilities">View all capabilities →</a></div><div class="related-grid"><a class="related-card" href="formal-verification.html"><span class="related-label">RELATED CAPABILITY</span><strong>Formal Verification</strong><span>Property proofs, counterexamples and equivalence.</span><b aria-hidden="true">→</b></a><a class="related-card" href="physical-design-signoff.html"><span class="related-label">RELATED CAPABILITY</span><strong>Physical Design &amp; Signoff</strong><span>Implementation, PPA and physical closure.</span><b aria-hidden="true">→</b></a></div></section><section aria-labelledby="contact-title" class="detailed-contact enhanced-contact" id="requirement-form"><div class="contact-copy"><p class="eyebrow">ENGINEERING INQUIRY</p><h2 id="contact-title">Discuss Your STA &amp; Timing Closure Requirement</h2><p>Share the scope, design stage and verification or signoff challenge. We will route the request to the engineering team.</p><p class="contact-direct">Prefer email? <a href="mailto:contact@terasiliconiq.com">contact@terasiliconiq.com</a></p></div><form action="mailto:contact@terasiliconiq.com" class="engineering-form" enctype="text/plain" method="post"><div class="form-grid"><label>Name<input autocomplete="name" name="Name" required=""/></label><label>Work Email<input autocomplete="email" name="Work Email" required="" type="email"/></label><label>Company<input autocomplete="organization" name="Company"/></label><label>EDA Tools / Flow<input name="EDA Tools / Flow" placeholder="e.g. VC Formal, JasperGold, VCS"/></label></div><label>Verification / Signoff Scope<textarea name="Scope" placeholder="Briefly describe the block, interface, flow or closure challenge." required="" rows="4"></textarea></label><label>Attachment / Specs<input accept=".pdf,.doc,.docx,.zip,.txt,.png,.jpg,.jpeg" name="Attachment / Specs" type="file"/></label><div class="form-actions"><button class="button" type="submit">Prepare Engineering Inquiry →</button><span>Submitting opens your configured email client with the details.</span></div></form></section></div></main>
 <script src="script/script.js">
-</script>
-<script src="script/logo-loader.js">
 </script>
 <footer class="site-footer">
 <div class="container footer-bottom">
@@ -144,5 +112,5 @@
 </div>
 </div>
 </footer>
-</body>
+<script defer="True" src="script/site-enhancements.js"></script></body>
 </html>
