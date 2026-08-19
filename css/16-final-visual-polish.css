@@ -1,0 +1,179 @@
+/* =========================================================
+   FINAL VISUAL POLISH — CAPABILITY SUBPAGES
+   High-resolution technical diagrams, no cropping, balanced
+   left-copy/right-visual composition, and consistent navy/purple
+   visual treatment. This file intentionally overrides only the
+   conflicting presentation rules from earlier passes.
+   ========================================================= */
+
+/* Main capability hero: keep content and technical visuals balanced. */
+.detailed-capability-page:not(.formal-reference-page) .detailed-container{
+  width:min(1680px,calc(100% - 64px)) !important;
+  max-width:1680px !important;
+}
+
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .domain-top{
+  display:grid !important;
+  grid-template-columns:minmax(0,0.86fr) minmax(0,1.14fr) !important;
+  gap:46px !important;
+  align-items:center !important;
+}
+
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .domain-info{
+  max-width:820px !important;
+}
+
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .domain-info h3{
+  font-size:clamp(40px,3.9vw,62px) !important;
+  line-height:1.02 !important;
+  letter-spacing:-2.4px !important;
+}
+
+/* One image: large enough to read, never clipped. */
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual:not(.subpage-visual-stack){
+  width:100% !important;
+  max-width:760px !important;
+  margin-left:auto !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  overflow:visible !important;
+}
+
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual:not(.subpage-visual-stack) > img{
+  display:block !important;
+  width:100% !important;
+  max-width:760px !important;
+  height:auto !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  margin:0 !important;
+  border-radius:20px !important;
+  border:1px solid rgba(101,53,147,.34) !important;
+  background:#0b1328 !important;
+  box-shadow:0 18px 40px rgba(16,22,56,.14) !important;
+}
+
+/* Two images: genuinely side-by-side, full-image display, no cropping. */
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual.subpage-visual-stack{
+  width:100% !important;
+  max-width:960px !important;
+  margin-left:auto !important;
+  display:grid !important;
+  grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+  gap:20px !important;
+  align-items:center !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+  overflow:visible !important;
+}
+
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual.subpage-visual-stack > img{
+  display:block !important;
+  width:100% !important;
+  max-width:none !important;
+  height:auto !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  object-position:center !important;
+  margin:0 !important;
+  padding:0 !important;
+  border-radius:20px !important;
+  border:1px solid rgba(101,53,147,.34) !important;
+  background:#0b1328 !important;
+  box-shadow:0 18px 40px rgba(16,22,56,.14) !important;
+}
+
+/* The diagrams already contain their own captions. */
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual-note{
+  display:none !important;
+}
+
+/* Slightly tighter lower content so the hero remains the visual focus. */
+.detailed-capability-page:not(.formal-reference-page) .detailed-domain .cols{
+  margin-top:34px !important;
+}
+
+/* Formal page: two dedicated diagrams stacked vertically on the right,
+   with the same high-resolution treatment and no cropping. */
+.formal-reference-page .formal-hero-grid{
+  grid-template-columns:minmax(0,1.03fr) minmax(480px,.97fr) !important;
+  gap:48px !important;
+  align-items:center !important;
+}
+
+.formal-reference-page .formal-visuals{
+  display:grid !important;
+  grid-template-columns:1fr !important;
+  gap:18px !important;
+  width:100% !important;
+  max-width:700px !important;
+  margin-left:auto !important;
+}
+
+.formal-reference-page .formal-visuals figure{
+  width:100% !important;
+  margin:0 !important;
+}
+
+.formal-reference-page .formal-visuals img{
+  display:block !important;
+  width:100% !important;
+  max-width:700px !important;
+  height:auto !important;
+  aspect-ratio:auto !important;
+  object-fit:contain !important;
+  border-radius:18px !important;
+  border:1px solid rgba(101,53,147,.34) !important;
+  background:#0b1328 !important;
+  box-shadow:0 18px 40px rgba(16,22,56,.14) !important;
+}
+
+.formal-reference-page .formal-visuals figcaption{
+  margin:6px 2px 0 !important;
+  color:#59617a !important;
+  font-size:10px !important;
+}
+
+@media(max-width:1200px){
+  .detailed-capability-page:not(.formal-reference-page) .detailed-domain .domain-top{
+    grid-template-columns:minmax(0,.84fr) minmax(0,1.16fr) !important;
+    gap:34px !important;
+  }
+  .detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual.subpage-visual-stack{
+    max-width:820px !important;
+  }
+  .formal-reference-page .formal-hero-grid{
+    grid-template-columns:minmax(0,1fr) minmax(420px,.95fr) !important;
+  }
+  .formal-reference-page .formal-visuals{max-width:620px !important;}
+}
+
+@media(max-width:900px){
+  .detailed-capability-page:not(.formal-reference-page) .detailed-domain .domain-top,
+  .formal-reference-page .formal-hero-grid{
+    grid-template-columns:1fr !important;
+  }
+  .detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual,
+  .detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual.subpage-visual-stack,
+  .formal-reference-page .formal-visuals{
+    max-width:900px !important;
+    margin-left:0 !important;
+  }
+}
+
+@media(max-width:620px){
+  .detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual.subpage-visual-stack{
+    grid-template-columns:1fr !important;
+    gap:14px !important;
+  }
+  .detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual > img,
+  .detailed-capability-page:not(.formal-reference-page) .detailed-domain .visual.subpage-visual-stack > img,
+  .formal-reference-page .formal-visuals img{
+    border-radius:14px !important;
+  }
+}

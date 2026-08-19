@@ -1,676 +1,145 @@
 <!DOCTYPE html>
-<html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <meta content="Formal Verification Services | Terasilicon IQ" name="description"/>
-  <title>
-   Formal Verification Services | Terasilicon IQ
-  </title>
-  <link href="https://fonts.googleapis.com" rel="preconnect"/>
-  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="css/01-core.css" rel="stylesheet"/>
-  <link href="css/02-layout.css" rel="stylesheet"/>
-  <link href="css/03-contact.css" rel="stylesheet"/>
-  <link href="css/04-header.css" rel="stylesheet"/>
-  <link href="css/05-footer.css" rel="stylesheet"/>
-  <link href="css/06-capabilities.css" rel="stylesheet"/>
-  <link href="css/07-navigation.css" rel="stylesheet"/>
-  <link href="css/08-flow.css" rel="stylesheet"/>
-  <link href="css/09-utilities.css" rel="stylesheet"/>
-  <link href="css/10-formal-verification.css" rel="stylesheet"/>
-  <link href="css/11-logo-loader.css" rel="stylesheet"/>
-  <link href="css/12-subpage-consistency.css" rel="stylesheet"/>
-    <link rel="icon" type="image/png" href="assets/terasilicon-iq-symbol.png">
 
- </head>
- <body class="formal-verification-page" data-capability-page="formal-verification.html">
-  <div aria-label="Loading Terasilicon IQ" id="tsiq-loader" role="status">
-   <div class="tsiq-loader-inner">
-    <div aria-hidden="true" class="tsiq-loader-logo">
-     <img alt="" class="tsiq-logo-base" src="assets/terasilicon-iq-symbol.png"/>
-     <img alt="" class="tsiq-logo-purple" src="assets/terasilicon-iq-symbol.png"/>
-     <img alt="" class="tsiq-logo-orange" src="assets/terasilicon-iq-symbol.png"/>
-     <img alt="" class="tsiq-logo-glow" src="assets/terasilicon-iq-symbol.png"/>
-    </div>
-    <div class="tsiq-loader-brand">
-     TERASILICON
-     <b>
-      IQ
-     </b>
-    </div>
-    <div class="tsiq-loader-tagline">
-     ENGINEERING THE FUTURE OF SILICON
-    </div>
-    <div aria-hidden="true" class="tsiq-loader-line">
-    </div>
-    <div aria-live="polite" class="tsiq-loader-status">
-     Loading
-    </div>
-    <div class="tsiq-loader-substatus">
-     Initializing Verification Flow
-    </div>
-   </div>
-  </div>
-  <div aria-hidden="true" class="fv-background">
-   <span class="fv-orb fv-orb-one">
-   </span>
-   <span class="fv-orb fv-orb-two">
-   </span>
-   <span class="fv-grid">
-   </span>
-  </div>
-  <header class="site-header">
-   <a aria-label="Terasilicon IQ home" class="site-brand" href="index.html#home">
-    <img alt="" src="assets/terasilicon-iq-symbol.png"/>
-    <span>
-     TERASILICON
-     <b>
-      IQ
-     </b>
-     <small>
-      ENGINEERING THE FUTURE OF SILICON
-     </small>
-    </span>
-   </a>
-   <button aria-expanded="false" aria-label="Toggle navigation menu" class="menu-toggle" type="button">
-    <span>
-    </span>
-    <span>
-    </span>
-    <span>
-    </span>
-   </button>
-   <nav aria-label="Primary navigation">
-    <a href="index.html#home">
-     Home
-    </a>
-    <a href="index.html#signoff">
-     Signoff
-    </a>
-    <div class="nav-capabilities subpage-active">
-     <div class="nav-capabilities-main">
-      <a class="capabilities-nav-link" href="index.html#capabilities">
-       Capabilities
-      </a>
-      <button aria-expanded="false" aria-label="Show capability pages" class="capabilities-toggle" type="button">
-       ⌄
-      </button>
-     </div>
-     <div aria-label="Capability pages" class="capabilities-dropdown">
-      <a aria-current="page" class="current" href="formal-verification.html">
-       Formal Verification
-      </a>
-      <a href="sta-timing-closure.html">
-       STA &amp; Timing Closure
-      </a>
-      <a href="emir-power-integrity.html">
-       EMIR &amp; Power Integrity
-      </a>
-      <a href="physical-design-signoff.html">
-       Physical Design &amp; Signoff
-      </a>
-      <a href="rtl-dv-dft.html">
-       RTL, Design Verification &amp; DFT
-      </a>
-      <a href="physical-verification.html">
-       Physical Verification
-      </a>
-     </div>
-    </div>
-    <a href="index.html#solutions">
-     Solutions
-    </a>
-    <a href="index.html#about">
-     About
-    </a>
-    <a class="nav-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">
-     Talk to our team
-     <b>
-      &rarr;
-     </b>
-    </a>
-   </nav>
-  </header>
-  <!-- Hero Section -->
-  <section class="relative pt-16 pb-20 overflow-hidden border-b border-slate-200 bg-white grid-pattern">
-   <div class="max-w-7xl mx-auto px-6">
-    <!-- Breadcrumb / Eyebrow -->
-    <div class="flex items-center gap-2 text-xs font-semibold tracking-wider text-slate-500 uppercase mb-4">
-     <span>
-      Strategic IP
-     </span>
-     <span>
-      /
-     </span>
-     <span class="text-indigo-600">
-      Capabilities
-     </span>
-    </div>
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start fv-hero-layout">
-     <!-- Left Title & Intro -->
-     <div class="lg:col-span-7">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-950 leading-[1.1] mb-6">
-       FORMAL
-       <span class="bg-clip-text text-transparent bg-gradient-to-r from-indigo-600 to-violet-600">
-        VERIFICATION
-       </span>
-      </h1>
-      <p class="text-lg text-slate-600 leading-relaxed mb-8 max-w-2xl fv-hero-intro">
-       Exhaustive property checking, mathematical assertion proofs, and equivalence verification to uncover corner-case functional issues and provide rigorous proof evidence before tape-out.
-      </p>
-      <!-- Engineering Scope Card -->
-      <div class="bg-slate-50 border border-slate-200/80 rounded-2xl p-6 shadow-sm">
-       <h3 class="text-xs font-bold uppercase tracking-wider text-slate-500 mb-4 flex items-center gap-2">
-        <img alt="" aria-hidden="true" class="w-4 h-4 text-indigo-600 fv-local-icon" src="assets/icons/layers.svg"/>
-        Engineering Scope
-       </h3>
-       <ul class="space-y-3 text-sm text-slate-700">
-        <li class="flex items-start gap-3">
-         <img alt="" aria-hidden="true" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0 fv-local-icon" src="assets/icons/check-circle-2.svg"/>
-         <span>
-          High-level safety property checking and control path state space exploration.
-         </span>
-        </li>
-        <li class="flex items-start gap-3">
-         <img alt="" aria-hidden="true" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0 fv-local-icon" src="assets/icons/check-circle-2.svg"/>
-         <span>
-          Deadlock &amp; livelock detection across complex arbitration and protocol bridges.
-         </span>
-        </li>
-        <li class="flex items-start gap-3">
-         <img alt="" aria-hidden="true" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0 fv-local-icon" src="assets/icons/check-circle-2.svg"/>
-         <span>
-          Automated counter-example waveform debug and root-cause tracing.
-         </span>
-        </li>
-        <li class="flex items-start gap-3">
-         <img alt="" aria-hidden="true" class="w-4 h-4 text-emerald-500 mt-0.5 shrink-0 fv-local-icon" src="assets/icons/check-circle-2.svg"/>
-         <span>
-          Proof convergence acceleration and sign-off readiness auditing.
-         </span>
-        </li>
-       </ul>
-      </div>
-     </div>
-     <!-- Right Side: Service Overview Card -->
-     <div class="lg:col-span-5">
-      <div class="bg-gradient-to-br from-slate-900 via-slate-850 to-indigo-950 text-white rounded-2xl p-8 border border-slate-800 shadow-xl relative overflow-hidden">
-       <div class="absolute -right-8 -top-8 w-40 h-40 bg-indigo-500/10 rounded-full blur-2xl">
-       </div>
-       <span class="inline-flex items-center gap-1.5 text-xs font-semibold tracking-wider text-indigo-400 uppercase mb-3">
-        <span class="w-2 h-2 rounded-full bg-indigo-400 animate-pulse">
-        </span>
-        Service Overview
-       </span>
-       <h2 class="text-2xl font-bold mb-4 tracking-tight">
-        Full-Stack Proof Services
-       </h2>
-       <p class="text-sm text-slate-300 leading-relaxed mb-8">
-        Terasilicon IQ provides dedicated senior verification engineering expertise for teams moving from initial RTL architecture through formal sign-off closure.
-       </p>
-       <div class="space-y-4">
-        <a class="flex items-center justify-between w-full px-5 py-3.5 bg-lime-400 hover:bg-lime-300 text-slate-950 font-semibold text-sm rounded-xl transition duration-200 shadow-md" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">
-         <span>
-          HAVE A FORMAL VERIFICATION REQUIREMENT?
-         </span>
-         <img alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon" src="assets/icons/arrow-right.svg"/>
-        </a>
-        <div class="flex items-center gap-6 pt-4 border-t border-slate-800/80 text-xs text-slate-400">
-         <div class="flex items-center gap-2">
-          <img alt="" aria-hidden="true" class="w-4 h-4 text-emerald-400 fv-local-icon" src="assets/icons/shield-check.svg"/>
-          ISO 26262 / ASIL-D-oriented verification support
-         </div>
-         <div class="flex items-center gap-2">
-          <img alt="" aria-hidden="true" class="w-4 h-4 text-amber-400 fv-local-icon" src="assets/icons/zap.svg"/>
-          10x Coverage Depth
-         </div>
-        </div>
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Detailed Offerings Section -->
-  <section class="py-20 border-b border-slate-200">
-   <div class="max-w-7xl mx-auto px-6">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 fv-offerings-layout">
-     <!-- Left: What We Provide -->
-     <div class="lg:col-span-7">
-      <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2 section-icon-label">
-       <img alt="" aria-hidden="true" class="section-label-icon fv-local-icon" src="assets/icons/file-check-2.svg"/>
-       <span>
-        Integration &amp; Delivery
-       </span>
-      </div>
-      <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-4">
-       WHAT WE PROVIDE
-      </h2>
-      <p class="text-sm text-slate-600 mb-8 leading-relaxed">
-       Our formal verification methodology provides mathematically rigorous evidence for defined properties and assumptions, helping uncover elusive edge cases that simulation testbenches may miss.
-      </p>
-      <div class="space-y-4">
-       <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
-        <div class="w-10 h-10 rounded-lg bg-indigo-50 border border-indigo-100 flex items-center justify-center shrink-0">
-         <img alt="" aria-hidden="true" class="w-5 h-5 text-indigo-600 fv-local-icon" src="assets/icons/shield-alert.svg"/>
-        </div>
-        <div>
-         <h4 class="text-sm font-bold text-slate-900">
-          Assertion-Based Verification (SVA / PSL)
-         </h4>
-         <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-          Development of rigorous formal properties targeting control logic, arbitration fairness, and functional safety properties.
-         </p>
-        </div>
-       </div>
-       <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
-        <div class="w-10 h-10 rounded-lg bg-emerald-50 border border-emerald-100 flex items-center justify-center shrink-0">
-         <img alt="" aria-hidden="true" class="w-5 h-5 text-emerald-600 fv-local-icon" src="assets/icons/git-branch.svg"/>
-        </div>
-        <div>
-         <h4 class="text-sm font-bold text-slate-900">
-          Sequential Equivalence Checking (SEC)
-         </h4>
-         <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-          Proving equivalence across aggressive clock-gating, retiming transformations, and microarchitectural ECOs.
-         </p>
-        </div>
-       </div>
-       <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
-        <div class="w-10 h-10 rounded-lg bg-amber-50 border border-amber-100 flex items-center justify-center shrink-0">
-         <img alt="" aria-hidden="true" class="w-5 h-5 text-amber-600 fv-local-icon" src="assets/icons/bug.svg"/>
-        </div>
-        <div>
-         <h4 class="text-sm font-bold text-slate-900">
-          Counter-Example Driven Root-Cause Debug
-         </h4>
-         <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-          Extraction of exact cycle-by-cycle failure traces to pinpoint underlying RTL hazards instantly.
-         </p>
-        </div>
-       </div>
-       <div class="flex gap-4 p-4 rounded-xl bg-white border border-slate-200/80 hover:border-slate-300 shadow-sm transition">
-        <div class="w-10 h-10 rounded-lg bg-rose-50 border border-rose-100 flex items-center justify-center shrink-0">
-         <img alt="" aria-hidden="true" class="w-5 h-5 text-rose-600 fv-local-icon" src="assets/icons/gauge.svg"/>
-        </div>
-        <div>
-         <h4 class="text-sm font-bold text-slate-900">
-          Proof Convergence &amp; Complexity Management
-         </h4>
-         <p class="text-xs text-slate-600 mt-1 leading-relaxed">
-          State-space abstraction, helper assertions, and solver orchestration to achieve full mathematical proof closure.
-         </p>
-        </div>
-       </div>
-      </div>
-     </div>
-     <!-- Right: From Requirement to Signoff -->
-     <div class="lg:col-span-5">
-      <div class="bg-white border border-slate-200/80 rounded-2xl p-8 shadow-sm h-full flex flex-col justify-between">
-       <div>
-        <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2 section-icon-label">
-         <img alt="" aria-hidden="true" class="section-label-icon fv-local-icon" src="assets/icons/file-text.svg"/>
-         <span>
-          Methodology
-         </span>
-        </div>
-        <h2 class="text-2xl font-extrabold text-slate-900 tracking-tight mb-4">
-         FROM REQUIREMENT TO SIGNOFF
-        </h2>
-        <p class="text-sm text-slate-600 leading-relaxed mb-6">
-         Our verification support structures rigorous proof evidence into your project lifecycle. We formalize technical specifications into provable assertions, isolate relevant state spaces, and provide clear proof results.
-        </p>
-        <div class="space-y-4 text-xs text-slate-600">
-         <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
-          <span class="font-bold text-slate-900 block mb-1 step-title">
-           <img alt="" aria-hidden="true" class="step-icon fv-local-icon" src="assets/icons/scan-search.svg"/>
-           <span>
-            01. Architectural Analysis
-           </span>
-          </span>
-          Extraction of formal assumptions, interfaces, and protocol contract invariants.
-         </div>
-         <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
-          <span class="font-bold text-slate-900 block mb-1 step-title">
-           <img alt="" aria-hidden="true" class="step-icon fv-local-icon" src="assets/icons/file-code-2.svg"/>
-           <span>
-            02. SVA Harness Creation
-           </span>
-          </span>
-          Layered property suites matching IEEE 1800 SystemVerilog standard.
-         </div>
-         <div class="p-4 rounded-lg bg-slate-50 border border-slate-250/60">
-          <span class="font-bold text-slate-900 block mb-1 step-title">
-           <img alt="" aria-hidden="true" class="step-icon fv-local-icon" src="assets/icons/badge-check.svg"/>
-           <span>
-            03. Bounded &amp; Full Proof Convergence
-           </span>
-          </span>
-          Execution across industrial formal solvers with formal coverage sign-off metrics.
-         </div>
-        </div>
-       </div>
-       <div class="mt-8 pt-6 border-t border-slate-100 flex items-center gap-3 text-xs text-slate-500 font-medium">
-        <img alt="" aria-hidden="true" class="w-4 h-4 text-indigo-600 fv-local-icon" src="assets/icons/check-check.svg"/>
-        Seamless synchronization with standard UVM/Simulation regression suites.
-       </div>
-      </div>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Typical Engineering Needs Grid -->
-  <section class="py-16 bg-white border-b border-slate-200">
-   <div class="max-w-7xl mx-auto px-6">
-    <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2 section-icon-label">
-     <img alt="" aria-hidden="true" class="section-label-icon fv-local-icon" src="assets/icons/layers-3.svg"/>
-     <span>
-      Use Cases
-     </span>
-    </div>
-    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight mb-8">
-     TYPICAL ENGINEERING NEEDS
-    </h2>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-     <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
-      <div class="w-9 h-9 rounded-lg bg-indigo-100 text-indigo-700 flex items-center justify-center mb-4">
-       <img alt="" aria-hidden="true" class="w-5 h-5 fv-local-icon" src="assets/icons/component.svg"/>
-      </div>
-      <h3 class="text-base font-bold text-slate-900 mb-2">
-       Block-Level Signoff
-      </h3>
-      <p class="text-xs text-slate-600 leading-relaxed">
-       Exhaustive proof that primary IP blocks perform strictly to functional spec before integration.
-      </p>
-     </div>
-     <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
-      <div class="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-700 flex items-center justify-center mb-4">
-       <img alt="" aria-hidden="true" class="w-5 h-5 fv-local-icon" src="assets/icons/network.svg"/>
-      </div>
-      <h3 class="text-base font-bold text-slate-900 mb-2">
-       SoC Integration
-      </h3>
-      <p class="text-xs text-slate-600 leading-relaxed">
-       Verify cross-domain interface assumptions, bus arbiters, and multi-clock CDC/RDC synchronization.
-      </p>
-     </div>
-     <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
-      <div class="w-9 h-9 rounded-lg bg-amber-100 text-amber-700 flex items-center justify-center mb-4">
-       <img alt="" aria-hidden="true" class="w-5 h-5 fv-local-icon" src="assets/icons/refresh-cw.svg"/>
-      </div>
-      <h3 class="text-base font-bold text-slate-900 mb-2">
-       RTL &amp; ECO Changes
-      </h3>
-      <p class="text-xs text-slate-600 leading-relaxed">
-       Instant regression verification after fast-turnaround ECOs, feature expansions, and bug-fix patches.
-      </p>
-     </div>
-     <div class="p-6 rounded-xl bg-slate-50 border border-slate-200/80 hover:border-indigo-200 hover:shadow-md transition">
-      <div class="w-9 h-9 rounded-lg bg-rose-100 text-rose-700 flex items-center justify-center mb-4">
-       <img alt="" aria-hidden="true" class="w-5 h-5 fv-local-icon" src="assets/icons/badge-check.svg"/>
-      </div>
-      <h3 class="text-base font-bold text-slate-900 mb-2">
-       Signoff Confidence
-      </h3>
-      <p class="text-xs text-slate-600 leading-relaxed">
-       Provide rigorous verification evidence for deep corner cases that simulation testbenches may not reach efficiently.
-      </p>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Technical Verification Flow Architecture -->
-  <section class="py-20 bg-slate-50 border-b border-slate-200">
-   <div class="max-w-7xl mx-auto px-6">
-    <div class="mb-12">
-     <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-2 section-icon-label">
-      <img alt="" aria-hidden="true" class="section-label-icon fv-local-icon" src="assets/icons/boxes.svg"/>
-      <span>
-       System Architecture
-      </span>
-     </div>
-     <h2 class="text-2xl sm:text-4xl font-extrabold text-slate-950 tracking-tight mb-4">
-      PROOF-DRIVEN CONFIDENCE AT RTL
-     </h2>
-     <p class="text-sm text-slate-600 max-w-3xl leading-relaxed">
-      A visual overview of our formal proof execution architecture: systematic state-space exploration within the defined verification model and assumptions.
-     </p>
-    </div>
-    <!-- Main Flow Diagram Card -->
-    <div class="bg-white border border-slate-200 rounded-2xl p-8 sm:p-12 shadow-sm mb-12">
-     <div class="text-xs font-bold tracking-widest text-slate-400 uppercase mb-8 flex items-center gap-2">
-      <img alt="" aria-hidden="true" class="w-4 h-4 text-indigo-600 fv-local-icon" src="assets/icons/workflow.svg"/>
-      Formal Verification Pipeline Flow
-     </div>
-     <div class="fv-pipeline-grid grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-      <!-- Stage 1: Design Input -->
-      <div class="fv-pipeline-stage fv-pipeline-dut lg:col-span-3">
-       <div class="p-6 bg-slate-900 text-white rounded-xl border border-slate-800 shadow-md text-center">
-        <span class="text-[11px] font-mono text-indigo-400 uppercase tracking-wider block mb-1">
-         Design Under Test
-        </span>
-        <h4 class="text-lg font-bold">
-         RTL DESIGN
-        </h4>
-        <p class="text-xs text-slate-400 mt-2 font-mono">
-         SystemVerilog / VHDL
-        </p>
-       </div>
-      </div>
-      <!-- Connector 1 -->
-      <div class="hidden lg:flex lg:col-span-1 justify-center">
-       <img alt="" aria-hidden="true" class="w-6 h-6 text-slate-300 fv-local-icon" src="assets/icons/arrow-right.svg"/>
-      </div>
-      <!-- Stage 2: Property Specifications -->
-      <div class="fv-pipeline-properties lg:col-span-3 space-y-3">
-       <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-center font-semibold text-xs text-slate-800 shadow-sm flex items-center justify-center gap-2">
-        <img alt="" aria-hidden="true" class="w-3.5 h-3.5 text-indigo-500 fv-local-icon" src="assets/icons/filter.svg"/>
-        ASSUMPTIONS (Environment)
-       </div>
-       <div class="p-3.5 bg-indigo-50/70 border border-indigo-200 rounded-lg text-center font-bold text-xs text-indigo-950 shadow-sm flex items-center justify-center gap-2">
-        <img alt="" aria-hidden="true" class="w-3.5 h-3.5 text-indigo-600 fv-local-icon" src="assets/icons/shield-check.svg"/>
-        SVA PROPERTIES (Assertions)
-       </div>
-       <div class="p-3.5 bg-slate-50 border border-slate-200 rounded-lg text-center font-semibold text-xs text-slate-800 shadow-sm flex items-center justify-center gap-2">
-        <img alt="" aria-hidden="true" class="w-3.5 h-3.5 text-emerald-600 fv-local-icon" src="assets/icons/crosshair.svg"/>
-        COVER PROPERTIES (Reachable)
-       </div>
-      </div>
-      <!-- Connector 2 -->
-      <div class="hidden lg:flex lg:col-span-1 justify-center">
-       <img alt="" aria-hidden="true" class="w-6 h-6 text-slate-300 fv-local-icon" src="assets/icons/arrow-right.svg"/>
-      </div>
-      <!-- Stage 3: Formal Engine Solver -->
-      <div class="fv-pipeline-engine lg:col-span-2">
-       <div class="p-5 bg-gradient-to-b from-slate-900 to-indigo-950 text-white rounded-xl border border-indigo-900/60 shadow-lg text-center">
-        <div class="w-8 h-8 rounded-lg bg-indigo-600 text-white mx-auto flex items-center justify-center mb-2 shadow">
-         <img alt="Formal Engine" class="w-5 h-5 fv-local-icon" src="assets/icons/formal-engine.svg"/>
-        </div>
-        <h4 class="text-sm font-bold tracking-tight">
-         FORMAL ENGINE
-        </h4>
-        <ul class="text-[10px] text-slate-300 font-mono mt-3 space-y-1 text-left">
-         <li>
-          Bounded Model Checking
-         </li>
-         <li>
-          k-Induction Proof
-         </li>
-         <li>
-          Invariant Generation
-         </li>
-        </ul>
-       </div>
-      </div>
-      <!-- Stage 4: Outcomes -->
-      <div class="fv-pipeline-outcomes lg:col-span-2 space-y-2.5">
-       <!-- Proved -->
-       <div class="p-3 rounded-lg bg-emerald-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
-        <span class="flex items-center gap-1.5">
-         <img alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon" src="assets/icons/check-circle.svg"/>
-         PROVED
-        </span>
-        <span class="text-[10px] font-mono opacity-80">
-         Proof Set Complete
-        </span>
-       </div>
-       <!-- Failed -->
-       <div class="p-3 rounded-lg bg-rose-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
-        <span class="flex items-center gap-1.5">
-         <img alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon" src="assets/icons/x-circle.svg"/>
-         FAILED
-        </span>
-        <span class="text-[10px] font-mono opacity-80">
-         Counter-Trace
-        </span>
-       </div>
-       <!-- Coverage -->
-       <div class="p-3 rounded-lg bg-amber-500 text-white font-bold text-xs flex items-center justify-between shadow-sm">
-        <span class="flex items-center gap-1.5">
-         <img alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon" src="assets/icons/pie-chart.svg"/>
-         COVERAGE
-        </span>
-        <span class="text-[10px] font-mono opacity-80">
-         Witness Hit
-        </span>
-       </div>
-      </div>
-     </div>
-    </div>
-    <!-- Secondary Sub-Diagrams: Design Clarification & Equivalence -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-     <!-- Design Intent Verification -->
-     <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
-      <div class="text-xs font-bold uppercase tracking-wider text-indigo-600 mb-4 flex items-center gap-2">
-       <img alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon" src="assets/icons/file-check-2.svg"/>
-       Formal Design Clarification
-      </div>
-      <div class="grid grid-cols-3 gap-2 text-center text-xs mb-4">
-       <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
-        <div class="font-bold text-slate-900 mb-1">
-         DESIGN INTENT
-        </div>
-        <p class="text-[10px] text-slate-500 font-mono">
-         Specs &amp; Constraints
-        </p>
-       </div>
-       <div class="p-3 rounded-lg bg-indigo-900 text-white border border-indigo-800">
-        <div class="font-bold text-indigo-200 mb-1">
-         SVA HARNESS
-        </div>
-        <p class="text-[10px] text-indigo-300 font-mono">
-         Formal Assertions
-        </p>
-       </div>
-       <div class="p-3 rounded-lg bg-slate-50 border border-slate-200">
-        <div class="font-bold text-emerald-600 mb-1">
-         RESULT
-        </div>
-        <p class="text-[10px] text-slate-500 font-mono">
-         Math Proof / Bug
-        </p>
-       </div>
-      </div>
-      <p class="text-xs text-slate-500 leading-relaxed">
-       Transforms ambiguous human-written specification documents into unambiguous, mathematically testable invariants.
-      </p>
-     </div>
-     <!-- Equivalence Checking (SEC) -->
-     <div class="bg-slate-900 text-white border border-slate-800 rounded-2xl p-6 shadow-sm">
-      <div class="fv-equivalence-label text-xs font-bold uppercase tracking-wider text-amber-400 mb-4 flex items-center gap-2">
-       <img alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon" src="assets/icons/git-compare.svg"/>
-       Formal Equivalence (SEC / LEC)
-      </div>
-      <div class="flex items-center justify-between gap-2 text-center text-xs mb-4">
-       <div class="flex-1 p-3 rounded-lg bg-slate-800 border border-slate-700">
-        <div class="font-bold text-slate-200 text-[11px]">
-         REFERENCE RTL
-        </div>
-        <span class="text-[9px] text-slate-400 font-mono">
-         Golden Model
-        </span>
-       </div>
-       <div class="w-10 h-10 rounded-full bg-amber-500/20 border border-amber-500/50 flex items-center justify-center shrink-0">
-        <span class="text-[10px] font-bold text-amber-400 font-mono">
-         MATCH
-        </span>
-       </div>
-       <div class="flex-1 p-3 rounded-lg bg-slate-800 border border-slate-700">
-        <div class="font-bold text-slate-200 text-[11px]">
-         IMPLEMENTATION
-        </div>
-        <span class="text-[9px] text-slate-400 font-mono">
-         Optimized Netlist
-        </span>
-       </div>
-      </div>
-      <p class="text-xs text-slate-400 leading-relaxed">
-       Zero-simulation formal equivalence checking provides proof evidence for functional equivalence within the defined reference, implementation, assumptions, and comparison scope after synthesis optimizations or manual ECOs.
-      </p>
-     </div>
-    </div>
-   </div>
-  </section>
-  <!-- Call to Action Banner -->
-  <section class="py-16 bg-white" id="contact">
-   <div class="max-w-7xl mx-auto px-6">
-    <div class="bg-gradient-to-r from-indigo-900 via-indigo-950 to-slate-950 rounded-3xl p-10 sm:p-14 text-center text-white relative overflow-hidden shadow-2xl">
-     <div class="absolute -left-12 -bottom-12 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl">
-     </div>
-     <div class="absolute -right-12 -top-12 w-64 h-64 bg-amber-500/10 rounded-full blur-3xl">
-     </div>
-     <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4 relative z-10">
-      HAVE A FORMAL VERIFICATION REQUIREMENT?
-     </h2>
-     <p class="text-slate-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed mb-8 relative z-10">
-      Tell us what you are trying to clean, verify, or prove mathematically, and let's explore the right verification engagement model for your tape-out timeline.
-     </p>
-     <div class="inline-flex flex-col sm:flex-row items-center gap-4 relative z-10">
-      <a class="px-8 py-4 bg-lime-400 hover:bg-lime-300 text-slate-950 font-bold rounded-xl text-sm transition duration-200 shadow-lg flex items-center gap-2" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">
-       <span>
-        Start your requirement discussion
-       </span>
-       <img alt="" aria-hidden="true" class="w-4 h-4 fv-local-icon" src="assets/icons/arrow-right.svg"/>
-      </a>
-     </div>
-    </div>
-   </div>
-  </section>
-  <footer class="site-footer">
-   <div class="container footer-bottom">
-    <a class="site-brand" href="index.html#home">
-     <img alt="" src="assets/terasilicon-iq-symbol.png"/>
-     <span>
-      TERASILICON
-      <b>
-       IQ
-      </b>
-      <small>
-       ENGINEERING THE FUTURE OF SILICON
-      </small>
-     </span>
-    </a>
-    <p>
-     &copy; 2026 Terasilicon IQ Private Limited. All rights reserved.
-    </p>
-    <div aria-label="Legal information">
-     <a href="privacy-policy.html">
-      Privacy Policy
-     </a>
-     <a href="terms-of-use.html">
-      Terms of Use
-     </a>
-     <a href="cookie-policy.html">
-      Cookie Policy
-     </a>
-    </div>
-   </div>
-  </footer>
-  <script src="script/script.js">
-  </script>
-  <script src="script/logo-loader.js">
-  </script>
- </body>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Formal Verification Services | Terasilicon IQ" name="description"/>
+<title>Formal Verification Services | Terasilicon IQ</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="css/01-core.css" rel="stylesheet"/>
+<link href="css/02-layout.css" rel="stylesheet"/>
+<link href="css/03-contact.css" rel="stylesheet"/>
+<link href="css/04-header.css" rel="stylesheet"/>
+<link href="css/05-footer.css" rel="stylesheet"/>
+<link href="css/06-capabilities.css" rel="stylesheet"/>
+<link href="css/07-navigation.css" rel="stylesheet"/>
+<link href="css/08-flow.css" rel="stylesheet"/>
+<link href="css/09-utilities.css" rel="stylesheet"/>
+<link href="css/11-logo-loader.css" rel="stylesheet"/>
+<link href="css/12-subpage-consistency.css" rel="stylesheet"/>
+<link href="assets/terasilicon-iq-symbol.png" rel="icon" type="image/png"/>
+<link href="css/15-detailed-subpages.css" rel="stylesheet"/><link href="css/16-final-visual-polish.css" rel="stylesheet"/>
+<style>
+/* Formal Verification — property checking + equivalence checking presentation. */
+.formal-reference-page{font-family:Inter,"Space Grotesk",Arial,sans-serif;background:var(--paper);color:var(--ink)}
+.formal-reference-page .detailed-container{width:min(1480px,calc(100% - 64px))!important;max-width:1480px!important}
+.formal-reference-page .formal-hero{padding:54px 0 42px;border-bottom:1px solid var(--line);margin-bottom:38px}
+.formal-reference-page .formal-hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1.4fr);gap:42px;align-items:center}
+.formal-reference-page .formal-copy{max-width:720px}
+.formal-reference-page .formal-copy h1{color:var(--ink);font-family:Inter,"Space Grotesk",Arial,sans-serif;font-size:clamp(42px,5vw,70px);line-height:.98;letter-spacing:-3px;text-transform:uppercase;margin:12px 0 22px}
+.formal-reference-page .formal-copy h1 .accent{color:var(--violet)}
+.formal-reference-page .formal-copy>p{max-width:680px;margin:0;color:var(--muted);font-size:16px;line-height:1.8}
+.formal-reference-page .formal-points{margin:26px 0 0;padding:0;list-style:none}
+.formal-reference-page .formal-points li{margin:11px 0;color:var(--ink);font-size:14px;line-height:1.5;display:flex;align-items:flex-start;gap:10px}
+.formal-reference-page .formal-points li::before{content:'✓';display:inline-grid;place-items:center;flex:0 0 20px;width:20px;height:20px;border-radius:50%;background:var(--orange);color:#fff;font-weight:700;font-size:12px;margin-top:1px}
+.formal-reference-page .tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:22px}
+.formal-reference-page .tag{display:inline-flex;align-items:center;padding:7px 11px;border:1px solid #d7d5d1;border-radius:999px;color:#59617a;background:#fff;font:10px/1.2 "IBM Plex Mono",monospace}
+.formal-reference-page .formal-visuals{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:stretch}
+.formal-reference-page .formal-visuals figure{margin:0}
+.formal-reference-page .formal-visuals img{display:block;width:100%;height:auto;object-fit:contain;border-radius:18px}
+.formal-reference-page .formal-visuals figcaption{margin:8px 4px 0;color:var(--muted);font:10px/1.4 "IBM Plex Mono",monospace;text-transform:uppercase;letter-spacing:.04em}
+.formal-reference-page .cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;margin-top:0;border:1px solid var(--line);background:var(--line)}
+.formal-reference-page .info-card{min-height:220px;padding:24px;background:#fff;border:0}
+.formal-reference-page .info-card h4{color:var(--ink);margin:0 0 12px;font-family:Inter,"Space Grotesk",Arial,sans-serif;font-size:14px;text-transform:uppercase;letter-spacing:.03em}
+.formal-reference-page .info-card p{color:var(--muted);font-size:13px;line-height:1.65;margin:0 0 12px}
+.formal-reference-page .info-card ul{margin:0;padding-left:17px}.formal-reference-page .info-card li{margin:6px 0;color:var(--muted);font-size:13px;line-height:1.5}
+.formal-reference-page .outcome{margin-top:12px;padding:15px 18px;border:1px solid #d8d1e6;border-left:3px solid var(--violet);background:#eeebf8}
+.formal-reference-page .outcome strong{display:block;margin-bottom:3px;color:var(--violet);font:10px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase}.formal-reference-page .outcome span{color:#59617a;font-size:12px;line-height:1.6}
+.formal-reference-page .detailed-contact{margin:48px 0 0;padding:48px 30px;border:1px solid #d8d1e6;background:#eeebf8;text-align:center}.formal-reference-page .detailed-contact .eyebrow{color:var(--violet)}
+.formal-reference-page .detailed-contact h2{max-width:760px;margin:0 auto 12px;color:var(--ink);font-family:Inter,"Space Grotesk",Arial,sans-serif;font-size:clamp(30px,4vw,48px);line-height:1.05;letter-spacing:-2px;text-transform:uppercase}.formal-reference-page .detailed-contact p:not(.eyebrow){max-width:650px;margin:0 auto 22px;color:var(--muted);font-size:14px}.formal-reference-page .detailed-contact .button{display:inline-flex}
+@media(max-width:1050px){.formal-reference-page .formal-hero-grid{grid-template-columns:1fr}.formal-reference-page .formal-copy{max-width:900px}.formal-reference-page .formal-visuals{max-width:900px}}
+@media(max-width:700px){.formal-reference-page .detailed-container{width:min(100% - 32px,760px)!important}.formal-reference-page .formal-hero{padding-top:36px}.formal-reference-page .formal-visuals{grid-template-columns:1fr}.formal-reference-page .cols{grid-template-columns:1fr}.formal-reference-page .info-card{min-height:auto}.formal-reference-page .formal-copy h1{letter-spacing:-2px}}
+@media(max-width:560px){.formal-reference-page .detailed-container{width:min(100% - 24px,760px)!important}.formal-reference-page .formal-copy h1{font-size:clamp(36px,12vw,52px)}.formal-reference-page .detailed-contact{padding:38px 18px}}
+</style>
+</head>
+<body class="formal-verification-page">
+<div aria-label="Loading Terasilicon IQ" id="tsiq-loader" role="status">
+<div class="tsiq-loader-inner">
+<div aria-hidden="true" class="tsiq-loader-logo">
+<img alt="" class="tsiq-logo-base" src="assets/terasilicon-iq-symbol.png"/>
+<img alt="" class="tsiq-logo-purple" src="assets/terasilicon-iq-symbol.png"/>
+<img alt="" class="tsiq-logo-orange" src="assets/terasilicon-iq-symbol.png"/>
+<img alt="" class="tsiq-logo-glow" src="assets/terasilicon-iq-symbol.png"/>
+</div>
+<div class="tsiq-loader-brand">TERASILICON <b>IQ</b></div>
+<div class="tsiq-loader-tagline">ENGINEERING THE FUTURE OF SILICON</div>
+<div aria-hidden="true" class="tsiq-loader-line"></div>
+<div aria-live="polite" class="tsiq-loader-status">Loading</div>
+<div class="tsiq-loader-substatus">Initializing Verification Flow</div>
+</div>
+</div>
+<header class="site-header">
+<a aria-label="Terasilicon IQ home" class="site-brand" href="index.html#home">
+<img alt="Terasilicon IQ symbol" src="assets/terasilicon-iq-symbol.png"/>
+<span>TERASILICON <b>IQ</b><small>ENGINEERING THE FUTURE OF SILICON</small></span>
+</a>
+<button aria-expanded="false" aria-label="Toggle navigation menu" class="menu-toggle" type="button">
+<span></span><span></span><span></span>
+</button>
+<nav aria-label="Primary navigation">
+<a href="index.html#home">Home</a>
+<a href="index.html#signoff">Signoff</a>
+<div class="nav-capabilities subpage-active">
+<div class="nav-capabilities-main">
+<a class="capabilities-nav-link" href="index.html#capabilities">Capabilities</a>
+<button aria-expanded="false" aria-label="Show capability pages" class="capabilities-toggle" type="button">⌄</button>
+</div>
+<div aria-label="Capability pages" class="capabilities-dropdown"><a aria-current="page" class="current" href="formal-verification.html">Formal Verification</a><a href="sta-timing-closure.html">STA &amp; Timing Closure</a><a href="emir-power-integrity.html">EMIR &amp; Power Integrity</a><a href="physical-design-signoff.html">Physical Design &amp; Signoff</a><a href="rtl-dv-dft.html">RTL, Design Verification &amp; DFT</a><a href="physical-verification.html">Physical Verification</a></div>
+</div>
+<a href="index.html#solutions">Solutions</a>
+<a href="index.html#about">About</a>
+<a class="nav-cta" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">Talk to our team <b>→</b></a>
+</nav>
+</header>
+<main class="capability-page detailed-capability-page formal-reference-page">
+<div class="container detailed-container">
+<section class="formal-hero">
+<div class="formal-hero-grid">
+<div class="formal-copy">
+<div class="eyebrow">FORMAL VERIFICATION</div>
+<h1>FORMAL <span class="accent">PROPERTY CHECKING</span> &amp; FORMAL EQUIVALENCE CHECKING</h1>
+<p>We use formal methods to mathematically explore design behavior, prove or disprove properties, and verify that implementation changes preserve intended functionality. Property checking focuses on design intent; equivalence checking validates that two design representations remain functionally consistent.</p>
+<ul class="formal-points">
+<li>Prove safety, liveness, protocol and control properties with SVA.</li>
+<li>Explore hard-to-reach states and debug counterexamples with precise traces.</li>
+<li>Compare RTL and implementation versions to validate functional equivalence.</li>
+<li>Support convergence, coverage and signoff-oriented analysis.</li>
+</ul>
+<div class="tags"><span class="tag">SVA</span><span class="tag">Property Proof</span><span class="tag">Counterexample Debug</span><span class="tag">RTL-to-RTL</span><span class="tag">RTL-to-Gate</span><span class="tag">LEC / FEV</span></div>
+</div>
+<div class="formal-visuals">
+<figure><img src="assets/formal/4k/formal-property-checking.png" alt="Formal property checking flow from RTL and assumptions through assertions to proof or counterexample"/><figcaption>Formal property checking</figcaption></figure>
+<figure><img src="assets/formal/4k/formal-equivalence-checking.png" alt="Formal equivalence checking between original and modified RTL with mismatch analysis"/><figcaption>Formal equivalence checking</figcaption></figure>
+</div>
+</div>
+</section>
+<div class="cols">
+<div class="info-card"><h4>FORMAL PROPERTY CHECKING</h4><p>Property checking asks whether a design satisfies its intended behavior across the reachable state space under defined environmental assumptions.</p><ul><li>Safety and protocol properties</li><li>Liveness and progress checks</li><li>Reset and illegal-state analysis</li><li>Counterexample waveform debug</li><li>Coverage and convergence support</li></ul></div>
+<div class="info-card"><h4>FORMAL EQUIVALENCE CHECKING</h4><p>Equivalence checking compares a reference design with a revised implementation to determine whether the intended functionality is preserved.</p><ul><li>RTL-to-RTL equivalence</li><li>RTL-to-gate equivalence</li><li>Gate-to-gate comparison</li><li>ECO and optimization validation</li><li>Mismatch root-cause analysis</li></ul></div>
+<div class="info-card"><h4>ENGINEERING OUTCOME</h4><p>Formal analysis provides mathematically rigorous evidence for the behaviors and transformations being checked, helping teams identify corner cases before signoff.</p><ul><li>Earlier bug discovery</li><li>Targeted debug evidence</li><li>Controlled implementation changes</li><li>Higher verification confidence</li><li>Signoff-ready proof results</li></ul></div>
+</div>
+<div class="outcome"><strong>ENGINEERING OUTCOME</strong><span>Mathematical proof of defined design intent and controlled validation of functional equivalence across design transformations.</span></div>
+<section class="detailed-contact"><p class="eyebrow">SIGNOFF SUPPORT</p><h2>NEED FORMAL VERIFICATION SUPPORT?</h2><p>Tell us what you are trying to prove or compare and we can discuss the verification approach that fits your project.</p><a class="button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=hr%40terasiliconiq.com" rel="noopener" target="_blank">Talk to our team →</a></section>
+</div>
+</main>
+<footer class="site-footer">
+<div class="container footer-bottom">
+<a class="site-brand" href="index.html#home">
+<img alt="Terasilicon IQ symbol" src="assets/terasilicon-iq-symbol.png"/>
+<span>TERASILICON <b>IQ</b><small>ENGINEERING THE FUTURE OF SILICON</small></span>
+</a>
+<p>© 2026 Terasilicon IQ Private Limited. All rights reserved.</p>
+<div aria-label="Legal information">
+<a href="privacy-policy.html">Privacy Policy</a>
+<a href="terms-of-use.html">Terms of Use</a>
+<a href="cookie-policy.html">Cookie Policy</a>
+</div>
+</div>
+</footer>
+<script src="script/script.js"></script>
+<script src="script/logo-loader.js"></script>
+</body>
 </html>
