@@ -42,9 +42,14 @@ document.addEventListener("DOMContentLoaded", () => {
      */
     const closeMobileMenu = () => {
       siteNav.classList.remove("open");
+      menuToggle.classList.remove("open");
       menuToggle.setAttribute(
         "aria-expanded",
         "false"
+      );
+      menuToggle.setAttribute(
+        "aria-label",
+        "Open navigation menu"
       );
     };
 
@@ -54,10 +59,15 @@ document.addEventListener("DOMContentLoaded", () => {
     menuToggle.addEventListener("click", () => {
 
       const isOpen = siteNav.classList.toggle("open");
+      menuToggle.classList.toggle("open", isOpen);
 
       menuToggle.setAttribute(
         "aria-expanded",
         String(isOpen)
+      );
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation menu" : "Open navigation menu"
       );
     });
 

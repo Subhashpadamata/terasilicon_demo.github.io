@@ -31,3 +31,18 @@
     },900);
   });
 })();
+
+
+/* V6.16 — lightweight viewport reveal animations. */
+(function(){
+  'use strict';
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  if (!('IntersectionObserver' in window)) return;
+  const selectors=['.flow-section','#signoff .section-head','#signoff .card.core','#capabilities .section-head','#capabilities .capability-row','#solutions .section-head','#solutions .card','#about .section-head','#about .check-list','.detailed-domain','.subpage-requirement-cta','.contact-details .footer-column'];
+  const elements=Array.from(document.querySelectorAll(selectors.join(',')));
+  if(!elements.length)return;
+  document.body.classList.add('tsiq-motion-ready');
+  elements.forEach((el,index)=>{el.classList.add('tsiq-reveal');const delay=index%4;if(delay)el.classList.add('tsiq-delay-'+delay);});
+  const observer=new IntersectionObserver((entries,obs)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('tsiq-revealed');obs.unobserve(entry.target);}});},{threshold:.12,rootMargin:'0px 0px -7% 0px'});
+  elements.forEach(el=>observer.observe(el));
+})();
