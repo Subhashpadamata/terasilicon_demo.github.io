@@ -13,7 +13,16 @@
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet"><link href="css/site-bundle.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="assets/terasilicon-iq-symbol.png" rel="icon" type="image/png"/>
-<meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="#11182f" name="theme-color"/><meta content="index,follow" name="robots"/></head>
+<meta content="strict-origin-when-cross-origin" name="referrer"/><meta content="#11182f" name="theme-color"/><meta content="index,follow" name="robots"/>
+<script>
+  // Always open standalone pages at the top; preserve intentional in-page anchors.
+  if (!window.location.hash) {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function () { window.scrollTo(0, 0); }, { once: true });
+  }
+</script>
+</head>
 <body>
 <div id="tsiq-loader" aria-hidden="true">
   <div class="tsiq-loader-inner">

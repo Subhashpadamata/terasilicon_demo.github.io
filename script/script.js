@@ -371,70 +371,92 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (!ignoreHash && currentHash) {
 
-        const exactSection =
-          sectionLinks.find(
-            (item) =>
-              item.id === currentHash
-          );
+        const exactSection = sectionLinks.find(
+          (item) => item.id === currentHash
+        );
 
         if (exactSection) {
-
           clearActiveNavigation();
+          activateNavigation(exactSection.link);
+          return;
+        }
+      }
 
-          activateNavigation(
-            exactSection.link
-          );
+      /*
+       * A navigation click can intentionally center a section (for
+       * example Careers). During the smooth scroll the section may
+       * not yet have crossed the normal activation line, so prefer
+       * the hashed section while it is actually visible. This also
+       * keeps Contact Us active while its footer/contact-details
+       * block is on screen.
+       */
+      if (currentHash) {
+        const hashedVisibleSection = sectionLinks.find((item) => {
+          if (item.id !== currentHash) return false;
+          const rect = item.section.getBoundingClientRect();
+          const headerNow = document.querySelector(".site-header");
+          const headerNowHeight = headerNow ? headerNow.getBoundingClientRect().height : 0;
+          return rect.bottom > headerNowHeight && rect.top < window.innerHeight;
+        });
 
+        if (hashedVisibleSection) {
+          clearActiveNavigation();
+          activateNavigation(hashedVisibleSection.link);
           return;
         }
       }
 
 
       /*
-       * Otherwise determine the section
-       * from the current scroll position.
+       * Otherwise determine the section from what is actually
+       * visible in the viewport.  Using offsetTop here is fragile
+       * because some sections are nested/styled differently and
+       * can have an offsetParent other than the document body.
+       * That was causing Careers/About to remain active while
+       * the Contact section was visible.
        */
-      const header =
-        document.querySelector(
-          ".site-header"
-        );
+      const header = document.querySelector(".site-header");
+      const headerHeight = header
+        ? header.getBoundingClientRect().height
+        : 0;
+      const activationLine = headerHeight + 110;
 
-
-      const headerHeight =
-        header
-          ? header.getBoundingClientRect().height
-          : 0;
-
-
-      const scrollOffset =
-        headerHeight + 100;
-
-
-      const currentPosition =
-        window.scrollY + scrollOffset;
-
-
-      let currentSection =
-        sectionLinks[0];
-
+      let currentSection = sectionLinks[0];
+      let bestTop = -Infinity;
 
       sectionLinks.forEach((item) => {
+        const rect = item.section.getBoundingClientRect();
+        const sectionTop = rect.top;
 
-        if (
-          item.section.offsetTop
-          <= currentPosition
-        ) {
-
+        if (sectionTop <= activationLine && sectionTop > bestTop) {
           currentSection = item;
+          bestTop = sectionTop;
         }
       });
 
+      /*
+       * When the final Contact details section is visible, make it
+       * explicitly win over earlier sections. This keeps Contact Us
+       * highlighted while the user is reading the footer/contact
+       * information instead of leaving Careers highlighted.
+       */
+      const contactSection = sectionLinks.find(
+        (item) => item.id === "contact-details"
+      );
+
+      if (contactSection) {
+        const contactRect = contactSection.section.getBoundingClientRect();
+        const contactVisible =
+          contactRect.top <= activationLine &&
+          contactRect.bottom > activationLine;
+
+        if (contactVisible) {
+          currentSection = contactSection;
+        }
+      }
 
       clearActiveNavigation();
-
-      activateNavigation(
-        currentSection.link
-      );
+      activateNavigation(currentSection.link);
     };
 
 
@@ -889,4 +911,33 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+});
+
+
+/* V6.27 — Center the Careers section when reached from navigation. */
+document.addEventListener("DOMContentLoaded", () => {
+  const careers = document.getElementById("careers");
+  if (!careers) return;
+
+  const centerCareers = (updateHash = false) => {
+    const header = document.querySelector(".site-header");
+    const headerHeight = header ? header.getBoundingClientRect().height : 0;
+    const sectionHeight = careers.getBoundingClientRect().height;
+    const targetTop = careers.getBoundingClientRect().top + window.scrollY
+      - Math.max(headerHeight, (window.innerHeight - sectionHeight) / 2 - 18);
+    const maxScroll = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+    window.scrollTo({ top: Math.min(Math.max(0, targetTop), maxScroll), behavior: "smooth" });
+    if (updateHash) history.replaceState(null, "", "#careers");
+  };
+
+  document.querySelectorAll('a.nav-careers[href="#careers"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      event.preventDefault();
+      centerCareers(true);
+    });
+  });
+
+  if (window.location.hash === "#careers") {
+    window.setTimeout(() => centerCareers(false), 80);
+  }
 });

@@ -16,8 +16,8 @@
 <link rel="canonical" href="https://subhashpadamata.github.io/terasilicon_demo.github.io/contact.html">
 <style>
 .contact-page{background:#f7f5f1;color:var(--ink)}
-.contact-page .contact-shell{width:min(1480px,calc(100% - 80px));margin:0 auto;padding:72px 0 88px}
-.contact-page .requirement-cta{position:relative;overflow:hidden;min-height:470px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:72px 60px;background:radial-gradient(circle at 12% 18%,rgba(101,53,147,.12),transparent 31%),radial-gradient(circle at 88% 84%,rgba(239,119,0,.11),transparent 29%),linear-gradient(135deg,#f3eef9 0%,#f7f5f1 48%,#eef1f8 100%);box-shadow:0 18px 42px rgba(16,22,56,.08);border:1px solid rgba(101,53,147,.18)}
+.contact-page .contact-shell{width:min(1480px,calc(100% - 80px));margin:0 auto;padding:36px 0 72px}
+.contact-page .requirement-cta{position:relative;overflow:hidden;min-height:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:64px 60px 58px;background:radial-gradient(circle at 12% 18%,rgba(101,53,147,.12),transparent 31%),radial-gradient(circle at 88% 84%,rgba(239,119,0,.11),transparent 29%),linear-gradient(135deg,#f3eef9 0%,#f7f5f1 48%,#eef1f8 100%);box-shadow:0 18px 42px rgba(16,22,56,.08);border:1px solid rgba(101,53,147,.18)}
 .contact-page .requirement-cta:before{content:"";position:absolute;width:460px;height:460px;border-radius:50%;left:-170px;top:-210px;background:radial-gradient(circle,rgba(101,53,147,.10) 0%,rgba(101,53,147,0) 68%);pointer-events:none}
 .contact-page .requirement-cta:after{content:"";position:absolute;width:500px;height:500px;border-radius:50%;right:-220px;bottom:-300px;background:radial-gradient(circle,rgba(239,119,0,.12) 0%,rgba(239,119,0,0) 68%);pointer-events:none}
 .contact-page .requirement-cta>*{position:relative;z-index:1}
@@ -38,9 +38,9 @@
 .contact-page .info-card h2{margin:0 0 10px;color:var(--violet);font:700 14px/1.2 "Space Grotesk",Arial,sans-serif;text-transform:uppercase;letter-spacing:.5px}
 .contact-page .info-card p{margin:0;color:var(--muted);font-size:14px;line-height:1.6}
 .contact-page .info-card a{color:var(--ink);font-weight:600}
-.contact-page .back-link{display:inline-flex;margin-top:26px;color:var(--violet);font:11px "IBM Plex Mono",monospace;text-decoration:none}
-@media(max-width:900px){.contact-page .contact-shell{width:min(100% - 36px,760px);padding:46px 0 64px}.contact-page .requirement-cta{min-height:420px;padding:56px 30px}.contact-page .requirement-cta h1{letter-spacing:-2px}.contact-page .contact-info{grid-template-columns:1fr}}
-@media(max-width:560px){.contact-page .contact-shell{width:min(100% - 24px,760px)}.contact-page .requirement-cta{padding:48px 20px}.contact-page .requirement-cta h1{font-size:clamp(38px,11vw,54px);letter-spacing:-1.5px}.contact-page .requirement-cta p:not(.eyebrow){font-size:15px}.contact-page .cta-button{min-width:0;width:100%}.contact-page .cta-secondary{width:100%}}
+.contact-page .back-link{display:inline-flex;align-items:center;margin-top:28px;color:#653593;font:600 12px/1.2 "IBM Plex Mono",monospace;text-decoration:none;text-underline-offset:4px;transition:color .2s ease,transform .2s ease}.contact-page .back-link:hover{color:#ef7700;transform:translateX(-2px)}
+@media(max-width:900px){.contact-page .contact-shell{width:min(100% - 36px,760px);padding:30px 0 56px}.contact-page .requirement-cta{min-height:0;padding:52px 30px 48px}.contact-page .requirement-cta h1{letter-spacing:-2px}.contact-page .contact-info{grid-template-columns:1fr}}
+@media(max-width:560px){.contact-page .contact-shell{width:min(100% - 24px,760px);padding:24px 0 44px}.contact-page .requirement-cta{padding:44px 20px 40px}.contact-page .requirement-cta h1{font-size:clamp(38px,11vw,54px);letter-spacing:-1.5px}.contact-page .requirement-cta p:not(.eyebrow){font-size:15px}.contact-page .cta-button{min-width:0;width:100%}.contact-page .cta-secondary{width:100%}}
 
 /* V6.9 — Engineering inquiry acknowledgement */
 .contact-page .requirement-cta h1{max-width:1080px}
@@ -54,6 +54,15 @@
 .mail-fallback strong{display:block;margin-bottom:4px;font-weight:700}
 .mail-fallback a{color:#653593;font-weight:700;text-decoration:underline}
 </style>
+
+<script>
+  // Always open standalone pages at the top; preserve intentional in-page anchors.
+  if (!window.location.hash) {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function () { window.scrollTo(0, 0); }, { once: true });
+  }
+</script>
 </head>
 <body class="contact-page">
 <div id="tsiq-loader" aria-hidden="true">
@@ -86,7 +95,7 @@
 </div>
 <a href="index.html#solutions">Solutions</a>
 <a href="index.html#about">About</a>
-<a class="nav-careers" href="careers.html">
+<a class="nav-careers" href="index.html#careers">
      Careers
     </a>
 <a class="nav-contact" href="index.html#contact-details">
@@ -127,13 +136,8 @@
     <span class="routing-email">careers@terasiliconiq.com <b aria-hidden="true">→</b></span>
   </a>
 </div>
-</section>
-<section aria-label="Engineering contact information" class="contact-info">
-<div class="info-card"><h2>Formal Verification</h2><p>Property checking, equivalence checking, SVA, convergence and formal signoff support.</p></div>
-<div class="info-card"><h2>Design &amp; Signoff</h2><p>RTL/DV/DFT, STA, physical verification, EMIR and implementation support.</p></div>
-<div class="info-card"><h2>HR Response</h2><p>Send your requirement to our HR team. We will review the request and contact you to discuss the next steps.</p></div>
-</section>
 <a class="back-link" href="index.html#home">← Back to Terasilicon IQ</a>
+</section>
 </div>
 </main>
 <footer class="site-footer">

@@ -27,7 +27,16 @@
   "description": "Terasilicon IQ provides signoff-driven ASIC and SoC semiconductor engineering services.",
   "url": "https://subhashpadamata.github.io/terasilicon_demo.github.io/",
   "email": "contact@terasiliconiq.com"
-}</script><link href="https://subhashpadamata.github.io/terasilicon_demo.github.io/" rel="canonical"/></head>
+}</script><link href="https://subhashpadamata.github.io/terasilicon_demo.github.io/" rel="canonical"/>
+<script>
+  // Always open standalone pages at the top; preserve intentional in-page anchors.
+  if (!window.location.hash) {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function () { window.scrollTo(0, 0); }, { once: true });
+  }
+</script>
+</head>
 <body>
 <div id="tsiq-loader" aria-hidden="true">
   <div class="tsiq-loader-inner">
@@ -88,6 +97,9 @@
     </a>
 <a href="#about">
      About
+    </a>
+<a class="nav-careers" href="#careers">
+     Careers
     </a>
 <a class="nav-contact" href="#contact-details">
      Contact Us
@@ -599,6 +611,19 @@
 </ul>
 </div>
 </section>
+<section class="careers-strip" id="careers" aria-labelledby="careers-title">
+ <div class="container careers-strip-inner">
+  <div class="careers-copy">
+   <p class="eyebrow">CAREERS</p>
+   <h2 id="careers-title">Build your career in silicon.</h2>
+   <p>Explore opportunities with Terasilicon IQ across formal verification, timing closure, power integrity, physical design and signoff-focused engineering.</p>
+  </div>
+  <a class="button careers-button" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=careers@terasiliconiq.com&amp;su=Career%20opportunity%20at%20Terasilicon%20IQ" target="_blank" rel="noopener noreferrer" aria-label="Email careers at Terasilicon IQ via Gmail">
+   Email careers team
+   <b>→</b>
+  </a>
+ </div>
+</section>
 <section class="contact" id="contact">
 <div class="container">
 <p class="eyebrow">
@@ -625,6 +650,8 @@
 </div>
 </div>
 </section>
+
+
 <section aria-label="Contact, location and engineering services" class="contact-details" id="contact-details">
 <div class="container footer-grid">
 <div class="contact-intro">
@@ -704,6 +731,15 @@
        Physical Verification
       </a>
 </nav>
+<div class="footer-careers-training">
+<nav aria-label="Careers" class="footer-column footer-directory footer-careers">
+<h3>
+       Careers
+      </h3>
+<a aria-label="Email careers at Terasilicon IQ via Gmail" href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=careers@terasiliconiq.com" rel="noopener noreferrer" target="_blank">
+       careers@terasiliconiq.com →
+      </a>
+</nav>
 <nav aria-label="Training" class="footer-column footer-directory footer-training">
 <h3>
        Training
@@ -712,6 +748,7 @@
        TSIQ VLSI Finishing School
       </a>
 </nav>
+</div>
 </div>
 </section>
 </main>
