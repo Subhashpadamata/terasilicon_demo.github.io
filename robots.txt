@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://subhashpadamata.github.io/terasilicon_demo.github.io/sitemap.xml

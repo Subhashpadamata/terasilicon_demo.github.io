@@ -1,43 +1,14 @@
 THIRD-PARTY NOTICES
-=====================
-
-Lucide Icons
-------------
-This website includes local SVG icon assets derived from or matching the Lucide icon set. Lucide is released under the ISC License. The current Lucide license also identifies specific icons derived from the Feather project and covered by the MIT License.
-
-Lucide project:
-https://github.com/lucide-icons/lucide
-
-Lucide license:
-https://github.com/lucide-icons/lucide/blob/main/LICENSE
-
-ISC License notice
-------------------
-Copyright (c) 2026 Lucide Icons and Contributors
-
-Permission to use, copy, modify, and/or distribute this software for any purpose with or without fee is hereby granted, provided that the above copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES WHATSOEVER ARISING OUT OF THE USE OF THIS SOFTWARE.
-
-Feather-derived portions
-------------------------
-Lucide's official license identifies the following portions as derived from Feather and covered by the MIT License. The complete current list and license text are maintained upstream.
-
-MIT License notice:
-Copyright (c) 2013-present Cole Bemis
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, subject to the conditions in the MIT License.
-
-See the upstream Lucide LICENSE above for the complete list of Feather-derived icons and the complete license wording.
+====================
 
 Google Fonts
 ------------
-The site currently uses IBM Plex Mono and Space Grotesk through Google Fonts. Their respective open-source font licenses apply. Google Fonts is a separate service and is disclosed in the Privacy Policy.
+The website uses the IBM Plex Mono and Space Grotesk typefaces through Google Fonts. The applicable open-source font licenses and Google Fonts terms apply to those resources. Google Fonts is an external service and is disclosed in the Privacy Policy.
 
-Site-owned assets
------------------
-Terasilicon IQ logos, branding, original page layouts, and other company-provided assets are intended to remain the property of or licensed to Terasilicon IQ Private Limited unless otherwise stated.
+Site-owned and supplied assets
+------------------------------
+Terasilicon IQ logos, branding, page layouts, diagrams, video, and other company-supplied materials are intended to remain the property of or licensed to Terasilicon IQ Private Limited unless otherwise stated.
 
-Asset provenance note
----------------------
-The site owner should retain source/licensing records for any company-provided photography, video, stock media, or other assets not created by Terasilicon IQ.
+Asset provenance
+----------------
+The site owner should retain source and licensing records for any photography, video, stock media, illustrations, fonts, icons, or other third-party materials that are added to or distributed with the website.

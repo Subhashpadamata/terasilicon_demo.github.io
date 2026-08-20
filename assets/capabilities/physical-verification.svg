@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 360" role="img" aria-label="Physical verification diagram">
-<rect width="720" height="360" rx="28" fill="#0b102f"/>
-<g fill="none" stroke="#653593" stroke-width="3"><path d="M70 90H650V270H70Z"/><path d="M120 135H600V225H120Z"/><path d="M180 160H540V200H180Z"/></g>
-<path d="M120 225L180 160L260 225L340 160L420 225L500 160L600 225" fill="none" stroke="#ef7700" stroke-width="5" stroke-linejoin="round"/>
-<circle cx="340" cy="160" r="10" fill="#15b981"/>
-<text x="55" y="55" fill="#fff" font-family="Space Grotesk, sans-serif" font-size="24" font-weight="700">PHYSICAL VERIFICATION</text>
-<text x="55" y="325" fill="#a9aec4" font-family="IBM Plex Mono, monospace" font-size="13">DRC • LVS • LAYOUT DEBUG • CLOSURE</text>
-</svg>

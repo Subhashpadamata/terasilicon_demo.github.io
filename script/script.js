@@ -156,13 +156,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
       "physical-verification.html": "capabilities",
 
-      "signoff.html": "signoff",
-
-      "solutions.html": "solutions",
-
-      "about.html": "about",
-
-      "capabilities.html": "capabilities"
     };
 
 
@@ -223,10 +216,6 @@ document.addEventListener("DOMContentLoaded", () => {
      * Separate the path and #hash from a link.
      *
      * Example:
-     *   capabilities.html#formal
-     *
-     * becomes:
-     *   path = capabilities.html
      *   hash = formal
      */
     const getLinkParts = (link) => {
