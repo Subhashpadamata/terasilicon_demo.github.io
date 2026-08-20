@@ -6280,3 +6280,184 @@ body.tsiq-motion-ready .tsiq-reveal.tsiq-delay-3{transition-delay:.18s}
     gap:18px !important;
   }
 }
+
+/* V6.19 — Careers navigation */
+.site-header nav .nav-careers{color:var(--ink);font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}.site-header nav .nav-careers:hover{color:var(--violet)}
+@media(max-width:900px){.site-header nav .nav-careers{font-size:12px}}
+
+/* V6.19 — professional contact routing */
+.contact-page .contact-routing{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;width:min(980px,100%);margin:30px auto 0;text-align:left}.contact-page .contact-routing article{padding:20px 22px;background:rgba(255,255,255,.62);border:1px solid rgba(101,53,147,.16);box-shadow:0 8px 20px rgba(16,22,56,.04);transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease}.contact-page .contact-routing article:hover{transform:translateY(-2px);border-color:rgba(101,53,147,.35);box-shadow:0 12px 24px rgba(16,22,56,.07)}.contact-page .contact-routing span{display:block;margin-bottom:8px;color:#653593;font:10px/1.2 "IBM Plex Mono",monospace;letter-spacing:1.4px}.contact-page .contact-routing strong{display:block;min-height:42px;color:#101638;font:600 14px/1.45 "Space Grotesk",Arial,sans-serif}.contact-page .contact-routing a{display:inline-block;margin-top:10px;color:#653593;font:600 13px/1.4 "Space Grotesk",Arial,sans-serif;text-underline-offset:3px;overflow-wrap:anywhere}
+@media(max-width:900px){.contact-page .contact-routing{grid-template-columns:1fr}}
+
+
+/* V6.20 — clickable contact routing cards */
+.contact-routing-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+}
+.contact-routing-card:hover,
+.contact-routing-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(92, 47, 143, 0.55);
+  box-shadow: 0 12px 28px rgba(20, 26, 63, 0.08);
+  text-decoration: none;
+}
+.contact-routing-card:focus-visible {
+  outline: 2px solid #ff7a00;
+  outline-offset: 3px;
+}
+.contact-routing-card .routing-email {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: auto;
+  color: #5c2f8f;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+.contact-routing-card .routing-email b {
+  color: #ff7a00;
+  text-decoration: none;
+  transition: transform 180ms ease;
+}
+.contact-routing-card:hover .routing-email b,
+.contact-routing-card:focus-visible .routing-email b {
+  transform: translateX(4px);
+}
+@media (prefers-reduced-motion: reduce) {
+  .contact-routing-card,
+  .contact-routing-card .routing-email b {
+    transition: none;
+  }
+}
+
+
+/* V6.21 — subtle visual background for contact routing */
+.contact-routing {
+  position: relative;
+  isolation: isolate;
+  padding: 34px 26px 30px;
+  border: 1px solid rgba(92, 47, 143, 0.14);
+  background:
+    radial-gradient(circle at 10% 20%, rgba(112, 73, 170, 0.13), transparent 34%),
+    radial-gradient(circle at 88% 78%, rgba(255, 122, 0, 0.10), transparent 32%),
+    linear-gradient(135deg, rgba(246, 243, 252, 0.96), rgba(255, 249, 242, 0.94));
+  overflow: hidden;
+}
+
+.contact-routing::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.42;
+  background-image:
+    linear-gradient(rgba(92, 47, 143, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(92, 47, 143, 0.055) 1px, transparent 1px);
+  background-size: 42px 42px;
+  mask-image: linear-gradient(to right, transparent, black 16%, black 84%, transparent);
+}
+
+.contact-routing::after {
+  content: "";
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  right: -110px;
+  bottom: -170px;
+  z-index: -1;
+  border-radius: 50%;
+  background: rgba(255, 122, 0, 0.08);
+  filter: blur(24px);
+  pointer-events: none;
+}
+
+.contact-routing-card {
+  background: rgba(255, 255, 255, 0.56);
+  border: 1px solid rgba(92, 47, 143, 0.13);
+  backdrop-filter: blur(3px);
+}
+
+.contact-routing-card:hover,
+.contact-routing-card:focus-visible {
+  background: rgba(255, 255, 255, 0.82);
+}
+
+@media (max-width: 760px) {
+  .contact-routing {
+    padding: 24px 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-routing-card,
+  .contact-routing-card .routing-email b {
+    transition: none;
+  }
+}
+
+
+/* V6.22 — contact section visual refinement */
+.contact-routing {
+  padding: 38px 0 34px;
+  border: 0;
+  background: transparent;
+  overflow: visible;
+}
+
+.contact-routing::before {
+  opacity: 0.22;
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to right, transparent 4%, black 18%, black 82%, transparent 96%);
+}
+
+.contact-routing::after {
+  width: 320px;
+  height: 320px;
+  right: -130px;
+  bottom: -190px;
+  opacity: 0.72;
+}
+
+.contact-routing-card {
+  min-height: 158px;
+  padding: 24px 26px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid rgba(92, 47, 143, 0.16);
+  box-shadow: 0 5px 18px rgba(20, 26, 63, 0.035);
+  backdrop-filter: blur(5px);
+}
+
+.contact-routing-card:hover,
+.contact-routing-card:focus-visible {
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(92, 47, 143, 0.34);
+  box-shadow: 0 12px 28px rgba(20, 26, 63, 0.09);
+}
+
+.contact-routing-card strong {
+  margin-top: 10px;
+  line-height: 1.45;
+}
+
+.contact-routing-card .routing-email {
+  margin-top: 22px;
+}
+
+@media (max-width: 760px) {
+  .contact-routing {
+    padding: 26px 0;
+  }
+
+  .contact-routing-card {
+    min-height: 0;
+    padding: 22px;
+  }
+}

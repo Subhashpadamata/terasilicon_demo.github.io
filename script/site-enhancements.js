@@ -14,18 +14,18 @@
 /* HR email fallback: keep mailto behavior, but provide a visible fallback when no mail app opens. */
 (function(){
   'use strict';
-  var button=document.getElementById('hr-email-button');
+  var button=document.getElementById('sales-email-button');
   if(!button) return;
   button.addEventListener('click',function(){
     var mailto=button.getAttribute('href');
     if(!mailto) return;
     window.location.href=mailto;
     window.setTimeout(function(){
-      if(document.visibilityState==='visible' && !document.getElementById('hr-mail-fallback')){
+      if(document.visibilityState==='visible' && !document.getElementById('mail-fallback')){
         var note=document.createElement('div');
-        note.id='hr-mail-fallback';
-        note.className='hr-mail-fallback';
-        note.innerHTML='<strong>Your email application did not open?</strong><span>Please send your enquiry directly to <a href="mailto:hr@terasiliconiq.com">hr@terasiliconiq.com</a>.</span>';
+        note.id='mail-fallback';
+        note.className='mail-fallback';
+        note.innerHTML='<strong>Your email application did not open?</strong><span>Please send your enquiry directly to <a href="mailto:sales@terasiliconiq.com">sales@terasiliconiq.com</a>.</span>';
         button.parentNode.appendChild(note);
       }
     },900);
