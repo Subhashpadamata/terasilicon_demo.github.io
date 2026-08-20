@@ -6685,3 +6685,51 @@ body:has(#careers:target) .site-header nav > a.nav-careers::after {
   transform: scaleX(1);
   opacity: 1;
 }
+
+/* =========================================================
+   V6.30 — NAVIGATION FONT CONSISTENCY
+   Keep every primary navigation label on the same typeface
+   across desktop, tablet and mobile, including Careers and
+   Contact Us. The CTA keeps its intentional mono treatment.
+   ========================================================= */
+.site-header nav > a:not(.nav-cta),
+.site-header nav > a:not(.nav-cta) *,
+.site-header .nav-capabilities-main > a,
+.site-header .nav-capabilities-main > a *,
+.site-header .nav-careers,
+.site-header .nav-contact {
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 1.2 !important;
+  letter-spacing: normal !important;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.site-header nav > a:not(.nav-cta),
+.site-header .nav-capabilities-main > a,
+.site-header .nav-careers,
+.site-header .nav-contact {
+  font-size: 14px !important;
+}
+
+.site-header .capabilities-toggle {
+  font-family: "Space Grotesk", Arial, sans-serif !important;
+  font-style: normal !important;
+  font-weight: 600 !important;
+  line-height: 1 !important;
+}
+
+@media (max-width: 900px) {
+  .site-header nav > a:not(.nav-cta),
+  .site-header .nav-capabilities-main > a,
+  .site-header .nav-careers,
+  .site-header .nav-contact {
+    font-family: "Space Grotesk", Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    letter-spacing: normal !important;
+  }
+}
