@@ -153,3 +153,78 @@ window.addEventListener("load", () => {
     }, 80);
   }
 });
+
+/* V10.24 — draw hero connectors from the TSIQ circle edge to each box edge.
+   Geometry is calculated from the actual rendered boxes, so links never enter
+   the circle or cross one another. */
+(function initHeroConnectors() {
+  const stage = document.querySelector('.chip-stage');
+  const core = document.querySelector('.chip-core');
+  const svg = document.querySelector('.chip-connectors');
+  const nodes = [...document.querySelectorAll('.chip-stage .chip-chip')];
+
+  if (!stage || !core || !svg || !nodes.length) return;
+
+  const colors = ['orange','purple','purple','orange','purple','orange','purple','orange'];
+
+  function draw() {
+    const sr = stage.getBoundingClientRect();
+    const cr = core.getBoundingClientRect();
+    const cx = cr.left - sr.left + cr.width / 2;
+    const cy = cr.top - sr.top + cr.height / 2;
+    const radius = Math.min(cr.width, cr.height) / 2 + 3;
+
+    svg.setAttribute('viewBox', `0 0 ${sr.width} ${sr.height}`);
+    svg.setAttribute('width', sr.width);
+    svg.setAttribute('height', sr.height);
+    svg.replaceChildren();
+
+    nodes.forEach((node, index) => {
+      const nr = node.getBoundingClientRect();
+      const nx = nr.left - sr.left + nr.width / 2;
+      const ny = nr.top - sr.top + nr.height / 2;
+      const vx = nx - cx;
+      const vy = ny - cy;
+      const length = Math.hypot(vx, vy) || 1;
+      const ux = vx / length;
+      const uy = vy / length;
+
+      // Start just outside the TSIQ circle.
+      const x1 = cx + ux * radius;
+      const y1 = cy + uy * radius;
+
+      // End exactly at the near edge of the label rectangle.
+      const halfW = nr.width / 2;
+      const halfH = nr.height / 2;
+      const tx = halfW / Math.max(Math.abs(ux), 0.0001);
+      const ty = halfH / Math.max(Math.abs(uy), 0.0001);
+      const edgeDistance = Math.min(tx, ty) + 2;
+      const x2 = nx - ux * edgeDistance;
+      const y2 = ny - uy * edgeDistance;
+      const lineLength = Math.hypot(x2 - x1, y2 - y1);
+
+      const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      line.setAttribute('x1', x1.toFixed(2));
+      line.setAttribute('y1', y1.toFixed(2));
+      line.setAttribute('x2', x2.toFixed(2));
+      line.setAttribute('y2', y2.toFixed(2));
+      line.classList.add(colors[index] || 'purple');
+      line.style.setProperty('--line-length', `${lineLength.toFixed(1)}`);
+      line.style.setProperty('--line-delay', `${0.18 + index * 0.07}s`);
+      svg.appendChild(line);
+    });
+  }
+
+  let resizeTimer;
+  function scheduleDraw() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(draw, 40);
+  }
+
+  // Wait until the entrance transforms have settled, then keep geometry stable.
+  window.addEventListener('load', () => setTimeout(draw, 1100));
+  window.addEventListener('resize', scheduleDraw);
+  window.addEventListener('orientationchange', scheduleDraw);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(scheduleDraw);
+  setTimeout(draw, 1250);
+})();

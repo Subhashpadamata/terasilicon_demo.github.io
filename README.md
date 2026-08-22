@@ -1,14 +1,5 @@
-# TSIQ Deep Tech Lab
+# Terasilicon IQ Deep Tech Lab — V10.24
 
-Professional one-page home page for the Terasilicon IQ Deep Tech Lab training program.
+Hero connector geometry rebuilt using SVG lines calculated from the rendered TSIQ circle and VLSI field boxes. Each connector runs only between the circle boundary and the nearest edge of its corresponding box, preventing crossings and preventing lines from entering the TSIQ circle.
 
-## Structure
-
-- `index.html` — main page
-- `css/style.css` — complete visual styling
-- `js/script.js` — header/mobile navigation and active-section behavior
-- `assets/terasilicon-iq-symbol.png` — Terasilicon IQ logo
-- `assets/images/` — regenerated page illustrations
-- `assets/icons/` — local interface icons
-
-The page is static and uses no framework.
+No assets were modified.
