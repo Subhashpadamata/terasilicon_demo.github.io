@@ -1,0 +1,502 @@
+      <a href="#tracks">Training Tracks</a>
+      <a href="#environment">Engineering Environment</a>
+      <a href="mailto:hr@terasiliconiq.com?subject=TSIQ%20Deep%20Tech%20Lab%20Training%20Program">
+        Contact Us →
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+<h1>
+            Structured semiconductor training.
+            <span>Practical engineering capability.</span>
+          </h1>
+
+          <p>
+            TSIQ Deep Tech Lab is a hands-on semiconductor engineering training
+            environment focused on structured learning, technical execution,
+            debugging, reviews, documentation and continuous evaluation.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#program">Explore Training Program →</a>
+            <a class="button button-secondary" href="#tracks">View Training Tracks</a>
+          </div>
+
+          <div class="hero-meta">
+            <span>Semiconductor workflows</span>
+            <span>EDA tools</span>
+            <span>Hands-on labs</span>
+            <span>Continuous evaluation</span>
+          </div>
+        </div>
+
+        <div class="hero-art hero-art--model">
+          <img
+            src="assets/images/deep-tech-chip-model.webp"
+            alt="Semiconductor training capability illustration"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Value strip -->
+    <section class="value-strip" aria-label="Training highlights">
+      <div class="value-block">
+        <img src="assets/icons/structured.svg" alt="" aria-hidden="true">
+        <div>
+          <strong>Structured Learning</strong>
+          <p>From fundamentals to advanced engineering topics.</p>
+        </div>
+      </div>
+
+      <div class="value-block">
+        <img src="assets/icons/hands-on.svg" alt="" aria-hidden="true">
+        <div>
+          <strong>Hands-on Execution</strong>
+          <p>Lab-oriented training with tools and engineering workflows.</p>
+        </div>
+      </div>
+
+      <div class="value-block">
+        <img src="assets/icons/practical.svg" alt="" aria-hidden="true">
+        <div>
+          <strong>Practical Engineering</strong>
+          <p>Technical problems, debugging and engineering discipline.</p>
+        </div>
+      </div>
+
+      <div class="value-block">
+        <img src="assets/icons/mentoring.svg" alt="" aria-hidden="true">
+        <div>
+          <strong>Expert Guidance</strong>
+          <p>Technical reviews, feedback and increasing responsibility.</p>
+        </div>
+      </div>
+
+      <div class="value-block">
+        <img src="assets/icons/outcome.svg" alt="" aria-hidden="true">
+        <div>
+          <strong>Capability Outcome</strong>
+          <p>Progress demonstrated through practical engineering work.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Program -->
+    <section class="split-section section-light" id="program">
+      <div class="container split-grid">
+        <div class="split-copy">
+          <div class="eyebrow">THE TRAINING PROGRAM</div>
+          <h2>From learning to engineering capability.</h2>
+          <p>
+            TSIQ Deep Tech Lab provides a structured engineering environment where
+            engineers progressively build semiconductor capability. The program
+            combines technical learning with hands-on labs, debugging,
+            documentation, reviews, presentations and continuous evaluation.
+          </p>
+
+          <div class="tag-grid">
+            <span>Semiconductor workflows</span>
+            <span>Technical problems</span>
+            <span>Project-oriented execution</span>
+            <span>EDA tools</span>
+            <span>Debugging</span>
+            <span>Technical reviews</span>
+            <span>Documentation</span>
+            <span>Presentations</span>
+          </div>
+        </div>
+
+        <div class="split-art">
+          <img
+            src="assets/images/training-model-journey.webp"
+            alt="Training journey from learning and practice to demonstrated engineering capability"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Program model -->
+    <section class="model-section" aria-labelledby="model-title">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">THE MODEL</div>
+            <h2 id="model-title">Learn. Practice. Debug. Review. Demonstrate.</h2>
+          </div>
+          <p>
+            Sustained engineering practice reveals how an engineer learns,
+            responds to failure, improves, communicates and takes ownership.
+          </p>
+        </div>
+
+        <div class="model-grid">
+          <article class="model-card">
+            <span class="step-number">01</span>
+            <h3>Learn</h3>
+            <p>Build foundations in concepts, tools and methodologies.</p>
+          </article>
+
+          <article class="model-card">
+            <span class="step-number orange">02</span>
+            <h3>Practice</h3>
+            <p>Apply concepts through labs and structured technical assignments.</p>
+          </article>
+
+          <article class="model-card">
+            <span class="step-number">03</span>
+            <h3>Debug</h3>
+            <p>Work through failures and develop practical debugging discipline.</p>
+          </article>
+
+          <article class="model-card">
+            <span class="step-number orange">04</span>
+            <h3>Review</h3>
+            <p>Present work, receive feedback and strengthen engineering decisions.</p>
+          </article>
+
+          <article class="model-card">
+            <span class="step-number">05</span>
+            <h3>Demonstrate</h3>
+            <p>Show capability through outputs, progress and technical ownership.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Engineering readiness -->
+    <section class="readiness-section">
+      <div class="container readiness-grid">
+        <div class="readiness-copy">
+          <div class="eyebrow">BUILDING PRACTICE-READY CAPABILITY</div>
+          <h2>Readiness depends on demonstrated capability.</h2>
+          <p>
+            Training duration alone does not define readiness. Different
+            engineering roles require different technologies, tools and
+            experience levels. The objective is to build capability that can
+            be demonstrated through practical work.
+          </p>
+
+          <div class="tag-grid compact">
+            <span>Technologies</span>
+            <span>Tools</span>
+            <span>Methodologies</span>
+            <span>Experience levels</span>
+            <span>Design complexity</span>
+            <span>Customer requirements</span>
+          </div>
+        </div>
+
+        <div class="readiness-art">
+          <img
+            src="assets/images/capability-growth-model.webp"
+            alt="Engineer building practical semiconductor engineering capability"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Focus areas -->
+    <section class="focus-section">
+      <div class="container">
+        <div class="section-heading section-heading-tight">
+          <div>
+            <div class="eyebrow">OUR FOCUS</div>
+            <h2>Engineering skills that grow through practice.</h2>
+          </div>
+          <p>
+            The Lab progressively develops talent across the domains a real
+            semiconductor program needs.
+          </p>
+        </div>
+
+        <div class="focus-grid">
+          <article>
+            <span class="metric">01</span>
+            <h3>Technical depth</h3>
+            <p>Build stronger knowledge within a chosen engineering discipline.</p>
+          </article>
+
+          <article>
+            <span class="metric">02</span>
+            <h3>Tool familiarity</h3>
+            <p>Develop confidence with engineering tools and repeatable flows.</p>
+          </article>
+
+          <article>
+            <span class="metric">03</span>
+            <h3>Problem solving</h3>
+            <p>Learn to analyze failures, isolate root causes and improve solutions.</p>
+          </article>
+
+          <article>
+            <span class="metric">04</span>
+            <h3>Engineering discipline</h3>
+            <p>Practice documentation, reviews, communication and ownership.</p>
+          </article>
+
+          <article>
+            <span class="metric">05</span>
+            <h3>Continuous evaluation</h3>
+            <p>Progress is observed through practical work over time.</p>
+          </article>
+
+          <article>
+            <span class="metric">06</span>
+            <h3>Team capability</h3>
+            <p>Technical collaboration grows alongside individual capability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tracks -->
+    <section class="tracks-section" id="tracks">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">TRAINING TRACKS</div>
+            <h2>Depth within each semiconductor discipline.</h2>
+          </div>
+          <p>
+            The goal is not only to study a discipline. It is to build
+            demonstrated capability across engineering flows.
+          </p>
+        </div>
+
+        <div class="track-grid">
+          <article class="track-card">
+            <span>01</span>
+            <h3>Physical Design</h3>
+            <p>Progressive exposure across RTL-to-GDSII implementation and signoff.</p>
+            <div class="tag-row">
+              <em>RTL-to-GDSII</em>
+              <em>Synthesis</em>
+              <em>Floorplanning</em>
+              <em>Placement</em>
+              <em>CTS</em>
+              <em>Routing</em>
+              <em>Timing</em>
+              <em>Optimization</em>
+              <em>Signoff</em>
+            </div>
+          </article>
+
+          <article class="track-card">
+            <span>02</span>
+            <h3>Design Verification</h3>
+            <p>Broader verification capability through structured practical work.</p>
+            <div class="tag-row">
+              <em>SystemVerilog</em>
+              <em>UVM</em>
+              <em>Assertions</em>
+              <em>Coverage</em>
+              <em>Regression</em>
+              <em>Debugging</em>
+              <em>Planning</em>
+            </div>
+          </article>
+
+          <article class="track-card">
+            <span>03</span>
+            <h3>Formal Verification</h3>
+            <p>Property-driven verification, proofs, debugging and coverage thinking.</p>
+            <div class="tag-row">
+              <em>SVA</em>
+              <em>Property checking</em>
+              <em>Counterexamples</em>
+              <em>Proof analysis</em>
+              <em>Coverage</em>
+            </div>
+          </article>
+
+          <article class="track-card">
+            <span>04</span>
+            <h3>Cross-functional Skills</h3>
+            <p>Exposure to the wider semiconductor program and engineering interfaces.</p>
+            <div class="tag-row">
+              <em>STA</em>
+              <em>DFT</em>
+              <em>Physical Verification</em>
+              <em>RTL</em>
+              <em>Power Integrity</em>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Environment -->
+    <section class="environment-section" id="environment">
+      <div class="container">
+        <div class="environment-intro">
+          <div>
+            <div class="eyebrow">THE ENGINEERING ENVIRONMENT</div>
+            <h2>Build the environment where engineers can grow.</h2>
+          </div>
+          <p>
+            The first objective is not a project team. It is the engineering
+            environment that continuously produces stronger engineers.
+          </p>
+        </div>
+
+        <div class="environment-grid">
+          <article>
+            <span>01</span>
+            <h3>Experience</h3>
+            <p>Engineers work through practical technical problems and labs.</p>
+          </article>
+
+          <article>
+            <span>02</span>
+            <h3>Knowledge</h3>
+            <p>Engineering learnings are documented and retained.</p>
+          </article>
+
+          <article>
+            <span>03</span>
+            <h3>Capability</h3>
+            <p>Improvement comes through repeated execution, not one-off exercises.</p>
+          </article>
+
+          <article>
+            <span>04</span>
+            <h3>Performance</h3>
+            <p>Progress is observed through technical work, reviews and feedback.</p>
+          </article>
+
+          <article>
+            <span>05</span>
+            <h3>Mentorship</h3>
+            <p>Engineers receive technical direction and opportunities to improve.</p>
+          </article>
+
+          <article>
+            <span>06</span>
+            <h3>Team Skills</h3>
+            <p>Communication and collaboration develop alongside technical depth.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Knowledge -->
+    <section class="knowledge-section">
+      <div class="container knowledge-grid">
+        <div>
+          <div class="eyebrow">ENGINEERING KNOWLEDGE ACCUMULATES</div>
+          <h2>Every problem solved makes the next one easier.</h2>
+          <p>
+            Technical learnings, debugging approaches and lessons from practical
+            work are documented and retained so engineers build reusable knowledge.
+          </p>
+
+          <div class="knowledge-flow">
+            <span>Problem</span>
+            <b>→</b>
+            <span>Debug</span>
+            <b>→</b>
+            <span>Document</span>
+            <b>→</b>
+            <span>Review</span>
+            <b>→</b>
+            <span>Improve</span>
+          </div>
+        </div>
+
+        <img
+          class="knowledge-art"
+          src="assets/images/knowledge-loop.svg"
+          alt="Engineering knowledge loop"
+        >
+      </div>
+    </section>
+
+    <!-- Training includes -->
+    <section class="includes-section">
+      <div class="container">
+        <div class="section-heading centered">
+          <div>
+            <div class="eyebrow">WHAT THE TRAINING INCLUDES</div>
+            <h2>Technical work beyond classroom theory.</h2>
+          </div>
+          <p>
+            Engineers are exposed to the workflows, tools and habits expected in
+            a semiconductor engineering environment.
+          </p>
+        </div>
+
+        <div class="includes-grid">
+          <span>Semiconductor workflows</span>
+          <span>Practical technical problems</span>
+          <span>Lab-oriented execution</span>
+          <span>EDA tools</span>
+          <span>Debugging</span>
+          <span>Technical reviews</span>
+          <span>Documentation</span>
+          <span>Technical presentations</span>
+          <span>Team collaboration</span>
+          <span>Performance evaluation</span>
+          <span>Increasing technical responsibility</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+      <div class="container cta-card">
+        <div class="eyebrow">TSIQ Deep Tech Dive</div>
+        <h2>Build semiconductor engineering capability through practice.</h2>
+        <p>
+          The program is designed for engineers who want structured technical
+          learning, practical exposure and continuous improvement in a
+          semiconductor engineering environment.
+        </p>
+
+        <div class="hero-actions">
+          <a
+            class="button button-primary"
+            href="mailto:hr@terasiliconiq.com?subject=TSIQ%20Deep%20Tech%20Lab%20Training%20Program"
+          >
+            Contact the Lab →
+          </a>
+          <a class="button button-dark" href="#home">Back to top ↑</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="#home">
+          <img src="assets/terasilicon-iq-symbol.png" alt="Terasilicon IQ logo">
+          <span class="brand-wordmark">
+            <strong>TSIQ Deep Tech Lab</strong>
+            <small>TSIQ DEEP TECH LAB</small>
+          </span>
+        </a>
+        <p>Semiconductor engineering training environment.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#program">Training Program</a>
+        <a href="#tracks">Training Tracks</a>
+        <a href="#environment">Engineering Environment</a>
+        <a href="mailto:hr@terasiliconiq.com">hr@terasiliconiq.com</a>
+      </div>
+
+      <div class="footer-copy">
+        © 2026 TERASILICON IQ Private Limited
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
