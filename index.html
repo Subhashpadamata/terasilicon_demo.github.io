@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="assets/terasilicon-iq-symbol.png">
+<link rel="apple-touch-icon" href="assets/terasilicon-iq-symbol.png">
 <meta name="theme-color" content="#101638">
 <meta name="description" content="TSIQ Deep Tech Lab — an engineering capability initiative by Terasilicon IQ Private Limited. Building semiconductor engineering teams before the project arrives.">
 <link rel="canonical" href="https://terasiliconiq.com/deep-tech-lab.html">
@@ -14,17 +16,58 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="icon" href="assets/terasilicon-iq-symbol.png" type="image/png">
 <link rel="stylesheet" href="css/style.css">
+<style>
+/* Header navigation */
+header .desktop-nav a,
+header .desktop-nav a:hover,
+header .desktop-nav a:focus,
+header .desktop-nav a:active {
+  text-decoration: none !important;
+}
+
+/* V10.29 visual spacing refinement: keep sections close enough to read as one continuous page. */
+:root {
+  --section-gap: clamp(56px, 6vw, 96px);
+}
+
+/* Remove accidental oversized gaps created by stacked section wrappers. */
+main > section {
+  margin-top: 0 !important;
+  margin-bottom: var(--section-gap) !important;
+}
+
+main > section + section {
+  margin-top: 0 !important;
+}
+
+/* Keep the belief/callout blocks visually connected to the preceding content. */
+.belief-section,
+.our-belief,
+.belief {
+  margin-top: 0 !important;
+}
+
+/* Prevent empty spacer elements from creating large blank bands. */
+.spacer,
+.section-spacer,
+.vertical-spacer {
+  height: 0 !important;
+  min-height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+</style>
 </head>
 <body>
 <header class="site-header">
 <div class="container nav">
 <a class="brand" href="https://terasiliconiq.com/" aria-label="Terasilicon IQ home"><img src="assets/terasilicon-iq-symbol.png" alt="Terasilicon IQ symbol"><span class="brand-wordmark"><strong>TSIQ Deep Tech Lab</strong><small>ENGINEERING THE FUTURE OF SILICON</small></span></a>
-<nav class="desktop-nav" aria-label="Primary navigation"><a class="active" href="#home">Home</a><a href="#program">Training Program</a><a href="#tracks">Training Tracks</a><a href="#environment">Engineering Environment</a><a class="nav-cta" href="https://terasiliconiq.com/contact.html#requirement-form">Contact Us →</a></nav>
+<nav class="desktop-nav" aria-label="Primary navigation"><a href="#home">Home</a><a href="#vlsi-finishing-school">VLSI Finishing School</a><a href="#environment">Engineering Environment</a><a href="#tracks">Engineering Pathways</a><a class="nav-cta" href="contact.html#requirement-form">Contact Us →</a></nav>
 <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
 </div>
-<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="#home">Home</a><a href="#program">Training Program</a><a href="#tracks">Training Tracks</a><a href="#environment">Engineering Environment</a><a class="nav-cta" href="https://terasiliconiq.com/contact.html#requirement-form">Contact Us →</a></nav>
+<nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="#home">Home</a><a href="#vlsi-finishing-school">VLSI Finishing School</a><a href="#environment">Engineering Environment</a><a href="#tracks">Engineering Pathways</a><a class="nav-cta" href="contact.html#requirement-form">Contact Us →</a></nav>
 </header>
 <main>
 <section class="chip-hero" id="home" aria-labelledby="lab-hero-title">
@@ -34,8 +77,8 @@
     <h1 id="lab-hero-title">Engineering capability<br><span>built before the project.</span></h1>
     <p>TSIQ Deep Tech Lab continuously develops semiconductor engineering capability so project teams can be evaluated against real requirements when they arrive.</p>
     <div class="hero-actions">
-      <a class="button button-primary" href="https://terasiliconiq.com/contact.html#requirement-form">Partner With the Lab →</a>
-      <a class="button button-secondary" href="#program">Explore the model</a>
+      <a class="button button-primary" href="contact.html#requirement-form">Partner With the Lab →</a>
+      <a class="button button-secondary" href="#vlsi-finishing-school">Explore the model</a>
     </div>
   </div>
   <div class="chip-stage" aria-label="TSIQ engineering capability animation">
@@ -55,7 +98,38 @@
 
 <section class="value-strip" aria-label="Deep Tech Lab model"><article class="value-block"><img src="assets/icons/structured.svg" alt=""><div><strong>Capability</strong><p>Continuous engineering development.</p></div></article><article class="value-block"><img src="assets/icons/hands-on.svg" alt=""><div><strong>Real Work</strong><p>Technical problems and execution.</p></div></article><article class="value-block"><img src="assets/icons/practical.svg" alt=""><div><strong>Performance</strong><p>Observed and evaluated over time.</p></div></article><article class="value-block"><img src="assets/icons/mentoring.svg" alt=""><div><strong>Team Readiness</strong><p>Capability developed across disciplines.</p></div></article><article class="value-block"><img src="assets/icons/outcome.svg" alt=""><div><strong>Delivery</strong><p>Capability mapped to real requirements.</p></div></article></section>
 
-<section class="split-section" id="program"><div class="container split-grid"><div class="split-copy"><div class="eyebrow">THE INDUSTRY CHALLENGE</div><h2>The gap between requirement and readiness.</h2><p>Recruiting only when a project arrives creates a time gap between the project requirement and engineering readiness — and readiness means more than headcount. It means a team that already understands the engineering environment, tools, methodologies, documentation, reviews and execution discipline a project demands.</p><div class="tag-grid"><span>Project Requirement</span><span>Engineering Readiness</span><span>Engineering workflows</span><span>Technical problems</span><span>Project-oriented execution</span><span>Engineering tools</span><span>Debugging</span><span>Technical reviews</span><span>Documentation</span><span>Presentations</span><span>Collaboration</span><span>Increasing responsibility</span></div></div><div class="split-art journey-art"><img src="assets/images/training-journey.svg" alt="Continuous engineering development journey"></div></div></section>
+<section class="split-section" id="vlsi-finishing-school"><div class="container split-grid"><div class="split-copy"><div class="eyebrow">THE INDUSTRY CHALLENGE</div><h2>The gap between requirement and readiness.</h2><p>Recruiting only when a project arrives creates a time gap between the project requirement and engineering readiness — and readiness means more than headcount. It means a team that already understands the engineering environment, tools, methodologies, documentation, reviews and execution discipline a project demands.</p><div class="tag-grid"><span>Project Requirement</span><span>Engineering Readiness</span><span>Engineering workflows</span><span>Technical problems</span><span>Project-oriented execution</span><span>Engineering tools</span><span>Debugging</span><span>Technical reviews</span><span>Documentation</span><span>Presentations</span><span>Collaboration</span><span>Increasing responsibility</span></div></div><div class="split-art journey-art" aria-label="Continuous engineering development journey">
+  <div class="journey-css">
+    <div class="journey-track">
+      <div class="journey-stage stage-purple">
+        <div class="journey-node"><strong>01</strong><small>LEARN</small></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card"><h4>Learn</h4><p>Concepts, intent and methodology</p></div>
+      </div>
+      <div class="journey-stage stage-orange">
+        <div class="journey-node"><strong>02</strong><small>PRACTICE</small></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card"><h4>Practice</h4><p>Labs, tools and execution</p></div>
+      </div>
+      <div class="journey-stage stage-purple">
+        <div class="journey-node"><strong>03</strong><small>DEBUG</small></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card"><h4>Debug</h4><p>Evidence, failure and root cause</p></div>
+      </div>
+      <div class="journey-stage stage-orange">
+        <div class="journey-node"><strong>04</strong><small>REVIEW</small></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card"><h4>Review</h4><p>Explain, challenge and improve</p></div>
+      </div>
+      <div class="journey-stage stage-purple">
+        <div class="journey-node"><strong>05</strong><small>DEMONSTRATE</small></div>
+        <div class="journey-connector"></div>
+        <div class="journey-card"><h4>Demonstrate</h4><p>Output, evidence and ownership</p></div>
+      </div>
+    </div>
+    <div class="journey-footer"><span></span><b>EVERY STAGE CREATES EVIDENCE FOR THE NEXT</b><span></span></div>
+  </div>
+</div></div></section>
 
 <section class="model-section"><div class="container"><div class="section-heading"><div><div class="eyebrow">OUR MODEL</div><h2>We don't wait for the project to build the team.</h2></div><p>TSIQ Deep Tech Lab continuously develops semiconductor engineering talent within the Terasilicon IQ ecosystem. Selected engineers spend an extended period working in a structured engineering environment before any specific project requires them.</p></div><div class="model-grid"><article class="model-card"><h3>Project arrives</h3><p>A client engineering requirement is received.</p></article><article class="model-card"><h3>Requirement identified</h3><p>The specific technical capability the project needs is scoped out.</p></article><article class="model-card"><h3>Capability exists</h3><p>Relevant capability is already being built inside the TSIQ ecosystem.</p></article><article class="model-card"><h3>Engineers evaluated</h3><p>Existing performance data is matched against what the project needs.</p></article><article class="model-card"><h3>Team formed</h3><p>Appropriate engineers are selected and engineering execution begins.</p></article></div></div></section>
 
@@ -90,9 +164,26 @@
 <section class="tracks-section" id="tracks"><div class="container"><div class="section-heading"><div><div class="eyebrow">DOMAIN-SPECIFIC DEVELOPMENT</div><h2>Depth within each engineering discipline.</h2></div><p>The goal isn't engineers who have studied a discipline — it's a pool of engineers with different levels of demonstrated capability across each flow.</p></div><div class="track-grid"><article class="track-card"><span>01</span><h3>Physical Design Track</h3><p>Engineers progressively develop across the full RTL-to-GDSII implementation flow.</p><div class="tag-row"><em>RTL-to-GDSII</em><em>Synthesis</em><em>Floorplanning</em><em>Power planning</em><em>Placement</em><em>CTS</em><em>Routing</em><em>Timing</em><em>Congestion</em><em>Optimization</em><em>Timing closure</em><em>Physical verification</em><em>Signoff</em></div></article><article class="track-card"><span>02</span><h3>Design Verification Track</h3><p>Engineers build a broader verification capability rather than isolated individual training.</p><div class="tag-row"><em>SystemVerilog</em><em>Verification methodology</em><em>Testbench development</em><em>UVM</em><em>Assertions</em><em>Functional coverage</em><em>Regression</em><em>Debugging</em><em>Verification planning</em><em>Failure analysis</em></div></article></div><div class="subhead">Cross-functional engineering capability</div><p class="section-note">As TSIQ expands, the Lab can progressively develop capability across the full breadth of a semiconductor program.</p><div class="tag-grid"><span>Physical Design</span><span>STA</span><span>DFT</span><span>RTL Design</span><span>Design Verification</span><span>Formal Verification</span><span>Physical Verification</span><span>Analog Layout</span><span>Silicon Validation</span><span>Embedded / Firmware</span></div></div></section>
 
 <section class="knowledge-section"><div class="container knowledge-grid"><div><div class="eyebrow">ENGINEERING KNOWLEDGE ACCUMULATES</div><h2>Every problem solved makes the next one easier.</h2><p>With appropriate confidentiality and IP controls, technical learnings are documented and retained — so the organization is developing knowledge, not just people.</p><div class="knowledge-flow"><span>Engineer solves problem</span><b>→</b><span>Solution documented</span><b>→</b><span>Knowledge enters repository</span><b>→</b><span>Previous learning available</span><b>→</b><span>Solution improves</span></div></div><div class="knowledge-art loop-visual knowledge-loop-visual" aria-label="Engineering knowledge reuse loop">
-  <div class="loop-ring ring-a"></div><div class="loop-ring ring-b"></div><div class="loop-ring ring-c"></div>
-  <div class="loop-core"><span>KNOWLEDGE</span><small>CAPTURE · REVIEW · REUSE</small></div>
-  <span class="loop-node node-a">CAPTURE</span><span class="loop-node node-b">REVIEW</span><span class="loop-node node-c">REUSE</span><span class="loop-node node-d">IMPROVE</span>
+  <div class="knowledge-orbit orbit-outer" aria-hidden="true"></div>
+  <div class="knowledge-orbit orbit-inner" aria-hidden="true"></div>
+  <div class="knowledge-core"><span>KNOWLEDGE</span></div>
+
+  <div class="knowledge-point point-capture">
+    <div class="knowledge-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M24 8v19"/><path d="m17 20 7 7 7-7"/><path d="M10 28v9c0 1.7 1.3 3 3 3h22c1.7 0 3-1.3 3-3v-9"/><path d="M16 31h16"/></svg></div>
+    <div class="knowledge-copy"><strong>CAPTURE</strong><p>Capture knowledge<br>from projects and<br>experiences</p></div>
+  </div>
+  <div class="knowledge-point point-review">
+    <div class="knowledge-icon orange" aria-hidden="true"><svg viewBox="0 0 48 48"><circle cx="21" cy="21" r="11"/><path d="m29 29 10 10"/></svg></div>
+    <div class="knowledge-copy"><strong>REVIEW</strong><p>Review for quality,<br>accuracy and<br>relevance</p></div>
+  </div>
+  <div class="knowledge-point point-reuse">
+    <div class="knowledge-icon orange" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 19a12 12 0 0 1 21-4"/><path d="m35 9 1 7-7-1"/><path d="M34 29a12 12 0 0 1-21 4"/><path d="m13 39-1-7 7 1"/></svg></div>
+    <div class="knowledge-copy"><strong>REUSE</strong><p>Reuse knowledge to<br>drive better decisions<br>and results</p></div>
+  </div>
+  <div class="knowledge-point point-improve">
+    <div class="knowledge-icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M9 38h30"/><path d="M12 34V26h7v8"/><path d="M22 34V20h7v14"/><path d="M32 34V13h7v21"/><path d="m12 22 9-8 7 4 9-9"/><path d="M32 9h5v5"/></svg></div>
+    <div class="knowledge-copy"><strong>IMPROVE</strong><p>Improve continuously<br>based on feedback<br>and outcomes</p></div>
+  </div>
 </div></div></section>
 
 <section class="focus-section"><div class="container"><div class="center-head"><div class="eyebrow">THE ROLE OF TSIQ DEEP TECH LAB</div><h2>A bridge between talent and delivery.</h2></div><div class="focus-grid"><article><h3>Talent</h3><p>Engineers with potential.</p></article><article><h3>Engineering</h3><p>Technical execution and problem solving.</p></article><article><h3>Technology</h3><p>Tools, methodologies and semiconductor workflows.</p></article><article><h3>Teams</h3><p>Groups of engineers developed within the same environment.</p></article><article><h3>Projects</h3><p>Future engineering opportunities.</p></article><article><h3>Clients</h3><p>Organizations requiring reliable semiconductor engineering capability.</p></article></div></div></section>
@@ -105,10 +196,39 @@
 
 <section class="model-section"><div class="container"><div class="center-head"><div class="eyebrow">THE TSIQ MODEL</div><h2>Before, during and after every project.</h2></div><div class="model-grid"><article class="model-card"><h3>Before</h3><p>Develop engineering capability.</p></article><article class="model-card"><h3>When the project arrives</h3><p>Map capability to requirements.</p></article><article class="model-card"><h3>During</h3><p>Build and support the right team.</p></article><article class="model-card"><h3>After</h3><p>Capture knowledge and lessons learned.</p></article><article class="model-card"><h3>Next project</h3><p>Start from a stronger capability base.</p></article></div></div></section>
 
-<section class="cta-section"><div class="container"><div class="cta-card"><div class="eyebrow">ENGINEERING STARTS BEFORE THE PROJECT</div><h2>Don't build a team after you win the project.</h2><p>Build the engineering capability before it arrives. If you're a semiconductor company, EDA partner, university or engineer interested in TSIQ Deep Tech Lab, we'd like to hear from you.</p><div class="hero-actions"><a class="button button-primary" href="https://terasiliconiq.com/contact.html#requirement-form">Partner With the Lab →</a><a class="button button-secondary" href="mailto:hr@terasiliconiq.com?subject=TSIQ%20Deep%20Tech%20Lab%20-%20Engineer%20Interest">I'm an Engineer — Get Involved</a><a class="button button-secondary" href="https://terasiliconiq.com/">Back to Terasilicon IQ</a></div></div></div></section>
+<section class="cta-section"><div class="container"><div class="cta-card"><div class="eyebrow">ENGINEERING STARTS BEFORE THE PROJECT</div><h2>Don't build a team after you win the project.</h2><p>Build the engineering capability before it arrives. If you're a semiconductor company, EDA partner, university or engineer interested in TSIQ Deep Tech Lab, we'd like to hear from you.</p><div class="hero-actions"><a class="button button-primary" href="contact.html#requirement-form">Partner With the Lab →</a><a class="button button-secondary" href="contact.html#requirement-form">I'm an Engineer — Get Involved</a><a class="button button-secondary" href="https://terasiliconiq.com/">Back to Terasilicon IQ</a></div></div></div></section>
 </main>
 
-<section class="contact-details"><div class="container footer-grid"><div class="contact-intro"><div class="eyebrow">TERASILICON IQ</div><h2>Let's build <i>engineering</i> capability.</h2><p>TSIQ Deep Tech Lab is an engineering capability initiative by Terasilicon IQ Private Limited.</p></div><div><h3>Company</h3><a href="https://terasiliconiq.com/">Home</a><a href="https://terasiliconiq.com/#capabilities">Capabilities</a><a href="https://terasiliconiq.com/#about">About</a><a href="https://terasiliconiq.com/contact.html">Contact</a></div><div><h3>Deep Tech Lab</h3><a href="#program">Training Program</a><a href="#tracks">Training Tracks</a><a href="#environment">Engineering Environment</a><a href="#home">Our Model</a></div><div><h3>Engineering</h3><a href="https://terasiliconiq.com/formal-verification.html">Formal Verification</a><a href="https://terasiliconiq.com/physical-design-signoff.html">Physical Design</a><a href="https://terasiliconiq.com/sta-timing-closure.html">STA &amp; Timing</a><a href="https://terasiliconiq.com/rtl-dv-dft.html">RTL / DV / DFT</a></div><div><h3>Contact</h3><a class="mail-link" href="mailto:hr@terasiliconiq.com"><img src="assets/mail-logo.png" alt="">hr@terasiliconiq.com</a><a class="location-link" href="https://www.google.com/maps/search/?api=1&query=Bengaluru%2C%20Karnataka%2C%20India"><img src="assets/maps-logo.png" alt="">Bengaluru, Karnataka, India</a></div></div></section>
-<footer class="site-footer"><div class="container footer-bottom"><a class="site-brand" href="https://terasiliconiq.com/"><img src="assets/terasilicon-iq-symbol.png" alt="Terasilicon IQ"><span>TERASILICON <b>IQ</b><small>ENGINEERING THE FUTURE OF SILICON</small></span></a><p>© 2026 TERASILICON IQ Private Limited</p><div><a href="https://terasiliconiq.com/privacy-policy.html">Privacy Policy</a><a href="https://terasiliconiq.com/terms-of-use.html">Terms of Use</a><a href="https://terasiliconiq.com/cookie-policy.html">Cookie Policy</a><a href="https://terasiliconiq.com/third-party-notices.txt">Third-Party Notices</a></div></div></footer>
+<section class="contact-details">
+  <div class="container footer-grid">
+    <div class="contact-intro">
+      <div class="eyebrow">TERASILICON IQ</div>
+      <h2>Let’s build <i>engineering</i> capability.</h2>
+      <p>TSIQ Deep Tech Lab is an engineering capability initiative by Terasilicon IQ Private Limited.</p>
+    </div>
+    <div>
+      <h3>Contact us</h3>
+      <a href="mailto:contact@tsiqdeeptechlab.com">contact@tsiqdeeptechlab.com →</a>
+      <a href="contact.html#requirement-form">Start a conversation →</a>
+    </div>
+    <div>
+      <h3>Our location</h3>
+      <a class="footer-location" href="https://www.google.com/maps/search/?api=1&query=Nandi%20InfoTech%2C%201st%20cross%2C%20Sadaramangala%20road%2C%20Mahadevapura%20post%2C%20Bengaluru%2C%20Karnataka%2C%20560048%2C%20India" target="_blank" rel="noopener"><img src="assets/maps-logo.png" alt="Google Maps"> <span>Nandi InfoTech, 1st cross,<br>Sadaramangala road,<br>Mahadevapura post,<br>Bengaluru, Karnataka, 560048,<br>India</span></a>
+      <a class="footer-map-link" href="https://www.google.com/maps/search/?api=1&query=Nandi%20InfoTech%2C%201st%20cross%2C%20Sadaramangala%20road%2C%20Mahadevapura%20post%2C%20Bengaluru%2C%20Karnataka%2C%20560048%2C%20India" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+    </div>
+    <div>
+      <h3>Our Engineering Services</h3>
+      <a href="https://terasiliconiq.com/formal-verification.html">Formal Verification</a>
+      <a href="https://terasiliconiq.com/physical-design-signoff.html">Physical Design &amp; Signoff</a>
+      <a href="https://terasiliconiq.com/sta-timing-closure.html">STA &amp; Timing Closure</a>
+      <a href="https://terasiliconiq.com/rtl-dv-dft.html">RTL / DV / DFT</a>
+    </div>
+    <div>
+      <h3>Careers</h3>
+      <a href="mailto:contact@tsiqdeeptechlab.com?subject=Engineering%20Career%20Interest">Engineering opportunities →</a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer"><div class="container footer-bottom"><a class="site-brand" href="https://terasiliconiq.com/"><img src="assets/terasilicon-iq-symbol.png" alt="Terasilicon IQ"><span>TSIQ <b>DEEP TECH LAB</b><small>ENGINEERING THE FUTURE OF SILICON</small></span></a><p>© 2026 TERASILICON IQ Private Limited</p><div><a href="https://terasiliconiq.com/privacy-policy.html">Privacy Policy</a><a href="https://terasiliconiq.com/terms-of-use.html">Terms of Use</a><a href="https://terasiliconiq.com/cookie-policy.html">Cookie Policy</a><a href="https://terasiliconiq.com/third-party-notices.txt">Third-Party Notices</a></div></div></footer>
 <script src="js/script.js" defer></script>
 </body></html>

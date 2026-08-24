@@ -107,10 +107,18 @@ window.addEventListener("resize", () => {
 });
 
 /* Highlight the header link for the section currently in view. */
-const sectionIds = ["home", "program", "tracks", "environment"];
+const sectionIds = ["home", "vlsi-finishing-school", "tracks", "environment"];
 const sectionElements = sectionIds
   .map((id) => document.getElementById(id))
   .filter(Boolean);
+
+function setActiveNav(targetId) {
+  document.querySelectorAll('.desktop-nav a').forEach((link) => {
+    const href = link.getAttribute('href') || '';
+    const isSectionLink = href === `#${targetId}` || href === `index.html#${targetId}`;
+    link.classList.toggle('active', isSectionLink);
+  });
+}
 
 if ("IntersectionObserver" in window) {
   const sectionObserver = new IntersectionObserver(
@@ -119,28 +127,16 @@ if ("IntersectionObserver" in window) {
         .filter((entry) => entry.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
 
-      if (!visible.length) {
-        return;
-      }
-
-      const activeId = visible[0].target.id;
-
-      document.querySelectorAll('.desktop-nav a[href^="#"]').forEach((link) => {
-        link.classList.toggle(
-          "active",
-          link.getAttribute("href") === `#${activeId}`
-        );
-      });
+      if (!visible.length) return;
+      setActiveNav(visible[0].target.id);
     },
     {
-      rootMargin: "-20% 0px -65% 0px",
-      threshold: [0.1, 0.3, 0.6]
+      rootMargin: "-18% 0px -62% 0px",
+      threshold: [0.05, 0.15, 0.3, 0.6]
     }
   );
 
-  sectionElements.forEach((section) => {
-    sectionObserver.observe(section);
-  });
+  sectionElements.forEach((section) => sectionObserver.observe(section));
 }
 
 /* Support direct links such as index.html#tracks. */
@@ -148,9 +144,12 @@ window.addEventListener("load", () => {
   const targetId = window.location.hash.substring(1);
 
   if (targetId && document.getElementById(targetId)) {
+    setActiveNav(targetId);
     setTimeout(() => {
       scrollToTarget(targetId);
     }, 80);
+  } else {
+    setActiveNav("home");
   }
 });
 

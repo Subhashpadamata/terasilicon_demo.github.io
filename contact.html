@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="assets/terasilicon-iq-symbol.png">
+<link rel="apple-touch-icon" href="assets/terasilicon-iq-symbol.png">
+<title>Fresher Engineering Application | TSIQ Deep Tech Lab</title>
+<meta name="description" content="Submit a project, engineering partnership or capability requirement to TSIQ Deep Tech Lab.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+.requirement-page{min-height:calc(100vh - 82px);padding:76px 0 88px;background:linear-gradient(135deg,#fbf8ff 0%,#fff 48%,#fff7ed 100%)}
+.requirement-grid{display:grid;grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr);gap:56px;align-items:start}
+.requirement-copy{padding-top:12px}
+.requirement-copy h1{max-width:760px}
+.requirement-copy>p{max-width:620px;margin-top:22px;font-size:16px;line-height:1.75}
+.requirement-points{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-top:30px}
+.requirement-points span{padding:12px 14px;border:1px solid #ddd8e3;background:rgba(255,255,255,.72);font:600 10px/1.4 "IBM Plex Mono",monospace;color:#505a70}
+.requirement-points span:nth-child(even){background:var(--orange-soft);border-color:#f0d4b7}
+.requirement-card{position:relative;padding:34px;background:rgba(255,255,255,.9);border:1px solid #d9d3e0;box-shadow:var(--shadow)}
+.requirement-card:before{content:"";position:absolute;inset:0 0 auto 0;height:4px;background:linear-gradient(90deg,var(--purple),var(--orange));}
+.requirement-card h2{font-size:30px;line-height:1.12;margin-bottom:8px}
+.requirement-card .intro{font-size:13px;line-height:1.65;margin-bottom:25px}
+.requirement-form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.form-field{display:grid;gap:7px}
+.form-field.full{grid-column:1/-1}
+.form-field label{font-size:11px;font-weight:700;color:var(--ink)}
+.form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid #d9d4df;background:#fff;color:var(--ink);padding:12px 13px;font:500 12px/1.45 "Space Grotesk",sans-serif;outline:none;transition:border-color .2s,box-shadow .2s}
+.form-field textarea{min-height:128px;resize:vertical}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px rgba(101,53,147,.08)}
+.form-field small{font-size:10px;color:#7b8495}.form-field .optional{font-weight:500;color:#7b8495}
+.form-actions{grid-column:1/-1;display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-top:4px}
+.form-actions .button{min-width:190px}
+.form-note{font-size:10px;color:#737c8d;line-height:1.5;max-width:420px}
+.form-success{display:none;margin-top:18px;padding:16px 18px;background:var(--purple-soft);border:1px solid #d7c8e7;color:var(--ink);font-size:13px;line-height:1.6}
+.form-success strong{display:block;color:var(--purple);margin-bottom:3px}
+.google-form-panel{margin-top:28px;padding:18px 20px;background:linear-gradient(110deg,#f5eff9,#fff,#fff1e2);border:1px solid #ddd8e3}
+.google-form-panel p{font-size:12px;line-height:1.6}
+.google-form-panel a{color:var(--purple);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:900px){.requirement-grid{grid-template-columns:1fr;gap:34px}.requirement-copy{padding-top:0}}
+@media(max-width:600px){.requirement-page{padding:48px 0 60px}.requirement-points{grid-template-columns:1fr}.requirement-card{padding:24px 18px}.requirement-form{grid-template-columns:1fr}.form-field.full{grid-column:auto}.form-actions{display:grid}.form-actions .button{width:100%}}
+</style>
+</head>
+<body>
+<header class="site-header" id="site-header">
+  <div class="container nav">
+    <a class="brand" href="index.html" aria-label="TSIQ Deep Tech Lab home"><img src="assets/terasilicon-iq-symbol.png" alt="Terasilicon IQ symbol"><span class="brand-wordmark"><strong>TSIQ Deep Tech Lab</strong><small>ENGINEERING THE FUTURE OF SILICON</small></span></a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a><a href="index.html#vlsi-finishing-school">VLSI Finishing School</a><a href="index.html#environment">Engineering Environment</a><a href="index.html#tracks">Engineering Pathways</a><a class="nav-cta active" href="contact.html#requirement-form">Contact Us →</a>
+    </nav>
+    <button class="menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu">Menu</button>
+  </div>
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="index.html#vlsi-finishing-school">VLSI Finishing School</a><a href="index.html#environment">Engineering Environment</a><a href="index.html#tracks">Engineering Pathways</a><a class="nav-cta" href="contact.html#requirement-form">Contact Us →</a></nav>
+</header>
+
+<main class="requirement-page">
+  <div class="container requirement-grid">
+    <section class="requirement-copy">
+      <div class="eyebrow">FRESHER ENGINEERING APPLICATION</div>
+      <h1>Start your engineering journey with us.</h1>
+      <p>Freshers and recent graduates can share their academic background, engineering domain and resume. Our HR team will review the details and contact you regarding relevant opportunities at TSIQ Deep Tech Lab.</p>
+      <div class="requirement-points" aria-label="What you can submit">
+        <span>Freshers &amp; recent graduates</span><span>Engineering capability</span><span>VLSI / semiconductor domains</span><span>Resume-based profile review</span><span>Technical interests</span><span>Engineering opportunities</span>
+      </div>
+      <div class="google-form-panel"><p><strong>Application process</strong> Submit your details and resume. After reviewing your application, our HR team will contact you if there is a relevant opportunity or next step.</p></div>
+    </section>
+
+    <section class="requirement-card" id="requirement-form">
+      <h2>Engineering Application</h2>
+      <p class="intro">All fields are mandatory except Requirement details, which is optional.</p>
+      <form class="requirement-form" id="requirement-form-element" action="https://formsubmit.co/subhashpadamata23@gmail.com" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
+        <input type="hidden" name="_subject" value="TSIQ Deep Tech Lab — Fresher Engineering Application">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="true">
+        <input type="hidden" name="_next" value="https://terasiliconiq.com/thank-you.html">
+        <input type="hidden" name="_url" value="https://terasiliconiq.com/contact.html">
+        <input type="hidden" name="_replyto" value="">
+        <input type="text" name="_honey" value="" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-field"><label for="name">Full name *</label><input id="name" name="name" required autocomplete="name"></div>
+        <div class="form-field"><label for="email">Email ID *</label><input id="email" name="email" type="email" required autocomplete="email"></div>
+        <div class="form-field"><label for="phone">Phone number *</label><input id="phone" name="phone" type="tel" required autocomplete="tel"></div>
+        <div class="form-field"><label for="college">College / University *</label><input id="college" name="college" required autocomplete="organization"></div>
+        <div class="form-field"><label for="branch">Engineering branch *</label><input id="branch" name="branch" required placeholder="e.g. ECE, EEE, CSE, VLSI"></div>
+        <div class="form-field"><label for="passout">Year of passout *</label><select id="passout" name="passout" required><option value="">Select year</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022</option><option>2021</option><option>2020</option><option>2019</option><option>2018</option><option>2017</option><option>2016</option><option>2015</option><option>2014</option><option>2013</option><option>2012</option><option>2011</option><option>2010</option></select></div>
+        <div class="form-field full"><label for="domain">Engineering domain *</label><select id="domain" name="domain" required><option value="">Select engineering domain</option><option>Physical Design</option><option>STA / Timing Closure</option><option>RTL Design</option><option>Design Verification</option><option>DFT</option><option>Formal Verification</option><option>Physical Verification</option><option>Analog / Layout</option><option>Silicon Validation</option><option>Embedded / Firmware</option><option>Other / Cross-functional</option></select></div>
+        <div class="form-field full"><label for="resume">Resume *</label><input id="resume" name="attachment" type="file" accept=".pdf,.doc,.docx,application/pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document" required><small>PDF, DOC or DOCX. Please upload your latest resume.</small></div>
+        <div class="form-field full"><label for="requirements">Requirement details <span class="optional">(Optional)</span></label><textarea id="requirements" name="requirements" placeholder="Optional: mention your preferred track, technical interests, projects, training goals or any specific requirement."></textarea></div>
+        <div class="form-actions"><button class="button button-primary" type="submit">Submit Application →</button><span class="form-note">Your application will be securely submitted to our HR mailbox. Our HR team will contact you after reviewing your application.</span></div>
+      </form>
+    </section>
+  </div>
+</main>
+
+<section class="contact-details">
+  <div class="container footer-grid">
+    <div class="contact-intro">
+      <div class="eyebrow">TSIQ DEEP TECH LAB</div>
+      <h2>Let’s build <i>engineering</i> capability.</h2>
+      <p>TSIQ Deep Tech Lab is an engineering capability initiative by Terasilicon IQ Private Limited.</p>
+    </div>
+    <div>
+      <h3>Contact us</h3>
+      <a href="mailto:contact@tsiqdeeptechlab.com">contact@tsiqdeeptechlab.com →</a>
+      <a href="https://terasiliconiq.com/contact.html">Partner with Terasilicon IQ →</a>
+    </div>
+    <div>
+      <h3>Our location</h3>
+      <a class="footer-location" href="https://www.google.com/maps/search/?api=1&query=Nandi%20InfoTech%2C%201st%20cross%2C%20Sadaramangala%20road%2C%20Mahadevapura%20post%2C%20Bengaluru%2C%20Karnataka%2C%20560048%2C%20India" target="_blank" rel="noopener"><img src="assets/maps-logo.png" alt="Google Maps"> <span>Nandi InfoTech, 1st cross,<br>Sadaramangala road,<br>Mahadevapura post,<br>Bengaluru, Karnataka, 560048,<br>India</span></a>
+      <a class="footer-map-link" href="https://www.google.com/maps/search/?api=1&query=Nandi%20InfoTech%2C%201st%20cross%2C%20Sadaramangala%20road%2C%20Mahadevapura%20post%2C%20Bengaluru%2C%20Karnataka%2C%20560048%2C%20India" target="_blank" rel="noopener">Open in Google Maps ↗</a>
+    </div>
+    <div>
+      <h3>Our Engineering Services</h3>
+      <a href="https://terasiliconiq.com/formal-verification.html">Formal Verification</a>
+      <a href="https://terasiliconiq.com/physical-design-signoff.html">Physical Design &amp; Signoff</a>
+      <a href="https://terasiliconiq.com/sta-timing-closure.html">STA &amp; Timing Closure</a>
+      <a href="https://terasiliconiq.com/rtl-dv-dft.html">RTL / DV / DFT</a>
+    </div>
+    <div>
+      <h3>Careers</h3>
+      <a href="mailto:contact@tsiqdeeptechlab.com?subject=Engineering%20Career%20Interest">Engineering opportunities →</a>
+    </div>
+  </div>
+</section>
+<footer class="site-footer"><div class="container footer-bottom"><a class="site-brand" href="https://terasiliconiq.com/"><img src="assets/terasilicon-iq-symbol.png" alt="Terasilicon IQ"><span>TSIQ <b>DEEP TECH LAB</b><small>ENGINEERING THE FUTURE OF SILICON</small></span></a><p>© 2026 TERASILICON IQ Private Limited</p><div><a href="https://terasiliconiq.com/privacy-policy.html">Privacy Policy</a><a href="https://terasiliconiq.com/terms-of-use.html">Terms of Use</a><a href="https://terasiliconiq.com/cookie-policy.html">Cookie Policy</a></div></div></footer>
+<script>
+const menuToggle=document.getElementById('menu-toggle');const mobileMenu=document.getElementById('mobile-menu');
+if(menuToggle){menuToggle.addEventListener('click',()=>{const open=mobileMenu.classList.toggle('open');menuToggle.setAttribute('aria-expanded',String(open));menuToggle.textContent=open?'Close':'Menu';});}
+document.querySelectorAll('#mobile-menu a').forEach(a=>a.addEventListener('click',()=>{mobileMenu.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.textContent='Menu';}));
+const form=document.getElementById('requirement-form-element');
+if(form){
+  const replyTo=form.querySelector('input[name="_replyto"]');
+  const emailField=document.getElementById('email');
+  if(replyTo && emailField){
+    emailField.addEventListener('input',()=>{ replyTo.value=emailField.value; });
+    form.addEventListener('submit',()=>{ replyTo.value=emailField.value; });
+  }
+  form.addEventListener('submit',(event)=>{
+    const file=document.getElementById('resume');
+    if(file && file.files && file.files[0]){
+      const allowed=['application/pdf','application/msword','application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+      const name=file.files[0].name.toLowerCase();
+      const validExt=/\.(pdf|doc|docx)$/.test(name);
+      if(!validExt || (file.files[0].type && !allowed.includes(file.files[0].type))){
+        event.preventDefault();
+        alert('Please upload your resume as a PDF, DOC or DOCX file.');
+        return;
+      }
+      if(file.files[0].size > 10 * 1024 * 1024){
+        event.preventDefault();
+        alert('Resume file is larger than 10 MB. Please upload a file smaller than 10 MB.');
+      }
+    }
+  });
+}
+</script>
+</body>
+</html>
