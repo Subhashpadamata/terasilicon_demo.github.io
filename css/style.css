@@ -10776,3 +10776,131 @@ body { padding-top: 84px; }
     font-size:13.5px !important;
   }
 }
+
+/* V11.27 final UI polish: contrast, card separation and secondary typography */
+:root {
+  --card-blue-border:#c7d9f5;
+  --card-orange-border:#efc9a7;
+  --footer-muted:#d7dbea;
+  --footer-heading:#ffffff;
+}
+
+/* Distinct separation for the alternating light content cards */
+.model-card,
+.focus-grid article,
+.track-card,
+.environment-grid article,
+.includes-grid span,
+.contrast .c-card,
+.compare .box,
+.tag-grid span,
+.large-card,
+.knowledge-flow span,
+.journey-card {
+  border:1px solid var(--card-blue-border);
+}
+
+.model-card:nth-child(even),
+.track-card:nth-child(2n),
+.environment-grid article:nth-child(3n),
+.contrast .c-card:nth-child(2),
+.compare .box.new,
+.tag-grid span:nth-child(even) {
+  border-color:var(--card-orange-border);
+}
+
+.focus-grid article:nth-child(2n),
+.environment-grid article:nth-child(2n),
+.contrast .c-card:nth-child(3),
+.compare .box.old {
+  border-color:#d4c8ec;
+}
+
+/* Slightly stronger supporting text for full-page readability */
+.eyebrow,
+.track-card>span,
+.environment-grid span,
+.footer-bottom p,
+.footer-bottom>div,
+.journey-footer b {
+  font-weight:650;
+}
+
+.eyebrow {
+  font-size:11px;
+}
+
+.tag-row em,
+.tag-grid span,
+.knowledge-flow span {
+  font-size:11px;
+}
+
+.knowledge-flow b {
+  font-size:15px;
+}
+
+.journey-card p,
+.model-card p,
+.focus-grid p,
+.environment-grid p,
+.track-card p,
+.compare p,
+.large-card p {
+  font-size:13px;
+}
+
+/* Footer: stronger contrast and more breathing room */
+.site-footer {
+  border-top:1px solid rgba(255,255,255,.12);
+}
+
+.footer-bottom {
+  padding:34px 0 38px;
+  min-height:108px;
+}
+
+.footer-bottom p,
+.footer-bottom>div,
+.footer-bottom>div a {
+  color:var(--footer-muted);
+  font-size:11px;
+  font-weight:600;
+  line-height:1.6;
+}
+
+.footer-bottom>div a:hover {
+  color:var(--footer-heading);
+}
+
+.site-brand {
+  color:var(--footer-heading);
+}
+
+.site-brand span {
+  font-weight:700;
+}
+
+.site-brand span small {
+  color:#d0d5e4;
+  font-weight:600;
+}
+
+@media(max-width:820px) {
+  .footer-bottom {
+    padding:30px 0 34px;
+    gap:18px;
+  }
+
+  .footer-bottom p,
+  .footer-bottom>div,
+  .footer-bottom>div a {
+    font-size:11px;
+  }
+
+  .tag-row em,
+  .tag-grid span,
+  .knowledge-flow span {
+    font-size:11px;
+  }
+}
