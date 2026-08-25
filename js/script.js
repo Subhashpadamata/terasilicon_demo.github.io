@@ -107,16 +107,21 @@ window.addEventListener("resize", () => {
 });
 
 /* Highlight the header link for the section currently in view. */
-const sectionIds = ["home", "vlsi-finishing-school", "tracks", "environment"];
+const sectionIds = ["home", "vlsi-finishing-school", "tracks", "environment", "contact-details"];
 const sectionElements = sectionIds
   .map((id) => document.getElementById(id))
   .filter(Boolean);
 
 function setActiveNav(targetId) {
-  document.querySelectorAll('.desktop-nav a').forEach((link) => {
+  document.querySelectorAll('.desktop-nav a, .mobile-menu a').forEach((link) => {
     const href = link.getAttribute('href') || '';
     const isSectionLink = href === `#${targetId}` || href === `index.html#${targetId}`;
     link.classList.toggle('active', isSectionLink);
+    if (isSectionLink) {
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.removeAttribute('aria-current');
+    }
   });
 }
 
