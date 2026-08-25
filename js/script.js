@@ -125,9 +125,23 @@ function setActiveNav(targetId) {
   });
 }
 
+/* The Contact section is short and sits at the very bottom of the page, so
+   with the -62% bottom rootMargin below it can end the scroll without ever
+   being counted as "intersecting" by the observer. Treat reaching the
+   bottom of the page as being in the Contact section as a fallback. */
+function isNearBottomOfPage() {
+  const scrollBottom = window.scrollY + window.innerHeight;
+  return scrollBottom >= document.documentElement.scrollHeight - 4;
+}
+
 if ("IntersectionObserver" in window) {
   const sectionObserver = new IntersectionObserver(
     (entries) => {
+      if (isNearBottomOfPage() && document.getElementById("contact-details")) {
+        setActiveNav("contact-details");
+        return;
+      }
+
       const visible = entries
         .filter((entry) => entry.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
@@ -142,6 +156,16 @@ if ("IntersectionObserver" in window) {
   );
 
   sectionElements.forEach((section) => sectionObserver.observe(section));
+
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (isNearBottomOfPage() && document.getElementById("contact-details")) {
+        setActiveNav("contact-details");
+      }
+    },
+    { passive: true }
+  );
 }
 
 /* Support direct links such as index.html#tracks. */
