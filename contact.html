@@ -457,39 +457,6 @@
    }
   </script>
  
-<!-- FINAL PUBLISH: active contact navigation -->
-
-<script>
-(function () {
-  const contact = document.getElementById('contact-details');
-  const links = Array.from(document.querySelectorAll('nav a, header a'))
-    .filter(a => /(^|#)contact-details$/.test(a.getAttribute('href') || '') ||
-                 /\bcontact us\b/i.test(a.textContent || ''));
-
-  if (!contact || !links.length) return;
-
-  function setActive(on) {
-    links.forEach(link => {
-      link.classList.toggle('active', on);
-      if (on) link.setAttribute('aria-current', 'location');
-      else link.removeAttribute('aria-current');
-    });
-  }
-
-  const observer = new IntersectionObserver(entries => {
-    const entry = entries[0];
-    setActive(entry.isIntersecting && entry.intersectionRatio > 0.15);
-  }, { threshold: [0.15, 0.5, 0.85] });
-
-  observer.observe(contact);
-
-  links.forEach(link => {
-    link.addEventListener('click', () => {
-      setTimeout(() => setActive(true), 120);
-    });
-  });
-})();
-</script>
 
 </body>
 </html>
