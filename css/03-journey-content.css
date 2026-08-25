@@ -1,0 +1,919 @@
+/* V10.29 responsive CSS training journey — no raster dependency
+   V10.75: this section sits in the right-hand half of a two-column split
+   layout and never has more than ~615px to work with at any realistic
+   viewport width (it's capped by the 1240px page max-width, not the
+   viewport), so a 5-across grid of titled cards never had room to breathe —
+   short titles like "Learn" fit, but "Demonstrate" was always one strong
+   gust from wrapping or clipping. Using the single stacked column (icon
+   left, card right) at every width removes that ceiling entirely and reads
+   cleanly at any container size. */
+.journey-art {
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center
+}
+.journey-css {
+  width:100%;
+  max-width:640px;
+  padding:28px 26px 24px;
+  border:1px solid #ddd8e3;
+  border-radius:4px;
+  background:linear-gradient(110deg,#faf8ff 0%,#fff 48%,#fffaf5 100%);
+  box-sizing:border-box
+}
+.journey-track {
+  display:flex;
+  flex-direction:column;
+  align-items:stretch;
+  gap:0
+}
+.journey-stage {
+  position:relative;
+  display:grid;
+  grid-template-columns:74px 1fr;
+  grid-template-rows:auto auto;
+  column-gap:20px;
+  align-items:center;
+  justify-items:start;
+  padding:0 0 18px;
+  min-width:0
+}
+.journey-node {
+  grid-column:1;
+  grid-row:1 / span 2;
+  width:68px;
+  height:68px;
+  border:2px solid currentColor;
+  border-radius:50%;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  box-sizing:border-box;
+  background:rgba(255,255,255,.72);
+  line-height:1
+}
+.journey-node strong {
+  font:500 22px/1 "Space Grotesk",sans-serif;
+  letter-spacing:-.03em
+}
+.journey-node small {
+  margin-top:5px;
+  font:600 7.5px/1 "IBM Plex Mono",monospace;
+  letter-spacing:.04em
+}
+.stage-purple {
+  color:#6738a0
+}
+.stage-orange {
+  color:#f47b00
+}
+.journey-connector {
+  grid-column:1;
+  grid-row:2;
+  width:2px;
+  height:18px;
+  justify-self:center;
+  align-self:end;
+  margin-top:6px;
+  background:currentColor;
+  opacity:.85
+}
+.journey-card {
+  grid-column:2;
+  grid-row:1 / span 2;
+  min-height:82px;
+  width:100%;
+  padding:16px 18px;
+  border:1px solid #e0dce4;
+  border-radius:10px;
+  background:#fff;
+  box-shadow:0 10px 24px rgba(16,22,56,.08);
+  box-sizing:border-box;
+  text-align:left;
+  color:var(--ink);
+  min-width:0
+}
+.journey-card h4 {
+  margin:0 0 6px;
+  font:700 15px/1.2 "Space Grotesk",sans-serif;
+  white-space:normal;
+  overflow-wrap:break-word;
+  word-break:break-word;
+  min-width:0
+}
+.journey-card p {
+  margin:0;
+  color:#65728b;
+  font-size:12.5px;
+  line-height:1.5;
+  min-width:0
+}
+.journey-stage:last-child {
+  padding-bottom:0
+}
+.journey-footer {
+  display:flex;
+  align-items:center;
+  gap:18px;
+  margin-top:24px;
+  color:#1b2242
+}
+.journey-footer span {
+  height:1px;
+  flex:1;
+  background:#ddd8e3
+}
+.journey-footer b {
+  font:600 8px/1.2 "IBM Plex Mono",monospace;
+  letter-spacing:.08em;
+  text-align:center;
+  white-space:normal
+}
+
+/* A little extra breathing room once the section genuinely has the space
+   for it (e.g. the section is viewed full-width rather than in the split
+   layout, or on very wide monitors). */
+@media (min-width:1600px) {
+  .journey-css {
+    max-width:720px;
+    padding:32px 30px 28px;
+  }
+  .journey-node {
+    width:74px;
+    height:74px;
+  }
+  .journey-node strong {
+    font-size:24px;
+  }
+  .journey-card h4 {
+    font-size:16px;
+  }
+  .journey-card p {
+    font-size:13.5px;
+  }
+}
+
+@media(max-width:820px) {
+  .journey-css {
+    max-width:620px;
+    padding:24px 20px 22px
+  }
+  .journey-stage {
+    column-gap:18px;
+  }
+  .journey-node {
+    width:64px;
+    height:64px
+  }
+  .journey-node strong {
+    font-size:21px
+  }
+  .journey-node small {
+    font-size:7px
+  }
+  .journey-card {
+    min-height:78px;
+    padding:15px 16px;
+  }
+  .journey-card h4 {
+    font-size:14px;
+    margin-bottom:6px
+  }
+  .journey-card p {
+    font-size:10px;
+    line-height:1.45
+  }
+  .journey-footer {
+    margin-top:22px;
+    gap:10px
+  }
+  .journey-footer b {
+    font-size:7px;
+  }
+}
+@media(max-width:480px) {
+  .journey-css {
+    padding:20px 14px 18px
+  }
+  .journey-stage {
+    grid-template-columns:60px 1fr;
+    column-gap:13px;
+    padding-bottom:15px
+  }
+  .journey-node {
+    width:58px;
+    height:58px
+  }
+  .journey-node strong {
+    font-size:19px
+  }
+  .journey-card {
+    padding:13px 14px;
+    min-height:72px
+  }
+  .journey-card h4 {
+    font-size:13px
+  }
+  .journey-card p {
+    font-size:9px
+  }
+  .journey-footer span {
+    display:none
+  }
+}
+.section-heading {
+  display:grid;
+  grid-template-columns:minmax(0,1.08fr) minmax(280px,.62fr);
+  gap:56px;
+  align-items:end;
+  margin-bottom:38px
+}
+.section-heading>p {
+  font-size:14px;
+  line-height:1.7
+}
+.section-heading-tight {
+  margin-bottom:32px
+}
+.centered {
+  text-align:center
+}
+.centered>p {
+  max-width:600px;
+  margin:0 auto
+}
+.model-section {
+  padding:88px 0;
+  background:linear-gradient(135deg,#eaf3ff 0%,#ffffff 50%,#f2f7ff 100%);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)
+}
+.model-grid {
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  border:1px solid var(--line);
+  background:var(--line);
+  gap:1px
+}
+.model-card {
+  position:relative;
+  min-height:250px;
+  padding:25px 22px 30px;
+  background:var(--violet-soft);
+  transition:transform .22s ease,box-shadow .22s ease,background .22s ease
+}
+.model-card:nth-child(even) {
+  background:var(--orange-soft)
+}
+.model-card:hover {
+  z-index:2;
+  transform:translateY(-7px);
+  box-shadow:var(--shadow);
+  background:#fff
+}
+.step-number,.metric {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  border:1px solid var(--purple);
+  color:var(--purple);
+  font:600 12px "IBM Plex Mono",monospace;
+  background:#fff
+}
+.model-card:nth-child(even) .step-number,.metric.orange {
+  border-color:var(--orange);
+  color:var(--orange)
+}
+.model-card h3 {
+  margin-top:42px
+}
+.model-card p {
+  margin-top:12px;
+  font-size:12px;
+  line-height:1.65;
+  max-width:230px
+}
+.readiness-section {
+  padding:94px 0;
+  background:#fff
+}
+.readiness-grid {
+  display:grid;
+  grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);
+  gap:70px;
+  align-items:center
+}
+.readiness-copy>p {
+  max-width:600px;
+  margin-top:22px;
+  font-size:15px;
+  line-height:1.75
+}
+.compact {
+  grid-template-columns:repeat(3,1fr)
+}
+.readiness-art {
+  padding:12px
+}
+.readiness-art img {
+  width:100%;
+  max-width:640px;
+  margin:auto
+}
+.focus-section {
+  padding:94px 0;
+  background:var(--paper)
+}
+.focus-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--line);
+  background:var(--line);
+  gap:1px
+}
+.focus-grid article {
+  min-height:235px;
+  padding:28px 26px;
+  background:#fff;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease
+}
+.focus-grid article:nth-child(2n) {
+  background:var(--orange-soft)
+}
+.focus-grid article:hover {
+  z-index:1;
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+  background:#fff
+}
+.focus-grid h3 {
+  margin-top:34px
+}
+.focus-grid p {
+  margin-top:12px;
+  font-size:12px;
+  line-height:1.65
+}
+.tracks-section {
+  padding:94px 0;
+  background:#fff;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line)
+}
+.track-grid {
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  border:1px solid var(--line);
+  background:var(--line);
+  gap:1px
+}
+.track-card {
+  min-height:300px;
+  padding:30px;
+  background:var(--violet-soft);
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease
+}
+.track-card:nth-child(2n) {
+  background:var(--orange-soft)
+}
+.track-card:hover {
+  z-index:2;
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+  background:#fff
+}
+.track-card>span {
+  color:var(--orange);
+  font:600 12px "IBM Plex Mono",monospace
+}
+.track-card h3 {
+  margin-top:34px;
+  font-size:28px
+}
+.track-card p {
+  max-width:650px;
+  margin-top:12px;
+  font-size:13px
+}
+.tag-row {
+  display:flex;
+  gap:7px;
+  flex-wrap:wrap;
+  margin-top:24px
+}
+.tag-row em {
+  padding:7px 9px;
+  border:1px solid #d9d4e1;
+  background:#fff;
+  font:600 10px "IBM Plex Mono",monospace;
+  font-style:normal;
+  color:#515a71
+}
+.tag-row em:hover {
+  border-color:var(--purple);
+  color:var(--purple)
+}
+.environment-section {
+  padding:94px 0;
+  background:var(--paper)
+}
+.environment-grid {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  border:1px solid var(--line);
+  background:var(--line);
+  gap:1px
+}
+.environment-grid article {
+  min-height:205px;
+  padding:26px;
+  background:#fff;
+  transition:transform .2s ease,box-shadow .2s ease
+}
+.environment-grid article:nth-child(2n) {
+  background:var(--violet-soft)
+}
+.environment-grid article:nth-child(3n) {
+  background:var(--orange-soft)
+}
+.environment-grid article:hover {
+  z-index:1;
+  transform:translateY(-5px);
+  box-shadow:var(--shadow);
+  background:#fff
+}
+.environment-grid span {
+  color:var(--purple);
+  font:600 11px "IBM Plex Mono",monospace
+}
+.environment-grid h3 {
+  margin-top:38px
+}
+.environment-grid p {
+  margin-top:10px;
+  font-size:12px
+}
+.knowledge-section {
+  padding:96px 0;
+  background:linear-gradient(135deg,#e8f1ff 0%,#f4f8ff 48%,#ffffff 100%);
+  border-top:1px solid #e0d9e8;
+  border-bottom:1px solid #e0d9e8
+}
+.knowledge-grid {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(420px,.8fr);
+  gap:70px;
+  align-items:center
+}
+.knowledge-grid>div>p {
+  max-width:650px;
+  margin-top:22px;
+  font-size:15px;
+  line-height:1.75
+}
+.knowledge-flow {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:30px
+}
+.knowledge-flow span {
+  padding:10px 13px;
+  background:#fff;
+  border:1px solid #ddd6e4;
+  font:600 11px "IBM Plex Mono",monospace
+}
+.knowledge-flow b {
+  color:var(--orange)
+}
+.knowledge-art {
+  width:100%;
+  max-width:560px;
+  margin:auto
+}
+.includes-section {
+  padding:88px 0;
+  background:#fff
+}
+.includes-grid {
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  border:1px solid var(--line);
+  background:var(--line);
+  gap:1px
+}
+.includes-grid span {
+  padding:20px;
+  background:#fff;
+  font-size:12px;
+  font-weight:600;
+  transition:background .2s ease,color .2s ease,transform .2s ease
+}
+.includes-grid span:nth-child(3n) {
+  background:var(--orange-soft)
+}
+.includes-grid span:nth-child(3n+1) {
+  background:var(--violet-soft)
+}
+.includes-grid span:hover {
+  z-index:1;
+  transform:translateY(-3px);
+  background:var(--purple)!important;
+  color:#fff
+}
+.cta-section {
+  padding:76px 0;
+  background:#f4f8ff
+}
+.cta-card {
+  position:relative;
+  overflow:hidden;
+  padding:76px 74px;
+  text-align:left;
+  background:radial-gradient(circle at 12% 18%,rgba(26,116,232,.14),transparent 31%),radial-gradient(circle at 88% 84%,rgba(24,139,255,.12),transparent 29%),linear-gradient(135deg,#e8f1ff 0%,#f4f8ff 48%,#eef5ff 100%);
+  border:1px solid rgba(101,53,147,.18);
+  box-shadow:var(--shadow)
+}
+.cta-card:after {
+  content:"";
+  position:absolute;
+  width:420px;
+  height:420px;
+  border-radius:50%;
+  right:-180px;
+  bottom:-260px;
+  background:radial-gradient(circle,rgba(24,139,255,.15),transparent 68%);
+  pointer-events:none
+}
+.cta-card>* {
+  position:relative;
+  z-index:1
+}
+.cta-card h2 {
+  max-width:950px
+}
+.cta-card p {
+  max-width:760px;
+  margin-top:20px;
+  font-size:15px;
+  line-height:1.7
+}
+.contact-details {
+  padding:72px 0;
+  background:#fff;
+  border-top:1px solid var(--line)
+}
+.contact-details .footer-grid {
+  display:grid;
+  grid-template-columns:minmax(205px,1.4fr) minmax(150px,.95fr) minmax(200px,1.25fr) minmax(190px,1.2fr) minmax(185px,1.15fr);
+  align-items:start;
+  gap:30px
+}
+.contact-intro p {
+  margin:0
+}
+.contact-intro h2 {
+  margin:26px 0 30px;
+  font-size:clamp(48px,4.5vw,70px);
+  letter-spacing:-3px
+}
+.contact-intro h2 i {
+  font-family:"Space Grotesk",sans-serif;
+  font-weight:400
+}
+.contact-intro>a {
+  color:var(--purple);
+  font-size:16px;
+  font-weight:600;
+  text-decoration:underline;
+  text-underline-offset:5px
+}
+.contact-details h3 {
+  margin:0 0 22px;
+  color:var(--purple);
+  font-size:15px;
+  text-decoration:underline;
+  text-underline-offset:5px
+}
+.contact-details a {
+  display:block;
+  margin-bottom:13px;
+  color:var(--ink);
+  font-size:13px;
+  font-weight:600
+}
+.contact-details a:hover {
+  color:var(--purple)
+}
+.mail-link,.location-link {
+  display:flex!important;
+  align-items:flex-start;
+  gap:9px
+}
+.mail-link img,.location-link img {
+  width:25px;
+  height:25px;
+  object-fit:contain;
+  flex:0 0 25px
+}
+.location-link {
+  line-height:1.55
+}
+.map-link {
+  color:var(--purple)!important;
+  font-size:12px!important;
+  text-decoration:underline;
+  text-underline-offset:4px
+}
+.linkedin-link {
+  color:#0a66c2!important
+}
+.footer-directory {
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:0
+}
+.footer-directory a {
+  margin-bottom:11px
+}
+.footer-careers-training {
+  display:flex;
+  flex-direction:column;
+  gap:30px
+}
+.site-footer {
+  background:#090e29;
+  color:#eef0f7
+}
+.footer-bottom {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  padding:24px 0
+}
+.site-brand {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:#fff
+}
+.site-brand img {
+  width:38px;
+  height:38px;
+  object-fit:contain
+}
+.site-brand span {
+  display:grid;
+  font:600 12px/1.1 "IBM Plex Mono",monospace;
+  letter-spacing:.08em
+}
+.site-brand span b {
+  color:var(--orange)
+}
+.site-brand span small {
+  margin-top:3px;
+  color:#bbc0d1;
+  font-size:6px;
+  letter-spacing:.11em
+}
+.footer-bottom p,.footer-bottom>div {
+  margin:0;
+  color:#afb5c8;
+  font-size:10px
+}
+.footer-bottom>div {
+  display:flex;
+  gap:18px;
+  flex-wrap:wrap
+}
+.footer-bottom>div a:hover {
+  color:#fff
+}
+@media(max-width:1100px) {
+  .desktop-nav {
+    gap:18px
+  }
+  value-strip {
+    grid-template-columns:repeat(3,1fr)
+  }
+  .value-block:nth-child(3) {
+    border-right:0
+  }
+  .model-grid {
+    grid-template-columns:repeat(3,1fr)
+  }
+  .model-card:nth-child(4),.model-card:nth-child(5) {
+    border-top:1px solid var(--line)
+  }
+  .readiness-grid,.knowledge-grid {
+    grid-template-columns:1fr 1fr
+  }
+  .includes-grid {
+    grid-template-columns:repeat(3,1fr)
+  }
+  .contact-details .footer-grid {
+    grid-template-columns:repeat(3,1fr);
+    gap:44px 30px
+  }
+  .contact-intro {
+    grid-column:span 1
+  }
+  .footer-careers-training {
+    grid-column:span 2;
+    display:grid;
+    grid-template-columns:1fr 1fr
+  }
+}
+@media(max-width:820px) {
+  .container {
+    width:min(100% - 36px,var(--max))
+  }
+  .desktop-nav {
+    display:none
+  }
+  .menu-toggle {
+    display:block
+  }
+  .mobile-menu {
+    display:none;
+    padding:8px 18px 18px;
+    background:#fff;
+    border-bottom:1px solid var(--line)
+  }
+  .mobile-menu.open {
+    display:grid
+  }
+  .mobile-menu a {
+    padding:13px 0;
+    border-bottom:1px solid var(--line);
+    font-weight:600
+  }
+  .mobile-menu .nav-cta {
+    margin-top:10px;
+    padding:13px;
+    text-align:center;
+    border-bottom:0
+  }
+  section-heading {
+    grid-template-columns:1fr;
+    gap:16px
+  }
+  .focus-grid,.environment-grid {
+    grid-template-columns:1fr 1fr
+  }
+  .track-grid {
+    grid-template-columns:1fr
+  }
+  .value-strip {
+    grid-template-columns:1fr 1fr
+  }
+  .value-block:nth-child(odd) {
+    border-right:1px solid var(--line)
+  }
+  .value-block:nth-child(even) {
+    border-right:0
+  }
+  .contact-details .footer-grid {
+    grid-template-columns:1fr 1fr
+  }
+  .contact-intro {
+    grid-column:span 2
+  }
+  .footer-careers-training {
+    grid-column:span 2
+  }
+  .footer-bottom {
+    align-items:flex-start;
+    flex-direction:column
+  }
+  .footer-bottom>div {
+    gap:8px 16px
+  }
+}
+@media(max-width:820px) {
+  /* Knowledge loop: use a true vertical mobile flow.
+     Desktop remains horizontal; mobile uses only centered downward arrows. */
+  .knowledge-section-no-loop .knowledge-flow {
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    width:100%;
+    margin-top:30px;
+  }
+
+  .knowledge-section-no-loop .knowledge-flow span {
+    width:100%;
+    box-sizing:border-box;
+    text-align:center;
+    padding:18px 16px;
+  }
+
+  .knowledge-section-no-loop .knowledge-flow b {
+    width:100%;
+    height:42px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0;
+    line-height:1;
+  }
+
+  .knowledge-section-no-loop .knowledge-flow b::after {
+    content:"\2193";
+    color:var(--orange);
+    font:700 24px/1 "Space Grotesk",sans-serif;
+  }
+}
+
+@media(max-width:560px) {
+  .container {
+    width:min(100% - 24px,var(--max))
+  }
+  .nav {
+    min-height:70px
+  }
+  .brand {
+    min-width:0
+  }
+  .brand img {
+    width:38px;
+    height:38px
+  }
+  .brand-wordmark strong {
+    font-size:13px
+  }
+  .brand-wordmark small {
+    font-size:6px
+  }
+  value-strip {
+    grid-template-columns:1fr
+  }
+  .value-block {
+    border-right:0!important;
+    border-bottom:1px solid var(--line);
+    min-height:96px
+  }
+  .value-block:last-child {
+    border-bottom:0
+  }
+  .split-section,.model-section,.readiness-section,.focus-section,.tracks-section,.environment-section,.knowledge-section,.includes-section {
+    padding:64px 0
+  }
+  .tag-grid,.compact {
+    grid-template-columns:1fr
+  }
+  .model-grid,.focus-grid,.environment-grid {
+    grid-template-columns:1fr
+  }
+  .model-card {
+    min-height:205px
+  }
+  .track-card {
+    min-height:0
+  }
+  .includes-grid {
+    grid-template-columns:1fr 1fr
+  }
+  .cta-section {
+    padding:48px 0
+  }
+  .cta-card {
+    padding:48px 26px
+  }
+  .cta-card h2 {
+    font-size:36px
+  }
+  .contact-details {
+    padding:56px 0
+  }
+  .contact-details .footer-grid {
+    grid-template-columns:1fr
+  }
+  .contact-intro,.footer-careers-training {
+    grid-column:auto
+  }
+  .footer-careers-training {
+    display:grid;
+    grid-template-columns:1fr 1fr
+  }
+  .footer-bottom {
+    padding:22px 0
+  }
+  .footer-bottom>div {
+    gap:7px 13px
+  }
+  .button {
+    width:100%
+  }
+  .hero-actions {
+    width:100%
+  }
+}

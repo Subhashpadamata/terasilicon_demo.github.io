@@ -1,0 +1,588 @@
+/* V10.8 — segmented circular capability flow */
+.circular-flow {
+  display:grid;
+  place-items:center;
+  min-height:500px;
+  background:linear-gradient(135deg,#fff 0%,#fbf8fd 58%,#f1f6ff 100%);
+}
+.circular-flow .flow-ring {
+  position:relative;
+  width:390px;
+  height:390px;
+  border-radius:50%;
+}
+.circular-flow .flow-ring::before {
+  content:"";
+  position:absolute;
+  inset:54px;
+  border-radius:50%;
+  background:rgba(255,255,255,.78);
+  border:1px solid rgba(101,53,147,.10);
+  box-shadow:0 16px 42px rgba(16,22,56,.07);
+}
+.circular-flow .flow-segment {
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:conic-gradient(var(--seg-color) 0 61deg,transparent 61deg 72deg);
+  -webkit-mask:radial-gradient(circle,transparent 0 62%,#000 62.5% 100%);
+  mask:radial-gradient(circle,transparent 0 62%,#000 62.5% 100%);
+  transform:rotate(var(--seg-rot));
+  filter:drop-shadow(0 8px 12px rgba(16,22,56,.05));
+  opacity:.88;
+  animation:segmentPulse 7.5s ease-in-out infinite;
+  animation-delay:var(--seg-delay);
+}
+.circular-flow .seg-1 {
+  --seg-color:var(--purple);
+  --seg-rot:-18deg;
+  --seg-delay:0s
+}
+.circular-flow .seg-2 {
+  --seg-color:var(--orange);
+  --seg-rot:54deg;
+  --seg-delay:-1.5s
+}
+.circular-flow .seg-3 {
+  --seg-color:#65a96f;
+  --seg-rot:126deg;
+  --seg-delay:-3s
+}
+.circular-flow .seg-4 {
+  --seg-color:#6d8ebd;
+  --seg-rot:198deg;
+  --seg-delay:-4.5s
+}
+.circular-flow .seg-5 {
+  --seg-color:#9b7bc2;
+  --seg-rot:270deg;
+  --seg-delay:-6s
+}
+.circular-flow .flow-label {
+  position:absolute;
+  z-index:4;
+  min-width:78px;
+  padding:8px 10px;
+  text-align:center;
+  background:#fff;
+  border:1px solid rgba(101,53,147,.18);
+  font:800 10px "IBM Plex Mono",monospace;
+  letter-spacing:.03em;
+  box-shadow:0 8px 18px rgba(16,22,56,.07);
+  transform:translate(-50%,-50%);
+  animation:labelPulse 7.5s ease-in-out infinite;
+  animation-delay:var(--label-delay);
+}
+.circular-flow .label-1 {
+  left:50%;
+  top:7%;
+  color:var(--purple);
+  --label-delay:0s
+}
+.circular-flow .label-2 {
+  left:89%;
+  top:37%;
+  color:var(--orange);
+  --label-delay:-1.5s
+}
+.circular-flow .label-3 {
+  left:73%;
+  top:86%;
+  color:#4d8f59;
+  --label-delay:-3s
+}
+.circular-flow .label-4 {
+  left:27%;
+  top:86%;
+  color:#5877a6;
+  --label-delay:-4.5s
+}
+.circular-flow .label-5 {
+  left:11%;
+  top:37%;
+  color:#74519c;
+  --label-delay:-6s
+}
+.circular-flow .flow-arrow {
+  position:absolute;
+  z-index:5;
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:#fff;
+  border:1px solid #e4ddea;
+  color:#cfc6da;
+  font:700 22px/1 "Space Grotesk",sans-serif;
+  box-shadow:0 6px 14px rgba(16,22,56,.06);
+  transform:translate(-50%,-50%);
+  animation:arrowAdvance 7.5s ease-in-out infinite;
+  animation-delay:var(--arrow-delay);
+}
+.circular-flow .arrow-1 {
+  left:73%;
+  top:13%;
+  --arrow-delay:0s
+}
+.circular-flow .arrow-2 {
+  left:88%;
+  top:63%;
+  --arrow-delay:-1.5s
+}
+.circular-flow .arrow-3 {
+  left:50%;
+  top:94%;
+  --arrow-delay:-3s
+}
+.circular-flow .arrow-4 {
+  left:12%;
+  top:63%;
+  --arrow-delay:-4.5s
+}
+.circular-flow .arrow-5 {
+  left:27%;
+  top:13%;
+  --arrow-delay:-6s
+}
+.circular-flow .loop-core {
+  z-index:8;
+  width:138px;
+  height:138px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid var(--purple);
+  box-shadow:0 16px 38px rgba(16,22,56,.12),inset 0 0 0 7px #f4eef9;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:2px;
+  animation:coreBreath 7.5s ease-in-out infinite;
+}
+.circular-flow .loop-core img {
+  width:38px;
+  height:38px;
+  object-fit:contain;
+  margin-bottom:2px
+}
+.circular-flow .loop-core strong {
+  font-size:18px;
+  line-height:1
+}
+.circular-flow .loop-core small {
+  font:700 7px "IBM Plex Mono",monospace;
+  letter-spacing:.08em;
+  color:var(--muted)
+}
+@keyframes segmentPulse {
+  0%,8%,100% {
+    opacity:.72;
+    filter:brightness(.98) drop-shadow(0 8px 12px rgba(16,22,56,.04))
+  }
+  12%,23% {
+    opacity:1;
+    filter:brightness(1.08) drop-shadow(0 10px 18px rgba(101,53,147,.16))
+  }
+  27% {
+    opacity:.72
+  }
+}
+@keyframes labelPulse {
+  0%,8%,100% {
+    transform:translate(-50%,-50%) scale(1);
+    box-shadow:0 8px 18px rgba(16,22,56,.06)
+  }
+  12%,23% {
+    transform:translate(-50%,-50%) scale(1.06);
+    box-shadow:0 12px 24px rgba(16,22,56,.13);
+    border-color:currentColor
+  }
+  27% {
+    transform:translate(-50%,-50%) scale(1)
+  }
+}
+@keyframes arrowAdvance {
+  0%,8%,100% {
+    color:#cfc6da;
+    border-color:#e4ddea;
+    transform:translate(-50%,-50%) scale(.92)
+  }
+  12%,23% {
+    color:var(--orange);
+    border-color:var(--orange);
+    transform:translate(-50%,-50%) scale(1.12)
+  }
+  27% {
+    color:#cfc6da;
+    border-color:#e4ddea;
+    transform:translate(-50%,-50%) scale(.92)
+  }
+}
+@keyframes coreBreath {
+  0%,100% {
+    transform:scale(1)
+  }
+  12%,23% {
+    transform:scale(1.025)
+  }
+  27% {
+    transform:scale(1)
+  }
+}
+@media(max-width:820px) {
+  .circular-flow {
+    min-height:430px
+  }
+  .circular-flow .flow-ring {
+    width:320px;
+    height:320px
+  }
+  .circular-flow .flow-ring::before {
+    inset:44px
+  }
+  .circular-flow .loop-core {
+    width:112px;
+    height:112px
+  }
+  .circular-flow .loop-core img {
+    width:31px;
+    height:31px
+  }
+  .circular-flow .loop-core strong {
+    font-size:15px
+  }
+  .circular-flow .flow-label {
+    min-width:68px;
+    padding:7px 7px;
+    font-size:8px
+  }
+  .circular-flow .flow-arrow {
+    width:24px;
+    height:24px;
+    font-size:18px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .circular-flow .flow-segment,.circular-flow .flow-label,.circular-flow .flow-arrow,.circular-flow .loop-core {
+    animation:none
+  }
+}
+/* V10.9 — corrected segmented loop: centered core, labels inside ring, clean flow */
+.circular-flow {
+  min-height:560px;
+  padding:20px;
+  background:linear-gradient(135deg,#fff 0%,#fbf8fd 58%,#f1f6ff 100%);
+  overflow:hidden
+}
+.circular-flow .flow-ring {
+  position:relative;
+  width:min(470px,86vw);
+  height:min(470px,86vw);
+  border-radius:50%;
+  display:block
+}
+.circular-flow .flow-ring::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:transparent;
+  border:0;
+  box-shadow:none
+}
+.circular-flow .flow-segment {
+  position:absolute;
+  inset:0;
+  border-radius:50%;
+  background:conic-gradient(from -90deg,var(--seg-color) 0 61deg,transparent 61deg 72deg);
+  -webkit-mask:radial-gradient(circle,transparent 0 63%,#000 63.4% 100%);
+  mask:radial-gradient(circle,transparent 0 63%,#000 63.4% 100%);
+  transform:rotate(var(--seg-rot));
+  opacity:.72;
+  animation:segmentPulse109 7.5s ease-in-out infinite;
+  animation-delay:var(--seg-delay);
+  filter:none
+}
+.circular-flow .seg-1 {
+  --seg-color:var(--purple);
+  --seg-rot:72deg;
+  --seg-delay:0s
+}
+.circular-flow .seg-2 {
+  --seg-color:var(--orange);
+  --seg-rot:144deg;
+  --seg-delay:1.5s
+}
+.circular-flow .seg-3 {
+  --seg-color:#63a96f;
+  --seg-rot:216deg;
+  --seg-delay:3s
+}
+.circular-flow .seg-4 {
+  --seg-color:#6d8fbd;
+  --seg-rot:288deg;
+  --seg-delay:4.5s
+}
+.circular-flow .seg-5 {
+  --seg-color:#9a78c4;
+  --seg-rot:0deg;
+  --seg-delay:6s
+}
+.circular-flow .flow-ring::after {
+  content:"";
+  position:absolute;
+  inset:63%;
+  border-radius:50%;
+  background:#fff;
+  transform:translate(0,0);
+  box-shadow:0 12px 34px rgba(16,22,56,.08);
+  z-index:2
+}
+.circular-flow .flow-label {
+  position:absolute;
+  z-index:6;
+  min-width:auto;
+  padding:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  font:800 11px/1 "IBM Plex Mono",monospace;
+  letter-spacing:.02em;
+  transform:translate(-50%,-50%);
+  animation:labelPulse109 7.5s ease-in-out infinite;
+  animation-delay:var(--label-delay)
+}
+.circular-flow .label-1 {
+  left:50%;
+  top:16%;
+  color:var(--purple);
+  --label-delay:0s
+}
+.circular-flow .label-2 {
+  left:83%;
+  top:38%;
+  color:var(--orange);
+  --label-delay:1.5s
+}
+.circular-flow .label-3 {
+  left:70%;
+  top:78%;
+  color:#4f8e5b;
+  --label-delay:3s
+}
+.circular-flow .label-4 {
+  left:30%;
+  top:78%;
+  color:#5b78a4;
+  --label-delay:4.5s
+}
+.circular-flow .label-5 {
+  left:17%;
+  top:38%;
+  color:#76529f;
+  --label-delay:6s
+}
+.circular-flow .flow-arrow {
+  position:absolute;
+  z-index:7;
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:rgba(255,255,255,.92);
+  border:1px solid rgba(26,116,232,.14);
+  color:#c9c2d3;
+  font:700 16px/1 "Space Grotesk",sans-serif;
+  box-shadow:0 5px 12px rgba(16,22,56,.05);
+  transform:translate(-50%,-50%);
+  animation:arrowPulse109 7.5s ease-in-out infinite;
+  animation-delay:var(--arrow-delay)
+}
+.circular-flow .arrow-1 {
+  left:70%;
+  top:22%;
+  --arrow-delay:0s;
+  transform:translate(-50%,-50%) rotate(40deg)
+}
+.circular-flow .arrow-2 {
+  left:78%;
+  top:61%;
+  --arrow-delay:1.5s;
+  transform:translate(-50%,-50%) rotate(110deg)
+}
+.circular-flow .arrow-3 {
+  left:50%;
+  top:83%;
+  --arrow-delay:3s;
+  transform:translate(-50%,-50%) rotate(180deg)
+}
+.circular-flow .arrow-4 {
+  left:22%;
+  top:61%;
+  --arrow-delay:4.5s;
+  transform:translate(-50%,-50%) rotate(250deg)
+}
+.circular-flow .arrow-5 {
+  left:30%;
+  top:22%;
+  --arrow-delay:6s;
+  transform:translate(-50%,-50%) rotate(320deg)
+}
+.circular-flow .loop-core {
+  position:absolute;
+  z-index:8;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:148px;
+  height:148px;
+  border-radius:50%;
+  background:#fff;
+  border:2px solid var(--purple);
+  box-shadow:0 16px 38px rgba(16,22,56,.12),inset 0 0 0 7px #f4eef9;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:3px;
+  animation:coreBreath109 7.5s ease-in-out infinite
+}
+.circular-flow .loop-core img {
+  width:40px;
+  height:40px;
+  object-fit:contain;
+  margin-bottom:2px
+}
+.circular-flow .loop-core strong {
+  font-size:19px;
+  line-height:1
+}
+.circular-flow .loop-core small {
+  font:700 7px/1.2 "IBM Plex Mono",monospace;
+  letter-spacing:.08em;
+  color:var(--muted)
+}
+@keyframes segmentPulse109 {
+  0%,8%,100% {
+    opacity:.55;
+    transform:rotate(var(--seg-rot)) scale(1)
+  }
+  12%,23% {
+    opacity:1;
+    transform:rotate(var(--seg-rot)) scale(1.018);
+    filter:brightness(1.08)
+  }
+  27% {
+    opacity:.55;
+    transform:rotate(var(--seg-rot)) scale(1)
+  }
+}
+@keyframes labelPulse109 {
+  0%,8%,100% {
+    opacity:.72;
+    transform:translate(-50%,-50%) scale(1)
+  }
+  12%,23% {
+    opacity:1;
+    transform:translate(-50%,-50%) scale(1.12)
+  }
+  27% {
+    opacity:.72;
+    transform:translate(-50%,-50%) scale(1)
+  }
+}
+@keyframes arrowPulse109 {
+  0%,8%,100% {
+    opacity:.25;
+    color:#c9c2d3;
+    box-shadow:0 5px 12px rgba(16,22,56,.04)
+  }
+  12%,23% {
+    opacity:1;
+    color:var(--orange);
+    border-color:var(--orange);
+    box-shadow:0 7px 16px rgba(239,119,0,.16)
+  }
+  27% {
+    opacity:.25;
+    color:#c9c2d3
+  }
+}
+@keyframes coreBreath109 {
+  0%,100% {
+    box-shadow:0 16px 38px rgba(16,22,56,.12),inset 0 0 0 7px #f4eef9
+  }
+  12%,23% {
+    box-shadow:0 18px 42px rgba(101,53,147,.16),inset 0 0 0 7px #f4eef9
+  }
+  27% {
+    box-shadow:0 16px 38px rgba(16,22,56,.12),inset 0 0 0 7px #f4eef9
+  }
+}
+@media(max-width:820px) {
+  .circular-flow {
+    min-height:430px;
+    padding:10px
+  }
+  .circular-flow .flow-ring {
+    width:min(370px,88vw);
+    height:min(370px,88vw)
+  }
+  .circular-flow .loop-core {
+    width:116px;
+    height:116px
+  }
+  .circular-flow .loop-core img {
+    width:31px;
+    height:31px
+  }
+  .circular-flow .loop-core strong {
+    font-size:15px
+  }
+  .circular-flow .flow-label {
+    font-size:8px
+  }
+  .circular-flow .flow-arrow {
+    width:24px;
+    height:24px;
+    font-size:13px
+  }
+}
+@media(max-width:560px) {
+  .circular-flow {
+    min-height:360px
+  }
+  .circular-flow .flow-ring {
+    width:300px;
+    height:300px
+  }
+  .circular-flow .loop-core {
+    width:98px;
+    height:98px
+  }
+  .circular-flow .loop-core img {
+    width:27px;
+    height:27px
+  }
+  .circular-flow .loop-core strong {
+    font-size:14px
+  }
+  .circular-flow .loop-core small {
+    font-size:5px
+  }
+  .circular-flow .flow-label {
+    font-size:7px
+  }
+  .circular-flow .flow-arrow {
+    width:20px;
+    height:20px;
+    font-size:11px
+  }
+}
+@media(prefers-reduced-motion:reduce) {
+  .circular-flow .flow-segment,.circular-flow .flow-label,.circular-flow .flow-arrow,.circular-flow .loop-core {
+    animation:none
+  }
+}

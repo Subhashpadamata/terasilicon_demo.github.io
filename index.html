@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
  <head>
-<style id="V11.08-mobile-difference-target">@media (max-width:767px){h2:has(+ .difference-cards), h2:has(~ .difference-cards){font-size:28px!important;font-weight:800!important;color:#071a46!important;text-align:center!important;background:#fff7ed!important;border-left:4px solid #ff7a00!important;border-right:4px solid #ff7a00!important;border-radius:10px!important;padding:14px 18px!important;margin:28px auto 34px!important;width:fit-content!important;max-width:calc(100% - 30px)!important}}</style>
+
   <meta charset="utf-8"/>
   <meta content="width=device-width, initial-scale=1" name="viewport"/>
   <link href="assets/images/terasilicon-iq-symbol.png" rel="icon" type="image/png"/>
@@ -19,103 +19,21 @@
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-  <link href="css/style.css" rel="stylesheet"/>
-  <style>
-   /* Header navigation */
-header .desktop-nav a,
-header .desktop-nav a:hover,
-header .desktop-nav a:focus,
-header .desktop-nav a:active {
-  text-decoration: none !important;
-}
+  <link href="css/00-mobile-difference.css" rel="stylesheet"/>
+  <link href="css/01-foundation.css" rel="stylesheet"/>
+  <link href="css/02-hero.css" rel="stylesheet"/>
+  <link href="css/03-journey-content.css" rel="stylesheet"/>
+  <link href="css/04-content-refinements.css" rel="stylesheet"/>
+  <link href="css/05-capability-visuals.css" rel="stylesheet"/>
+  <link href="css/06-capability-loop.css" rel="stylesheet"/>
+  <link href="css/07-capability-pulse.css" rel="stylesheet"/>
+  <link href="css/08-capability-segments.css" rel="stylesheet"/>
+  <link href="css/09-main-hero.css" rel="stylesheet"/>
+  <link href="css/10-connectors-labels.css" rel="stylesheet"/>
+  <link href="css/11-responsive-composition.css" rel="stylesheet"/>
+  <link href="css/12-domain-refinement.css" rel="stylesheet"/>
+  <link href="css/13-page-refinements.css" rel="stylesheet"/>
 
-/* V10.29 visual spacing refinement: keep sections close enough to read as one continuous page. */
-:root {
-  --section-gap: clamp(56px, 6vw, 96px);
-}
-
-/* Remove accidental oversized gaps created by stacked section wrappers. */
-main > section {
-  margin-top: 0 !important;
-  margin-bottom: var(--section-gap) !important;
-}
-
-main > section + section {
-  margin-top: 0 !important;
-}
-
-/* Keep the belief/callout blocks visually connected to the preceding content. */
-.belief-section,
-.our-belief,
-.belief {
-  margin-top: 0 !important;
-}
-
-/* Prevent empty spacer elements from creating large blank bands. */
-.spacer,
-.section-spacer,
-.vertical-spacer {
-  height: 0 !important;
-  min-height: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-}
-
-/* Path cards inside the final CTA section */
-.path-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin-top: 36px;
-}
-.path-card {
-  background: #fff;
-  border: 1px solid rgba(101,53,147,.14);
-  border-radius: 6px;
-  padding: 30px 26px 28px;
-  box-shadow: 0 10px 26px rgba(16,22,56,.06);
-  transition: transform .2s ease, box-shadow .2s ease;
-  display: flex;
-  flex-direction: column;
-}
-.path-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 18px 38px rgba(16,22,56,.12);
-}
-.path-card .path-label {
-  display: inline-block;
-  font-family: 'IBM Plex Mono', monospace;
-  font-size: 12px;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--orange);
-  margin-bottom: 12px;
-}
-.path-card:nth-child(2) .path-label { color: var(--purple); }
-.path-card:nth-child(3) .path-label { color: var(--orange); }
-.path-card h3 {
-  font-size: 21px;
-  line-height: 1.25;
-  margin-bottom: 10px;
-}
-.path-card p {
-  font-size: 15px;
-  line-height: 1.65;
-  color: var(--muted);
-  flex-grow: 1;
-}
-.path-card .button {
-  margin-top: 18px;
-  align-self: flex-start;
-  font-size: 14px;
-  padding: .6rem 1.1rem;
-}
-@media (max-width: 860px) {
-  .path-grid {
-    grid-template-columns: 1fr;
-  }
-}
-  </style>
  </head>
  <body>
   <header class="site-header" id="site-header">
