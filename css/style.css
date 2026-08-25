@@ -10402,3 +10402,161 @@ body { padding-top: 84px; }
 .knowledge-section-no-loop .knowledge-flow span {
   font-size:14px !important;
 }
+
+/* V11.24 — final full-page visual polish
+   Typography, spacing, card contrast and hierarchy only.
+   Preserve the approved header, mobile flow, CTA interactions and contact/footer. */
+@media (min-width: 821px) {
+  /* Consistent editorial rhythm: reduce isolated blank bands without touching the hero/header. */
+  .split-section,
+  .model-section,
+  .readiness-section,
+  .focus-section,
+  .tracks-section,
+  .environment-section,
+  .knowledge-section,
+  .includes-section,
+  .statement-section {
+    padding-top: 68px !important;
+    padding-bottom: 68px !important;
+  }
+
+  .section-heading,
+  .tracks-section .section-heading {
+    margin-bottom: 26px !important;
+  }
+
+  /* Supporting copy should remain readable at full-page scale. */
+  .section-heading > p,
+  .split-copy > p,
+  .readiness-copy > p,
+  .section-note,
+  .knowledge-grid > div > p,
+  .cta-card > p {
+    font-size: 16px !important;
+    line-height: 1.72 !important;
+  }
+
+  .model-card p,
+  .focus-grid article p,
+  .environment-grid article p,
+  .tracks-section .track-card p {
+    font-size: 14px !important;
+    line-height: 1.65 !important;
+  }
+
+  .tag-grid span,
+  .includes-grid span,
+  .knowledge-flow span {
+    font-size: 13px !important;
+  }
+
+  /* Stronger separation from the section surfaces while keeping the two-colour system. */
+  .model-card,
+  .focus-grid article,
+  .environment-grid article,
+  .tracks-section .track-card,
+  .includes-grid > span {
+    border: 1px solid rgba(157, 188, 232, .72) !important;
+    box-shadow: 0 6px 18px rgba(16,22,56,.045);
+  }
+
+  .model-card:nth-child(even),
+  .tracks-section .track-card:nth-child(2),
+  .environment-grid article:nth-child(3n) {
+    border-color: rgba(239, 193, 141, .82) !important;
+  }
+
+  .model-card {
+    min-height: 190px !important;
+    padding: 26px 24px !important;
+  }
+
+  .focus-grid article {
+    min-height: 185px !important;
+  }
+
+  .environment-grid article {
+    min-height: 175px !important;
+  }
+
+  .tracks-section .track-card {
+    min-height: 260px !important;
+  }
+
+  /* The difference section should read as a major proof point. */
+  .difference-subhead {
+    font-size: clamp(30px, 3vw, 42px) !important;
+    line-height: 1.12 !important;
+    margin-bottom: 28px !important;
+    color: #0b2857 !important;
+  }
+
+  .difference-subhead + .contrast .c-card {
+    padding: 30px !important;
+    background: #eaf2ff !important;
+    border-color: #c8dcfa !important;
+  }
+
+  .difference-subhead + .contrast .not,
+  .difference-subhead + .contrast .yes {
+    font-size: 16px !important;
+    line-height: 1.62 !important;
+  }
+
+  /* Make CTA panels feel intentional rather than washed out. */
+  .cta-card {
+    box-shadow: 0 16px 38px rgba(16,22,56,.09) !important;
+    border-color: rgba(101,53,147,.24) !important;
+  }
+
+  .cta-section .path-card {
+    box-shadow: 0 8px 22px rgba(16,22,56,.07) !important;
+  }
+
+  /* Knowledge flow labels should be easy to scan without enlarging the layout. */
+  .knowledge-section-no-loop .knowledge-flow {
+    gap: 9px !important;
+    margin-top: 20px !important;
+  }
+
+  .knowledge-section-no-loop .knowledge-flow span {
+    padding: 11px 14px !important;
+    font-size: 14px !important;
+  }
+}
+
+@media (max-width: 820px) {
+  /* Keep the mobile hierarchy clean while improving supporting-text readability. */
+  .section-heading > p,
+  .split-copy > p,
+  .readiness-copy > p,
+  .section-note,
+  .knowledge-grid > div > p,
+  .cta-card > p {
+    font-size: 15px !important;
+    line-height: 1.72 !important;
+  }
+
+  .model-card p,
+  .focus-grid article p,
+  .environment-grid article p,
+  .tracks-section .track-card p {
+    font-size: 13px !important;
+    line-height: 1.6 !important;
+  }
+
+  .tag-grid span,
+  .includes-grid span,
+  .knowledge-flow span {
+    font-size: 12px !important;
+  }
+
+  .model-card,
+  .focus-grid article,
+  .environment-grid article,
+  .tracks-section .track-card,
+  .includes-grid > span {
+    box-shadow: 0 5px 16px rgba(16,22,56,.045);
+  }
+}
